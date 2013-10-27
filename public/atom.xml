@@ -2,15 +2,24 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[My Octopress Blog]]></title>
-  <link href="http://yoursite.com/atom.xml" rel="self"/>
-  <link href="http://yoursite.com/"/>
-  <updated>2013-10-27T15:27:43-04:00</updated>
-  <id>http://yoursite.com/</id>
+  <link href="http://rukshn.github.io/atom.xml" rel="self"/>
+  <link href="http://rukshn.github.io/"/>
+  <updated>2013-10-27T15:42:51-04:00</updated>
+  <id>http://rukshn.github.io/</id>
   <author>
     <name><![CDATA[Your Name]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[My new blog]]></title>
+    <link href="http://rukshn.github.io/blog/2013/10/27/my-new-blog/"/>
+    <updated>2013-10-27T15:42:00-04:00</updated>
+    <id>http://rukshn.github.io/blog/2013/10/27/my-new-blog</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
 </feed>
