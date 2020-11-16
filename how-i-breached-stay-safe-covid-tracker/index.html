@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css">
+	
+
+	
+	<meta name="description" content="How I breached the national covid program, and what I have leared by doing it.">
+	<meta name="og:description" content="How I breached the national covid program, and what I have leared by doing it.">
+	
+
+	<meta name="og:title" content="How I breached the StaySafe program, the government COVID 19 tracker of Sri Lanka | Rukshan&#39;s Blog | Just Another Guy On The Internet">
+	<meta name="og:type" content="website">
+	
+	<meta property="og:image" content="/images/posts/2020/staysafe/123760394_3724198324297298_1148737849357766572_n.jpg" />
+	<meta name="twitter:image" content="/images/posts/2020/staysafe/123760394_3724198324297298_1148737849357766572_n.jpg" />
+	
+	<meta name="twitter:card" content="summary" />
+
+	
+	
+	<meta name="keywords" content="security">
+	
+	<title>How I breached the StaySafe program, the government COVID 19 tracker of Sri Lanka | Rukshan&#39;s Blog | Just Another Guy On The Internet</title>
+	
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Oswald:wght@700&display=swap.css">
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+  <body>
+    <nav class="navbar mb-3" role="navigation" aria-label="main navigation">
+  <div class="container">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h2 class="title is-4">
+          Rukshan&#39;s Blog
+        </h2>
+      </a>
+  
+      <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+        data-target="navbarBasicExample">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+  
+    <div id="navbarBasicExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="https://twitter.com/imruky" target="_blank" rel="noopener" class="navbar-item">
+          @Twitter
+        </a>
+  
+        <a class="navbar-item" href="https://instagram.com/justruky" target="_blank" rel="noopener" >
+          @Instagram
+        </a>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>
+    <post>
+    <div class="container bd-lead">
+        <div class="columns">
+            <div class="column is-7">
+                <div class="post_title">
+                    <img src="/images/posts/2020/staysafe/123760394_3724198324297298_1148737849357766572_n.jpg" class="cover-photo" alt="How I breached the national covid program, and what I have leared by doing it.">
+                    <p class="is-5">
+                        
+                            <strong>
+                                <a href="/tags/security">
+                                    #security
+                                </a>
+                            </strong>
+                        
+                    </p>
+                    <h1 class="title is-2">How I breached the StaySafe program, the government COVID 19 tracker of Sri Lanka</h1>
+                    <div class="media">
+                      <figure class="media-left">
+                        <p class="image is-rounded is-64x64">
+                          <img src="https://pbs.twimg.com/profile_images/1252894385844322305/6Gizp36J_400x400.jpg">
+                        </p>
+                      </figure>
+                      <div class="media-content">
+                        <div class="content">
+                          <p>
+                            <strong>@Rukshan</strong>
+                            <small>
+                                <time datetime="2016-1-1">November 16th</time>
+                            </small>
+                          </p>
+                        </div>
+                      </div>
+                      <div class="media-right">
+                      </div>
+                    </div>
+                </div>
+                
+                <div class="content mt-2" id="content">
+                    <div class="columns">
+                        <div class="column is-1">
+                            <a id="fbShare" href="#" class="button" target="_blank">
+                                <span class="icon is-small">
+                                    <i class="fab fa-facebook-square"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="column is-10">
+                            <div class="content">
+                                <p>Last week government launched its online covid tracker called the <strong><a href="https://staysafe.gov.lk" target="_blank" rel="noopener">“StaySafe”</a> program.</strong></p>
+<p>The program is similar was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.  </p>
+<p>Leaving the privacy aspect aside, since we are experiencing a second wave of COVID 19 a tracking solution can help to identify people exposed to a potential COVID 19 patient.  </p>
+<p>I have not investigated an exploit for a very long time. I was busy with my daily job, and my master’s in Health Informatics.</p>
+<p>However, a <a href="https://www.facebook.com/nalina.kanchana/posts/3724152284301902" target="_blank" rel="noopener">Facebook post</a> about someone finding unofficial API access to check the infective status of any person just passing their NIC number (it’s like a social security number) caught my eye.</p>
+<p><img src="/images/posts/2020/staysafe/123760394_3724198324297298_1148737849357766572_n.jpg" alt="The facebook post that started it all"><br><em>The facebook post that started it all</em></p>
+<p>The post showed an unofficial API, where anyone can just type a NIC number and get their covid status, without requiring any authentication.</p>
+<p>Since this is all about to do with a Health Informatics system, it sparked my curiosity to learn more about this StaySafe platform, potentially finding an exploit and ultimately breaching it.</p>
+<h2 id="Step-1"><a href="#Step-1" class="headerlink" title="Step 1"></a>Step 1</h2><p>I visited the stay safe website, and at a glance, it has a simple landing page.</p>
+<p>The first thing I did was to sign up as a new user. </p>
+<p>According to the landing page, I had to do is text my NIC number to 1919, or scan a QR code using my mobile.</p>
+<ul>
+<li><p>If I send a text message, they will create a new account, associate my NIC number with my mobile number.</p>
+</li>
+<li><p>If I scan the QR code, it will take me to a signup form, where I have to give my NIC number, mobile phone number, and they will signup me as a new user using the same details. </p>
+</li>
+</ul>
+<p>So I picked up my phone and sent 123456789V as my NIC number to 1919. I was hoping the system will reject my NIC number since this is obviously an incorrect NIC number (just like a credit card number, an NIC number follows a standard pattern).</p>
+<p>However, I was able to sign-up for the system using a fake NIC number, which means I can game the system, or impersonate someone else, using someone else’s NIC number.</p>
+<p><img src="/images/posts/2020/staysafe/IMG_8B243A37279C-1.jpg" alt="I was able to register with a bogus NIC"><br><em>I registered with a fake nic</em></p>
+<h2 id="Step-2"><a href="#Step-2" class="headerlink" title="Step 2"></a>Step 2</h2><p>  Still, I was not able to find information about the unofficial API as I saw on the screenshots.</p>
+<p>I scanned the QR code using my phone, and it took me to a registration form.</p>
+<p><strong><a href="https://staysafe.gov.lk/customerSignUp/00047" target="_blank" rel="noopener">https://staysafe.gov.lk/customerSignUp/00047</a></strong></p>
+<p>The system generates different forms for different locations, and each location will have its own unique URL.</p>
+<p>The forms also had the same vulnerability, where I can signup using a fake NIC number.</p>
+<p>I signed up through the form using fake data, and at the same time checked the network-requests.</p>
+<p>The requests are all made using javascript, Iooked the developer tools, and looking at the requests I saw that anyone could make a get request to an unofficial API endpoint to get the infected status of the covid status just sending their NIC number with the get request.</p>
+<p><img src="/images/posts/2020/staysafe/Screenshot-2020-11-10-at-14.34.27.png" alt="The unofficial API to check anyone&#39;s infection status"><br><em>The unofficial API to check infected status</em></p>
+<h2 id="Step-3"><a href="#Step-3" class="headerlink" title="Step 3"></a><strong>Step 3</strong></h2><p>I made a simple Google search.</p>
+<p><strong>Search site:staysafe.gov.lk</strong></p>
+<p>Looking at the Google results, I was able to access a backend dashboard for merchants (location owners) that was not supposed to be accessible to users. </p>
+<p><img src="/images/posts/2020/staysafe/Screenshot-2020-11-10-at-14.37.20.png" alt="Merchant dashboard"><br><em>Merchant dashboard</em></p>
+<p>And this page was not protected by any authentication. However, I was unable to go to click links because they are redirecting me to the landing page.</p>
+<p>So again looking at network requests, I was able to find that they are checking whether the user is logged in from the front end.</p>
+<p>By using javascript and a merchant ID is sent to the API, it supposedly checks whether that merchant ID exists in the database (which was a 4 digit ID), if the merchant ID exists, a valid response is sent, if it does not exist an invalid response is sent, and the user is redirected.</p>
+<p>Looking at their javascript code, I was able to find that they save the merchant ID in the browser local storage. So by using the developer tools, I created a 4 digit merchant ID on the browser local storage. (I was able to obtain a valid merchant ID from the signup form.)</p>
+<p>After refreshing the page, I was able to access the other broken features on the dashboard. I was able to submit some forms, but I was not able to get any valuable data through that dashboard. And I didn’t know whether the data I passed made any difference.</p>
+<p><img src="/images/posts/2020/staysafe/Screenshot-2020-11-10-at-14.38.20.png" alt="I gained more privilates after setting the localstorage object"><br><em>Gained more privilages in the merchant dashboard</em></p>
+<h2 id="Step-4"><a href="#Step-4" class="headerlink" title="Step 4"></a>Step 4</h2><p>Then I saw another photo on the same Facebook thread that showed a password field.</p>
+<p>And I followed that URL - staysafe.gov.lk/admin</p>
+<p>Then I came to a page with the password field, saying I need some secret key to log in to the next page.</p>
+<p><img src="/images/posts/2020/staysafe/123849698_3724191044298026_8139327141724236291_n.jpg" alt="Login page I found on the Facebook post"><br><em>Login page I found in the same Facebook post</em></p>
+<p>I entered some generic passwords to check whether it will open, but for no luck.</p>
+<p>Again I checked the page source code. All the user checks are done in front-end using javascript.</p>
+<p>So I went through the javascript code and came across this unusual function, <strong>function saveAdmin() {}</strong></p>
+<pre><code>function saveAdmin() {
+    var fname = document.getElementById(&quot;sfname&quot;).value;
+    var lname = document.getElementById(&quot;slname&quot;).value;
+    var contact = document.getElementById(&quot;sphone&quot;).value;
+    var email = document.getElementById(&quot;semail&quot;).value;
+    var password = document.getElementById(&quot;spassword&quot;).value;
+    var isOk = true;
+
+    if (isEmpty(email)) {
+        setErrorMessage(&apos;semail&apos;, &apos;Email is required.&apos;)
+        isOk = false;
+    } else {
+        removeErrorMessage(&apos;semail&apos;);
+    }
+
+    if (isEmpty(contact)) {
+        setErrorMessage(&apos;sphone&apos;, &apos;Contact Number is required.&apos;)
+        isOk = false;
+    } else {
+        removeErrorMessage(&apos;sphone&apos;);
+    }
+
+    if (isEmpty(password)) {
+        setErrorMessage(&apos;spassword&apos;, &apos;Password is required.&apos;)
+        isOk = false;
+    } else {
+        removeErrorMessage(&apos;spassword&apos;);
+    }
+
+    if (isOk === false) {
+        return;
+    }
+
+    var form = new FormData();
+    form.append(&quot;mainTypeId&quot;, &quot;1&quot;);
+    form.append(&quot;mainType&quot;, &quot;Admin&quot;);
+    form.append(&quot;subTypeId&quot;, &quot;9&quot;);
+    form.append(&quot;subType&quot;, &quot;stay safe&quot;);
+    form.append(&quot;contactNumberTypeId&quot;, &quot;2&quot;);
+    form.append(&quot;contactNumberType&quot;, &quot;Personal&quot;);
+    form.append(&quot;contactNumber&quot;, contact);
+    form.append(&quot;email&quot;, email);
+    form.append(&quot;fname&quot;, fname);
+    form.append(&quot;lname&quot;, lname);
+    form.append(&quot;password&quot;, password);
+
+    var settings = {
+        &quot;url&quot;: main_api_url + &quot;/admin/save_admin&quot;,
+        &quot;type&quot;: &quot;POST&quot;,
+        &quot;timeout&quot;: 0,
+        &quot;headers&quot;: {
+             &apos;X-CSRF-TOKEN&apos;: $(&apos;meta[name=&quot;csrf-token&quot;]&apos;).attr(&apos;content&apos;)    
+        },
+       &quot;processData&quot;: false,
+       &quot;mimeType&quot;: &quot;multipart/form-data&quot;,
+       &quot;contentType&quot;: false,
+       &quot;data&quot;: form,
+       success: function (data) {    
+       Swal.fire({
+           // position: &apos;top-end&apos;,
+           icon: &apos;success&apos;,
+           title: &apos;Account Has Been Created&apos;
+       }).then(function () {
+           window.location.replace(main_url + &apos;/admin/dashboard&apos;);
+        });
+       },
+        error: function (data) {
+            console.log(data);
+        }
+    };
+    $.ajax(settings);
+}</code></pre><p><em>The javascript code</em></p>
+<p>Further inspecting this function’s code, I was able to figure out that all I need to do is pass a name, email, a phone number, a password, and a CSRF token (which I can collect from the website) as a POST request to an API URL which was available in the saveAdmin function.</p>
+<p>And looking at the function, it looked as if it was successful, I will be able to create an administrator account on the system, which can be the vulnerability I was looking for.</p>
+<p>I made a simple javascript fetch request with all the required fields.</p>
+<p>And as a response, I got a successful response, which meant I just created a new Admin account. I was surprised and excited at the same time.</p>
+<p>Creating an admin account is one thing, but what about login? I went back to the login page and tried entering the password I just passed in the previous POST request. It didn’t work.  </p>
+<h2 id="The-breakthrough"><a href="#The-breakthrough" class="headerlink" title="The breakthrough"></a>The breakthrough</h2><p>Again looking at the javascript code, just as what they did with the merchant dashboard, I saw that they are checking the authentication from the frontend using javascript.  </p>
+<p>They store a local storage object with name, id, and email, and upon saving the objects in the local storage, they will redirect you to the dashboard URL, which was also available in the javascript code.</p>
+<p>They will make an API call with administrator details, ID, name, and email. And my theory was that if the data exists in the backend, then the API will return a valid response, and if not it will return a response.</p>
+<p>Since I made an admin account, and I had the email, name with me, and received my admin ID from the response of the saveAdmin function, I just saved these objects in the local storage, crossed my fingers, and typed the dashboard URL on my browser address bar.  </p>
+<p>And just like that, I was inside the dashboard of the corona tracker designed to track patient exposure in the country.</p>
+<h2 id="Exploring-the-national-COVID-tracker"><a href="#Exploring-the-national-COVID-tracker" class="headerlink" title="Exploring the national COVID tracker"></a>Exploring the national COVID tracker</h2><p>After a brief moment of joy, I thought of exploring the system to see the functionality of the system.</p>
+<p>I could search for anyone who signed up for the system, using their NIC or mobile number.</p>
+<p><img src="/images/posts/2020/staysafe/Screenshot-2020-11-10-at-00.31.00.png" alt="StaySafe dashboard"><br><em>The national covid tracker staysafe dashboard</em></p>
+<p>I can see the places they have visited, and even mark them as infected, I didn’t tamper or saved any data. My intention was only to find the vulnerability and report it.</p>
+<p>For some wired reason, when someone logged in to the dashboard, all the registered user data was fetched in a single JSON response to the dashboard. I was able to see that the request returned around 8000+ user data, which included, their mobile phone number, NIC number, and their COVID status.</p>
+<p>I’m not sure whether this response included all the user data in the system.</p>
+<p><img src="/images/posts/2020/staysafe/blur-data.jpg" alt="json request with 8000+ personal data"><br><em>The request resposne with 8000+ userdata</em></p>
+<p>I didn’t tamper with any data. I contacted some developers who commented on the original Facebook post that started all this to find out whether this was the only vulnerability.</p>
+<p><img src="/images/posts/2020/staysafe/Screenshot-2020-11-10-at-00.34.46" alt="I got to see more data than I expected"><br><em>More info on dashboard</em></p>
+<p> But some fellow developers showed me that the website’s SSL is not properly configured and you can find out the IP address of the server, which is also found to be correct.</p>
+<p><img src="/images/posts/2020/staysafe/PHOTO-2020-11-10-09-47-46.jpg" alt="SSL settings exposed the original IP"><br><em>SSL vulnerability with the exposed IP address</em></p>
+<h2 id="Learning-points"><a href="#Learning-points" class="headerlink" title="Learning points"></a>Learning points</h2><ul>
+<li>Even though javascript can give a nice user experience, there is a risk of passing authentication details through javascript. A session value can easily read by the server-side than passing the session details in a javascript request.</li>
+<li>Use a cookie-based or token-based authentication system.</li>
+<li>Never trust user input, always validate the data.  </li>
+</ul>
+<h2 id="Status-update"><a href="#Status-update" class="headerlink" title="Status update"></a>Status update</h2><ul>
+<li><p>I contacted the CTO of ICTA Mr. Hiranya Samarasekera, I informed about the vulnerability and offered my support to fix the vulnerabilities.</p>
+</li>
+<li><p>Mr. Hiranya Samarasekera said that the project was developed by a group of volunteers and offered to ICTA for free.</p>
+</li>
+<li><p>The API, admin page, and dashboard are now removed and returns a 404 error.</p>
+</li>
+<li><p>ICTA has thanked me for informing the vulnerability and said they are working on a fix.</p>
+</li>
+</ul>
+<h2 id="More-updates"><a href="#More-updates" class="headerlink" title="More updates"></a>More updates</h2><ul>
+<li><p>After writing this Mr. Hiranya Samarasekera contacted me and me and the developers of StaySafe had a discussion where I explained to them about the vulnerabilities we found, I offered my ideas on how to fix it.</p>
+</li>
+<li><p>The developers have patched the vulnerabilities and working on a fix.</p>
+</li>
+</ul>
+<h2 id="Disclaimer"><a href="#Disclaimer" class="headerlink" title="Disclaimer"></a>Disclaimer</h2><p>I did not tamper or save any data, I hope I’m the first to find the vulnerability, and no one was able to breach the system and harvest the user data.</p>
+<p>The idea of this post is for learning purposes only on finding vulnerabilities and designing a secure system. I take no responsibility for any damage caused by someone wrongfully using this information.</p>
+
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var link = document.getElementById("fbShare");
+        link.setAttribute('href', 'https://facebook.com/sharer.php?u=' + window.location);
+    </script>
+
+  </post>
+  
+    <footer class="footer">
+  <p class="site-info">
+    Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> and
+    Theme <a href="https://github.com/rukshn/travelgram" target="_blank">Travelgram</a> by <a href="https://github.com/rukshn/" target="_blank">Rukshan</a>
+    
+    
+    &copy; 2020 Rukshan
+    
+  </p>
+</footer>
+    <!-- Font awesome -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>	
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3QVDVTVHR8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3QVDVTVHR8');
+</script>
+  </body>
+</html>
