@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>I used to love Bootstrap. God, now I just hate it</title>
+<meta
+  name="description"
+  content="
+I have been using Bootstrap since it was version 2. At the time Bootstrap was an easy way to set up a responsive website. And also it made your life so much easier and developing a decent website became easier thanks to the styled elements they provided."
+/>
+<link rel="canonical" href="http://example.org/i-used-to-love-bootstrap-god-now-i-just-hate-it/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">I used to love Bootstrap. God, now I just hate it</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2021-08-24 11:44:00 &#43;0000 UTC"
+        title='Tue, Aug 24, 2021, 11:44 AM UTC'
+      >
+        24/08/2021 - Estimated reading time: 4 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a class="categories" href="/categories/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/bootstrap-5-releases-with-major-changes.jpg?resize=710%2C410&amp;ssl=1" alt=""></p>
+<p>I have been using Bootstrap since it was version 2. At the time Bootstrap was an easy way to set up a responsive website. And also it made your life so much easier and developing a decent website became easier thanks to the styled elements they provided.</p>
+<p>At the time Twitter and several other popular startups used Bootstrap. In the beginning it was called Twitter Bootstrap because it was in fact build to be used on Twitter.</p>
+<p>Then Bootstrap migrated to version 3, and I always wanted a Bootstrap that didn’t require jQuery. jQuery was getting outdated, and it was easier to use vanilla JS or something like Vue that gave more functionality and templating over jQuery.</p>
+<h2 id="looking-for-al-alternative">Looking for al alternative</h2>
+<p>So I decided to search for an alternative framework. Back then some of the popular CSS frameworks were Foundation, SemanticUI. I always found Foundation to be a very difficult framework to incorporate to a website, and looking back today I see that the project has been abandoned. SemanticUI was also great thanks to it’s semantic classes which was easier to understand. But that too was abandoned by the creator.</p>
+<p>I came across Bulma which was a small CSS framework that didn’t include any javascript and and had very little footprint. I loved using Bulma and used in several of my projects.</p>
+<p>Even though Tailwind was there at the time, the setup process for Tailwind was too complex, and I always tried to stay away from it.</p>
+<p>Then when Tailwind version 2 came out, I decided to use it for a simple project that I was about to put online. Tailwind css has a utility class approach, where instead of providing out of the box elements like Bootstrap, Tailwind gave you utility classes which you can combine to create any number of elements and designs without writing any extra CSS code which was great.</p>
+<p>I think I instantly fell in love with Tailwind and after getting used to it I used it on several other projects and continue to use Tailwind as my goto css framework whenever I wanted to get something off the ground.</p>
+<h2 id="bootstrap-hell">Bootstrap hell</h2>
+<p>Recently I started working on an open source HIMS (health information management system) project as a developer (which I will write in future posts), and one thing I immediately noticed after setting up the project on my local computer is the fact that it requires UI improvement.</p>
+<p>The project is based on another HIMS project and has several CSS frameworks, and custom styles which were incorporated along the way.</p>
+<p>The project already had an older version of Bootstrap and depended on Bootstrap for some elements. I wanted to remove all styling frameworks, in built styles and streamline the CSS for maintainability and improve the UI. Migrating to something like Tailwind was too difficult because of the size of the project and required rapid development.</p>
+<p>Since the currently release of Bootstrap is version 5, I decided to migrate the project to Bootstrap 5. I have never went through Bootstrap documentation since version 3 and after reading the documentation I realized lot has changed over the years.</p>
+<p>Now Bootstrap is not a framework which gave everything from elements to components out of the box. Neither it was a utility based framework like Tailwind, but a mixture of both, which was very confusing and hard to implement.</p>
+<p>For example, as I remember back in version 3-4 there was the <code>btn-block</code> which made the button go full width.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;btn btn-primary btn-block&#34;</span>&gt;Sign In&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span></code></pre></div><p>However, if you are making a button full width in Bootstrap 5,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;d-grid gap-2&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;btn btn-primary&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span>&gt;Button&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>      &lt;<span style="color:#ff79c6">button</span> <span style="color:#50fa7b">class</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;btn btn-primary&#34;</span> <span style="color:#50fa7b">type</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;button&#34;</span>&gt;Button&lt;/<span style="color:#ff79c6">button</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span></code></pre></div><p>According to Bootstrap’s own documentation,</p>
+<blockquote>
+<p>Create responsive stacks of full-width, “block buttons” like those in Bootstrap 4 with a mix of our display and gap utilities. By using utilities instead of button specific classes, we have much greater control over spacing, alignment, and responsive behaviors.</p>
+<p><a href="https://getbootstrap.com/docs/5.1/components/buttons/">https://getbootstrap.com/docs/5.1/components/buttons/</a></p>
+</blockquote>
+<p>As I remember Bootstrap had a <code>.buttons</code> class which nicely added paddings and spacing to buttons inside that element.</p>
+<p>One aspect developers complain about Tailwind over Bootstrap is people don’t enjoy writing so many utility classes. But when you write everything in utility classes everything is in utility classes, and you will also get used to write everything in utility classes after several days.</p>
+<p>But now with Bootstrap it has become a mixture of utility classes and components that makes things way more complicated than they need to be. The above button example just one use case, you will find several such complicated use cases in their documentation.</p>
+<p>However, I will be able to migrate the project successfully to Bootstrap 5, however, I won’t consider using Bootstrap for a new project starting from the beginning.</p>
+<p>On a side note, Bootstrap dragged jQuery with it until version 4 and fully dropped jQuery starting from version 5 which was released in 2021. And I still feel Bootstrap lags behind some of the modern frameworks like Tailwind.</p>
+<p>What is your opinion about Bootstrap 5?</p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a href="/tags/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

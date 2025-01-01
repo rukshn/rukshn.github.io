@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>A TO-DO app that fits in a single tweet</title>
+<meta
+  name="description"
+  content="Sunday morning while I was scrolling through my Twitter feed one tweet caught my eye,"
+/>
+<link rel="canonical" href="http://example.org/a-to-do-app-that-fits-in-a-single-tweet/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">A TO-DO app that fits in a single tweet</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2020-12-21 09:50:03 &#43;0000 UTC"
+        title='Mon, Dec 21, 2020, 9:50 AM UTC'
+      >
+        21/12/2020 - Estimated reading time: 4 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/hacking/" alt="Hacking">
+        Hacking
+      </a>
+      
+      <a class="categories" href="/categories/javascript/" alt="JavaScript">
+        JavaScript
+      </a>
+      
+      <a class="categories" href="/categories/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p>Sunday morning while I was scrolling through my Twitter feed one tweet caught my eye,</p>
+<blockquote>
+<p><a href="https://twitter.com/hashtag/JavaScript?src=hash&amp;ref_src=twsrc%5Etfw">#JavaScript</a> Challenge:</p>
+<p>Can you make a TO-DO app within a single Tweet? (280 chars)</p>
+<p>The app should be able to add tasks, strike-through finished tasks &amp; clear all tasks.</p>
+<p>Any general-purpose library is allowed.<br>
+Starting HTML body should be empty except the <code>&lt;script&gt;</code>.<a href="https://twitter.com/hashtag/JS?src=hash&amp;ref_src=twsrc%5Etfw">#JS</a> <a href="https://twitter.com/hashtag/code?src=hash&amp;ref_src=twsrc%5Etfw">#code</a></p>
+<p>— Dumi Jay (@dumindaxsb) <a href="https://twitter.com/dumindaxsb/status/1340539549890404354?ref_src=twsrc%5Etfw">December 20, 2020</a></p>
+</blockquote>
+<p>The challenge was to make a todo app that fits in a single tweet, just like any other todo app, you should be able to add or remove tasks and clear the task list. I thought how hard this can get, I thought to myself this is doable just by using plain JavaScript.</p>
+<p>So since I don’t have a laptop, what resulted was a whole day of torture having to code though my iPad on codepen.</p>
+<h2 id="plain-javascript"><strong>Plain JavaScript</strong></h2>
+<p>Soon after I started using plain JavaScript it became obvious that I was not able to make it within one tweet, the DOM manipulation was taking too much characters_, document.createElements, document.getElements._</p>
+<p>It was obvious that was not the right approach.</p>
+<h2 id="using-vue">Using vue</h2>
+<p>Vue framework won’t require any build tools, so I don’t have to go through setting up Webpack,</p>
+<p>Also I can easily create the DOM within the script tag using simple HTML. So that will save some characters for me in DOM manipulation.</p>
+<p>The first version I made use the <em>method</em> option in Vue app to handle button clicks, the button click event will call the function in methods to add new tasks and clear the task list.</p>
+<p>However, I was unable to reduce it to one tweet. Then I went back to in-line functions, the same methods were added to button click events inline and not within the <em>methods</em> section.</p>
+<p>Also I had to change buttons to anchor tags, in order to save some characters, and I had to use emojis instead of button text to save some more characters.</p>
+<p>I also had to drop few buttons like a button to add a task, and instead I had to go with pressing enter key to add a task instead.</p>
+<p>So I made the final version, the JavaScript code looked like this,</p>
+<p>See the Pen <a href="https://codepen.io/rukshn/pen/qBaXmpE">qBaXmpE</a> by Rukshan Ranatunge (<a href="https://codepen.io/rukshn">@rukshn</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p>Then I ran the code through an online JavaScript minifier and then the whole HTML though an HTML minifier, and ended up with this piece of code,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">body</span>&gt;&lt;<span style="color:#ff79c6">script</span> <span style="color:#50fa7b">src</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">https://unpkg.com/vue@next</span>&gt;&lt;/<span style="color:#ff79c6">script</span>&gt;&lt;<span style="color:#ff79c6">script</span>&gt;<span style="color:#8be9fd;font-style:italic">var</span> x<span style="color:#ff79c6">=</span>{data<span style="color:#ff79c6">:</span>()=&gt;({t<span style="color:#ff79c6">:</span>[],k<span style="color:#ff79c6">:</span><span style="color:#f1fa8c">&#34;&#34;</span>}),template<span style="color:#ff79c6">:</span><span style="color:#f1fa8c">&#39;&lt;input @keyup.enter=&#34;t.push(k)&#34; v-model=&#34;k&#34;&gt;&lt;a @click=&#34;t=[]&#34;&gt;❎&lt;/a&gt;&lt;p v-for=&#34;(v,i) in t&#34;&gt;&lt;a @click=&#34;t.splice(i,1)&#34;&gt;?️&lt;/a&gt;{{v}}&lt;/p&gt;&#39;</span>};Vue.createApp(x).mount(<span style="color:#f1fa8c">&#34;body&#34;</span>)&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><p>With my fingers crossed, I copied the code on to Twitter, and guess what it fits perfectly inside a single Tweet.</p>
+<p><a href="https://twitter.com/JustRuky/status/1340862545322762240">https://twitter.com/JustRuky/status/1340862545322762240</a></p>
+<p>And here is the code in action, <a href="https://jsbin.com/venihiliha/1/edit?html,output">link</a></p>
+<p>See the Pen <a href="https://codepen.io/rukshn/pen/qBaXmpE">qBaXmpE</a> by Rukshan Ranatunge (<a href="https://codepen.io/rukshn">@rukshn</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<h2 id="what-i-failed-to-achieve">What I failed to achieve</h2>
+<p>The original Tweet says, that the completed tasks should have a strike through.</p>
+<p>But because css was costing me too much characters I had to fall back to remove completed tasks instead, but I’m sure someone will figure a solution for that as well.</p>
+<p>At the same time, I think you can save even more characters by using <a href="https://mithril.js.org/">mithril</a>, because you have short-codes for DOM elements as well, but I haven’t tried mithril in awhile.</p>
+<h4 id="one-last-thing">One last thing</h4>
+<p>No I didn’t waste my whole Sunday on this problem, but I had to spend few hours, thinking and trying different versions.</p>
+<p>I would have cut back some more time if I had a laptop. Somerimes I feel like buying an old laptop and refurbishing it and installing Ubuntu on it.</p>
+<p>Sunday well spent? Absolutely yes.</p>
+<h2 id="best-answer">Best answer?</h2>
+<p>One thing I love about HN is the fact that there are lot of bright minds out there. Since I posted this on HN I knew it was just a matter of time since someone figures this out.</p>
+<p>I guess this is the best answer and also ticks all the boxes, well done.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>     &lt;<span style="color:#ff79c6">script</span>&gt;<span style="color:#8be9fd;font-style:italic">document</span>.write(<span style="color:#f1fa8c">`&lt;style&gt;:checked+*{text-decoration:line-through}#t{display:none}&lt;/style&gt;&lt;p id=&#34;t&#34;&gt;&lt;input type=&#34;checkbox&#34;&gt;&lt;input&gt;&lt;div id=&#34;f&#34;&gt;&lt;/div&gt;&lt;p&gt;&lt;button onclick=&#34;f.appendChild(t.cloneNode(true)).id=&#39;&#39;&#34;&gt;+&lt;/button&gt;&lt;button onclick=&#34;f.innerHTML=&#39;&#39;&#34;&gt;×&lt;/button&gt;`</span>)&lt;/<span style="color:#ff79c6">script</span>&gt;
+</span></span></code></pre></div><p><strong>HN link to this answer</strong>: <a href="https://news.ycombinator.com/item?id=25493533">https://news.ycombinator.com/item?id=25493533</a></p>
+<p><strong>Original thread on HN</strong>: <a href="https://news.ycombinator.com/item?id=25492302">https://news.ycombinator.com/item?id=25492302</a></p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/hacking/" alt="Hacking">
+        Hacking
+      </a>
+      
+      <a href="/tags/javascript/" alt="JavaScript">
+        JavaScript
+      </a>
+      
+      <a href="/tags/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

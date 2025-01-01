@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Web 3 Tutorial - How to upload and serve files in IPFS network using NodeJs</title>
+<meta
+  name="description"
+  content="
+Web3 is fascinating and uncharted territory. Recently, I decided to learn a few things about Web3 technologies. Even though I had some basic ideas about the blockchain and NFTs, I’ve never tried writing a program for Web3."
+/>
+<link rel="canonical" href="http://example.org/web-3-how-to-upload-a-file-to-the-ipfs-network/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">Web 3 Tutorial - How to upload and serve files in IPFS network using NodeJs</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2022-05-17 23:35:59 &#43;0000 UTC"
+        title='Tue, May 17, 2022, 11:35 PM UTC'
+      >
+        17/05/2022 - Estimated reading time: 4 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a class="categories" href="/categories/crypto/" alt="Crypto">
+        Crypto
+      </a>
+      
+      <a class="categories" href="/categories/web3/" alt="Web3">
+        Web3
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/05/ipfs-logo.webp?resize=1024%2C406&amp;ssl=1" alt=""></p>
+<p>Web3 is fascinating and uncharted territory. Recently, I decided to learn a few things about Web3 technologies. Even though I had some basic ideas about the blockchain and NFTs, I’ve never tried writing a program for Web3.</p>
+<p>So I decided to learn about Web3 technology and write a simple program that can upload files to the IPFS network. </p>
+<h2 id="what-is-ipfs">What is IPFS?</h2>
+<p>Before getting started, if you don’t know what is IPFS, IPFS stands for InterPlanatry File System. It’s a protocol to save files in a decentralized netowork of computers. If you upload a file to Google Drive, you upload your file to a server belonging to Google. The server belongs to Google, and therfore it is a centralised storage. </p>
+<p>However, unlike Google Drive, the IPFS protocol strores files in computers around the world. There is no single owner to the network or the computers storing the data. Therefore it’s decentralised. It’s somewhat similar to the BitTorrent protocol used for file sharing. </p>
+<p>However, unlike Google Drive, the data you upload to IPFS is not private. Therefore, you should not upload or store sensitive data on the IPFS network. Also, once you upload data to the IPFS network, it remains forever on the IPFS network, and you can’t edit or delete your data. If you want to edit, you need to re upload a modified copy and use that instead. </p>
+<p>Because of this nature, IPFS network is used to save NFT images as well.</p>
+<p>Now that you have a basic idea about the IPFS protocol. Let’s try to write a program using NodeJs to upload a file to the IPFS network. You will need to have some basic knowlage in JavaScript to understand the code. And you will need a text editor like VsCode.</p>
+<h2 id="create-a-new-nodejs-project">Create a new NodeJs project</h2>
+<p>Create a new NodeJs project by running,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    npm init -y
+</span></span></code></pre></div><p>You will get a new project in your local computer.</p>
+<p>Install the dependancies</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    npm install nft.storage node-fetch notenv
+</span></span></code></pre></div><h2 id="obtain-an-nftstorage-api-key">Obtain an NFT.storage API key</h2>
+<p><a href="https://nft.storage">NFT.storage</a> is a service (IPFS gateway) that makes it easy to upload and serve files over the IPFS network through their API, as they will to the heavy lifting.</p>
+<p>You can also use the ipfs-js libraty to upload and serve files over IPFS protocol.</p>
+<p>You can easily signup on nft.storage using your GitHub account and obtain an API key.</p>
+<p>Save the API key you got from nft.storage in a <code>.env</code> file.</p>
+<h2 id="uploading-your-file-to-ipfs">Uploading your file to IPFS</h2>
+<p>I’ve stored a simple png file as test.png in the project folder that we will upload to the IPFS netowrk.</p>
+<p>We are using the following code to upload the file to the IPFS network. It’s simple and self explanatory. </p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span>    <span style="color:#ff79c6">import</span> { NFTStorage, File } from <span style="color:#f1fa8c">&#34;nft.storage&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">import</span> fs from <span style="color:#f1fa8c">&#34;fs&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">import</span> dotenv from <span style="color:#f1fa8c">&#34;dotenv&#34;</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">import</span> fetch from <span style="color:#f1fa8c">&#34;node-fetch&#34;</span>;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    dotenv.config();
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> { NFT_STORE_API_KEY } <span style="color:#ff79c6">=</span> process.env;
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> storeAsset <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">async</span> () =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">const</span> client <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> NFTStorage({ token<span style="color:#ff79c6">:</span> NFT_STORE_API_KEY });
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">const</span> metaData <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">await</span> client.store({
+</span></span><span style="display:flex;"><span>        name<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Example NFT&#34;</span>,
+</span></span><span style="display:flex;"><span>        description<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;Testing IPFS network&#34;</span>,
+</span></span><span style="display:flex;"><span>        image<span style="color:#ff79c6">:</span> <span style="color:#ff79c6">new</span> File([<span style="color:#ff79c6">await</span> fs.promises.readFile(<span style="color:#f1fa8c">&#34;test.png&#34;</span>)], <span style="color:#f1fa8c">&#34;test.png&#34;</span>, {
+</span></span><span style="display:flex;"><span>          type<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;image/png&#34;</span>,
+</span></span><span style="display:flex;"><span>        }),
+</span></span><span style="display:flex;"><span>      });
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">return</span> metaData.url;
+</span></span><span style="display:flex;"><span>    };
+</span></span></code></pre></div><p>Apart from the image, we can also upload some metadata in JSON format associated with the file we upload to the IPFS network. In the example, we are adding a name and description as metadata. The link to the image file will be in the image property of the metadata. </p>
+<p>The function will return the ifps url of your uploaded file’s metadata.json file. The metadata.json file contains all the information about the file you just uploaded to the IPFS network (name, description, image etc).</p>
+<p>The image property of the json will have the link to the image file you just uploaded.</p>
+<pre><code>ipfs://bafyreice4ib5is4zjv3kugad5rzlvgsojuq767qbys6ppwy5itys3gi2ze/metadata.json
+</code></pre>
+<p>Great, you successfully uploaded a file to the IPFS network, soon it will be in someone else’s storage forever.</p>
+<h2 id="opening-an-ipfs-file-from-the-browser">Opening an IPFS file from the browser</h2>
+<p>Unlike a regular URL, you can’t directly open an ipfs url from your browser. You will need to use a gateway, such as CloudFlare IPFS gateway or ipfs.io.</p>
+<p>You need to replace the protocol of your IPFS link (<code>ipfs://</code>) with <a href="https://ips.io">https://ips.io</a> or <a href="https://clourflare-ipfs.com">https://clourflare-ipfs.com</a> and you will be able to read the contents of the metadata file.</p>
+<p>The following code will replace the ipfs:// protocol of your IPFS url to a one that can be accessed via the CloudFlare IPFS gateway.</p>
+<pre><code>const ipfsToHttp = (url) =&gt; {
+  return url.replace(&quot;ipfs://&quot;, &quot;https://cloudflare-ipfs.com/ipfs/&quot;);
+};
+</code></pre>
+<p>If you read the metadata.json file, the image property of the JSON file will contain the link to the image file you just uploaded.</p>
+<p>We can use fetch to retrieve the metadata.json file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> getMetaData <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">async</span> (url) =&gt; {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">const</span> metaData <span style="color:#ff79c6">=</span> fetch(url)
+</span></span><span style="display:flex;"><span>        .then((response) =&gt; response.json())
+</span></span><span style="display:flex;"><span>        .then((data) =&gt; {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">return</span> data;
+</span></span><span style="display:flex;"><span>        });
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">return</span> metaData;
+</span></span><span style="display:flex;"><span>    };
+</span></span></code></pre></div><p>The output would be like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;name&#34;</span>:<span style="color:#f1fa8c">&#34;Example NFT&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;description&#34;</span>:<span style="color:#f1fa8c">&#34;Testing storing&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;image&#34;</span>:<span style="color:#f1fa8c">&#34;ipfs://bafybeid5klxzkhkc2qe36s2tqu5anysou3y5fpet2ovfihtr2l76hrnybu/test.jpeg&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>Now all you need to do is convert the image property’s IPFS link to an http protocol link though the CloudFlare IPFS gateway and you will be able to access your image file that you just uploaded to the IPFS network.</p>
+<p><a href="https://cloudflare-ipfs.com/ipfs/bafybeid5klxzkhkc2qe36s2tqu5anysou3y5fpet2ovfihtr2l76hrnybu/test.jpeg">https://cloudflare-ipfs.com/ipfs/bafybeid5klxzkhkc2qe36s2tqu5anysou3y5fpet2ovfihtr2l76hrnybu/test.jpeg</a></p>
+<p>You can find the full code in the GitHub repo – <a href="https://github.com/rukshn/web3-lessons">https://github.com/rukshn/web3-lessons</a></p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a href="/tags/crypto/" alt="Crypto">
+        Crypto
+      </a>
+      
+      <a href="/tags/web3/" alt="Web3">
+        Web3
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

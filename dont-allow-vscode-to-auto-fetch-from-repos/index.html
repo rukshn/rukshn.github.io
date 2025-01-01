@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Don&#39;t allow VSCode to auto fetch from repos</title>
+<meta
+  name="description"
+  content="Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to my GitHub repo."
+/>
+<link rel="canonical" href="http://example.org/dont-allow-vscode-to-auto-fetch-from-repos/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">Don&#39;t allow VSCode to auto fetch from repos</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2021-02-21 10:52:08 &#43;0000 UTC"
+        title='Sun, Feb 21, 2021, 10:52 AM UTC'
+      >
+        21/02/2021 - Estimated reading time: 5 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a class="categories" href="/categories/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p>Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to <a href="https://github.com/rukshn">my GitHub</a> repo.</p>
+<p>During the past 1 month I was hacking a small side project during my free time. Since I’m the only one working on the project I’m the only one who is pushing to the repo.</p>
+<p>Whenever I was pushing commits to my GitHub repo, VS code is showing this popup, with this message. <strong>“would you like code to periodically run <em>git fetch?</em></strong>”</p>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/02/EnHU-mFVQAIzSDd.jpg?resize=1024%2C336&amp;ssl=1" alt=""></p>
+<p>Image stolen from Twitter <a href="https://twitter.com/levelsio/status/1329077610542886915/photo/2">https://twitter.com/levelsio/status/1329077610542886915/photo/2</a></p>
+<p>At the beginning I ignored this message and clicked ask me later. But since it is nagging me during every push to GitHub, since I’m the only one pushing commits to the repo, and thinking that it will warn me when there is conflict between versions, or code. I decided to click yes, allowing VsCode to run git fetch “periodically”.</p>
+<p>I’m using GraphQL for the project, and GraphQL is something that I learned this year (2021). And GraphQL doesn’t have a <em>type</em> to upload a file, I had to dig though the internet for a way and some npm packages to find a suitable package to handle file uploads.</p>
+<p>I finally found out a package, and it took me a whole day to cook a way to work it together with Amazon AWS package to upload a file successfully to an s3 bucket. It was frustrating and took me a whole day, and staying up till around 2am to figure everything and make it work.</p>
+<p>I’m not going in to detail, but first the file was not uploading, and second the uploaded file was corrupted, and had to fix some other bugs before it finally worked.</p>
+<p>So I was happy. On this project I had this habit of committing and pushing everything to GitHub before I went to bed. And since it was 2am in the morning, I didn’t push the commits to GitHub and instead went to bed.</p>
+<p>The next day I started again on the project, did some changes, and when I was testing for the changes, the file uploading function did not work, and was giving an error, which I’m sure I fixed and it worked the other night.</p>
+<p>I thought maybe it was the changes that I just made during the morning that was causing the error, even though it had nothing to do with file uploading, I was adding some features to my GraphQL API.</p>
+<p>I quickly undid some of my changes, ran the program again, still getting the same error, undid some more, still the same error, undid all the work that I did in the morning, still the same error.</p>
+<p>I was dead frustrated, it took me a whole day to figure everything yesterday, and now again I had to work on a file uploading function? Does this has to do with the package I just selected to handle file uploading in GraphQL?</p>
+<p>After checking my GraphQL API, and nothing seemed to work, I decided to take a look at the file uploading module I just created yesterday. And I was surprised to see what I just found.</p>
+<p>Some of the important changes I just did to the file uploading module has be reverted to a previously pushed commit, because I was yet to commit them and push it to GitHub.</p>
+<p>Then I fixed everything again and changed everything to as they were when everything was working fine and finally committed and pushed it to my repo.</p>
+<p>The next thing I did was quickly find a way to turn off the auto fetch, because I was afraid that my project will be taken back a whole day, and all other important changes I just made during the day will be lost (like I said earlier for this project, I had the habit of committing and pushing at the end of the day)</p>
+<h2 id="turn-off-auto-fetch-on-vs-code">Turn off auto fetch on vs code</h2>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/02/Screenshot-2021-02-21-at-10.41.38.png?resize=1024%2C172&amp;ssl=1" alt=""></p>
+<p>Turn off auto fetch on VSCode</p>
+<p>So I went to preferences, searched fetch, and it will show the auto fetch option. I opened the settings.json and set auto fetch to false. Now that it won’t fetch commits from the repo and changing my code without my notice.</p>
+<p>I’m not an advanced user of Git, I use to track changes, and push them to GitHub, and maybe my idea of fetch was wrong, which I thought it would warn me when there is a difference or conflict in the code.</p>
+<blockquote>
+<p>Fetch just updates your remote tracking branches and doesn&rsquo;t affect your local branches or working copy, so it&rsquo;s safe to do regularly without messing up your work. It&rsquo;s helpful for staying updated when collaborating on a repo with others.</p>
+<p>— Justin Roberts (@roarked) <a href="https://twitter.com/roarked/status/1072979375098744832?ref_src=twsrc%5Etfw">December 12, 2018</a></p>
+</blockquote>
+<p>While according to Justin even though it did not affect my local branch, here it did affected my local branch, and if anyone is using auto fetch feature on GitHub please let me know in the comments so I can learn and improve my VSCode skills.</p>
+<p>I guess until I figure the importance of this feature, it is better to keep the auto fetch as false and fetch manually when it is only required.</p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a href="/tags/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

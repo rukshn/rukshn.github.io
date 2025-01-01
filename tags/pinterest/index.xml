@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pinterest on Rukshan&#39;s Blog</title>
+    <link>http://example.org/tags/pinterest/</link>
+    <description>Recent content in Pinterest on Rukshan&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Tue, 05 Jan 2021 10:40:46 +0000</lastBuildDate>
+    <atom:link href="http://example.org/tags/pinterest/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>You might want to block Pinterest to save your data</title>
+      <link>http://example.org/you-might-want-to-block-pinterest-to-save-your-data/</link>
+      <pubDate>Tue, 05 Jan 2021 10:40:46 +0000</pubDate>
+      <guid>http://example.org/you-might-want-to-block-pinterest-to-save-your-data/</guid>
+      <description>&lt;p&gt;&lt;em&gt;I guess this is the first blog post of the new year, even though I’m not someone who is keen on celebrating a new year, I sincerely hope every one would have a very bright 2021.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

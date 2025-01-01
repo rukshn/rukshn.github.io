@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>XForm and XLSFrom Standards are Preventing The Progress of Digital Health</title>
+<meta
+  name="description"
+  content="Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards."
+/>
+<link rel="canonical" href="http://example.org/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">XForm and XLSFrom Standards are Preventing The Progress of Digital Health</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2023-10-31 16:25:16 &#43;0000 UTC"
+        title='Tue, Oct 31, 2023, 4:25 PM UTC'
+      >
+        31/10/2023 - Estimated reading time: 6 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a class="categories" href="/categories/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a class="categories" href="/categories/javascript/" alt="JavaScript">
+        JavaScript
+      </a>
+      
+      <a class="categories" href="/categories/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p>Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.</p>
+<h2 id="scenario">Scenario</h2>
+<p>Let me take the most common scenario: a healthcare facility survey. Social workers or conductors of the survey go to the healthcare institute, with a tablet or a mobile device. They load the survey questionnaire from a remote server and then collect the data. The data gets submitted to the server online or collected offline at the site and then synced with the server later.</p>
+<p>The survey questionnaire can be a simple survey with a static set of fields, or can be a complex questionnaire with hundreds of questions plus lots of skip logic, and calculations along the way. As developers, it won’t be a difficult task to create forms like this in JavaScript. But imagine having to develop something with no coding or HTML knowledge, and one institute can conduct more than one survey and might have the need to create a number of surveys per year. Plus in a low-resource country with little or no budget to hire developers.</p>
+<h3 id="the-standard">The Standard</h3>
+<p>Currently, the defacto standard used to create forms for surveys like these is the XForms standard. And people use another standard called XLS forms. Where you can create forms with a very crude language, and add logic to the elements and group of elements with its own pseudo-language, which will generate the skip logic.</p>
+<p>The logic in an XLS form looks like this,</p>
+<pre tabindex="0"><code>if(${gender}=&#39;female&#39; and ${p_age}&gt;=24,41.2622536519346-2.2807946589665*${p_height}+0.0513162082758347*pow(${p_height},2)-0.000532227017487036*pow(${p_height},3)+0.00000267880129591717*pow(${p_height},4)-0.00000000502269777541732*pow(${p_height},5), 0)
+</code></pre><p>Everything you do is based on Excel, and you will need to have the specific Excel columns and follow a strict pattern to generate the skip logic and correct form rendering. This XLS form can then be converted to XForms using tools like ODK (which I will talk about in the next section), and rendered on a device. This is a simple and intuitive way to create simple forms with no knowledge of HTML and JavaScript.</p>
+<p>The way these tools collect and store data, also hinders how the data can be shared with other systems with using modern standards like FHIR. And with the lock-in these tools have on the data collection space, and their delay to adopt modern standards like FHIR also hinders interoperability and data sharing.</p>
+<h2 id="the-problem">The Problem</h2>
+<p>The problem arises when the questionnaires become complex, with an increasing number of questions and skip logic. As the logic gets complex, the conditions increase in length and are difficult to manage, and everything snowballs into chaos</p>
+<ul>
+<li>No IDEs or tools. Everything has to be done by hand.</li>
+<li>Everything has to be in the same cell, there is no way to go to a different cell, or row as if you’re coding.</li>
+<li>No type checks or syntax checks, everything is done in Excel.</li>
+<li>Finding errors can become a nightmare and it’s like a needle in a haystack.</li>
+<li>Cyclic dependencies</li>
+<li>I’ve also seen some logic becoming so complex, it hits the character limit for a cell in excel.</li>
+<li>One small modification somewhere can crash everything and form from rendering.</li>
+</ul>
+<p>Once someone generates a proper XLS file, it will be uploaded to one of the software servers mentioned below and gets generated into Xfrom which is used to collect data. Creating these files can take an unbelievably long time.</p>
+<p>Sometimes WHO itself publishes the questionnaire in XLSForms and XFroms standard because they are widely being used in countries. Countries also find it extremely difficult to modify these forms for the reasons mentioned above, because XLSFroms are not a proper standard or a language. One has to come to the digital health landscape to see how this is slowing down the adaptation of proper standards and digital health.</p>
+<h2 id="the-software">The Software</h2>
+<p>Data collection tools like ODK, Kobo, and CHT are using these standards, and they have been established as the de facto tools for data collection in healthcare surveys.</p>
+<p>And countries have been using these tools for a really long period, it has become really difficult to replace them with something better. As there are people who are used to collecting data using these tools, countries are reluctant to replace and train people with different tools.</p>
+<p>The tools, even though they are open source, do not adopt proper interoperability standards, making it extremely difficult to exchange the data with other systems. The tools also do not seem to innovate and replace the XLSform with something better.</p>
+<p>And it’s one of those niche corners where XForms are still widely being used and one reason for the existence of Xforms and XLSForms..</p>
+<p>Finally, now there is a symbiotic relationship between these tools, and an old standard XForms and pseudo standard (XLS Forms). And one is kept alive because of the other. And there is no progress and in the field of health survey data collection. And even with all the issues, XLSFroms provides a semi no-code solution for countries to develop forms without the need to invest time and money on developers or solutions.</p>
+<h2 id="the-solution">The Solution</h2>
+<p>In my research during last week, I was unable to find a proper replacement for XForms and XLSForms. I found one repository from 2016, that tried to replace XLSfroms with a JSON structure called JSON forms, but it has not received any update since 2016.</p>
+<p>But what JSON forms did not understand is that what adds value to XLSfroms is the ability to add skip logic, and render forms dynamically depending on previous user inputs. Which has not been addressed in JSON forms. The ability to add logic without the need to learn JavaScript or HTML and generate complex web forms.</p>
+<p>I think there should be a tool that allows people to generate web forms with skip logic, ideally a graphical UI, which outputs a standard HTML web form with JavaScript to add logic. I know there are survey tools that can add basic logic, but these forms have complex logic that can depend on responses collected at different stages of data collection.</p>
+<p>These HTML forms can then be sent to a tablet or mobile device for data collection in the field.</p>
+<p>In summery the solution should be a,</p>
+<ul>
+<li>A no-code tool that can easily create web forms.</li>
+<li>Ability to add complex logic depending on previous responses and dynamically generate forms.</li>
+<li>Ability to add this logic without coding in JavaScript with minimal syntax or GUI like people currently add logic in Excel.</li>
+<li>Push the form to a tablet or a mobile device.</li>
+<li>Collect the responses in a central server and share with other services to generate reports.</li>
+</ul>
+<p>As someone working in digital health field, it can be really frustrating to see when we are living in an age of generative AI, and an abundance of really smart coders. But on the other spectrum, we tend to struggle to have a proper tool that generates forms for data collection based on real web standards.</p>
+<p>I really hope one comes up with such a tool. I’d love to listen to your recommendations and feedback in the comments.</p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a href="/tags/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a href="/tags/javascript/" alt="JavaScript">
+        JavaScript
+      </a>
+      
+      <a href="/tags/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

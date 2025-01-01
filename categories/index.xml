@@ -1,0 +1,510 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Rukshan&#39;s Blog</title>
+    <link>http://example.org/categories/</link>
+    <description>Recent content in Categories on Rukshan&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Thu, 26 Dec 2024 08:10:20 +0000</lastBuildDate>
+    <atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Academia</title>
+      <link>http://example.org/categories/academia/</link>
+      <pubDate>Thu, 26 Dec 2024 08:10:20 +0000</pubDate>
+      <guid>http://example.org/categories/academia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DigitalHealth</title>
+      <link>http://example.org/categories/digitalhealth/</link>
+      <pubDate>Fri, 25 Oct 2024 05:49:10 +0000</pubDate>
+      <guid>http://example.org/categories/digitalhealth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Health Informatics</title>
+      <link>http://example.org/categories/health-informatics/</link>
+      <pubDate>Fri, 25 Oct 2024 05:49:10 +0000</pubDate>
+      <guid>http://example.org/categories/health-informatics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ideas</title>
+      <link>http://example.org/categories/ideas/</link>
+      <pubDate>Fri, 25 Oct 2024 05:49:10 +0000</pubDate>
+      <guid>http://example.org/categories/ideas/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Life</title>
+      <link>http://example.org/categories/life/</link>
+      <pubDate>Fri, 25 Oct 2024 05:49:10 +0000</pubDate>
+      <guid>http://example.org/categories/life/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rants</title>
+      <link>http://example.org/categories/rants/</link>
+      <pubDate>Fri, 25 Oct 2024 05:49:10 +0000</pubDate>
+      <guid>http://example.org/categories/rants/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Google</title>
+      <link>http://example.org/categories/google/</link>
+      <pubDate>Sat, 29 Jun 2024 10:43:03 +0000</pubDate>
+      <guid>http://example.org/categories/google/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Internet</title>
+      <link>http://example.org/categories/internet/</link>
+      <pubDate>Sat, 29 Jun 2024 10:43:03 +0000</pubDate>
+      <guid>http://example.org/categories/internet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Digital Health</title>
+      <link>http://example.org/categories/digital-health/</link>
+      <pubDate>Sun, 09 Jun 2024 11:20:30 +0000</pubDate>
+      <guid>http://example.org/categories/digital-health/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Switzerland</title>
+      <link>http://example.org/categories/switzerland/</link>
+      <pubDate>Sun, 09 Jun 2024 11:20:30 +0000</pubDate>
+      <guid>http://example.org/categories/switzerland/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AI</title>
+      <link>http://example.org/categories/ai/</link>
+      <pubDate>Sat, 01 Jun 2024 09:39:41 +0000</pubDate>
+      <guid>http://example.org/categories/ai/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blockchain</title>
+      <link>http://example.org/categories/blockchain/</link>
+      <pubDate>Sat, 01 Jun 2024 09:39:41 +0000</pubDate>
+      <guid>http://example.org/categories/blockchain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Startup</title>
+      <link>http://example.org/categories/startup/</link>
+      <pubDate>Sat, 01 Jun 2024 09:39:41 +0000</pubDate>
+      <guid>http://example.org/categories/startup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Work</title>
+      <link>http://example.org/categories/work/</link>
+      <pubDate>Sat, 01 Jun 2024 09:39:41 +0000</pubDate>
+      <guid>http://example.org/categories/work/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Import 2024-04-25 23:03</title>
+      <link>http://example.org/categories/import-2024-04-25-2303/</link>
+      <pubDate>Thu, 25 Apr 2024 11:46:20 +0000</pubDate>
+      <guid>http://example.org/categories/import-2024-04-25-2303/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wordpress</title>
+      <link>http://example.org/categories/wordpress/</link>
+      <pubDate>Thu, 25 Apr 2024 11:46:20 +0000</pubDate>
+      <guid>http://example.org/categories/wordpress/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Coding</title>
+      <link>http://example.org/categories/coding/</link>
+      <pubDate>Sat, 03 Feb 2024 15:43:42 +0000</pubDate>
+      <guid>http://example.org/categories/coding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>JavaScript</title>
+      <link>http://example.org/categories/javascript/</link>
+      <pubDate>Tue, 31 Oct 2023 16:25:16 +0000</pubDate>
+      <guid>http://example.org/categories/javascript/</guid>
+      <description>&lt;p&gt;Description&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>DHIS2</title>
+      <link>http://example.org/categories/dhis2/</link>
+      <pubDate>Sun, 25 Jun 2023 00:29:17 +0000</pubDate>
+      <guid>http://example.org/categories/dhis2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>FHIR</title>
+      <link>http://example.org/categories/fhir/</link>
+      <pubDate>Sun, 25 Jun 2023 00:29:17 +0000</pubDate>
+      <guid>http://example.org/categories/fhir/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Interoperability</title>
+      <link>http://example.org/categories/interoperability/</link>
+      <pubDate>Sun, 25 Jun 2023 00:29:17 +0000</pubDate>
+      <guid>http://example.org/categories/interoperability/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apache-Superset</title>
+      <link>http://example.org/categories/apache-superset/</link>
+      <pubDate>Sat, 11 Mar 2023 22:23:24 +0000</pubDate>
+      <guid>http://example.org/categories/apache-superset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Geojson</title>
+      <link>http://example.org/categories/geojson/</link>
+      <pubDate>Sat, 11 Mar 2023 22:23:24 +0000</pubDate>
+      <guid>http://example.org/categories/geojson/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Superset</title>
+      <link>http://example.org/categories/superset/</link>
+      <pubDate>Sat, 11 Mar 2023 22:23:24 +0000</pubDate>
+      <guid>http://example.org/categories/superset/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Health Systems</title>
+      <link>http://example.org/categories/health-systems/</link>
+      <pubDate>Fri, 10 Feb 2023 01:23:32 +0000</pubDate>
+      <guid>http://example.org/categories/health-systems/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Informatics</title>
+      <link>http://example.org/categories/informatics/</link>
+      <pubDate>Fri, 10 Feb 2023 01:23:32 +0000</pubDate>
+      <guid>http://example.org/categories/informatics/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DevOps</title>
+      <link>http://example.org/categories/devops/</link>
+      <pubDate>Mon, 26 Dec 2022 16:47:59 +0000</pubDate>
+      <guid>http://example.org/categories/devops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bigdata</title>
+      <link>http://example.org/categories/bigdata/</link>
+      <pubDate>Fri, 16 Dec 2022 22:37:55 +0000</pubDate>
+      <guid>http://example.org/categories/bigdata/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data</title>
+      <link>http://example.org/categories/data/</link>
+      <pubDate>Fri, 16 Dec 2022 22:37:55 +0000</pubDate>
+      <guid>http://example.org/categories/data/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Visualization</title>
+      <link>http://example.org/categories/data-visualization/</link>
+      <pubDate>Fri, 16 Dec 2022 22:37:55 +0000</pubDate>
+      <guid>http://example.org/categories/data-visualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Open-Souce</title>
+      <link>http://example.org/categories/open-souce/</link>
+      <pubDate>Fri, 16 Dec 2022 22:37:55 +0000</pubDate>
+      <guid>http://example.org/categories/open-souce/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Facebook</title>
+      <link>http://example.org/categories/facebook/</link>
+      <pubDate>Mon, 26 Sep 2022 10:41:58 +0000</pubDate>
+      <guid>http://example.org/categories/facebook/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>WhatsApp</title>
+      <link>http://example.org/categories/whatsapp/</link>
+      <pubDate>Mon, 26 Sep 2022 10:41:58 +0000</pubDate>
+      <guid>http://example.org/categories/whatsapp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blog</title>
+      <link>http://example.org/categories/blog/</link>
+      <pubDate>Tue, 30 Aug 2022 11:51:37 +0000</pubDate>
+      <guid>http://example.org/categories/blog/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blogging</title>
+      <link>http://example.org/categories/blogging/</link>
+      <pubDate>Tue, 30 Aug 2022 11:51:37 +0000</pubDate>
+      <guid>http://example.org/categories/blogging/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Data Protection</title>
+      <link>http://example.org/categories/data-protection/</link>
+      <pubDate>Fri, 26 Aug 2022 10:45:13 +0000</pubDate>
+      <guid>http://example.org/categories/data-protection/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sri Lanka</title>
+      <link>http://example.org/categories/sri-lanka/</link>
+      <pubDate>Fri, 26 Aug 2022 10:45:13 +0000</pubDate>
+      <guid>http://example.org/categories/sri-lanka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bitcoin</title>
+      <link>http://example.org/categories/bitcoin/</link>
+      <pubDate>Tue, 14 Jun 2022 13:29:06 +0000</pubDate>
+      <guid>http://example.org/categories/bitcoin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Crypto</title>
+      <link>http://example.org/categories/crypto/</link>
+      <pubDate>Tue, 14 Jun 2022 13:29:06 +0000</pubDate>
+      <guid>http://example.org/categories/crypto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web3</title>
+      <link>http://example.org/categories/web3/</link>
+      <pubDate>Tue, 17 May 2022 23:35:59 +0000</pubDate>
+      <guid>http://example.org/categories/web3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hacking</title>
+      <link>http://example.org/categories/hacking/</link>
+      <pubDate>Tue, 03 May 2022 11:59:40 +0000</pubDate>
+      <guid>http://example.org/categories/hacking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nostalgia</title>
+      <link>http://example.org/categories/nostalgia/</link>
+      <pubDate>Wed, 01 Sep 2021 01:01:01 +0000</pubDate>
+      <guid>http://example.org/categories/nostalgia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Development</title>
+      <link>http://example.org/categories/web-development/</link>
+      <pubDate>Sun, 22 Aug 2021 00:26:39 +0000</pubDate>
+      <guid>http://example.org/categories/web-development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Instagram</title>
+      <link>http://example.org/categories/instagram/</link>
+      <pubDate>Thu, 22 Jul 2021 12:10:52 +0000</pubDate>
+      <guid>http://example.org/categories/instagram/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Buddhism</title>
+      <link>http://example.org/categories/buddhism/</link>
+      <pubDate>Tue, 20 Jul 2021 15:06:27 +0000</pubDate>
+      <guid>http://example.org/categories/buddhism/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Memories</title>
+      <link>http://example.org/categories/memories/</link>
+      <pubDate>Fri, 16 Jul 2021 11:11:56 +0000</pubDate>
+      <guid>http://example.org/categories/memories/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>CSS</title>
+      <link>http://example.org/categories/css/</link>
+      <pubDate>Sat, 01 May 2021 13:58:49 +0000</pubDate>
+      <guid>http://example.org/categories/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Webdevelopment</title>
+      <link>http://example.org/categories/webdevelopment/</link>
+      <pubDate>Sat, 01 May 2021 13:58:49 +0000</pubDate>
+      <guid>http://example.org/categories/webdevelopment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Clubhouse</title>
+      <link>http://example.org/categories/clubhouse/</link>
+      <pubDate>Tue, 06 Apr 2021 12:10:29 +0000</pubDate>
+      <guid>http://example.org/categories/clubhouse/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Social Networking</title>
+      <link>http://example.org/categories/social-networking/</link>
+      <pubDate>Tue, 30 Mar 2021 01:22:28 +0000</pubDate>
+      <guid>http://example.org/categories/social-networking/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PickMe</title>
+      <link>http://example.org/categories/pickme/</link>
+      <pubDate>Tue, 02 Mar 2021 15:53:57 +0000</pubDate>
+      <guid>http://example.org/categories/pickme/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uber</title>
+      <link>http://example.org/categories/uber/</link>
+      <pubDate>Tue, 02 Mar 2021 15:53:57 +0000</pubDate>
+      <guid>http://example.org/categories/uber/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>http://example.org/categories/programming/</link>
+      <pubDate>Fri, 26 Feb 2021 20:40:36 +0000</pubDate>
+      <guid>http://example.org/categories/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorials</title>
+      <link>http://example.org/categories/tutorials/</link>
+      <pubDate>Tue, 23 Feb 2021 22:40:24 +0000</pubDate>
+      <guid>http://example.org/categories/tutorials/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vue</title>
+      <link>http://example.org/categories/vue/</link>
+      <pubDate>Tue, 23 Feb 2021 22:40:24 +0000</pubDate>
+      <guid>http://example.org/categories/vue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Privacy</title>
+      <link>http://example.org/categories/privacy/</link>
+      <pubDate>Wed, 17 Feb 2021 22:38:06 +0000</pubDate>
+      <guid>http://example.org/categories/privacy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Advertising</title>
+      <link>http://example.org/categories/advertising/</link>
+      <pubDate>Wed, 03 Feb 2021 15:18:02 +0000</pubDate>
+      <guid>http://example.org/categories/advertising/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apple</title>
+      <link>http://example.org/categories/apple/</link>
+      <pubDate>Wed, 03 Feb 2021 15:18:02 +0000</pubDate>
+      <guid>http://example.org/categories/apple/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Chat</title>
+      <link>http://example.org/categories/chat/</link>
+      <pubDate>Sun, 31 Jan 2021 10:53:51 +0000</pubDate>
+      <guid>http://example.org/categories/chat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Signal</title>
+      <link>http://example.org/categories/signal/</link>
+      <pubDate>Sun, 31 Jan 2021 10:53:51 +0000</pubDate>
+      <guid>http://example.org/categories/signal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Telegram</title>
+      <link>http://example.org/categories/telegram/</link>
+      <pubDate>Sun, 31 Jan 2021 10:53:51 +0000</pubDate>
+      <guid>http://example.org/categories/telegram/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Passwords</title>
+      <link>http://example.org/categories/passwords/</link>
+      <pubDate>Thu, 28 Jan 2021 11:55:50 +0000</pubDate>
+      <guid>http://example.org/categories/passwords/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>GraphQL</title>
+      <link>http://example.org/categories/graphql/</link>
+      <pubDate>Wed, 27 Jan 2021 20:54:01 +0000</pubDate>
+      <guid>http://example.org/categories/graphql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NuxtJs</title>
+      <link>http://example.org/categories/nuxtjs/</link>
+      <pubDate>Wed, 27 Jan 2021 20:54:01 +0000</pubDate>
+      <guid>http://example.org/categories/nuxtjs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>LinkedIn</title>
+      <link>http://example.org/categories/linkedin/</link>
+      <pubDate>Mon, 18 Jan 2021 11:03:59 +0000</pubDate>
+      <guid>http://example.org/categories/linkedin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Email</title>
+      <link>http://example.org/categories/email/</link>
+      <pubDate>Sat, 09 Jan 2021 13:04:38 +0000</pubDate>
+      <guid>http://example.org/categories/email/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pinterest</title>
+      <link>http://example.org/categories/pinterest/</link>
+      <pubDate>Tue, 05 Jan 2021 10:40:46 +0000</pubDate>
+      <guid>http://example.org/categories/pinterest/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reddit</title>
+      <link>http://example.org/categories/reddit/</link>
+      <pubDate>Thu, 31 Dec 2020 11:54:54 +0000</pubDate>
+      <guid>http://example.org/categories/reddit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Twitter</title>
+      <link>http://example.org/categories/twitter/</link>
+      <pubDate>Sun, 27 Dec 2020 14:45:09 +0000</pubDate>
+      <guid>http://example.org/categories/twitter/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Code</title>
+      <link>http://example.org/categories/code/</link>
+      <pubDate>Thu, 24 Dec 2020 14:25:56 +0000</pubDate>
+      <guid>http://example.org/categories/code/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uncategories</title>
+      <link>http://example.org/categories/uncategories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://example.org/categories/uncategories/</guid>
+      <description>&lt;p&gt;Description&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

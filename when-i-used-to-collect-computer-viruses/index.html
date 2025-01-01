@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>When I used to collect computer viruses</title>
+<meta
+  name="description"
+  content="Today I was having a lecture about information security and information security law. I just started the module and this is the third lecture about the topic. And todays lecture was about different IT threats that an health information system would face. The lecture mainly revolved around malware. During the lecture, the teacher told a point that most malware today are written for profit, and ransomware are popular today because it’s a get rich scheme for malware writers."
+/>
+<link rel="canonical" href="http://example.org/when-i-used-to-collect-computer-viruses/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">When I used to collect computer viruses</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2021-09-01 01:01:01 &#43;0000 UTC"
+        title='Wed, Sep 1, 2021, 1:01 AM UTC'
+      >
+        01/09/2021 - Estimated reading time: 4 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a class="categories" href="/categories/hacking/" alt="Hacking">
+        Hacking
+      </a>
+      
+      <a class="categories" href="/categories/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a class="categories" href="/categories/life/" alt="Life">
+        Life
+      </a>
+      
+      <a class="categories" href="/categories/nostalgia/" alt="Nostalgia">
+        Nostalgia
+      </a>
+      
+      <a class="categories" href="/categories/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p>Today I was having a lecture about information security and information security law. I just started the module and this is the third lecture about the topic. And todays lecture was about different IT threats that an health information system would face. The lecture mainly revolved around malware. During the lecture, the teacher told a point that most malware today are written for profit, and ransomware are popular today because it’s a get rich scheme for malware writers.</p>
+<p>This made me think about the time where malware was made for fun, or to disrupt system, and rarely for a profit. So I want to share some stories to remember those good old days.</p>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/09/img_0283.jpg?resize=1024%2C533&amp;ssl=1" alt=""></p>
+<p>Too bad you can’t write these script viruses anymore.</p>
+<p>This was around 2002, I remember seeing on news sometime back about the LoveBug virus and hearing that it was written as a prank and got released by an accident made me fall in love with malware. I was a teenager, naive, and looking for an adventure.</p>
+<h2 id="collecting-computer-viruses"><strong>Collecting</strong> computer viruses</h2>
+<p>I don’t know about you, but back in the day I used to have a collection of different computer viruses.</p>
+<p>So how did I collect malware? Back in the day virus guards (Remember Norton Antivirus?) had the feature to quarantine files, so the virus guard will store the files in a quarantine bin so they can’t harm the system, but at the same time you can restore these files like you are restoring a file from the recycle bin anytime you want.</p>
+<p>How did I get these viruses? Well, mainly though floppy disks, and from my computer class. Sometimes friends who knew that I collected them used to give me these files if they</p>
+<p>So what did I do, well I loved showing it off to my friends. It was like a collection of stamps, but more harmful. I had a really nice collection of viruses, worms etc. There is this one occasion where I restored one virus (I think it was the die hard virus) to a floppy disk which I gave to my neighbor together with some other program.</p>
+<p>Few days later I remember the neighbor coming to my place asking for help to fix her computer. The virus has made her CD rom disappears from MyComputer. And she can’t access a CD. See back in the days viruses were more fun and not about profit. I helped her to fix her computer, how ever I got grounded by my mother.</p>
+<p>Even though I loved malware as a teen, and always wanted to create one, in 2002 by knowledge in programming was mainly about MS-BASIC and I didn’t have the programming knowledge to create a malware.</p>
+<h2 id="writing-my-own-computer-virus">Writing my own <strong>computer</strong> virus</h2>
+<p>Then around 2005, I learned Visual Basic 6. And i was able to create computer programs which ran on Windows.</p>
+<p>While I was making simple to complex programs which ran on Windows, at the same time I wanted to create a computer virus. This is the time where I started programming my first computer virus.</p>
+<p>The first computer virus that I made was a very simple one. Once executed, it will copy from the floppy disk to the hard drive, make a copy to the startup folder at the start menu, so that it will execute automatically on system startup, it will copy itself to a floppy disk once inserted.</p>
+<p>However, the most important thing it did was copy Explorer.exe file located in windows folder over no over again in an infinite loop until your hard drive will be full in an infinite loop.</p>
+<p>The owner won’t know this unless he checked his Windows folder, and the hard drive will slowly get full, chocking your computer to a slow halt and once your hard disk is full you won’t be able even move your mouse.</p>
+<p>I wrote this in one week, and one weekend I planted the virus on my computer classroom. I planted it to be executed on the next day (I scheduled it as a task). I also ran the program on a computer while I was working at the computer class, and watched it slowly come to a halt.</p>
+<p>It never went beyond that, being destructive means it also reduced its chance of infecting someone else. But it sure was fun.</p>
+<p>Oh, writing all this just brings the nostalgia inside of me. I will share more mis-adventures that I had in future posts.</p>
+<p>So my question is, have you collected computer viruses? Have you ever tried to program one. Not for money or destruction, but for fun.</p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a href="/tags/hacking/" alt="Hacking">
+        Hacking
+      </a>
+      
+      <a href="/tags/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a href="/tags/life/" alt="Life">
+        Life
+      </a>
+      
+      <a href="/tags/nostalgia/" alt="Nostalgia">
+        Nostalgia
+      </a>
+      
+      <a href="/tags/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

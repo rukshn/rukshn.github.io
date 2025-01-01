@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How to setup Glassfish server for Java web app deployment</title>
+<meta
+  name="description"
+  content="Recently I had to locally run a JavaEE web app so I can contribute to the project. However, it was my first time trying to run a Java web app locally, or even remotely. I know it was easy to deploy it using NetBeans because it has been developed with NetBeans and Glassfish. However, I wanted to run it without NetBeans because I don’t have NetBeans setup on my computer and I NetBeans currently doesn’t have the native M1 support."
+/>
+<link rel="canonical" href="http://example.org/how-to-setup-glassfish-server-for-java-web-app-deployment/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">How to setup Glassfish server for Java web app deployment</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2021-08-07 21:54:11 &#43;0000 UTC"
+        title='Sat, Aug 7, 2021, 9:54 PM UTC'
+      >
+        07/08/2021 - Estimated reading time: 5 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p>Recently I had to locally run a JavaEE web app so I can contribute to the project. However, it was my first time trying to run a Java web app locally, or even remotely. I know it was easy to deploy it using NetBeans because it has been developed with NetBeans and Glassfish. However, I wanted to run it without NetBeans because I don’t have NetBeans setup on my computer and I NetBeans currently doesn’t have the native M1 support.</p>
+<p>After some googling and reading though hours of different tutorials, StackOverflow answers, troubleshooting various problems I was able to setup the web app on my computer.</p>
+<p>Now that I got it working, I decided to write this post combining everything so that someone who wants to deploy a Java web app on Glassfish remotely or locally can get some idea on how to do it.</p>
+<p>I’ll be writing on how to deploy it on a remote server (a DigitalOcean Droplet) but you can follow the same steps for deploying it on your localhost.</p>
+<h2 id="setup-a-lamp-server">Setup a LAMP server</h2>
+<p>If your web app is using MySql, it’s easy to get started with a LAMP server (Linux, Apache, MySql, PHP).</p>
+<p>When you create a new droplet on DigitalOcean you can easily select a LAMP server from their market place. It install the current stable Ubuntu LTS version, and automatically open up port 80 for web traffic and install MySql and setup a user and you can manipulate the database with it.</p>
+<p>You can get more details about the LAMP server on DigitalOcean here – <a href="https://marketplace.digitalocean.com/apps/lamp">https://marketplace.digitalocean.com/apps/lamp</a></p>
+<p>I don’t think Apache and PHP is necessary, and you can use a different database management system instead of MySql. But it’s easy to set up a LAMP server, on DigitalOcean on a computer, but it’s not a must. Simply having Ubuntu or any other Linux distro would be enough.</p>
+<h2 id="install-java-jdk">Install Java, JDK</h2>
+<p>I ran into a small problem at this point. There are different <em>“branches”</em> of GlassFish available out there. If you search on Google you will find the following page as its top result. <a href="https://javaee.github.io/glassfish/">https://javaee.github.io/glassfish/</a>. However, this branch hasn’t been updated since 2019, and you can download GlassFish version 5 from the following website.</p>
+<p>The latest update of GlassFish are available on Eclipse foundation website – <a href="https://projects.eclipse.org/projects/ee4j.glassfish/downloads">https://projects.eclipse.org/projects/ee4j.glassfish/downloads</a></p>
+<p>On the Eclipse foundation website you will be able to download the newest version of GlassFish which is GlassFish 6.2 at the time of writing.</p>
+<p>GlassFish 5 only supports JDK 1.8, Java 8 and will not work on the latest Java version at the time of writing which is Java 11.</p>
+<p>GlassFish 6 on the other hand will support JDK 1.11, Java 11.</p>
+<p>Depending on the version of the GlassFish that you are going to use, install Java 8 or Java 11. You can do it with the following commands.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo apt update
+</span></span><span style="display:flex;"><span>    sudo apt install openjdk-11-jdk
+</span></span><span style="display:flex;"><span>    java -version
+</span></span></code></pre></div><p>This should show your Java version as follows.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    openjdk version <span style="color:#f1fa8c">&#34;11.0.7&#34;</span>.....
+</span></span></code></pre></div><p>If you are using GlassFish 5, install Java version 8.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo apt update
+</span></span><span style="display:flex;"><span>    sudo apt install openjdk-8-jdk
+</span></span><span style="display:flex;"><span>    java -version
+</span></span></code></pre></div><p>And your Java version should be like this</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    openjdk version <span style="color:#f1fa8c">&#34;1.8.0_191&#34;</span>....
+</span></span></code></pre></div><h2 id="install-glassfish">Install Glassfish</h2>
+<p>Now it’s time to install Glassfish, depending on the version of Java that you installed, install the appropriate Glassfish version.</p>
+<p>If you are installing Glassfish 5</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    wget http://download.oracle.com/glassfish/5.0.1/release/glassfish-5.0.1-web.zip
+</span></span></code></pre></div><p>If you are installing Glassfish 6</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    wget https://download.eclipse.org/ee4j/glassfish/web-6.2.0.zip
+</span></span></code></pre></div><p>Unzip your Glassfish download. I suggest you unzip it to the <code>/opt/</code> folder</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo mv web-6.2.0.zip /opt/
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">cd</span> /opt/
+</span></span><span style="display:flex;"><span>    sudo unzip web-6.2.0.zip
+</span></span></code></pre></div><p>If unzip ins not install you can install unzip on Ubuntu like this, if it’s not already installed,</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo apt update
+</span></span><span style="display:flex;"><span>    sudo apt install unzip
+</span></span></code></pre></div><h2 id="setting-up-glassfish">Setting up Glassfish</h2>
+<p>Create a new service file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo vim /etc/systemd/system/glassfish.service
+</span></span></code></pre></div><p>Enter the following details to your Glassfish.service file and make sure to use the path where you extracted the Glassfish zip file. The below file assumes that you have used Glassfish version 5 and you have extracted Glassfish zip file to <code>/opt/</code> folder.</p>
+<p>If you are using Glassfish 6 change <code>glassfish5</code> to <code>glassfish6</code></p>
+<pre tabindex="0"><code>    [Unit]
+    Description = GlassFish Server v5.0
+    After = syslog.target network.target
+    
+    [Service]
+    ExecStart=/opt/glassfish5/bin/asadmin start-domain
+    ExecReload=/opt/glassfish5/bin/asadmin restart-domain
+    ExecStop=/opt/glassfish5/bin/asadmin stop-domain
+    Type = forking
+    
+    [Install]
+    WantedBy = multi-user.target
+</code></pre><p>Save the file and reload the system services.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo systemctl daemon-reload
+</span></span></code></pre></div><p>Enable Glassfish at boot</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo systemctl <span style="color:#8be9fd;font-style:italic">enable</span> glassfish
+</span></span></code></pre></div><p>To start Glassfish</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo systemctl start glassfish
+</span></span></code></pre></div><p>To stop Glassfish</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo systemctl stop glassfish
+</span></span></code></pre></div><p>Restart Glassfish</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    sudo systemctl restart glassfish
+</span></span></code></pre></div><p>After starting Glassfish server you will be able to access though the following address</p>
+<pre tabindex="0"><code>    http://&lt;your-digital-ocean-ip&gt;:8080
+    http://localhost:8080
+</code></pre><p>You can also access Glassfish admin console by visiting the port 4848</p>
+<pre tabindex="0"><code>    http://&lt;your-digital-ocean-ip&gt;:4848
+    http://localhost:4848
+</code></pre><p>However, you won’t be able to login to the admin console unless you are running it on your localhost. If you are running it on a DigitalOcean Droplet, you won’t be able to access the admin console without enabling secure admin.</p>
+<p>If you are accessing admin console the default username is <strong>admin</strong>. Leave the password field blank.</p>
+<h2 id="open-ports-8080-and-4848">Open ports 8080 and 4848</h2>
+<p>If you are running a DigitalOcean Droplet, usually your 8080 and 4848 ports are not open. You can open them by running the following commands.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    ufw allow <span style="color:#bd93f9">8080</span>
+</span></span><span style="display:flex;"><span>    uff allow <span style="color:#bd93f9">4848</span>
+</span></span></code></pre></div><h2 id="glassfish-enable-secure-admin">Glassfish enable-secure-admin</h2>
+<p>You can enable secure-admin by running the following command.</p>
+<pre tabindex="0"><code>    /opt/glassfish5/bin/asadmin enable-secure-admin
+</code></pre><p>However, I came across this problem where after enabling secure admin I was unable to run any command though the asadmin admin command. I got a security error. This was probably because some certificate key mismatch, and I was unable to find a solution for it.</p>
+<p>However, if you are using this as a development server, which in my case I’m using it for development purposes, or if you are using it on your localhost, then you don’t have to enable secure admin.</p>
+<h2 id="add-glassfish-to-your-path">Add Glassfish to your path</h2>
+<p>You can add Glassfish to your path by using the following command. It will make it possible for you to run Glassfish from (<code>asadmin</code>) anywhere.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">export</span> <span style="color:#8be9fd;font-style:italic">PATH</span><span style="color:#ff79c6">=</span>/opt/glassfish5/bin:<span style="color:#8be9fd;font-style:italic">$PATH</span>
+</span></span></code></pre></div><p>If you did everything correctly, you should be able to see the Glassfish welcome page by visiting your remote server IP/localhost on port 8080.</p>
+<p>This is a basic introduction on how to setup a Glassfish server to deploy a Java web app. Since this post is relatively long, I will write another post on how you can deploy a Java web app on your newly setup Glassfish server.</p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

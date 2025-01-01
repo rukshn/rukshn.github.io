@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>I&#39;m Switching from VS Code to VS Codium</title>
+<meta
+  name="description"
+  content="
+VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code."
+/>
+<link rel="canonical" href="http://example.org/im-switching-form-vs-code-to-vs-codium/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">I&#39;m Switching from VS Code to VS Codium</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2022-06-11 14:50:34 &#43;0000 UTC"
+        title='Sat, Jun 11, 2022, 2:50 PM UTC'
+      >
+        11/06/2022 - Estimated reading time: 4 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a class="categories" href="/categories/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a class="categories" href="/categories/javascript/" alt="JavaScript">
+        JavaScript
+      </a>
+      
+      <a class="categories" href="/categories/life/" alt="Life">
+        Life
+      </a>
+      
+      <a class="categories" href="/categories/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-1.png?resize=1024%2C576&amp;ssl=1" alt=""></p>
+<p>VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.</p>
+<p>Don’t get me wrong, VS Code is a good editor. It has improved since its initial release. But starting this month, I’m switching from VS Code to VS Codium. Allow me to explain,</p>
+<p>VS Codium official website – <a href="https://vscodium.com">https://vscodium.com</a></p>
+<h2 id="is-vs-code-open-source">Is VS Code open source?</h2>
+<p>VS Code, released by Microsoft, is not open-source software. Microsoft is following the open-core model for the VS Code editor, just like how Google is following an open-core model for its Chrome browser. </p>
+<p>In the open core model, the core of the editor gets developed as an open-source project, with the source code for VS Code under the MIT license. However, Microsoft uses this core and modifies it, incorporates its propriety changes, includes <strong>telemetry tracking,</strong> and releases it as a proprietary version with its own licensing that is not a FOSS license, therefore different from the MIT license.</p>
+<p>It is similar to the Chrome browser, where the core of the browser is “Chromium”, an open-source browser developed and released under a FOSS license. Google then modifies it, incorporates proprietary Google services, and releases Chrome as a separate browser.</p>
+<h2 id="what-is-proprietary-about-vs-code">What is proprietary about VS Code?</h2>
+<p>Microsoft modifies VS Code in a way that a non-Microsoft VS Code fork can’t use extensions from the official Microsoft VS Code store. Not only that, some of the VS Code extensions developed and released by Microsoft will only work in the VS Code released by Microsoft and won’t work on non-Microsoft VS Code forks.</p>
+<p>There is nothing wrong with an organization following an open-core principal. Microsoft still has to pay for the developers who contribute to VS Code and other bills associated with VS Code and running the extension store.</p>
+<h2 id="why-i-switched-to-vs-codium">Why I switched to VS Codium?</h2>
+<p>If you want to get the full open-source MIT-licensed VS Code with no telemetry tracking, you will have to download the source code from the repository and build the VS Code on your own.</p>
+<p>It is difficult for most users to build VS Code from the source.</p>
+<p>This is where VS Codium comes in,</p>
+<p>VS Codium is a fully open-source version of the VS Code, without the constraints and tracking that come with Microsoft’s VS Code. The VS Codium team builds VS Code from the source and releases the builds for different platforms under the VS Codium name.</p>
+<p>I wanted to skip all the tracking that comes with VS Code. I was increasingly getting upset about their extension marketplace, where there is an increased number of extensions starting to sell pro versions of the extensions we used for free.</p>
+<h2 id="my-experience-with-vs-codium">My experience with VS Codium</h2>
+<p>Even though I’ve seen VS Codium before, the only thing that kept me from switching was the lack of availability of all the extensions. Extensions that I’ve used to customize my VS Code experience. </p>
+<p>But the extension ecosystem for VS COdium has matured, and almost all the open-source extensions for VS Code are now available for VS Codium under the <a href="https://open-vsx.org/">open-vsx</a> extension marketplace. </p>
+<p>These extensions are uploaded by the official developers or by the community. Now that the extensions I use are available in VS Codium, I made a smooth transition to VS Codium, and there is nothing to complain about.</p>
+<p>The only thing I miss is the “Monokai pro” theme, which I used on VS Code, but I have found a new favourite called <a href="https://open-vsx.org/extension/croccifixio/blackboard-pro">“Blackboard Pro”</a> (it’s free) on Open VSX registry.</p>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-2.png?resize=1024%2C511&amp;ssl=1" alt=""></p>
+<p>Open VS Code extension registry. <a href="https://open-vsx.org">https://open-vsx.org</a>. You can now download all the popular VS Code extensions from the Open VSX registry</p>
+<h2 id="how-to-install-vs-codium">How to install VS Codium?</h2>
+<p>The easiest way to install VS Codium is through the package manages, available for your respective operating systems.</p>
+<h3 id="if-youre-a-windows-user">If you’re a Windows user</h3>
+<pre><code>winget install vscodium
+</code></pre>
+<h3 id="macos-user">macOs user</h3>
+<pre><code>brew install --cask vscodium
+</code></pre>
+<h3 id="linux-ubuntu-user">Linux Ubuntu user</h3>
+<pre><code>sudo apt update &amp;&amp; sudo apt install codium
+</code></pre>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-3.png?resize=1024%2C549&amp;ssl=1" alt=""></p>
+<p>VS Codium after installation. I’ve installed the Blackboard pro theme.</p>
+<h2 id="performance">Performance</h2>
+<p>Performance wise I don’t see a noticeable change, maybe it’s because my MBP and my Windows machine both has enough specs to run VS Codium and VS Code Smoothly, but I’m sure there is a small performance gain because you don’t have telemetry running in the background sending data to Microsoft.</p>
+<p>If you’re a VS Code user, I suggest you to try out VS Codium and see if it works for you as well.</p>
+<hr>
+<p>Follow the discussion on HackerNews – <a href="https://news.ycombinator.com/item?id=31713625">https://news.ycombinator.com/item?id=31713625</a></p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/coding/" alt="Coding">
+        Coding
+      </a>
+      
+      <a href="/tags/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a href="/tags/javascript/" alt="JavaScript">
+        JavaScript
+      </a>
+      
+      <a href="/tags/life/" alt="Life">
+        Life
+      </a>
+      
+      <a href="/tags/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

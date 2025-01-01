@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work on interesting problems. Not interesting technologies - Part 2</title>
+<meta
+  name="description"
+  content="Recently I wrote a short post about why you should work on interesting problems instead of interesting technologies. I never thought that it would reach front page on HN and receive so many responses."
+/>
+<link rel="canonical" href="http://example.org/work-on-interesting-problems-not-interesting-technologies-part-2/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">Work on interesting problems. Not interesting technologies - Part 2</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2021-09-15 18:32:49 &#43;0000 UTC"
+        title='Wed, Sep 15, 2021, 6:32 PM UTC'
+      >
+        15/09/2021 - Estimated reading time: 4 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/life/" alt="Life">
+        Life
+      </a>
+      
+      <a class="categories" href="/categories/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p>Recently I wrote a short post about why you should work on interesting problems instead of interesting technologies. I never thought that it would reach front page on HN and receive so many responses.</p>
+<p>Since I wrote that post in a hurry, I think there are some points that I missed, and some clarifications I had to make in response to some HN comments.</p>
+<p>First of all I want to mention that by saying you should work on interesting problems, not interesting technologies I didn’t mean everyone to go on hobby coding. I know that hobby coding is unlikely to pay your bills and paying bills has to be there before everything else. But what I would like to suggest is even for work, if you get a chance, always try wok for company which is in the field which you are interested in. No matter how boring it maybe.</p>
+<h2 id="the-more-you-work-on-interesting-problems-the-more-likely-you-will-find-more-interesting-problems-to-solve">The more you work on interesting problems, the more likely you will find more interesting problems to solve.</h2>
+<p>For example, if you are interested in the field of online advertising, even though others might think it as a boring field, if you find that field challenging, or if you are interested in solving problems within online advertising, then continue working on it. Even if you don’t have a problem to solve at the moment in that particular field, you are likely to come across one while you are working.</p>
+<p>If you work or learn on cool technology, just because they are cool, or work on a field which you are not genuinely interested in, you are likely to work there because you have to work. And even if you come across an interesting problem, you might not be interested working on it.</p>
+<p>Isn’t it better to do what you truly love solving instead of doing something that you don’t like?</p>
+<p><strong>If you work on what a field or problems that you are genuinely interested in, the higher the chance for you to come across problems that genuinely interest you.</strong></p>
+<h2 id="if-you-work-on-interesting-tech-you-get-blind-by-the-tech">If you work on interesting tech, you get blind by the tech</h2>
+<p>Have you ever come across people who thinks that the solution to every database problem is a “NoSQL” solution? Well, I have come across people who thinks the solution is a NoSQL solution, even though it’s plain to obvious that it’s far easier to implement a relational database model.</p>
+<p>So what is the reason? This is because they have worked, or like working with cool tech just because it is cool. Not because it’s the solution to the problem.</p>
+<p>They try to use the solution they think “cool”, to every problem they come cross. They try to solve the problem backwards. Try to fit the “cool” tech into a problem. Not solving the problem forward, which is analyzing the problem and then try to find a solution. Sometimes it will work, but most of the time it won’t.</p>
+<p>If you work on interesting problems then you will come across not just one but many alternative solutions, and you can decide on the solution that best suites your problem. Not the other way around.</p>
+<p><strong>If you think like hammer, everything around you will look like a nail.</strong> <strong>Use cool tech to solve the problems you want to solve. Not use them because they are cool.</strong></p>
+<h2 id="interesting-problems-leads-to-bigger-ideas">Interesting problems leads to bigger ideas</h2>
+<p>If you look at all the big companies out there, no matter how monoliths they might be today, they were once built on interesting ideas.</p>
+<ul>
+<li>Google – Collecting all the information in the World Wide Web.</li>
+<li>Apple – Building a consumer friendly pc.</li>
+<li>Facebook – Connecting everyone on the internet.</li>
+<li>Amazon – An online marketplace to buy anything you want.</li>
+</ul>
+<p>And the list goes on.</p>
+<p>Even cool tech themselves are built on interesting ideas. However, if you are someone who blindly follows cool tech just because they are cool, you will only be a person who are a “consultant” on a particular field. This itself is not bad. But like I said earlier, if you don’t know how to practically solve a problem, you are just a promoter of a cool tech.</p>
+<p>So no matter how small a problem is, always try to work on a problem which you are genuinely interested in solving. If you don’t have time you can work on during the weekends, or in your spare time. It might look like a toy today. But as Paul Graham once said, the next big thing in 10 years from now will look like a toy today. That’s how Facebook, Google and everything looked like when they all got started.</p>
+<p>II think I wrote everything that I have to say why you should work on interesting problems and ideas, not interesting tech.</p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/life/" alt="Life">
+        Life
+      </a>
+      
+      <a href="/tags/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

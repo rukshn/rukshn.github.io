@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Life</title>
+<meta
+  name="description"
+  content=""
+/>
+<link rel="canonical" href="http://example.org/tags/life/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+
+
+
+<div class="flex flex-col gap-1">
+  <h1 class="text-2xl font-extrabold">
+    
+      Life
+      
+    </h1>
+  
+  
+</div>
+
+<section class="flex flex-col gap-10">
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/my-first-publication-and-my-thoughts-on-academia/">My First Publication and My Thoughts on Academia</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2024-10-25 05:49:10 &#43;0000 UTC" title='Fri, Oct 25, 2024, 5:49 AM UTC'>
+      25/10/2024
+    </time>
+  </span>
+
+  <div class="description">
+    
+      <p>Few years ago I was someone was not interested in academia, I felt as if people are rehashing the same scientific topic in different ways, or publishing every minute thing just to add up to their pile of publications. I never thought I&rsquo;d be able to write a publication under 200 words, the very idea of expressing something meaningful in such a short number of words was something that I could not agree with.</p>
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/my-first-publication-and-my-thoughts-on-academia/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/geneva-digital-health-day-2024/">Geneva Digital Health Day 2024</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2024-06-09 11:20:30 &#43;0000 UTC" title='Sun, Jun 9, 2024, 11:20 AM UTC'>
+      09/06/2024
+    </time>
+  </span>
+
+  <div class="description">
+    
+      <p>The month of May ended me attending the Geneva digital health day, and event following the Geneva health forum. The event was at Campus Biotech, where people get together to talk about the future on digital health.</p>
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/geneva-digital-health-day-2024/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/i-am-trying-to-avoid-ai-these-days/">I&#39;m Trying to Avoid AI These Days</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2024-06-01 09:39:41 &#43;0000 UTC" title='Sat, Jun 1, 2024, 9:39 AM UTC'>
+      01/06/2024
+    </time>
+  </span>
+
+  <div class="description">
+    
+      I feel as if the AI hype has peeked, and I am very skeptical about the AI wave that&rsquo;s happening where majority of the ideas are chatGPT wrappers.
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/i-am-trying-to-avoid-ai-these-days/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/the-art-of-writing-abstracts/">The Art of Writing Abstracts</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2024-04-25 11:46:20 &#43;0000 UTC" title='Thu, Apr 25, 2024, 11:46 AM UTC'>
+      25/04/2024
+    </time>
+  </span>
+
+  <div class="description">
+    
+      <p>I have never been interested in academia and research. I always felt research and academia, or a majority of what people publish is just to fill their profiles with the number of publications. When I think about research, I always think about doing research as something groundbreaking. I remember telling colleagues (and I still do) to read the Page Rank algorithm [<a href="http://infolab.stanford.edu/pub/papers/google.pdf">link</a>, <a href="https://www.cis.upenn.edu/~mkearns/teaching/NetworkedLife/pagerank.pdf">link 2</a>] publication that formed the backbone of Google search in the beginning. I wanted every research or publication to be something like Page Rank.</p>
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/the-art-of-writing-abstracts/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/github-co-pilot-generating-different-outputs-in-different-editors/">GitHub Co-Pilot Generating Different Outputs in Different Editors</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2024-02-03 15:43:42 &#43;0000 UTC" title='Sat, Feb 3, 2024, 3:43 PM UTC'>
+      03/02/2024
+    </time>
+  </span>
+
+  <div class="description">
+    
+      <p>I’ve not been able to write something new lately, in fact, I think this is the first post of the year. So happy new year 2024, insert :tada: emoji. So I’ve been pretty much busy with work, and travelling, networking at conferences, the usual. At the start of 2023, I had never left Sri Lanka in my whole life, but by the end of 2023, I’d visited 5 different countries, including the US.</p>
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/github-co-pilot-generating-different-outputs-in-different-editors/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/i-was-happy-sad-lost-and-lonely-without-a-smartphone-at-the-same-time/">I Was Happy, Sad, Lost and Lonely Without a Smartphone at the Same Time</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2023-09-26 10:53:05 &#43;0000 UTC" title='Tue, Sep 26, 2023, 10:53 AM UTC'>
+      26/09/2023
+    </time>
+  </span>
+
+  <div class="description">
+    
+      <p>I haven’t posted on my blog for a long time, partly because I have been super busy with my personal and work life. I moved to Switzerland to work as a health informatics specialist for the Swiss Tropical and Public Health Institute, and moving to Switzerland in a very short period has been a change that took some time for me to get used to. There were cultural, administrative, and legal things I had not been used to while in Sri Lanka. I have yet to move to my apartment and live in a studio apartment at the time of writing this. It’s good that I moved to central Europe during the summer and excited to experience my first winter. Now back to what I wanted to tell you about.</p>
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/i-was-happy-sad-lost-and-lonely-without-a-smartphone-at-the-same-time/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/is-it-time-to-open-source-sublimetext/">Is It Time to Open Source SublimeText?</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2023-03-30 19:29:26 &#43;0000 UTC" title='Thu, Mar 30, 2023, 7:29 PM UTC'>
+      30/03/2023
+    </time>
+  </span>
+
+  <div class="description">
+    
+      <p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/03/image-5.png?resize=1024%2C495&amp;ssl=1" alt=""></p>
+<p>Recently I had to do some text editing and was in need of a text editor that was better than Notepad, and with muscle memory, I went on and tried to download VSCodium. However, the download was like 100+ megabytes in size and since I was using a public internet connection that would make me wait for several good minutes to complete the download.</p>
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/is-it-time-to-open-source-sublimetext/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/im-switching-form-vs-code-to-vs-codium/">I&#39;m Switching from VS Code to VS Codium</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2022-06-11 14:50:34 &#43;0000 UTC" title='Sat, Jun 11, 2022, 2:50 PM UTC'>
+      11/06/2022
+    </time>
+  </span>
+
+  <div class="description">
+    
+      <p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-1.png?resize=1024%2C576&amp;ssl=1" alt=""></p>
+<p>VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.</p>
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/im-switching-form-vs-code-to-vs-codium/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/every-organization-needs-a-cto/">Every organization needs a CTO</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2021-10-22 18:21:18 &#43;0000 UTC" title='Fri, Oct 22, 2021, 6:21 PM UTC'>
+      22/10/2021
+    </time>
+  </span>
+
+  <div class="description">
+    
+      <p>Recently I was shown a product marketing itself as providing geological data layer for apps. A sketchy product at a glance and maybe scammy in the worst case. The developer is unable to provide direct answers and finding it difficult to provide details on how the product really works.</p>
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/every-organization-needs-a-cto/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+    <article class="flex flex-col gap-1">
+  <h1>
+    <a href="http://example.org/work-on-interesting-problems-not-interesting-technologies-part-2/">Work on interesting problems. Not interesting technologies - Part 2</a>
+  </h1>
+  
+  <span class="date">
+    <time datetime="2021-09-15 18:32:49 &#43;0000 UTC" title='Wed, Sep 15, 2021, 6:32 PM UTC'>
+      15/09/2021
+    </time>
+  </span>
+
+  <div class="description">
+    
+      <p>Recently I wrote a short post about why you should work on interesting problems instead of interesting technologies. I never thought that it would reach front page on HN and receive so many responses.</p>
+    
+  </div>
+
+  <div class="mt-2">
+    <a class="read-more" href="http://example.org/work-on-interesting-problems-not-interesting-technologies-part-2/">
+      Read more
+      <span class="w-4 h-4 stroke-2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+
+      </span>
+    </a>
+  </div>
+</article>
+
+  
+</section>
+
+
+  
+
+<div class="pb-10 grid grid-cols-2 font-semibold">
+  
+  <div>
+    
+  </div>
+
+  
+  <div class="flex justify-end">
+    
+      <a href="/tags/life/page/2/" class="pagination-button">
+        Older Posts
+        <span class="h-4 w-4 stroke-2"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+</svg>
+ </span>
+      </a>
+    
+  </div>
+</div>
+
+
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

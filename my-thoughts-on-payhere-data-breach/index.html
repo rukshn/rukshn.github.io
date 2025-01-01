@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My thoughts on the PayHere data breach</title>
+<meta
+  name="description"
+  content="Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by Have I Been Pwned about a data breach at PayHere, an online payment processor in Sri Lanka."
+/>
+<link rel="canonical" href="http://example.org/my-thoughts-on-payhere-data-breach/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">My thoughts on the PayHere data breach</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2022-05-03 11:59:40 &#43;0000 UTC"
+        title='Tue, May 3, 2022, 11:59 AM UTC'
+      >
+        03/05/2022 - Estimated reading time: 3 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/hacking/" alt="Hacking">
+        Hacking
+      </a>
+      
+      <a class="categories" href="/categories/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a class="categories" href="/categories/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p>Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by <a href="https://haveibeenpwned.com/">Have I Been Pwned</a> about a data breach at <a href="https://payhere.lk/">PayHere</a>, an online payment processor in Sri Lanka.</p>
+<blockquote>
+<p><a href="https://twitter.com/hashtag/SriLanka?src=hash&amp;ref_src=twsrc%5Etfw">#SriLanka</a> payment gateway <a href="https://twitter.com/PayHereLK?ref_src=twsrc%5Etfw">@PayHereLK</a> &rsquo;s hacked data dump is listed on <a href="https://t.co/DFEEZx7yZz">https://t.co/DFEEZx7yZz</a></p>
+<p>You can check whether you&rsquo;re included in it.</p>
+<p>It&rsquo;s massive, 65GB data of 1.5 million accounts including partial credit card data, addresses, purchase history, etc. <a href="https://twitter.com/hashtag/lka?src=hash&amp;ref_src=twsrc%5Etfw">#lka</a> <a href="https://twitter.com/hashtag/Cybersecurity?src=hash&amp;ref_src=twsrc%5Etfw">#Cybersecurity</a></p>
+<p>— Dumi Jay (@dumindaxsb) <a href="https://twitter.com/dumindaxsb/status/1521018057832816641?ref_src=twsrc%5Etfw">May 2, 2022</a></p>
+</blockquote>
+<p>PayHere may well be one the largest and most significant data breach to occur in Sri Lanka, and it’s the only data breach from Sri Lanka to be included in Have I Been Pwned.</p>
+<p>Since I may have submitted my personal and payment details though a merchant that uses PayHere as their payment processor, also since I too have tried to apply as a merchant on PayHere several years ago, I decided to search my email on Have I Been Pwned and there it was, my email is in the PayHere data breach.</p>
+<p>But the thing is, I never received an email about a data breach from PayHere. They never asked me to change my password or never informed me abut the what the hackers managed to steal from about me from their database. Are my banking details at risk? Did they manage to get my credit card information?</p>
+<p>Upon further searching, I came across this Tweet that showed</p>
+<p>PayHere was indeed hacked and their website was defaced by the hackers who broke in to the website late March.</p>
+<blockquote>
+<p>Here&rsquo;s your screenshot.</p>
+<p>⚡ Want to automatically post your tweets on Instagram? Visit <a href="https://t.co/6fIpjtsiEr">https://t.co/6fIpjtsiEr</a>. <a href="https://t.co/YMBixiPX5x">pic.twitter.com/YMBixiPX5x</a></p>
+<p>— Pikaso (@pikaso_me) <a href="https://twitter.com/pikaso_me/status/1510095350991794178?ref_src=twsrc%5Etfw">April 2, 2022</a></p>
+</blockquote>
+<p>The account that initially posted this tweet, “MyWayReach” is now suspended. Even though the breach happened in March/April, apart from few social media posts, PayHere never informed their customers about the incident.</p>
+<p>Users can easily miss social media posts about a breach. It is not a responsible way to handle a serious data breach, and informing your customers about an incident.</p>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/05/image.png?resize=650%2C135&amp;ssl=1" alt=""></p>
+<p>According to Have I Been Pwned, the breach contains 1.5+ million email addresses, personal information, partially obfuscated credit card data, etc.</p>
+<p>It took nearly a month, for them to acknowledge the breach in a <a href="https://blog.payhere.lk/ensuring-integrity-on-payhere-cybersecurity-incident/">blog post.</a> They are yet to inform their customers individually about the breach.</p>
+<h2 id="data-protection-act-loophole">Data protection act loophole?</h2>
+<p>PayHere exploited a loophole in the Sri Lankan data protection act to get away from informing their customers about the data breach. The act binds companies to inform any potential data breach to the data protection authority. However, the act does not explicitly bind companies to inform a data breach to their customers.</p>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/05/image-1.png?resize=858%2C315&amp;ssl=1" alt=""></p>
+<p>However, there is a moral obligation for companies to inform about a data breach to their customers, and something that most global companies follow when handling a serious data breach as of this nature.</p>
+<p>As AccessNow which has done a through research on the Data Protection Act suggests, companies should be given a deadline no less than 5 days to inform the public about a potential data breach to the data protection authority and to the public.</p>
+<p>You can read about the Access Now analysis of the current data protection act in Sri Lanka – <a href="https://www.accessnow.org/cms/assets/uploads/2022/02/Policy_Brief_Sri_Lanka_Data_Protection_Bill_February_2022.pdf">https://www.accessnow.org/cms/assets/uploads/2022/02/Policy_Brief_Sri_Lanka_Data_Protection_Bill_February_2022.pdf</a></p>
+<p>PayHere’s data breach is a good lesson for tech companies on how to handle a potential data breach in a responsible manner. And we hopefuture amendments to the data protection act closing down these loopholes for better disclosure of data breaches.</p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/hacking/" alt="Hacking">
+        Hacking
+      </a>
+      
+      <a href="/tags/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a href="/tags/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

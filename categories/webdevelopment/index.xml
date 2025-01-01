@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Webdevelopment on Rukshan&#39;s Blog</title>
+    <link>http://example.org/categories/webdevelopment/</link>
+    <description>Recent content in Webdevelopment on Rukshan&#39;s Blog</description>
+    <generator>Hugo</generator>
+    <language>en-US</language>
+    <copyright>{year}</copyright>
+    <lastBuildDate>Sat, 01 May 2021 13:58:49 +0000</lastBuildDate>
+    <atom:link href="http://example.org/categories/webdevelopment/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why textareas can&#39;t grow?</title>
+      <link>http://example.org/why-textareas-cant-grow/</link>
+      <pubDate>Sat, 01 May 2021 13:58:49 +0000</pubDate>
+      <guid>http://example.org/why-textareas-cant-grow/</guid>
+      <description>&lt;p&gt;Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

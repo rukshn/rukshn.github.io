@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How to setup SCSS on your computer</title>
+<meta
+  name="description"
+  content="
+SCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS."
+/>
+<link rel="canonical" href="http://example.org/how-to-setup-scss-on-your-computer/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">How to setup SCSS on your computer</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2021-08-22 00:26:39 &#43;0000 UTC"
+        title='Sun, Aug 22, 2021, 12:26 AM UTC'
+      >
+        22/08/2021 - Estimated reading time: 4 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a class="categories" href="/categories/javascript/" alt="JavaScript">
+        JavaScript
+      </a>
+      
+      <a class="categories" href="/categories/web-development/" alt="Web Development">
+        Web Development
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/sass.png?resize=1024%2C516&amp;ssl=1" alt=""></p>
+<p>SCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.</p>
+<p>Even though SCSS is similar to css and even though you can write regular CSS in a CSS file, still your browser won’t render SCSS files unless you compile them to CSS files.</p>
+<p>In this post I will show you how you can setup SCSS compiler on your computer so you can easily compile sass files to regular css files to be used on your next web project.</p>
+<h2 id="why-scss-over-css">Why SCSS over CSS?</h2>
+<p>Before I write how you can setup SCSS I will show some of the capabilities of SCSS over CSS and how it can improve the way you write CSS.</p>
+<h4 id="variables">Variables</h4>
+<p>You can declare variables in SCSS by using the <code>$</code> sign followed by a variable name.</p>
+<p>For example, let’s say you want to assign a primary color that you will use throughout your web project. Instead of having to memorize the hex or RGBA value of that color, you can simply specify a variable that you can remember, and use it through out your project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#ff79c6">$</span><span style="color:#ff79c6">primary_color</span><span style="color:#ff79c6">:</span> #3f37c9<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">main-button</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: $primary_color;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h4 id="functions">Functions</h4>
+<p>SCSS also has some functions that are useful in web-development. For example, if you want to darken a color of a button on hover, if you write plain CSS you might have to manually find a suitable color by using the web-developer-console on your browser.</p>
+<p>However, if you are using SCSS you can simply use SCSS function to darken or lighten a color like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#ff79c6">$</span><span style="color:#ff79c6">primary_color</span><span style="color:#ff79c6">:</span> #3f37c9<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">main-button</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: $primary_color;
+</span></span><span style="display:flex;"><span>        :hover {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">background-color</span>: <span style="color:#50fa7b">darken</span>($primary_color, <span style="color:#bd93f9">10</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        :focus {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">background-color</span>: <span style="color:#50fa7b">lighten</span>($primary_color, <span style="color:#bd93f9">10</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>The darken function will darken the <code>$primary_color</code> by 10% and the lighten function will lighten the color by 10% etc.</p>
+<p>These are some of the most common use cases that I love when using sass. There are lots of features such as this in sass that you can read it from their documentation at <a href="http://scss-lang.org">http://scss-lan</a><a href="http://scss-lang.com">g.com</a>.</p>
+<h2 id="installing-the-scss-compiler">Installing the SCSS compiler</h2>
+<p>There are several ways and tools to compile SCSS to CSS files. There are GUI tools as well as terminal tools. In this post I will show you how to setup the NodeJS compiler of SCSS and how you can compile SCSS files to CSS.</p>
+<h3 id="step-1--install-nodejs-on-your-computer">Step 1 – Install NodeJS on your computer</h3>
+<p>If you don’t have NodeJS installed on your computer, download and install the NodeJS version that matches your operating system and processor architecture. NodeJS supports Apple M1 processor since version 16.</p>
+<p>There are two types of distributions, the long term support version (LTS) which is currently 14 at the time of writing and the latest version which is version 16 at the time of writing.</p>
+<p>You can download the NodeJS from their website at <a href="http://nodejs.org">http://nodejs.org</a></p>
+<p>Download and install NodeJS. If you are a windows user, you might have to add NodeJS path to your command.</p>
+<p>You can check if NodeJS is correctly installed by running the following command from your command line.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    node -v
+</span></span></code></pre></div><p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/Screen-Shot-2021-08-22-at-00.21.55.png?resize=1024%2C708&amp;ssl=1" alt=""></p>
+<h3 id="step-2--install-sass">Step 2 – Install SASS</h3>
+<p>You can install sass globally, or locally on your project. If you install sass globally it will be accessible anywhere through your command line, and if you install it on your project it will only be accessible within your project folder.</p>
+<p>Personally I prefer installing it within the project folder. You can install it though the <strong>node package manager (NPM)</strong> by running the following command.</p>
+<pre><code>npm install -save-dev sass
+</code></pre>
+<h3 id="step-3--compile-scss-files-to-scc">Step 3 – Compile SCSS files to SCC</h3>
+<p>Now you can simply compile SCSS files to CSS files by running the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    node sass source/stylesheets/index.scss build/stylesheets/index.css
+</span></span></code></pre></div><p>If installed sass globally you can run without including the node at the beginning on your command prompt.</p>
+<p>The first parameter is the path to your source file, which is a sass file. The second parameter is the destination file where your compiled css file will be created.</p>
+<p>Now you can include the compiled css file on your web project.</p>
+<p>You can also use the <code>-w</code> switch to watch for changes, so when you include the <code>-w</code> switch the sass compiler will look for changes whenever you make a modification to the sass file and a newer css file will be compiled by using the source.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    node sass -w source/stylesheets/index.scss build/stylesheets/index.css
+</span></span></code></pre></div><p>I personally setup sass compiler together with a task runner like Gulp so I can easily run the sass compiler and other tasks together.</p>
+<p>I will write a separate post on how to set up Gulp as a task runner for your NodeJS project at a later time.</p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a href="/tags/javascript/" alt="JavaScript">
+        JavaScript
+      </a>
+      
+      <a href="/tags/web-development/" alt="Web Development">
+        Web Development
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

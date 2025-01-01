@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Somethings are never meant to be invented. The story of BlockEvent</title>
+<meta
+  name="description"
+  content="Every few years there comes a technology that people get hyped about, everyone wants to be a specialist in that field because it appears to be the next big thing."
+/>
+<link rel="canonical" href="http://example.org/somethings-are-never-meant-to-be-invented-the-story-of-blockevent/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">Somethings are never meant to be invented. The story of BlockEvent</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2020-12-23 13:47:52 &#43;0000 UTC"
+        title='Wed, Dec 23, 2020, 1:47 PM UTC'
+      >
+        23/12/2020 - Estimated reading time: 8 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/blockchain/" alt="Blockchain">
+        Blockchain
+      </a>
+      
+      <a class="categories" href="/categories/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a class="categories" href="/categories/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a class="categories" href="/categories/startup/" alt="Startup">
+        Startup
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p>Every few years there comes a technology that people get hyped about, everyone wants to be a specialist in that field because it appears to be the next big thing.</p>
+<p>Between 2015-2019 this was largely about bitcoins and blockchain technology. Everyone wanted to be a specialist in blockchain technology. Bitcoin was booming, ICOs were happening to the left and right.</p>
+<p>And people were trying to introduce/incorporate blockchain technology into everything they can get their hands on.</p>
+<p>Yes sometimes blockchain technology can improve the existing system. However, when you try to introduce blockchain or any other technology into something that doesn’t require it,the results can be disastrous.</p>
+<p>This is a story I wanted to write for a very long time, it was about a small startup called BlockEvent. A small startup that wanted to incorporate blockchain technology into event management.</p>
+<p><em>Their website blockevent.tk is now not functioning, and I was unable to find a web archive snapshot. A mirror exists on a different domain, please check the footnotes.</em></p>
+<p>Blockchain on event management has been there before BlockEvents. Smart ticketing and smart contracts are currently being used to improve the ticketing field and control pricing etc.</p>
+<h2 id="blockevent">BlockEvent</h2>
+<p>BlockEvents wanted to make the whole event process a decentralized mechanism. From user data, to events, to registration, everything was supposed to be “decentralized” and was “not accessible” to and “not modifiable” by anyone.</p>
+<p>According to the BlockEvent team,</p>
+<blockquote>
+<p>We made BlockEvent as a decentralized system. That means no central party can control this booking process and it will work without any third party involvement.</p>
+<p>BlockEvent acts as a bridge between the organizers and the participants where organizers come and create events through our system, and participants can come and book their tickets.</p>
+<p>The whole process is done through Public Blockchain.</p>
+<p>…</p>
+<p>Using the blockchain for user identity management is a whole new paradigm.</p>
+<p>BlockEvent on one of their Facebook posts, describing their system.</p>
+</blockquote>
+<p>BlockEvent when initially started mainly hosted monthly blockchain event meetup events. However, their big break came in May 2019, during the annual Google I/O.</p>
+<p>Google I/O event is celebrated in Sri Lanka every year, with local tech companies hosting events of their own, with local influencers, while live streaming the Google I/O event.</p>
+<p>The selection process is a very completions, hundreds of people compete for few limited number of seats. These events are a good place to network and meet new friends in IT field. Plus you end up getting some cool swags.</p>
+<p>In order to be selected to these events you need to show that you are a tech person, usually they check your GitHub page, blog or YouTube channel. And the tech company will select and send an invitation to whom they think are the most suitable to attend their events.</p>
+<p>Until 2018, this was done by using a simple Google form or a regular website.</p>
+<p>However, in 2019, one of the largest tech and telecom companies in Sri Lanka decided to use BlockEvents to host their Google I/O event.</p>
+<p>Getting selected by a big company like them to manage their Google I/O event was big deal, because they host one of the largest I/O events in Sri Lanka. And BlockEvent can leverage this to opportunity to get bigger clients in future.</p>
+<p>It was their make or break moment. They had to nail it, and if they failed then for a small startup like BlockEvent, the damage to their reputation is going to hurt them to a point where there is no return.</p>
+<h2 id="disaster"><strong>Disaster</strong></h2>
+<p>BlockEvent also in their description, said this,</p>
+<blockquote>
+<p>To ensure the user data privacy and security, <strong>we are not storing any user credentials or password</strong>[s] <strong>in our database. Even the user emails are stored as a hash. Only the users know their passwords</strong> and that will provide 100% control over your account actions. Even BlockEvent team can’t access your accounts.</p>
+<p>BlockEvent describing their system in a Facebook post</p>
+</blockquote>
+<p>Since they were storing <strong>everything</strong> in the blockchain, they were not storing even user emails and passwords. This may sound as a good privacy focused system. But this will come to hurt BlockEvent in a very bad way.</p>
+<p>Since no one else other than the people in monthly blockchain meetups knew about BlockEvents, like in any other new service, most people registering for the local Google I/O event used either throwaway passwords, or new passwords which they forgot or didn’t save.</p>
+<p>This caused large number of people to forget their passwords. If we use a normal database to store user data, with no hashing, they would have been able to reset the user passwords.</p>
+<p>However, since everything is stored in blockchain, and everything were hashed, this meant that there is no way to reset a user password.</p>
+<p>This led to large number of people being locked out of their accounts, unable to create new accounts with the existing emails, and BlockEvent team unable to reset passwords.</p>
+<p>This caused a wave of negative reviews on BlockEvent Facebook page and on social media. Some users demanded the organizers to go back to the old system of using a Google form for user registration.</p>
+<p>BlockEvent finally responded to their users, they had no way to reseat the password. Unless you remember the password and login, or you are permanently locked out from using the account.</p>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2020/12/img_0045.jpg?resize=1024%2C1011&amp;ssl=1" alt=""></p>
+<p>Large number of people were locked out from their accounts, unable to reset their passwords.</p>
+<blockquote>
+<p>Due to the rules of decentralization, we can’t reset your passwords as we are giving priority to user data and security. We already communicated this on registration [on sign up].</p>
+<p>To ensure the decentralization the same rule is applied by many other [b]lockchain projects and products all over the world.</p>
+<p>BlockEvent responding to the events on a Facebook page</p>
+</blockquote>
+<p>BlockEvent also asked participants to send their personal details on Facebook and via a Google form, so they can manually arrange a way to send the gift pack to the participants.</p>
+<p>Some of the users accused the selection process was also flawed and complained that some of the people who were less qualified to attend the event were selected over them.</p>
+<p>All this led to irreplaceable damage on BlockEvent, and the Google I/O event didn’t happen due to the Easter Sunday bombings.</p>
+<p>BlockEvent went into hiatus few months later, all thought they never mentioned that they are shutting down, their website went offline once their domain name expired. Possibly signaling the end of the startup that hoped to decentralize how we manage identity online.</p>
+<h2 id="conclusion"><strong>Conclusion</strong></h2>
+<p>The title of the post is <strong>“Somethings are never meant to be invented”</strong>.</p>
+<p>No matter how utopian the idea may sound like, guaranteeing 100% user privacy with everything stored on a blockchain, not even giving access to user email to the creators can have its own drawbacks.</p>
+<p>And since we are all humans, and we all tend to make mistakes, there has to be a fail safe mechanism, that will keep things in check and can undo the mistakes when we make one.</p>
+<p>Also a single use password is a very bad idea, not only that users can lose their passwords, but also in the event of a data breach, user handing over the password to a third party by a mistake, how can the service reset the passwords? There are so many scenarios where things can go wrong.</p>
+<p>May be an idea like BlockEvent were never meant to be invented.</p>
+<p><strong>The currently hyped up technology may not be ideal for your system and instead a time tested solution may be the answer that you’re looking for.</strong></p>
+<h2 id="my-thoughts">My thoughts</h2>
+<p>When it comes to blockchain and cryptocurrency, I’m still open minded, at the same time but skeptical. I’m not yet ready to invest or build something on blockchain.</p>
+<p>I still find it difficult to fully understand the idea of blockchain, what makes it different from a decentralized git repository? Why Git is easy to implement but blockchain is hard?</p>
+<p>When it comes to BlockEvents, I think what they did was store the email and password both hashed on the blockchain, and when a user logs in, they match the submitted hashed email and hashed passwords against what’s stored in the blockchain, like we do it in a normal login system using a database, except the fact that we don’t hash the emails.</p>
+<h4 id="notes">Notes</h4>
+<p><em>I’m not a blockchain expert, so I don’t know the exact reason why BlockEvent was not able to reset the passwords.</em></p>
+<p><em>Was it because they didn’t know the emails because they were hashed, or was it because once you put some information to the blockchain it is immutable, or was it due to both?</em></p>
+<p><em>At the time when I saw this in 2019, I thought it was due to the fact that data is immutable on the blockchain, but now at the time of writing I feel it was due to the fact that the emails were stored on the blockchain in hashed format.</em></p>
+<p><em>I also don’t know what really caused so many people to lose their password, my assumption is that they used a throwaway password, or a new password which they forgot. But still this number of users getting locked out is still unexplained.</em></p>
+<p><em>After further Googling I was able to find a mirror of the original website on another domain name <a href="http://blockevent.ml">http://blockevent.ml</a></em></p>
+<p><em>I tried logging in using my BlockEvent account, but I also have forgotten my BlockEvent password, and now I’m also locked out.</em></p>
+<ul>
+<li>BlockEvent password forgot requests – <a href="https://m.facebook.com/pg/blockevent.live/reviews/">https://m.facebook.com/pg/blockevent.live/reviews/</a></li>
+</ul>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/blockchain/" alt="Blockchain">
+        Blockchain
+      </a>
+      
+      <a href="/tags/internet/" alt="Internet">
+        Internet
+      </a>
+      
+      <a href="/tags/rants/" alt="Rants">
+        Rants
+      </a>
+      
+      <a href="/tags/startup/" alt="Startup">
+        Startup
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

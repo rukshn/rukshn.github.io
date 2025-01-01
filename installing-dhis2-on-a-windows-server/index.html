@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en-US" class="scroll-smooth dark">
+  <head>
+
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Installing DHIS2 on a Windows Server</title>
+<meta
+  name="description"
+  content="Recently a college contacted me asking how they can install DHIS2 on a Windows server which they have just received on their premises. Since most tutorials available on the internet discuss installing DHIS2 on a server running a Linux distribution, he was finding it difficult to follow the steps outlined in those tutorials."
+/>
+<link rel="canonical" href="http://example.org/installing-dhis2-on-a-windows-server/" />
+<link rel="robots" href="/robots.txt" />
+
+<link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
+
+
+
+<script
+  type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });
+</script>
+
+<link
+  rel="stylesheet"
+  href="http://example.org/css/app.min.4719c293547315e741031522c24ad56a04a7b73b529558d568c25a044b6b4652.css"
+  integrity="sha256-RxnCk1RzFedBAxUiwkrVagSntztSlVjVaMJaBEtrRlI="
+/></head>
+
+  <body class="max-w-screen-md mx-auto px-2.5">
+    <div class="header">
+      <header class="flex flex-col sm:flex-row items-center gap-5 sm:gap-10 pt-16 py-12">
+   
+
+
+<div class="flex-none w-20 h-20 rounded-full overflow-hidden">
+  <a href="http://example.org/">
+    <img
+      srcset="/img/profile-picture_hu5545886796893753086.jpg 80w"
+      src="/img/profile-picture.jpg"
+      width="1000"
+      height="1000"
+      alt="Rukshan&#39;s Blog"
+    />
+  </a>
+</div>
+
+  
+  <div class="flex flex-col gap-5">
+    <a href="http://example.org/">
+  <h1 id="site-title">Rukshan&#39;s Blog</h1>
+</a>
+ 
+    <nav>
+  <ul>
+     
+    
+    <li>
+      <a href="/" class="">
+        Home
+      </a>
+    </li>
+    
+    <li>
+      <a href="/about" class="">
+        About me
+      </a>
+    </li>
+    
+    <li>
+      <a href="/categories" class="">
+        Categories
+      </a>
+    </li>
+    
+    <li>
+      <a href="/tags" class="">
+        Tags
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+  </div>
+</header>
+
+      <button class="toggle-theme" aria-label="Toggle Theme" title="Toggle Theme" onclick="toggleTheme()">
+  <span class="theme-icon light"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
+</svg> </span>
+  <span class="theme-icon dark"> <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+</svg> </span>
+</button>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const theme = localStorage.getItem('theme');
+
+    if (!theme || theme === 'light') {
+      setTheme('light');
+    } else {
+      setTheme(theme);
+    }
+  });
+
+  function setTheme(theme) {
+    const html = document.querySelector('html');
+    localStorage.setItem('theme', theme);
+
+    if (theme === 'light') {
+      if (html.classList.contains('dark')) {
+        document.querySelector('html').classList.remove('dark');
+      }
+
+      document.querySelector('.theme-icon.light').style.display = 'none';
+      document.querySelector('.theme-icon.dark').style.display = 'block';
+    } else {
+      if (!html.classList.contains('dark')) {
+        document.querySelector('html').classList.add('dark');
+      }
+
+      document.querySelector('.theme-icon.dark').style.display = 'none';
+      document.querySelector('.theme-icon.light').style.display = 'block';
+    }
+  }
+
+  function toggleTheme() {
+    const theme = localStorage.getItem('theme');
+
+    if (theme === 'light') {
+      setTheme('dark');
+    } else {
+      setTheme('light');
+    }
+  }
+</script>
+    </div>
+  
+    <main id="content">
+
+<article class="flex flex-col gap-10">
+  <header class="flex flex-col gap-2">
+    <h2 class="title-large">Installing DHIS2 on a Windows Server</h2>
+
+    <script
+      async
+      type="text/javascript"
+      src="//cdn.carbonads.com/carbon.js?serve=CEBIPK7N&placement=rukyme&format=responsive"
+      id="_carbonads_js"
+    ></script>
+
+    <div class="meta">
+      
+      <time
+        datetime="2023-02-10 01:23:32 &#43;0000 UTC"
+        title='Fri, Feb 10, 2023, 1:23 AM UTC'
+      >
+        10/02/2023 - Estimated reading time: 7 minutes
+      </time>
+
+        — 
+      <a class="categories" href="/categories/dhis2/" alt="DHIS2">
+        DHIS2
+      </a>
+      
+      <a class="categories" href="/categories/digital-health/" alt="Digital Health">
+        Digital Health
+      </a>
+      
+      <a class="categories" href="/categories/health-informatics/" alt="Health Informatics">
+        Health Informatics
+      </a>
+      
+      <a class="categories" href="/categories/health-systems/" alt="Health Systems">
+        Health Systems
+      </a>
+      
+      <a class="categories" href="/categories/informatics/" alt="Informatics">
+        Informatics
+      </a>
+      
+      <a class="categories" href="/categories/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a class="categories" href="/categories/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+       
+    </div>
+  </header>
+
+  
+
+  <section><p>Recently a college contacted me asking how they can install DHIS2 on a Windows server which they have just received on their premises. Since most tutorials available on the internet discuss installing DHIS2 on a server running a Linux distribution, he was finding it difficult to follow the steps outlined in those tutorials.</p>
+<p>I decided to write this small tutorial for anyone interested in learning about installing DHIS2 on a Windows Server.</p>
+<h2 id="what-is-dhis2">What is DHIS2?</h2>
+<p>For those who are unfamiliar, DHIS2 is a health information management system for collecting, analyzing, reporting and disseminating aggregated and individual-level health data.</p>
+<p>DHIS2 is developed by the University of Oslo and released under the BSD license as free and open-source software backed up by a global community.</p>
+<h2 id="hardware">Hardware</h2>
+<p>The computer I installed DHIS2 was an Amazon Lightsail virtual machine running Windows Server 2019 with 2GB of ram and 60GB of hard drive space.</p>
+<h2 id="the-steps">The steps</h2>
+<h3 id="download-and-install-java">Download and install Java</h3>
+<p>The first step is to install Java.</p>
+<p>DHIS2 requires Java 11 to run and it is important to download the correct JDK that matches your system requirements, my initial attempt failed when I mistakenly downloaded Java runtime environment (JRE) which was designed for 32-bit computers, however, the Windows server was a 64-bit computer.</p>
+<p>I suggest downloading and installing the Microsoft Build of OpenJDK on your Windows server following the link below,</p>
+<p><a href="https://learn.microsoft.com/en-us/java/openjdk/download">https://learn.microsoft.com/en-us/java/openjdk/download</a></p>
+<p>Try to avoid downloading newer versions of JDKs as there is a risk you might run into errors because at the time of writing DHIS2 currently supports Java 11.</p>
+<h3 id="download-and-install-postgres">Download and install Postgres</h3>
+<p>DHIS2 requires PostgreSQL as the database management system, therefore you have to download and install PostgreSQL and install it on your computer.</p>
+<p>You can download and install Postgres for Windows by following this link, I recommend downloading and installing PostgreSQL version 14 for DHIS2.</p>
+<p><a href="https://www.enterprisedb.com/downloads/postgres-postgresql-downloads">https://www.enterprisedb.com/downloads/postgres-postgresql-downloads</a></p>
+<p>Download the setup and install PostgreSQL on your Windows server. After installing Postgres it is important to install the PostGIS extension which is required for DHIS2 to function.</p>
+<p>You can install PostGIS by opening the “Stack Builder” application that you will find under Postgres in your start menu.</p>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/02/image.png?resize=1024%2C705&amp;ssl=1" alt=""></p>
+<p>Stack Builder Application</p>
+<p>From the Stack Builder application, select the latest PostGIS version as the version to be installed, at the end of the wizard, Stack Builder will install PostGIS on your Windows server.</p>
+<h3 id="setup-postgres-user-and-postgres-database">Setup Postgres user and Postgres Database</h3>
+<h4 id="creating-a-non-super-user-postgres-user-for-dhis2">Creating a non-super-user postgres user for DHIS2</h4>
+<p>Access the PostgreSQL shell by opening the SQL Shell (psql) application from the start menu.</p>
+<p><img src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/02/image-1.png?resize=1024%2C907&amp;ssl=1" alt=""></p>
+<p>PSQL shell Windows Server</p>
+<p>Create a user named <code>dhis</code> with the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">USER</span> dhis;
+</span></span></code></pre></div><p>After creating a user with the username <code>dhis</code> change the privileges of the user to match the privileges given in the DHIS2 installation documentation for Ubuntu.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">USER</span> dhis <span style="color:#ff79c6">WITH</span> <span style="color:#ff79c6">NOCREATEDB</span> NOCREATEROLE;
+</span></span></code></pre></div><p>Next, change the password for the postgres user we created above. For this tutorial, the password I’m using is dhis2. However, I suggest using a strong password when implementing DHIS2 in a production environment.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">USER</span> dhis <span style="color:#ff79c6">WITH</span> PASSWORD <span style="color:#f1fa8c">&#39;dhis2&#39;</span>;
+</span></span></code></pre></div><h4 id="creating-a-database-for-dhis2">Creating a database for DHIS2</h4>
+<p>The next step is creating the database that will store the data of your DHIS2 instance. To create the database run the following command on your PostgreSQL shell (PSQL).</p>
+<p>For this tutorial I’m creating a database named <code>dhis2</code>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#ff79c6">CREATE</span> <span style="color:#ff79c6">DATABASE</span> dhis2;
+</span></span></code></pre></div><p>The database that you just created is still owned by the default postgres superuser postgres, the next step involves handing over the ownership of the database to the <code>dhis</code> user that we just created in the above step.</p>
+<p>To transfer ownership of the database, execute the following command on the Postgres shell.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    <span style="color:#ff79c6">ALTER</span> <span style="color:#ff79c6">DATABASE</span> dhis2 <span style="color:#ff79c6">OWNER</span> <span style="color:#ff79c6">TO</span> dhis;
+</span></span></code></pre></div><p>Now that we have transferred the ownership of the database to the newly created user, we have to load the PostGIS extension on the newly created dhis2 database.</p>
+<p>Before loading the PostGIS extension, first change the active database to the newly created <code>dhis2</code> database.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>    \<span style="color:#ff79c6">connect</span> dhis2;
+</span></span></code></pre></div><p>After switching the database, load the POSTGIS extension to the <code>dhis2</code> database by running the following command in the psql shell,</p>
+<pre><code>CREATE EXTENSION postgis;
+</code></pre>
+<h3 id="create-dhis2-configuration-file">Create DHIS2 configuration file</h3>
+<p>Create a DHIS2 configuration file named <code>dhis.conf</code> in a folder named <code>DHIS2_home\config</code> inside the <code>C:</code> drive of the Windows Server.</p>
+<pre tabindex="0"><code>    # ----------------------------------------------------------------------
+    # Database connection
+    # ----------------------------------------------------------------------
+    
+    # JDBC driver class
+    connection.driver_class = org.postgresql.Driver
+    
+    # Database connection URL
+    connection.url = jdbc:postgresql:dhis2
+    
+    # Database username
+    connection.username = dhis
+    
+    # Database password
+    connection.password = dhis2
+    
+    # ----------------------------------------------------------------------
+    # Server
+    # ----------------------------------------------------------------------
+    
+    # Enable secure settings if deployed on HTTPS, default &#39;off&#39;, can be &#39;on&#39;
+    # server.https = on
+    
+    # Server base URL
+    # server.base.url = https://server.com
+</code></pre><p>Replace the <code>connection.username</code> with the username of the postgres user we created which is <code>dhis</code>, and replace <code>connection.password</code> with the password of the postgres user provided in the <code>connection.username</code> parameter.</p>
+<h3 id="download-and-setup-tomcat-9">Download and setup tomcat-9</h3>
+<p>For this tutorial, we are going to use Tomcat to host the DHIS2 instance, and you can download Tomcat through the Apache website,</p>
+<p><a href="https://tomcat.apache.org/">https://tomcat.apache.org/</a></p>
+<p>I suggest you use Tomcat 9 but I don’t think there will be an issue with using Tomcat 10 to run your DHIS2 instance.</p>
+<p>Download the tomcat 9 instances and unzip the file to a preferred location. The next step involves changing the settings of the Tomcat 9 server to run DHIS2.</p>
+<h3 id="changing-the-tomcat-9settings-to-run-dhis2">Changing the Tomcat 9 settings to run DHIS2</h3>
+<p>First, we have to point to the location of the DHIS2 configuration file, open the <code>context.xml</code> file within the Tomcat folder and add the following value within the context block of the XML file and set the path pointing to the location of the <code>dhis.conf</code> file that you created.</p>
+<p>You only need to point to the root folder which contains the <code>dhis.conf</code> file, DHIS2 will automatically load the configurations when starting the Tomcat server</p>
+<pre><code>&lt;Environment name=&quot;dhis2-home&quot; value=&quot;/DHIS2_home/config&quot; type=&quot;java.lang.String&quot; override=&quot;true&quot;/&gt;
+</code></pre>
+<p>Next, open the server.xml file inside the unzipped Tomcat folder, and set <code>relaxedQueryChars</code> value in the <code>Connector</code> property. You can also specify the port which DHIS2 run. The default port for Apache Tomcat is 8080. However, you can always get rid of the port number using a reverse proxy with nginx.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-apache" data-lang="apache"><span style="display:flex;"><span>    &lt;<span style="color:#8be9fd;font-style:italic">Connector</span> port=<span style="color:#f1fa8c">&#34;8080&#34;</span> protocol=<span style="color:#f1fa8c">&#34;HTTP/1.1&#34;</span>
+</span></span><span style="display:flex;"><span>      connectionTimeout=&#34;20000&#34;
+</span></span><span style="display:flex;"><span>      redirectPort=&#34;8443&#34;
+</span></span><span style="display:flex;"><span>      relaxedQueryChars=&#34;[]&#34; /&gt;
+</span></span></code></pre></div><p>Finally, we have to set the environment variables on Tomcat, open the <code>setenv.bat</code> file inside the <code>bin</code> folder of your unzipped Tomcat folder, if there is no <code>setenv.bat</code> file, create a new <code>setenv.bat</code> file inside the <code>bin</code> folder with your favourite text editor.</p>
+<p><code>JAVA_HOME</code></p>
+<p>The path pointing to your java installation</p>
+<p><code>JAVA_OPTS</code></p>
+<p>The maximum and minimum memory allocated for your DHIS2 instance</p>
+<p><code>DHIS2_HOME</code></p>
+<p>The location of the DHIS2 configuration folder</p>
+<p>You can set the environment variables in the setenv.bat file following the code snippet below.</p>
+<pre tabindex="0"><code>    set &#34;JAVA_HOME=C:\Program Files\OpenJDK\jdk-11.0.18.10-hotspot&#34;
+    set &#34;JAVA_OPTS=-Xms500m -Xmx1000m&#34;
+    set &#34;DHIS2_HOME=C:\DHIS2_home\config&#34;
+</code></pre><p>Setting the <code>DHIS2_HOME</code> environment variable in the <code>setenv.bat</code> file is an alternative way to point to the location of the DHIS2 configuration file, which we have done by setting the <code>DHIS2_HOME</code> value in the <code>context.xml</code> file in one of the above steps.</p>
+<p>The <code>JAVA_OPTS</code> sets the minimum and maximum memory (RAM) that can be allocated for the Tomcat server. There the <code>-Xms</code> means the minimum memory allocated while the <code>-Xmx</code> is the maximum amount of memory allocated. You will be setting the value in megabytes. In this example since our server is a 2GB windows server, I’ve set the minimum allocated memory as 500 megabytes, and the maximum allocated memory as 1000 megabytes.</p>
+<p>The maximum allocated memory should be less than the system memory, and you will have to leave some memory for the operating system and other processes. Therefore it’s a good practice to leave 2-3 GB for the system processes depending on the amount of system memory that is available at your disposal.</p>
+<h3 id="download-dhis2-war-file">Download DHIS2 war file</h3>
+<p>You can download the DHIS2 war file from the official DHIS2 website,</p>
+<p><a href="https://dhis2.org/downloads/">https://dhis2.org/downloads/</a></p>
+<p>At the time of writing, the latest available version was 2.39 which I installed on the Windows server.</p>
+<p>Copy the downloaded <code>war</code> file into the <code>webapps</code> folder of your Tomcat server.</p>
+<h3 id="starting-the-tomcat-server">Starting the Tomcat server</h3>
+<p>To start the Tomcat server, open PowerShell on your Windows server, change the directory to the tomcat server using the cd command and run the <code>/bin/startup.bat</code> file from PowerShell. Once the server has started, you will be able to access the DHIS2 installation by navigating to localhost:8080 from the browser in the Windows server.<br>
+<code>./startup.bat</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    ./startup.bat
+</span></span></code></pre></div><h3 id="stopping-the-tomcat-server">Stopping the Tomcat server</h3>
+<p>Stopping the tomcat server is similar to starting the server, just run the <code>/bin/shutdown.bat</code> file in the tomcat folder from the PowerShell and it will shutdown the tomcat server.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    ./shutdown.bat
+</span></span></code></pre></div><p>If there are any questions regarding installing DHIS2 on a Windows server, leave your questions as a comment.</p>
+<hr>
+<h3 id="leave-the-hassle-to-us">Leave the hassle to us</h3>
+<p>Let the experts manage your DHIS2 instance with dedicated DHIS2 cloud hosting solutions the scales as your instance grow. And you don’t have to worry about any of the complex server management.</p>
+<p><a href="https://zemantic.co/dhis2-hosting/">Zemantic.co</a></p>
+</section>
+
+  
+    
+  
+
+    
+  
+
+
+  <footer>
+    
+    <div class="pb-14 taxonomy-list tags-list">
+      
+      <a href="/tags/dhis2/" alt="DHIS2">
+        DHIS2
+      </a>
+      
+      <a href="/tags/digital-health/" alt="Digital Health">
+        Digital Health
+      </a>
+      
+      <a href="/tags/health-informatics/" alt="Health Informatics">
+        Health Informatics
+      </a>
+      
+      <a href="/tags/health-systems/" alt="Health Systems">
+        Health Systems
+      </a>
+      
+      <a href="/tags/informatics/" alt="Informatics">
+        Informatics
+      </a>
+      
+      <a href="/tags/wordpress/" alt="Wordpress">
+        Wordpress
+      </a>
+      
+      <a href="/tags/import-2024-04-25-2303/" alt="Import 2024-04-25 23:03">
+        Import 2024-04-25 23:03
+      </a>
+      
+    </div>
+    
+  </footer>
+</article>
+
+
+    </main><footer class="pt-5 pb-10 grid gap-3 sm:grid-cols-2">
+    <div class="text-xs font-semibold text-gray-500 order-2 sm:order-1">
+  © 2025 —
+  <a href="http://example.org/">Rukshan&#39;s Blog</a> 
+  <span class="font-normal">with</span>
+  <a
+    href="https://github.com/nixentric/Lowkey-Hugo-Theme"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Lowkey
+  </a>
+</div>
+
+    <div class="order-1 sm:order-2">
+  <ul class="flex sm:justify-end gap-5">
+    
+    
+    <li>    
+      <a href="https://twitter.com/justruky" target="_blank" rel="noopener noreferrer">Twitter</a>
+    </li>
+    
+    <li>    
+      <a href="https://instagram.com/imruky" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </li>
+    
+    <li>    
+      <a href="https://github.com/rukshn" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </li>
+    
+    
+  </ul>
+</div>
+
+</footer></body>
+</html>

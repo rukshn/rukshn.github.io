@@ -1,0 +1,493 @@
+User-agent: *
+
+Disallow: /tags/academia/
+
+Disallow: /categories/academia/
+
+Disallow: /categories/
+
+Disallow: /
+
+Disallow: /how-to-attended-your-next-conference-for-free/
+
+Disallow: /posts/
+
+Disallow: /tags/
+
+Disallow: /tags/digitalhealth/
+
+Disallow: /categories/digitalhealth/
+
+Disallow: /tags/health-informatics/
+
+Disallow: /categories/health-informatics/
+
+Disallow: /tags/ideas/
+
+Disallow: /categories/ideas/
+
+Disallow: /tags/life/
+
+Disallow: /categories/life/
+
+Disallow: /my-first-publication-and-my-thoughts-on-academia/
+
+Disallow: /tags/rants/
+
+Disallow: /categories/rants/
+
+Disallow: /tags/google/
+
+Disallow: /categories/google/
+
+Disallow: /google-search-has-to-innovate-or-die/
+
+Disallow: /tags/internet/
+
+Disallow: /categories/internet/
+
+Disallow: /tags/digital-health/
+
+Disallow: /categories/digital-health/
+
+Disallow: /geneva-digital-health-day-2024/
+
+Disallow: /tags/switzerland/
+
+Disallow: /categories/switzerland/
+
+Disallow: /tags/ai/
+
+Disallow: /categories/ai/
+
+Disallow: /tags/blockchain/
+
+Disallow: /categories/blockchain/
+
+Disallow: /i-am-trying-to-avoid-ai-these-days/
+
+Disallow: /tags/startup/
+
+Disallow: /categories/startup/
+
+Disallow: /tags/work/
+
+Disallow: /categories/work/
+
+Disallow: /about/
+
+Disallow: /tags/import-2024-04-25-2303/
+
+Disallow: /categories/import-2024-04-25-2303/
+
+Disallow: /the-art-of-writing-abstracts/
+
+Disallow: /tags/wordpress/
+
+Disallow: /categories/wordpress/
+
+Disallow: /tags/coding/
+
+Disallow: /categories/coding/
+
+Disallow: /github-co-pilot-generating-different-outputs-in-different-editors/
+
+Disallow: /tags/javascript/
+
+Disallow: /categories/javascript/
+
+Disallow: /how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/
+
+Disallow: /i-was-happy-sad-lost-and-lonely-without-a-smartphone-at-the-same-time/
+
+Disallow: /tags/dhis2/
+
+Disallow: /categories/dhis2/
+
+Disallow: /tags/fhir/
+
+Disallow: /categories/fhir/
+
+Disallow: /tags/interoperability/
+
+Disallow: /categories/interoperability/
+
+Disallow: /why-we-need-interoperability-and-hl7-fhir/
+
+Disallow: /is-it-time-to-open-source-sublimetext/
+
+Disallow: /tags/apache-superset/
+
+Disallow: /categories/apache-superset/
+
+Disallow: /tags/geojson/
+
+Disallow: /categories/geojson/
+
+Disallow: /how-to-correctly-load-your-country-in-to-apache-superset/
+
+Disallow: /tags/superset/
+
+Disallow: /categories/superset/
+
+Disallow: /tags/health-systems/
+
+Disallow: /categories/health-systems/
+
+Disallow: /tags/informatics/
+
+Disallow: /categories/informatics/
+
+Disallow: /installing-dhis2-on-a-windows-server/
+
+Disallow: /tags/devops/
+
+Disallow: /categories/devops/
+
+Disallow: /running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/
+
+Disallow: /tags/bigdata/
+
+Disallow: /categories/bigdata/
+
+Disallow: /tags/data/
+
+Disallow: /categories/data/
+
+Disallow: /tags/data-visualization/
+
+Disallow: /categories/data-visualization/
+
+Disallow: /installing-apache-superset-version-2-on-ubuntu-without-errors/
+
+Disallow: /tags/open-souce/
+
+Disallow: /categories/open-souce/
+
+Disallow: /codeberg-a-github-alternative-from-europe/
+
+Disallow: /tags/facebook/
+
+Disallow: /categories/facebook/
+
+Disallow: /the-rings-of-share/
+
+Disallow: /tags/whatsapp/
+
+Disallow: /categories/whatsapp/
+
+Disallow: /tags/blog/
+
+Disallow: /categories/blog/
+
+Disallow: /tags/blogging/
+
+Disallow: /categories/blogging/
+
+Disallow: /medium-and-google-is-not-a-good-combination/
+
+Disallow: /tags/data-protection/
+
+Disallow: /categories/data-protection/
+
+Disallow: /tags/sri-lanka/
+
+Disallow: /categories/sri-lanka/
+
+Disallow: /the-sri-lankan-data-protection-act-and-its-impact-on-digital-health/
+
+Disallow: /people-who-dont-use-rss-dont-know-what-they-are-missing-out/
+
+Disallow: /designing-is-easy-implementation-is-hard/
+
+Disallow: /tags/bitcoin/
+
+Disallow: /categories/bitcoin/
+
+Disallow: /tags/crypto/
+
+Disallow: /categories/crypto/
+
+Disallow: /cryptocurrencies-have-broken-almost-all-of-their-major-promises/
+
+Disallow: /im-switching-form-vs-code-to-vs-codium/
+
+Disallow: /why-do-javascript-frameworks-get-increasingly-difficult-over-time/
+
+Disallow: /re-why-we-stopped-making-einsteins-no-we-did-not/
+
+Disallow: /web-3-how-to-upload-a-file-to-the-ipfs-network/
+
+Disallow: /tags/web3/
+
+Disallow: /categories/web3/
+
+Disallow: /tags/hacking/
+
+Disallow: /categories/hacking/
+
+Disallow: /my-thoughts-on-payhere-data-breach/
+
+Disallow: /reddit-can-build-a-better-search-engine/
+
+Disallow: /ideas-that-have-been-beaten-to-death/
+
+Disallow: /every-organization-needs-a-cto/
+
+Disallow: /a-basic-introduction-to-git/
+
+Disallow: /are-we-all-professional-googlers/
+
+Disallow: /work-on-interesting-problems-not-interesting-technologies-part-2/
+
+Disallow: /work-on-interesting-problems-not-interesting-technologies/
+
+Disallow: /tags/nostalgia/
+
+Disallow: /categories/nostalgia/
+
+Disallow: /when-i-used-to-collect-computer-viruses/
+
+Disallow: /trying-to-be-a-project-manager/
+
+Disallow: /i-used-to-love-bootstrap-god-now-i-just-hate-it/
+
+Disallow: /how-to-setup-scss-on-your-computer/
+
+Disallow: /tags/web-development/
+
+Disallow: /categories/web-development/
+
+Disallow: /install-a-community-server-on-vscode/
+
+Disallow: /how-to-setup-glassfish-server-for-java-web-app-deployment/
+
+Disallow: /coming-full-circle/
+
+Disallow: /tags/instagram/
+
+Disallow: /categories/instagram/
+
+Disallow: /my-journey-in-deleting-facebook-and-instagram-accounts/
+
+Disallow: /tags/buddhism/
+
+Disallow: /categories/buddhism/
+
+Disallow: /buddhism-and-meditation-is-not-the-same/
+
+Disallow: /are-you-ashamed-to-share-your-email-address/
+
+Disallow: /working-at-an-icu/
+
+Disallow: /tags/memories/
+
+Disallow: /categories/memories/
+
+Disallow: /why-javascript-dialogs-alert-prompt-confirm-are-not-widely-used/
+
+Disallow: /clones-are-good/
+
+Disallow: /can-a-company-vendor-lock-patient-data/
+
+Disallow: /recycle-bin-by-facebook/
+
+Disallow: /tags/css/
+
+Disallow: /categories/css/
+
+Disallow: /tags/webdevelopment/
+
+Disallow: /categories/webdevelopment/
+
+Disallow: /why-textareas-cant-grow/
+
+Disallow: /bitclout-is-a-scam-change-my-mind/
+
+Disallow: /tags/clubhouse/
+
+Disallow: /categories/clubhouse/
+
+Disallow: /tags/social-networking/
+
+Disallow: /categories/social-networking/
+
+Disallow: /the-good-the-bad-and-the-ugly-side-of-clubhouse/
+
+Disallow: /your-ego-can-kill-your-idea-before-anything-else/
+
+Disallow: /first-launch-review-yalukids/
+
+Disallow: /the-impossible-task-of-blocking-disposable-email-signups/
+
+Disallow: /weekly-update-what-im-built-for-tuti-this-week/
+
+Disallow: /using-your-browsers-developer-tools-to-finding-vulnerabilities/
+
+Disallow: /how-uber-lost-to-pickme-in-sri-lanka/
+
+Disallow: /tags/pickme/
+
+Disallow: /categories/pickme/
+
+Disallow: /tags/uber/
+
+Disallow: /categories/uber/
+
+Disallow: /i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/
+
+Disallow: /tags/programming/
+
+Disallow: /categories/programming/
+
+Disallow: /facebook-is-combining-messenger-and-instagram-messaging/
+
+Disallow: /how-to-host-your-nuxtjs-in-10-steps/
+
+Disallow: /tags/tutorials/
+
+Disallow: /categories/tutorials/
+
+Disallow: /tags/vue/
+
+Disallow: /categories/vue/
+
+Disallow: /dont-allow-vscode-to-auto-fetch-from-repos/
+
+Disallow: /tags/privacy/
+
+Disallow: /categories/privacy/
+
+Disallow: /they-launched-a-website-to-register-covid-vaccinations-but-it-only-lasted-one-week/
+
+Disallow: /always-try-to-be-a-monopoly/
+
+Disallow: /hackers-briefly-took-over-the-google-lk-domain/
+
+Disallow: /tags/advertising/
+
+Disallow: /categories/advertising/
+
+Disallow: /tags/apple/
+
+Disallow: /categories/apple/
+
+Disallow: /would-you-pay-me-if-i-built-a-web-browser/
+
+Disallow: /tags/chat/
+
+Disallow: /categories/chat/
+
+Disallow: /tags/signal/
+
+Disallow: /categories/signal/
+
+Disallow: /tags/telegram/
+
+Disallow: /categories/telegram/
+
+Disallow: /why-google-needs-to-build-an-open-chat-client-like-element/
+
+Disallow: /tags/passwords/
+
+Disallow: /categories/passwords/
+
+Disallow: /suggest-me-a-password/
+
+Disallow: /tags/graphql/
+
+Disallow: /categories/graphql/
+
+Disallow: /tags/nuxtjs/
+
+Disallow: /categories/nuxtjs/
+
+Disallow: /run-graphql-server-with-express-in-nuxtjs/
+
+Disallow: /the-value-of-targeted-advertising/
+
+Disallow: /do-you-believe-in-fail-fast-and-fail-quickly/
+
+Disallow: /why-i-switched-to-wordpress/
+
+Disallow: /have-you-ever-tried-blocking-whatsapp-you-probably-cant/
+
+Disallow: /who-is-sending-these-mysterious-2fa-codes/
+
+Disallow: /too-much-hustling-can-kill-you/
+
+Disallow: /tags/linkedin/
+
+Disallow: /categories/linkedin/
+
+Disallow: /whats-the-use-of-linkedin/
+
+Disallow: /why-teaching-programming-is-so-difficult/
+
+Disallow: /the-framework-trap/
+
+Disallow: /i-sent-this-email-asking-my-friends-to-switch-to-signal/
+
+Disallow: /what-if-parler-was-a-decentralised-network/
+
+Disallow: /tags/email/
+
+Disallow: /categories/email/
+
+Disallow: /everyone-should-get-a-personal-email-address/
+
+Disallow: /signal-thank-you-for-not-collecting-my-data-but-i-wont-use-you/
+
+Disallow: /google-launches-question-hub-to-tackle-niche-and-long-tail-keyword-queries/
+
+Disallow: /tags/pinterest/
+
+Disallow: /categories/pinterest/
+
+Disallow: /you-might-want-to-block-pinterest-to-save-your-data/
+
+Disallow: /tags/reddit/
+
+Disallow: /categories/reddit/
+
+Disallow: /reddit-mods-please-stop-automated-blocking/
+
+Disallow: /please-dont-spam-my-blog-seo-myths-you-need-to-stop-believing/
+
+Disallow: /sri-lanka-need-unlimited-internet-connections/
+
+Disallow: /tags/twitter/
+
+Disallow: /categories/twitter/
+
+Disallow: /twitter-please-dont-ruin-my-timeline/
+
+Disallow: /my-lost-opportunity-to-become-a-millionaire/
+
+Disallow: /tags/code/
+
+Disallow: /categories/code/
+
+Disallow: /how-to-sort-a-list-of-words-the-bucket-sorting-method/
+
+Disallow: /what-is-health-informatics-and-what-i-do-for-a-living/
+
+Disallow: /somethings-are-never-meant-to-be-invented-the-story-of-blockevent/
+
+Disallow: /this-community-is-available-in-the-app/
+
+Disallow: /a-to-do-app-that-fits-in-a-single-tweet/
+
+Disallow: /i-just-checked-yamu-stats-they-dont-look-good-is-google-killing-yamu/
+
+Disallow: /starting-a-blog-has-never-been-this-difficult/
+
+Disallow: /i-just-installed-a-content-blocker-on-my-iphone/
+
+Disallow: /dont-buy-a-icu-domain/
+
+Disallow: /the-unusual-pricing-of-electronics-in-sri-lanka/
+
+Disallow: /convocation-ceremonies-are-fake/
+
+Disallow: /categories/uncategories/
