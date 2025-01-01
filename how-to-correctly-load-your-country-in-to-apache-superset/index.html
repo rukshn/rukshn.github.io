@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US" class="scroll-smooth dark">
-  <head>
+  <head>   
 
 <meta charset="UTF-8" />
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -21,7 +21,29 @@ Apache Superset is a free and open-core data analysis tool that offers a wide ra
 />
 <link rel="canonical" href="https://ruky.me/how-to-correctly-load-your-country-in-to-apache-superset/" />
 <link rel="robots" href="/robots.txt" />
+<meta
+  property="og:title"
+  content="How to Correctly Load Your Country in to Apache Superset"
+/>
+<meta
+  property="og:description"
+  content="TLDR
 
+The geoJSON specification published in 2016 requires the polygons to follow the right-hand rule.
+All updated geoJSON files now follow the right-hand rule.
+However, Superset requires your geoJSON file polygons to follow the opposite direction, breaking the specification.
+Covert your geoJSON files so polygons are drawn in opposite directions using the script included in Step 5.
+Include the geoJSON file inside the legacy-plugin-chart-country-map plugin.
+Import the geoJSON file and rebuild your Superset frontend.
+
+Apache Superset is a free and open-core data analysis tool that offers a wide range of really neat features for a business. It’s a good piece of software where you don’t have the budget to spend on an expensive business intelligence tool."
+/>
+<meta property="og:url" content="https://ruky.me/how-to-correctly-load-your-country-in-to-apache-superset/" />
+<meta
+  property="og:type"
+  content="article"
+/>
+<meta property="og:image" content="https://hicafe.co/og/eyJ0aXRsZSIgOiAiSG93IHRvIENvcnJlY3RseSBMb2FkIFlvdXIgQ291bnRyeSBpbiB0byBBcGFjaGUgU3VwZXJzZXQifQ" />
 <link rel="icon" type="image/x-icon" href="/icons/favicon.ico" />
 
 
