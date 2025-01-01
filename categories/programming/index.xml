@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Programming on Rukshan&#39;s Blog</title>
-    <link>http://example.org/categories/programming/</link>
+    <link>https://ruky.me/categories/programming/</link>
     <description>Recent content in Programming on Rukshan&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Fri, 26 Feb 2021 20:40:36 +0000</lastBuildDate>
-    <atom:link href="http://example.org/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ruky.me/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I do development for one week and marketing and documentation for one week</title>
-      <link>http://example.org/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</link>
+      <link>https://ruky.me/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</link>
       <pubDate>Fri, 26 Feb 2021 20:40:36 +0000</pubDate>
-      <guid>http://example.org/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</guid>
+      <guid>https://ruky.me/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</guid>
       <description>&lt;p&gt;I know the advice is to find a co-founder. But what if you can’t find a co-founder? Yes, having a co-founder is great. But there are companies that are founded by solo-founders who went on to become billion or million dollar companies.&lt;/p&gt;</description>
     </item>
   </channel>

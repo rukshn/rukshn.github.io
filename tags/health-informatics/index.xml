@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Health Informatics on Rukshan&#39;s Blog</title>
-    <link>http://example.org/tags/health-informatics/</link>
+    <link>https://ruky.me/tags/health-informatics/</link>
     <description>Recent content in Health Informatics on Rukshan&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Fri, 25 Oct 2024 05:49:10 +0000</lastBuildDate>
-    <atom:link href="http://example.org/tags/health-informatics/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ruky.me/tags/health-informatics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Publication and My Thoughts on Academia</title>
-      <link>http://example.org/my-first-publication-and-my-thoughts-on-academia/</link>
+      <link>https://ruky.me/my-first-publication-and-my-thoughts-on-academia/</link>
       <pubDate>Fri, 25 Oct 2024 05:49:10 +0000</pubDate>
-      <guid>http://example.org/my-first-publication-and-my-thoughts-on-academia/</guid>
+      <guid>https://ruky.me/my-first-publication-and-my-thoughts-on-academia/</guid>
       <description>&lt;p&gt;Few years ago I was someone was not interested in academia, I felt as if people are rehashing the same scientific topic in different ways, or publishing every minute thing just to add up to their pile of publications. I never thought I&amp;rsquo;d be able to write a publication under 200 words, the very idea of expressing something meaningful in such a short number of words was something that I could not agree with.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Installing DHIS2 on a Windows Server</title>
-      <link>http://example.org/installing-dhis2-on-a-windows-server/</link>
+      <link>https://ruky.me/installing-dhis2-on-a-windows-server/</link>
       <pubDate>Fri, 10 Feb 2023 01:23:32 +0000</pubDate>
-      <guid>http://example.org/installing-dhis2-on-a-windows-server/</guid>
+      <guid>https://ruky.me/installing-dhis2-on-a-windows-server/</guid>
       <description>&lt;p&gt;Recently a college contacted me asking how they can install DHIS2 on a Windows server which they have just received on their premises. Since most tutorials available on the internet discuss installing DHIS2 on a server running a Linux distribution, he was finding it difficult to follow the steps outlined in those tutorials.&lt;/p&gt;</description>
     </item>
   </channel>

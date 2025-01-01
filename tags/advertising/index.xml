@@ -2,32 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Advertising on Rukshan&#39;s Blog</title>
-    <link>http://example.org/tags/advertising/</link>
+    <link>https://ruky.me/tags/advertising/</link>
     <description>Recent content in Advertising on Rukshan&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Wed, 03 Feb 2021 15:18:02 +0000</lastBuildDate>
-    <atom:link href="http://example.org/tags/advertising/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ruky.me/tags/advertising/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Would you pay me if I built a web browser?</title>
-      <link>http://example.org/would-you-pay-me-if-i-built-a-web-browser/</link>
+      <link>https://ruky.me/would-you-pay-me-if-i-built-a-web-browser/</link>
       <pubDate>Wed, 03 Feb 2021 15:18:02 +0000</pubDate>
-      <guid>http://example.org/would-you-pay-me-if-i-built-a-web-browser/</guid>
+      <guid>https://ruky.me/would-you-pay-me-if-i-built-a-web-browser/</guid>
       <description>&lt;p&gt;Google recently announced their Q4 results, and it seems almost everyone is having a great Q4 from Facebook, to Amazon to Google.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The value of targeted advertising</title>
-      <link>http://example.org/the-value-of-targeted-advertising/</link>
+      <link>https://ruky.me/the-value-of-targeted-advertising/</link>
       <pubDate>Wed, 27 Jan 2021 16:48:26 +0000</pubDate>
-      <guid>http://example.org/the-value-of-targeted-advertising/</guid>
+      <guid>https://ruky.me/the-value-of-targeted-advertising/</guid>
       <description>&lt;p&gt;This post will might be the post that will roast me the most. But before triggering your fingers just by reading the title I would like everyone to read my post, and read my argument before jumping in to conclusions.&lt;/p&gt;</description>
     </item>
     <item>
       <title>I just installed a content blocker on my iPhone</title>
-      <link>http://example.org/i-just-installed-a-content-blocker-on-my-iphone/</link>
+      <link>https://ruky.me/i-just-installed-a-content-blocker-on-my-iphone/</link>
       <pubDate>Thu, 17 Dec 2020 21:24:27 +0000</pubDate>
-      <guid>http://example.org/i-just-installed-a-content-blocker-on-my-iphone/</guid>
+      <guid>https://ruky.me/i-just-installed-a-content-blocker-on-my-iphone/</guid>
       <description>&lt;p&gt;Recently I saw a Facebook post post where someone has monitored his data usage and found out that he is spending nearly 300mb of data everyday just for the ad content he’s getting on different websites and YouTube.&lt;/p&gt;</description>
     </item>
   </channel>

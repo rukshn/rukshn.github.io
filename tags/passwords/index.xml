@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Passwords on Rukshan&#39;s Blog</title>
-    <link>http://example.org/tags/passwords/</link>
+    <link>https://ruky.me/tags/passwords/</link>
     <description>Recent content in Passwords on Rukshan&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Thu, 28 Jan 2021 11:55:50 +0000</lastBuildDate>
-    <atom:link href="http://example.org/tags/passwords/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ruky.me/tags/passwords/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Suggest me a password</title>
-      <link>http://example.org/suggest-me-a-password/</link>
+      <link>https://ruky.me/suggest-me-a-password/</link>
       <pubDate>Thu, 28 Jan 2021 11:55:50 +0000</pubDate>
-      <guid>http://example.org/suggest-me-a-password/</guid>
+      <guid>https://ruky.me/suggest-me-a-password/</guid>
       <description>&lt;p&gt;Recently this post making rounds on some of the dev community groups which I’m a part of on Facebook.&lt;/p&gt;</description>
     </item>
   </channel>

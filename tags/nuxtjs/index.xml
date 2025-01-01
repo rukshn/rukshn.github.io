@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NuxtJs on Rukshan&#39;s Blog</title>
-    <link>http://example.org/tags/nuxtjs/</link>
+    <link>https://ruky.me/tags/nuxtjs/</link>
     <description>Recent content in NuxtJs on Rukshan&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Wed, 27 Jan 2021 20:54:01 +0000</lastBuildDate>
-    <atom:link href="http://example.org/tags/nuxtjs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ruky.me/tags/nuxtjs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Run GraphQL server with Express in NuxtJS</title>
-      <link>http://example.org/run-graphql-server-with-express-in-nuxtjs/</link>
+      <link>https://ruky.me/run-graphql-server-with-express-in-nuxtjs/</link>
       <pubDate>Wed, 27 Jan 2021 20:54:01 +0000</pubDate>
-      <guid>http://example.org/run-graphql-server-with-express-in-nuxtjs/</guid>
+      <guid>https://ruky.me/run-graphql-server-with-express-in-nuxtjs/</guid>
       <description>&lt;p&gt;Since I use Vue for almost all of my projects, if I’m making an application that requires routing and server side rendering (for SEO), I use &lt;a href=&#34;https://nuxtjs.org/&#34;&gt;NuxtJS&lt;/a&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

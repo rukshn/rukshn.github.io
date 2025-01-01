@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Work on Rukshan&#39;s Blog</title>
-    <link>http://example.org/tags/work/</link>
+    <link>https://ruky.me/tags/work/</link>
     <description>Recent content in Work on Rukshan&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Sat, 01 Jun 2024 09:39:41 +0000</lastBuildDate>
-    <atom:link href="http://example.org/tags/work/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ruky.me/tags/work/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>I&#39;m Trying to Avoid AI These Days</title>
-      <link>http://example.org/i-am-trying-to-avoid-ai-these-days/</link>
+      <link>https://ruky.me/i-am-trying-to-avoid-ai-these-days/</link>
       <pubDate>Sat, 01 Jun 2024 09:39:41 +0000</pubDate>
-      <guid>http://example.org/i-am-trying-to-avoid-ai-these-days/</guid>
+      <guid>https://ruky.me/i-am-trying-to-avoid-ai-these-days/</guid>
       <description>I feel as if the AI hype has peeked, and I am very skeptical about the AI wave that&amp;rsquo;s happening where majority of the ideas are chatGPT wrappers.</description>
     </item>
     <item>
       <title>Can a company vendor lock patient data?</title>
-      <link>http://example.org/can-a-company-vendor-lock-patient-data/</link>
+      <link>https://ruky.me/can-a-company-vendor-lock-patient-data/</link>
       <pubDate>Fri, 28 May 2021 12:56:23 +0000</pubDate>
-      <guid>http://example.org/can-a-company-vendor-lock-patient-data/</guid>
+      <guid>https://ruky.me/can-a-company-vendor-lock-patient-data/</guid>
       <description>&lt;p&gt;When I first started my new blog, I wanted to post at least one post a week. But just like everything else I have not being able to post at least one blog post per week.&lt;/p&gt;</description>
     </item>
   </channel>

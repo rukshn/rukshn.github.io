@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>CSS on Rukshan&#39;s Blog</title>
-    <link>http://example.org/categories/css/</link>
+    <link>https://ruky.me/categories/css/</link>
     <description>Recent content in CSS on Rukshan&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Sat, 01 May 2021 13:58:49 +0000</lastBuildDate>
-    <atom:link href="http://example.org/categories/css/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ruky.me/categories/css/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why textareas can&#39;t grow?</title>
-      <link>http://example.org/why-textareas-cant-grow/</link>
+      <link>https://ruky.me/why-textareas-cant-grow/</link>
       <pubDate>Sat, 01 May 2021 13:58:49 +0000</pubDate>
-      <guid>http://example.org/why-textareas-cant-grow/</guid>
+      <guid>https://ruky.me/why-textareas-cant-grow/</guid>
       <description>&lt;p&gt;Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.&lt;/p&gt;</description>
     </item>
     <item>
       <title>The framework trap</title>
-      <link>http://example.org/the-framework-trap/</link>
+      <link>https://ruky.me/the-framework-trap/</link>
       <pubDate>Thu, 14 Jan 2021 02:24:35 +0000</pubDate>
-      <guid>http://example.org/the-framework-trap/</guid>
+      <guid>https://ruky.me/the-framework-trap/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://wompampsupport.azureedge.net/fetchimage?siteId=7575&amp;amp;v=2&amp;amp;jpgQuality=100&amp;amp;width=700&amp;amp;url=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F000%2F157%2Fitsatrap.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;When it comes to programming, frameworks are there to make your life easy. React, Vue, Larvel, Bootstrap, I can go on and on to list your favourite frameworks.&lt;/p&gt;</description>
     </item>
   </channel>

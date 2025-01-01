@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Reddit on Rukshan&#39;s Blog</title>
-    <link>http://example.org/tags/reddit/</link>
+    <link>https://ruky.me/tags/reddit/</link>
     <description>Recent content in Reddit on Rukshan&#39;s Blog</description>
     <generator>Hugo</generator>
     <language>en-US</language>
     <copyright>{year}</copyright>
     <lastBuildDate>Thu, 31 Dec 2020 11:54:54 +0000</lastBuildDate>
-    <atom:link href="http://example.org/tags/reddit/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://ruky.me/tags/reddit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Reddit mods please stop automated blocking</title>
-      <link>http://example.org/reddit-mods-please-stop-automated-blocking/</link>
+      <link>https://ruky.me/reddit-mods-please-stop-automated-blocking/</link>
       <pubDate>Thu, 31 Dec 2020 11:54:54 +0000</pubDate>
-      <guid>http://example.org/reddit-mods-please-stop-automated-blocking/</guid>
+      <guid>https://ruky.me/reddit-mods-please-stop-automated-blocking/</guid>
       <description>&lt;p&gt;In a recent post, I talked about a dark practice that Reddit uses to funnel people to install their app.&lt;/p&gt;</description>
     </item>
     <item>
       <title>This community is available in the app</title>
-      <link>http://example.org/this-community-is-available-in-the-app/</link>
+      <link>https://ruky.me/this-community-is-available-in-the-app/</link>
       <pubDate>Tue, 22 Dec 2020 09:53:26 +0000</pubDate>
-      <guid>http://example.org/this-community-is-available-in-the-app/</guid>
+      <guid>https://ruky.me/this-community-is-available-in-the-app/</guid>
       <description>&lt;p&gt;Yesterday’s &lt;a href=&#34;https://ruky.me/a-to-do-app-that-fits-in-a-single-tweet/&#34;&gt;post&lt;/a&gt; was an awesome one, I learned a lot in JavaScript and and I was happy to see people doing what I thought impossible. Writing a simple todo app within 280 chars, in plain js.&lt;/p&gt;</description>
     </item>
   </channel>
