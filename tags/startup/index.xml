@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Startup on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/startup/</link>
+    <description>Recent content in Startup on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Sat, 01 Jun 2024 09:39:41 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/startup/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I&#39;m Trying to Avoid AI These Days</title>
+      <link>http://localhost:1313/i-am-trying-to-avoid-ai-these-days/</link>
+      <pubDate>Sat, 01 Jun 2024 09:39:41 +0000</pubDate>
+      <guid>http://localhost:1313/i-am-trying-to-avoid-ai-these-days/</guid>
+      <description>I feel as if the AI hype has peeked, and I am very skeptical about the AI wave that&amp;rsquo;s happening where majority of the ideas are chatGPT wrappers.</description>
+    </item>
+    <item>
+      <title>Your ego can kill your idea before anything else</title>
+      <link>http://localhost:1313/your-ego-can-kill-your-idea-before-anything-else/</link>
+      <pubDate>Sun, 21 Mar 2021 20:47:33 +0000</pubDate>
+      <guid>http://localhost:1313/your-ego-can-kill-your-idea-before-anything-else/</guid>
+      <description>&lt;p&gt;You’re a creator, you have been working on your idea for few months. The MVP is ready, it’s time to launch your product. You tell about it on ProductHunt, HackerNews, Reddit, Facebook etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First launch review - YaluKids</title>
+      <link>http://localhost:1313/first-launch-review-yalukids/</link>
+      <pubDate>Sat, 20 Mar 2021 21:43:35 +0000</pubDate>
+      <guid>http://localhost:1313/first-launch-review-yalukids/</guid>
+      <description>&lt;p&gt;I wanted to write something like this for a while, to look at a launch and dissect it and do a SWOT analysis (strengths, weaknesses, opportunities and threats).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How Uber lost to PickMe in Sri Lanka</title>
+      <link>http://localhost:1313/how-uber-lost-to-pickme-in-sri-lanka/</link>
+      <pubDate>Tue, 02 Mar 2021 15:53:57 +0000</pubDate>
+      <guid>http://localhost:1313/how-uber-lost-to-pickme-in-sri-lanka/</guid>
+      <description>&lt;p&gt;Uber is one of the leaders in ride-sharing in the US and in Europe. However, they are having troubles in expanding to Asian continent. For example Ubers expansion to China failed, and Uber in China was acquired by DiDi.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I do development for one week and marketing and documentation for one week</title>
+      <link>http://localhost:1313/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</link>
+      <pubDate>Fri, 26 Feb 2021 20:40:36 +0000</pubDate>
+      <guid>http://localhost:1313/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</guid>
+      <description>&lt;p&gt;I know the advice is to find a co-founder. But what if you can’t find a co-founder? Yes, having a co-founder is great. But there are companies that are founded by solo-founders who went on to become billion or million dollar companies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Always try to be a monopoly</title>
+      <link>http://localhost:1313/always-try-to-be-a-monopoly/</link>
+      <pubDate>Sat, 13 Feb 2021 13:04:42 +0000</pubDate>
+      <guid>http://localhost:1313/always-try-to-be-a-monopoly/</guid>
+      <description>&lt;p&gt;Roughly three years ago we started &lt;a href=&#34;https://instagram.com/treetalks.lk&#34;&gt;TreeTalks&lt;/a&gt;, it was a very simple idea, we deliver cacti, succulents and indoor plants to people who ordered them online.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Do you believe in fail fast and fail quickly?</title>
+      <link>http://localhost:1313/do-you-believe-in-fail-fast-and-fail-quickly/</link>
+      <pubDate>Tue, 26 Jan 2021 11:30:07 +0000</pubDate>
+      <guid>http://localhost:1313/do-you-believe-in-fail-fast-and-fail-quickly/</guid>
+      <description>&lt;p&gt;The first month of 2021 is a bad month to begin with, I always say to myself that we need to fail fast and fail quickly, but failing is not a pleasant experience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Too much hustling can kill you</title>
+      <link>http://localhost:1313/too-much-hustling-can-kill-you/</link>
+      <pubDate>Tue, 19 Jan 2021 12:16:57 +0000</pubDate>
+      <guid>http://localhost:1313/too-much-hustling-can-kill-you/</guid>
+      <description>&lt;p&gt;When you are young, you feel like you’re invincible. You feel as if you’re on a road to wold domination.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Somethings are never meant to be invented. The story of BlockEvent</title>
+      <link>http://localhost:1313/somethings-are-never-meant-to-be-invented-the-story-of-blockevent/</link>
+      <pubDate>Wed, 23 Dec 2020 13:47:52 +0000</pubDate>
+      <guid>http://localhost:1313/somethings-are-never-meant-to-be-invented-the-story-of-blockevent/</guid>
+      <description>&lt;p&gt;Every few years there comes a technology that people get hyped about, everyone wants to be a specialist in that field because it appears to be the next big thing.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

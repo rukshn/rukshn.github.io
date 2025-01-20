@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tutorials on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/tutorials/</link>
+    <description>Recent content in Tutorials on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Mon, 20 Jan 2025 11:40:43 +0100</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/tutorials/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hacking CHT User Interface With Javascript to Format Content</title>
+      <link>https://ruky.me/hacking-cht-user-interface-with-javascript-to-format-content/</link>
+      <pubDate>Mon, 20 Jan 2025 11:40:43 +0100</pubDate>
+      <guid>https://ruky.me/hacking-cht-user-interface-with-javascript-to-format-content/</guid>
+      <description>CHT javascript extensions can be used to customize the look and feel of the CHT form</description>
+    </item>
+    <item>
+      <title>How to host your NuxtJS in 10 steps</title>
+      <link>https://ruky.me/how-to-host-your-nuxtjs-in-10-steps/</link>
+      <pubDate>Tue, 23 Feb 2021 22:40:24 +0000</pubDate>
+      <guid>https://ruky.me/how-to-host-your-nuxtjs-in-10-steps/</guid>
+      <description>&lt;p&gt;I first started using &lt;a href=&#34;https://nuxtjs.org&#34;&gt;NuxtJS&lt;/a&gt; one year ago, when I tried to make a platform for travellers to easily find and book villas online. But unlike other popular booking services, I was targeting villas that did not have an online presence or haven’t signup or don’t know how to use an online booking service.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

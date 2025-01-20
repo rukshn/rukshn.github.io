@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Informatics on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/informatics/</link>
+    <description>Recent content in Informatics on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Fri, 10 Feb 2023 01:23:32 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/informatics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installing DHIS2 on a Windows Server</title>
+      <link>https://ruky.me/installing-dhis2-on-a-windows-server/</link>
+      <pubDate>Fri, 10 Feb 2023 01:23:32 +0000</pubDate>
+      <guid>https://ruky.me/installing-dhis2-on-a-windows-server/</guid>
+      <description>&lt;p&gt;Recently a college contacted me asking how they can install DHIS2 on a Windows server which they have just received on their premises. Since most tutorials available on the internet discuss installing DHIS2 on a server running a Linux distribution, he was finding it difficult to follow the steps outlined in those tutorials.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Hacking on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/hacking/</link>
+    <description>Recent content in Hacking on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Tue, 03 May 2022 11:59:40 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/hacking/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My thoughts on the PayHere data breach</title>
+      <link>https://ruky.me/my-thoughts-on-payhere-data-breach/</link>
+      <pubDate>Tue, 03 May 2022 11:59:40 +0000</pubDate>
+      <guid>https://ruky.me/my-thoughts-on-payhere-data-breach/</guid>
+      <description>&lt;p&gt;Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by &lt;a href=&#34;https://haveibeenpwned.com/&#34;&gt;Have I Been Pwned&lt;/a&gt; about a data breach at &lt;a href=&#34;https://payhere.lk/&#34;&gt;PayHere&lt;/a&gt;, an online payment processor in Sri Lanka.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>When I used to collect computer viruses</title>
+      <link>https://ruky.me/when-i-used-to-collect-computer-viruses/</link>
+      <pubDate>Wed, 01 Sep 2021 01:01:01 +0000</pubDate>
+      <guid>https://ruky.me/when-i-used-to-collect-computer-viruses/</guid>
+      <description>&lt;p&gt;Today I was having a lecture about information security and information security law. I just started the module and this is the third lecture about the topic. And todays lecture was about different IT threats that an health information system would face. The lecture mainly revolved around malware. During the lecture, the teacher told a point that most malware today are written for profit, and ransomware are popular today because it’s a get rich scheme for malware writers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using your browser&#39;s developer tools to find vulnerabilities</title>
+      <link>https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/</link>
+      <pubDate>Wed, 03 Mar 2021 14:36:20 +0000</pubDate>
+      <guid>https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/</guid>
+      <description>&lt;p&gt;Last week government launched its online covid tracker called the &amp;ldquo;StaySafe&amp;rdquo; program.&lt;/p&gt;
+&lt;p&gt;The program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hackers briefly took over the Google.lk domain</title>
+      <link>https://ruky.me/hackers-briefly-took-over-the-google-lk-domain/</link>
+      <pubDate>Sat, 06 Feb 2021 23:01:49 +0000</pubDate>
+      <guid>https://ruky.me/hackers-briefly-took-over-the-google-lk-domain/</guid>
+      <description>&lt;p&gt;Today hackers were able to briefly take over the &lt;a href=&#34;https://google.lk&#34;&gt;Google.lk&lt;/a&gt; domain, the Google’s search engine page for Sri Lanka and redirect it to bring awareness to an ongoing crisis in Sri Lanka.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Who is sending these mysterious 2FA codes?</title>
+      <link>https://ruky.me/who-is-sending-these-mysterious-2fa-codes/</link>
+      <pubDate>Wed, 20 Jan 2021 11:38:19 +0000</pubDate>
+      <guid>https://ruky.me/who-is-sending-these-mysterious-2fa-codes/</guid>
+      <description>&lt;p&gt;I read a recent post titled &lt;a href=&#34;https://shkspr.mobi/blog/2021/01/thats-not-how-2fa-works/&#34;&gt;“That’s not how 2FA works”,&lt;/a&gt; it was an interesting read.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A TO-DO app that fits in a single tweet</title>
+      <link>https://ruky.me/a-to-do-app-that-fits-in-a-single-tweet/</link>
+      <pubDate>Mon, 21 Dec 2020 09:50:03 +0000</pubDate>
+      <guid>https://ruky.me/a-to-do-app-that-fits-in-a-single-tweet/</guid>
+      <description>&lt;p&gt;Sunday morning while I was scrolling through my Twitter feed one tweet caught my eye,&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

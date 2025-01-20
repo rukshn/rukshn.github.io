@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Sri Lanka on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/sri-lanka/</link>
+    <description>Recent content in Sri Lanka on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Fri, 26 Aug 2022 10:45:13 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/sri-lanka/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Sri Lankan Data Protection Act, And Its Impact on Digital Health</title>
+      <link>https://ruky.me/the-sri-lankan-data-protection-act-and-its-impact-on-digital-health/</link>
+      <pubDate>Fri, 26 Aug 2022 10:45:13 +0000</pubDate>
+      <guid>https://ruky.me/the-sri-lankan-data-protection-act-and-its-impact-on-digital-health/</guid>
+      <description>&lt;p&gt;The data protection act in Sri Lanka is a highly awaited and timely act to enable data protection in Sri Lanka. It was passed in the parliament on 9th March 2022 [1]. Even though there are similar acts to protect personal data in other countries such as the HIPAA (Health Insurance Portability and Accountability Act) since 1996 and the GDPR (Health Insurance Portability and Accountability Act) since 2016.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Designing is easy, implementation is hard</title>
+      <link>https://ruky.me/designing-is-easy-implementation-is-hard/</link>
+      <pubDate>Sun, 17 Jul 2022 15:53:19 +0000</pubDate>
+      <guid>https://ruky.me/designing-is-easy-implementation-is-hard/</guid>
+      <description>&lt;p&gt;Sri Lanka is facing a never before seen fuel crisis due to the nation’s foreign exchange crisis. While scrolling through my Twitter feed, I came across a tweet from someone suggesting why no one is creating a database to track fuel distribution, accoring by doing that fuel can be distributed equally among everyone, and prevent hoarding and black markets.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First launch review - YaluKids</title>
+      <link>https://ruky.me/first-launch-review-yalukids/</link>
+      <pubDate>Sat, 20 Mar 2021 21:43:35 +0000</pubDate>
+      <guid>https://ruky.me/first-launch-review-yalukids/</guid>
+      <description>&lt;p&gt;I wanted to write something like this for a while, to look at a launch and dissect it and do a SWOT analysis (strengths, weaknesses, opportunities and threats).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using your browser&#39;s developer tools to find vulnerabilities</title>
+      <link>https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/</link>
+      <pubDate>Wed, 03 Mar 2021 14:36:20 +0000</pubDate>
+      <guid>https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/</guid>
+      <description>&lt;p&gt;Last week government launched its online covid tracker called the &amp;ldquo;StaySafe&amp;rdquo; program.&lt;/p&gt;
+&lt;p&gt;The program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>They launched a website to register covid vaccinations, but it only lasted one week</title>
+      <link>https://ruky.me/they-launched-a-website-to-register-covid-vaccinations-but-it-only-lasted-one-week/</link>
+      <pubDate>Wed, 17 Feb 2021 22:38:06 +0000</pubDate>
+      <guid>https://ruky.me/they-launched-a-website-to-register-covid-vaccinations-but-it-only-lasted-one-week/</guid>
+      <description>&lt;p&gt;When it comes to IT in this country we are not having a great year, especially when it comes to IT involving health and security.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Always try to be a monopoly</title>
+      <link>https://ruky.me/always-try-to-be-a-monopoly/</link>
+      <pubDate>Sat, 13 Feb 2021 13:04:42 +0000</pubDate>
+      <guid>https://ruky.me/always-try-to-be-a-monopoly/</guid>
+      <description>&lt;p&gt;Roughly three years ago we started &lt;a href=&#34;https://instagram.com/treetalks.lk&#34;&gt;TreeTalks&lt;/a&gt;, it was a very simple idea, we deliver cacti, succulents and indoor plants to people who ordered them online.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hackers briefly took over the Google.lk domain</title>
+      <link>https://ruky.me/hackers-briefly-took-over-the-google-lk-domain/</link>
+      <pubDate>Sat, 06 Feb 2021 23:01:49 +0000</pubDate>
+      <guid>https://ruky.me/hackers-briefly-took-over-the-google-lk-domain/</guid>
+      <description>&lt;p&gt;Today hackers were able to briefly take over the &lt;a href=&#34;https://google.lk&#34;&gt;Google.lk&lt;/a&gt; domain, the Google’s search engine page for Sri Lanka and redirect it to bring awareness to an ongoing crisis in Sri Lanka.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sri Lanka need unlimited internet connections</title>
+      <link>https://ruky.me/sri-lanka-need-unlimited-internet-connections/</link>
+      <pubDate>Mon, 28 Dec 2020 14:03:37 +0000</pubDate>
+      <guid>https://ruky.me/sri-lanka-need-unlimited-internet-connections/</guid>
+      <description>&lt;p&gt;There is a &lt;a href=&#34;https://i.reddit.com/r/srilanka/comments/kkgb5i/something_is_terribly_wrong_here_also_its/&#34;&gt;post making rounds on social media&lt;/a&gt; about internet charges of Sri Lanka. I don’t know how accurate the post really is, but Sri Lankan telco companies and their ISPs run one of the most shadiest businesses in the country, and it’s doing more harm than good.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I just checked Yamu stats, they don’t look good. Is Google killing Yamu?</title>
+      <link>https://ruky.me/i-just-checked-yamu-stats-they-dont-look-good-is-google-killing-yamu/</link>
+      <pubDate>Sun, 20 Dec 2020 10:05:38 +0000</pubDate>
+      <guid>https://ruky.me/i-just-checked-yamu-stats-they-dont-look-good-is-google-killing-yamu/</guid>
+      <description>&lt;p&gt;Yamu was started out as an idea in a hackathon back in 2011 or 2012 (I can’t remember the exact time), but it’s close to a decade. The original idea was to start something that was close to Uber or PickMe.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The unusual pricing of electronics in Sri Lanka</title>
+      <link>https://ruky.me/the-unusual-pricing-of-electronics-in-sri-lanka/</link>
+      <pubDate>Mon, 14 Dec 2020 11:31:09 +0000</pubDate>
+      <guid>https://ruky.me/the-unusual-pricing-of-electronics-in-sri-lanka/</guid>
+      <description>&lt;p&gt;I was looking to buy a new laptop and I was doing some shopping online. I was tracking the pricing of the new M1 MacBook air, since two weeks after its release, I found the first M1 MacBooks in Sri Lanka priced at Rs 245,000.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

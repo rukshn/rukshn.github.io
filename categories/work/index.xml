@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Work on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/work/</link>
+    <description>Recent content in Work on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Sat, 01 Jun 2024 09:39:41 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I&#39;m Trying to Avoid AI These Days</title>
+      <link>https://ruky.me/i-am-trying-to-avoid-ai-these-days/</link>
+      <pubDate>Sat, 01 Jun 2024 09:39:41 +0000</pubDate>
+      <guid>https://ruky.me/i-am-trying-to-avoid-ai-these-days/</guid>
+      <description>I feel as if the AI hype has peeked, and I am very skeptical about the AI wave that&amp;rsquo;s happening where majority of the ideas are chatGPT wrappers.</description>
+    </item>
+    <item>
+      <title>Can a company vendor lock patient data?</title>
+      <link>https://ruky.me/can-a-company-vendor-lock-patient-data/</link>
+      <pubDate>Fri, 28 May 2021 12:56:23 +0000</pubDate>
+      <guid>https://ruky.me/can-a-company-vendor-lock-patient-data/</guid>
+      <description>&lt;p&gt;When I first started my new blog, I wanted to post at least one post a week. But just like everything else I have not being able to post at least one blog post per week.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

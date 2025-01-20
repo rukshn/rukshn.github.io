@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Privacy on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/privacy/</link>
+    <description>Recent content in Privacy on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Wed, 17 Feb 2021 22:38:06 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/privacy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>They launched a website to register covid vaccinations, but it only lasted one week</title>
+      <link>http://localhost:1313/they-launched-a-website-to-register-covid-vaccinations-but-it-only-lasted-one-week/</link>
+      <pubDate>Wed, 17 Feb 2021 22:38:06 +0000</pubDate>
+      <guid>http://localhost:1313/they-launched-a-website-to-register-covid-vaccinations-but-it-only-lasted-one-week/</guid>
+      <description>&lt;p&gt;When it comes to IT in this country we are not having a great year, especially when it comes to IT involving health and security.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The value of targeted advertising</title>
+      <link>http://localhost:1313/the-value-of-targeted-advertising/</link>
+      <pubDate>Wed, 27 Jan 2021 16:48:26 +0000</pubDate>
+      <guid>http://localhost:1313/the-value-of-targeted-advertising/</guid>
+      <description>&lt;p&gt;This post will might be the post that will roast me the most. But before triggering your fingers just by reading the title I would like everyone to read my post, and read my argument before jumping in to conclusions.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

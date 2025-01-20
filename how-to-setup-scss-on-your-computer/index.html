@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>How to setup SCSS on your computer | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="Internet, JavaScript, Web development, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="
+SCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/how-to-setup-scss-on-your-computer/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/how-to-setup-scss-on-your-computer/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/how-to-setup-scss-on-your-computer/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="How to setup SCSS on your computer">
+  <meta property="og:description" content="
+SCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-08-22T00:26:39+00:00">
+    <meta property="article:modified_time" content="2021-08-22T00:26:39+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to setup SCSS on your computer">
+<meta name="twitter:description" content="
+SCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "How to setup SCSS on your computer",
+      "item": "https://ruky.me/how-to-setup-scss-on-your-computer/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to setup SCSS on your computer",
+  "name": "How to setup SCSS on your computer",
+  "description": "\nSCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.\n",
+  "keywords": [
+    "Internet", "JavaScript", "Web development", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "\nSCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.\nEven though SCSS is similar to css and even though you can write regular CSS in a CSS file, still your browser won’t render SCSS files unless you compile them to CSS files.\nIn this post I will show you how you can setup SCSS compiler on your computer so you can easily compile sass files to regular css files to be used on your next web project.\nWhy SCSS over CSS? Before I write how you can setup SCSS I will show some of the capabilities of SCSS over CSS and how it can improve the way you write CSS.\nVariables You can declare variables in SCSS by using the $ sign followed by a variable name.\nFor example, let’s say you want to assign a primary color that you will use throughout your web project. Instead of having to memorize the hex or RGBA value of that color, you can simply specify a variable that you can remember, and use it through out your project.\n$primary_color: #3f37c9; .main-button { background-color: $primary_color; } Functions SCSS also has some functions that are useful in web-development. For example, if you want to darken a color of a button on hover, if you write plain CSS you might have to manually find a suitable color by using the web-developer-console on your browser.\nHowever, if you are using SCSS you can simply use SCSS function to darken or lighten a color like this.\n$primary_color: #3f37c9; .main-button { background-color: $primary_color; :hover { background-color: darken($primary_color, 10%); } :focus { background-color: lighten($primary_color, 10%); } } The darken function will darken the $primary_color by 10% and the lighten function will lighten the color by 10% etc.\nThese are some of the most common use cases that I love when using sass. There are lots of features such as this in sass that you can read it from their documentation at http://scss-lang.com.\nInstalling the SCSS compiler There are several ways and tools to compile SCSS to CSS files. There are GUI tools as well as terminal tools. In this post I will show you how to setup the NodeJS compiler of SCSS and how you can compile SCSS files to CSS.\nStep 1 – Install NodeJS on your computer If you don’t have NodeJS installed on your computer, download and install the NodeJS version that matches your operating system and processor architecture. NodeJS supports Apple M1 processor since version 16.\nThere are two types of distributions, the long term support version (LTS) which is currently 14 at the time of writing and the latest version which is version 16 at the time of writing.\nYou can download the NodeJS from their website at http://nodejs.org\nDownload and install NodeJS. If you are a windows user, you might have to add NodeJS path to your command.\nYou can check if NodeJS is correctly installed by running the following command from your command line.\nnode -v Step 2 – Install SASS You can install sass globally, or locally on your project. If you install sass globally it will be accessible anywhere through your command line, and if you install it on your project it will only be accessible within your project folder.\nPersonally I prefer installing it within the project folder. You can install it though the node package manager (NPM) by running the following command.\nnpm install -save-dev sass Step 3 – Compile SCSS files to SCC Now you can simply compile SCSS files to CSS files by running the following command.\nnode sass source/stylesheets/index.scss build/stylesheets/index.css If installed sass globally you can run without including the node at the beginning on your command prompt.\nThe first parameter is the path to your source file, which is a sass file. The second parameter is the destination file where your compiled css file will be created.\nNow you can include the compiled css file on your web project.\nYou can also use the -w switch to watch for changes, so when you include the -w switch the sass compiler will look for changes whenever you make a modification to the sass file and a newer css file will be compiled by using the source.\nnode sass -w source/stylesheets/index.scss build/stylesheets/index.css I personally setup sass compiler together with a task runner like Gulp so I can easily run the sass compiler and other tasks together.\nI will write a separate post on how to set up Gulp as a task runner for your NodeJS project at a later time.\n",
+  "wordCount" : "787",
+  "inLanguage": "en",
+  "datePublished": "2021-08-22T00:26:39Z",
+  "dateModified": "2021-08-22T00:26:39Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/how-to-setup-scss-on-your-computer/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      How to setup SCSS on your computer
+    </h1>
+    <div class="post-meta"><span title='2021-08-22 00:26:39 +0000 UTC'>August 22, 2021</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/sass.png?resize=1024%2C516&ssl=1"></p>
+<p>SCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.</p>
+<p>Even though SCSS is similar to css and even though you can write regular CSS in a CSS file, still your browser won’t render SCSS files unless you compile them to CSS files.</p>
+<p>In this post I will show you how you can setup SCSS compiler on your computer so you can easily compile sass files to regular css files to be used on your next web project.</p>
+<h2 id="why-scss-over-css">Why SCSS over CSS?<a hidden class="anchor" aria-hidden="true" href="#why-scss-over-css">#</a></h2>
+<p>Before I write how you can setup SCSS I will show some of the capabilities of SCSS over CSS and how it can improve the way you write CSS.</p>
+<h4 id="variables">Variables<a hidden class="anchor" aria-hidden="true" href="#variables">#</a></h4>
+<p>You can declare variables in SCSS by using the <code>$</code> sign followed by a variable name.</p>
+<p>For example, let’s say you want to assign a primary color that you will use throughout your web project. Instead of having to memorize the hex or RGBA value of that color, you can simply specify a variable that you can remember, and use it through out your project.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#ff79c6">$</span><span style="color:#ff79c6">primary_color</span><span style="color:#ff79c6">:</span> #3f37c9<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">main-button</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: $primary_color;
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h4 id="functions">Functions<a hidden class="anchor" aria-hidden="true" href="#functions">#</a></h4>
+<p>SCSS also has some functions that are useful in web-development. For example, if you want to darken a color of a button on hover, if you write plain CSS you might have to manually find a suitable color by using the web-developer-console on your browser.</p>
+<p>However, if you are using SCSS you can simply use SCSS function to darken or lighten a color like this.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span>    <span style="color:#ff79c6">$</span><span style="color:#ff79c6">primary_color</span><span style="color:#ff79c6">:</span> #3f37c9<span style="color:#ff79c6">;</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    .<span style="color:#50fa7b">main-button</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">background-color</span>: $primary_color;
+</span></span><span style="display:flex;"><span>        :hover {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">background-color</span>: <span style="color:#50fa7b">darken</span>($primary_color, <span style="color:#bd93f9">10</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        :focus {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">background-color</span>: <span style="color:#50fa7b">lighten</span>($primary_color, <span style="color:#bd93f9">10</span><span style="color:#8be9fd">%</span>);
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>The darken function will darken the <code>$primary_color</code> by 10% and the lighten function will lighten the color by 10% etc.</p>
+<p>These are some of the most common use cases that I love when using sass. There are lots of features such as this in sass that you can read it from their documentation at <a href="http://scss-lang.org">http://scss-lan</a><a href="http://scss-lang.com">g.com</a>.</p>
+<h2 id="installing-the-scss-compiler">Installing the SCSS compiler<a hidden class="anchor" aria-hidden="true" href="#installing-the-scss-compiler">#</a></h2>
+<p>There are several ways and tools to compile SCSS to CSS files. There are GUI tools as well as terminal tools. In this post I will show you how to setup the NodeJS compiler of SCSS and how you can compile SCSS files to CSS.</p>
+<h3 id="step-1--install-nodejs-on-your-computer">Step 1 – Install NodeJS on your computer<a hidden class="anchor" aria-hidden="true" href="#step-1--install-nodejs-on-your-computer">#</a></h3>
+<p>If you don’t have NodeJS installed on your computer, download and install the NodeJS version that matches your operating system and processor architecture. NodeJS supports Apple M1 processor since version 16.</p>
+<p>There are two types of distributions, the long term support version (LTS) which is currently 14 at the time of writing and the latest version which is version 16 at the time of writing.</p>
+<p>You can download the NodeJS from their website at <a href="http://nodejs.org">http://nodejs.org</a></p>
+<p>Download and install NodeJS. If you are a windows user, you might have to add NodeJS path to your command.</p>
+<p>You can check if NodeJS is correctly installed by running the following command from your command line.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    node -v
+</span></span></code></pre></div><p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/Screen-Shot-2021-08-22-at-00.21.55.png?resize=1024%2C708&ssl=1"></p>
+<h3 id="step-2--install-sass">Step 2 – Install SASS<a hidden class="anchor" aria-hidden="true" href="#step-2--install-sass">#</a></h3>
+<p>You can install sass globally, or locally on your project. If you install sass globally it will be accessible anywhere through your command line, and if you install it on your project it will only be accessible within your project folder.</p>
+<p>Personally I prefer installing it within the project folder. You can install it though the <strong>node package manager (NPM)</strong> by running the following command.</p>
+<pre><code>npm install -save-dev sass
+</code></pre>
+<h3 id="step-3--compile-scss-files-to-scc">Step 3 – Compile SCSS files to SCC<a hidden class="anchor" aria-hidden="true" href="#step-3--compile-scss-files-to-scc">#</a></h3>
+<p>Now you can simply compile SCSS files to CSS files by running the following command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    node sass source/stylesheets/index.scss build/stylesheets/index.css
+</span></span></code></pre></div><p>If installed sass globally you can run without including the node at the beginning on your command prompt.</p>
+<p>The first parameter is the path to your source file, which is a sass file. The second parameter is the destination file where your compiled css file will be created.</p>
+<p>Now you can include the compiled css file on your web project.</p>
+<p>You can also use the <code>-w</code> switch to watch for changes, so when you include the <code>-w</code> switch the sass compiler will look for changes whenever you make a modification to the sass file and a newer css file will be compiled by using the source.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    node sass -w source/stylesheets/index.scss build/stylesheets/index.css
+</span></span></code></pre></div><p>I personally setup sass compiler together with a task runner like Gulp so I can easily run the sass compiler and other tasks together.</p>
+<p>I will write a separate post on how to set up Gulp as a task runner for your NodeJS project at a later time.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>DevOps on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/devops/</link>
+    <description>Recent content in DevOps on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Mon, 26 Dec 2022 16:47:59 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Running a Local HAPI FHIR Server For Testing HL7 FHIR Requests</title>
+      <link>http://localhost:1313/running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/</link>
+      <pubDate>Mon, 26 Dec 2022 16:47:59 +0000</pubDate>
+      <guid>http://localhost:1313/running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/</guid>
+      <description>&lt;p&gt;When implementing FHIR, a FHIR server is essential for validating and process incoming FHIR requests from clients. Also, it will be the place where you store your customized profiles, valuesets, and codesystems that is necessary for managing terminology.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>XForm and XLSFrom Standards are Preventing The Progress of Digital Health | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="coding, Internet, JavaScript, Rants, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="XForm and XLSFrom Standards are Preventing The Progress of Digital Health">
+  <meta property="og:description" content="Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-10-31T16:25:16+00:00">
+    <meta property="article:modified_time" content="2023-10-31T16:25:16+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="XForm and XLSFrom Standards are Preventing The Progress of Digital Health">
+<meta name="twitter:description" content="Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "XForm and XLSFrom Standards are Preventing The Progress of Digital Health",
+      "item": "https://ruky.me/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "XForm and XLSFrom Standards are Preventing The Progress of Digital Health",
+  "name": "XForm and XLSFrom Standards are Preventing The Progress of Digital Health",
+  "description": "Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.\n",
+  "keywords": [
+    "coding", "Internet", "JavaScript", "Rants", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.\nScenario Let me take the most common scenario: a healthcare facility survey. Social workers or conductors of the survey go to the healthcare institute, with a tablet or a mobile device. They load the survey questionnaire from a remote server and then collect the data. The data gets submitted to the server online or collected offline at the site and then synced with the server later.\nThe survey questionnaire can be a simple survey with a static set of fields, or can be a complex questionnaire with hundreds of questions plus lots of skip logic, and calculations along the way. As developers, it won’t be a difficult task to create forms like this in JavaScript. But imagine having to develop something with no coding or HTML knowledge, and one institute can conduct more than one survey and might have the need to create a number of surveys per year. Plus in a low-resource country with little or no budget to hire developers.\nThe Standard Currently, the defacto standard used to create forms for surveys like these is the XForms standard. And people use another standard called XLS forms. Where you can create forms with a very crude language, and add logic to the elements and group of elements with its own pseudo-language, which will generate the skip logic.\nThe logic in an XLS form looks like this,\nif(${gender}='female' and ${p_age}\u003e=24,41.2622536519346-2.2807946589665*${p_height}+0.0513162082758347*pow(${p_height},2)-0.000532227017487036*pow(${p_height},3)+0.00000267880129591717*pow(${p_height},4)-0.00000000502269777541732*pow(${p_height},5), 0) Everything you do is based on Excel, and you will need to have the specific Excel columns and follow a strict pattern to generate the skip logic and correct form rendering. This XLS form can then be converted to XForms using tools like ODK (which I will talk about in the next section), and rendered on a device. This is a simple and intuitive way to create simple forms with no knowledge of HTML and JavaScript.\nThe way these tools collect and store data, also hinders how the data can be shared with other systems with using modern standards like FHIR. And with the lock-in these tools have on the data collection space, and their delay to adopt modern standards like FHIR also hinders interoperability and data sharing.\nThe Problem The problem arises when the questionnaires become complex, with an increasing number of questions and skip logic. As the logic gets complex, the conditions increase in length and are difficult to manage, and everything snowballs into chaos\nNo IDEs or tools. Everything has to be done by hand. Everything has to be in the same cell, there is no way to go to a different cell, or row as if you’re coding. No type checks or syntax checks, everything is done in Excel. Finding errors can become a nightmare and it’s like a needle in a haystack. Cyclic dependencies I’ve also seen some logic becoming so complex, it hits the character limit for a cell in excel. One small modification somewhere can crash everything and form from rendering. Once someone generates a proper XLS file, it will be uploaded to one of the software servers mentioned below and gets generated into Xfrom which is used to collect data. Creating these files can take an unbelievably long time.\nSometimes WHO itself publishes the questionnaire in XLSForms and XFroms standard because they are widely being used in countries. Countries also find it extremely difficult to modify these forms for the reasons mentioned above, because XLSFroms are not a proper standard or a language. One has to come to the digital health landscape to see how this is slowing down the adaptation of proper standards and digital health.\nThe Software Data collection tools like ODK, Kobo, and CHT are using these standards, and they have been established as the de facto tools for data collection in healthcare surveys.\nAnd countries have been using these tools for a really long period, it has become really difficult to replace them with something better. As there are people who are used to collecting data using these tools, countries are reluctant to replace and train people with different tools.\nThe tools, even though they are open source, do not adopt proper interoperability standards, making it extremely difficult to exchange the data with other systems. The tools also do not seem to innovate and replace the XLSform with something better.\nAnd it’s one of those niche corners where XForms are still widely being used and one reason for the existence of Xforms and XLSForms..\nFinally, now there is a symbiotic relationship between these tools, and an old standard XForms and pseudo standard (XLS Forms). And one is kept alive because of the other. And there is no progress and in the field of health survey data collection. And even with all the issues, XLSFroms provides a semi no-code solution for countries to develop forms without the need to invest time and money on developers or solutions.\nThe Solution In my research during last week, I was unable to find a proper replacement for XForms and XLSForms. I found one repository from 2016, that tried to replace XLSfroms with a JSON structure called JSON forms, but it has not received any update since 2016.\nBut what JSON forms did not understand is that what adds value to XLSfroms is the ability to add skip logic, and render forms dynamically depending on previous user inputs. Which has not been addressed in JSON forms. The ability to add logic without the need to learn JavaScript or HTML and generate complex web forms.\nI think there should be a tool that allows people to generate web forms with skip logic, ideally a graphical UI, which outputs a standard HTML web form with JavaScript to add logic. I know there are survey tools that can add basic logic, but these forms have complex logic that can depend on responses collected at different stages of data collection.\nThese HTML forms can then be sent to a tablet or mobile device for data collection in the field.\nIn summery the solution should be a,\nA no-code tool that can easily create web forms. Ability to add complex logic depending on previous responses and dynamically generate forms. Ability to add this logic without coding in JavaScript with minimal syntax or GUI like people currently add logic in Excel. Push the form to a tablet or a mobile device. Collect the responses in a central server and share with other services to generate reports. As someone working in digital health field, it can be really frustrating to see when we are living in an age of generative AI, and an abundance of really smart coders. But on the other spectrum, we tend to struggle to have a proper tool that generates forms for data collection based on real web standards.\nI really hope one comes up with such a tool. I’d love to listen to your recommendations and feedback in the comments.\n",
+  "wordCount" : "1211",
+  "inLanguage": "en",
+  "datePublished": "2023-10-31T16:25:16Z",
+  "dateModified": "2023-10-31T16:25:16Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      XForm and XLSFrom Standards are Preventing The Progress of Digital Health
+    </h1>
+    <div class="post-meta"><span title='2023-10-31 16:25:16 +0000 UTC'>October 31, 2023</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.</p>
+<h2 id="scenario">Scenario<a hidden class="anchor" aria-hidden="true" href="#scenario">#</a></h2>
+<p>Let me take the most common scenario: a healthcare facility survey. Social workers or conductors of the survey go to the healthcare institute, with a tablet or a mobile device. They load the survey questionnaire from a remote server and then collect the data. The data gets submitted to the server online or collected offline at the site and then synced with the server later.</p>
+<p>The survey questionnaire can be a simple survey with a static set of fields, or can be a complex questionnaire with hundreds of questions plus lots of skip logic, and calculations along the way. As developers, it won’t be a difficult task to create forms like this in JavaScript. But imagine having to develop something with no coding or HTML knowledge, and one institute can conduct more than one survey and might have the need to create a number of surveys per year. Plus in a low-resource country with little or no budget to hire developers.</p>
+<h3 id="the-standard">The Standard<a hidden class="anchor" aria-hidden="true" href="#the-standard">#</a></h3>
+<p>Currently, the defacto standard used to create forms for surveys like these is the XForms standard. And people use another standard called XLS forms. Where you can create forms with a very crude language, and add logic to the elements and group of elements with its own pseudo-language, which will generate the skip logic.</p>
+<p>The logic in an XLS form looks like this,</p>
+<pre tabindex="0"><code>if(${gender}=&#39;female&#39; and ${p_age}&gt;=24,41.2622536519346-2.2807946589665*${p_height}+0.0513162082758347*pow(${p_height},2)-0.000532227017487036*pow(${p_height},3)+0.00000267880129591717*pow(${p_height},4)-0.00000000502269777541732*pow(${p_height},5), 0)
+</code></pre><p>Everything you do is based on Excel, and you will need to have the specific Excel columns and follow a strict pattern to generate the skip logic and correct form rendering. This XLS form can then be converted to XForms using tools like ODK (which I will talk about in the next section), and rendered on a device. This is a simple and intuitive way to create simple forms with no knowledge of HTML and JavaScript.</p>
+<p>The way these tools collect and store data, also hinders how the data can be shared with other systems with using modern standards like FHIR. And with the lock-in these tools have on the data collection space, and their delay to adopt modern standards like FHIR also hinders interoperability and data sharing.</p>
+<h2 id="the-problem">The Problem<a hidden class="anchor" aria-hidden="true" href="#the-problem">#</a></h2>
+<p>The problem arises when the questionnaires become complex, with an increasing number of questions and skip logic. As the logic gets complex, the conditions increase in length and are difficult to manage, and everything snowballs into chaos</p>
+<ul>
+<li>No IDEs or tools. Everything has to be done by hand.</li>
+<li>Everything has to be in the same cell, there is no way to go to a different cell, or row as if you’re coding.</li>
+<li>No type checks or syntax checks, everything is done in Excel.</li>
+<li>Finding errors can become a nightmare and it’s like a needle in a haystack.</li>
+<li>Cyclic dependencies</li>
+<li>I’ve also seen some logic becoming so complex, it hits the character limit for a cell in excel.</li>
+<li>One small modification somewhere can crash everything and form from rendering.</li>
+</ul>
+<p>Once someone generates a proper XLS file, it will be uploaded to one of the software servers mentioned below and gets generated into Xfrom which is used to collect data. Creating these files can take an unbelievably long time.</p>
+<p>Sometimes WHO itself publishes the questionnaire in XLSForms and XFroms standard because they are widely being used in countries. Countries also find it extremely difficult to modify these forms for the reasons mentioned above, because XLSFroms are not a proper standard or a language. One has to come to the digital health landscape to see how this is slowing down the adaptation of proper standards and digital health.</p>
+<h2 id="the-software">The Software<a hidden class="anchor" aria-hidden="true" href="#the-software">#</a></h2>
+<p>Data collection tools like ODK, Kobo, and CHT are using these standards, and they have been established as the de facto tools for data collection in healthcare surveys.</p>
+<p>And countries have been using these tools for a really long period, it has become really difficult to replace them with something better. As there are people who are used to collecting data using these tools, countries are reluctant to replace and train people with different tools.</p>
+<p>The tools, even though they are open source, do not adopt proper interoperability standards, making it extremely difficult to exchange the data with other systems. The tools also do not seem to innovate and replace the XLSform with something better.</p>
+<p>And it’s one of those niche corners where XForms are still widely being used and one reason for the existence of Xforms and XLSForms..</p>
+<p>Finally, now there is a symbiotic relationship between these tools, and an old standard XForms and pseudo standard (XLS Forms). And one is kept alive because of the other. And there is no progress and in the field of health survey data collection. And even with all the issues, XLSFroms provides a semi no-code solution for countries to develop forms without the need to invest time and money on developers or solutions.</p>
+<h2 id="the-solution">The Solution<a hidden class="anchor" aria-hidden="true" href="#the-solution">#</a></h2>
+<p>In my research during last week, I was unable to find a proper replacement for XForms and XLSForms. I found one repository from 2016, that tried to replace XLSfroms with a JSON structure called JSON forms, but it has not received any update since 2016.</p>
+<p>But what JSON forms did not understand is that what adds value to XLSfroms is the ability to add skip logic, and render forms dynamically depending on previous user inputs. Which has not been addressed in JSON forms. The ability to add logic without the need to learn JavaScript or HTML and generate complex web forms.</p>
+<p>I think there should be a tool that allows people to generate web forms with skip logic, ideally a graphical UI, which outputs a standard HTML web form with JavaScript to add logic. I know there are survey tools that can add basic logic, but these forms have complex logic that can depend on responses collected at different stages of data collection.</p>
+<p>These HTML forms can then be sent to a tablet or mobile device for data collection in the field.</p>
+<p>In summery the solution should be a,</p>
+<ul>
+<li>A no-code tool that can easily create web forms.</li>
+<li>Ability to add complex logic depending on previous responses and dynamically generate forms.</li>
+<li>Ability to add this logic without coding in JavaScript with minimal syntax or GUI like people currently add logic in Excel.</li>
+<li>Push the form to a tablet or a mobile device.</li>
+<li>Collect the responses in a central server and share with other services to generate reports.</li>
+</ul>
+<p>As someone working in digital health field, it can be really frustrating to see when we are living in an age of generative AI, and an abundance of really smart coders. But on the other spectrum, we tend to struggle to have a proper tool that generates forms for data collection based on real web standards.</p>
+<p>I really hope one comes up with such a tool. I’d love to listen to your recommendations and feedback in the comments.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

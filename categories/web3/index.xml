@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web3 on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/web3/</link>
+    <description>Recent content in Web3 on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Tue, 17 May 2022 23:35:59 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/web3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Web 3 Tutorial - How to upload and serve files in IPFS network using NodeJs</title>
+      <link>https://ruky.me/web-3-how-to-upload-a-file-to-the-ipfs-network/</link>
+      <pubDate>Tue, 17 May 2022 23:35:59 +0000</pubDate>
+      <guid>https://ruky.me/web-3-how-to-upload-a-file-to-the-ipfs-network/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2022/05/ipfs-logo.webp?resize=1024%2C406&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Web3 is fascinating and uncharted territory. Recently, I decided to learn a few things about Web3 technologies. Even though I had some basic ideas about the blockchain and NFTs, I’ve never tried writing a program for Web3.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

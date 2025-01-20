@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Why textareas can&#39;t grow? | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="CSS, JavaScript, Rants, Webdevelopment, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/why-textareas-cant-grow/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/why-textareas-cant-grow/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/why-textareas-cant-grow/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="Why textareas can&#39;t grow?">
+  <meta property="og:description" content="Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-05-01T13:58:49+00:00">
+    <meta property="article:modified_time" content="2021-05-01T13:58:49+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Why textareas can&#39;t grow?">
+<meta name="twitter:description" content="Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Why textareas can't grow?",
+      "item": "https://ruky.me/why-textareas-cant-grow/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why textareas can't grow?",
+  "name": "Why textareas can\u0027t grow?",
+  "description": "Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.\n",
+  "keywords": [
+    "CSS", "JavaScript", "Rants", "Webdevelopment", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.\nHowever, textareas have one small problem that you can’t seem to find an answer, that is textareas won’t automatically grow in height, as you would need them to be in a modern UI website.\nTextareas have a fixed height, and if the text overflows this height, then the usual way is for textareas to have scrollbars.\nThis is somewhat of an anti-pattern in today’s websites. No one wants to have scrollbars in their textareas, users and developers want the textareas to grow and make all the user input visible at all times.\nI remember struggling to create a growing textarea five years back when I was trying to develop a website. Back then the solution has been to automatically increase the height property of the textarea style by using jQuery.\nSince I don’t use jQuery anymore, and I don’t want to use jQuery just to grow a textarea, I searched the internet while I was trying to develop a textarea that grows for Tuti. An online flashcard creator that I’m building for fun.\nIf you googled this question, you will see that so many questions have been asked and people have come up with different solutions of their own from time to time, depending on the tech and CSS available during their time (like I used jQuery five years ago to solve the same problem)\nThe latest and the most popular answer available Google and Stackoverflow points to this blog post on CSS-Tricks, which uses some CSS magic and one line of Javascript to create an automatically growing textarea.\nYes, this seems great, and the demo also works fine. However, for some reason when I try to mix the solution with Vue or AlpineJs which I’m currently using for another small web app, there is an annoying delay between the keypress and your text appearing on screen.\nIt won’t have much of an effect on someone who types slowly, but for somewhat who is trying relatively fast it tends to be super annoying.\nI tried using different events, (keyup, keydown, onInput) but nothing seems to get rid of me this annoying delay that I’m getting.\nThis is not to say that the answer on CSS-Tricks is bad, but it is not the right solution for me when I combine that with a javascript framework. Maybe it has to do with something that has to do with Vue or other DOM manipulating frameworks.\nWhat others are doing So I decided to check what are the solutions that are being used by popular websites, especially Twitter and Facebook. Since an auto-growing textarea plays a central role in their UI. Posting content and comments on Facebook, and writing a new Tweet on Twitter.\nUpon inspecting the website’s code, it seems both services are using a content-editable div, and are not depending on a textarea at all.\nSo I thought of doing the same, and here’s the solution that I came up for my web app for the time being.\nStep 1 Create a div with content editable being true.\n\u003cdiv id=\"growingTextarea\" placeholder=\"some placeholder text\" contenteditable=\"true\"\u003e\u003c/div\u003e Step 2 Textareas have placeholders, but you can’t simply add a placeholder property to a content editable div. But you can add a placeholder property to the div and make it visible to the user with the help of some CSS.\n[contenteditable=true]:empty:before{ content: attr(placeholder); @apply text-gray-400 text-lg; /* the @apply notations are to import the styles via tailwindCss */ pointer-events: none; display: block; /* For Firefox */ } Step 3 Retrieve the content of the div with the help of Javascript.\ndocument.getElementById('growingTextarea').innerText Result See the Pen Auto growing TextArea by Rukshan Ranatunge (@rukshn) on CodePen.\nConclusion It’s funny how even with so many web apps depending on textareas that are auto-growing, still there is no css only, standard method to create a textarea that is automatically increasing in size, without having to depend on CSS or Javascript hacks.\nMaybe content editable might have their own issues, but it’s something that currently works for me solving my problem.\nIf you know any alternative solutions (which I’m sure there are many) feel free to let me know on Twitter via https://twitter.com/justruky\n",
+  "wordCount" : "715",
+  "inLanguage": "en",
+  "datePublished": "2021-05-01T13:58:49Z",
+  "dateModified": "2021-05-01T13:58:49Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/why-textareas-cant-grow/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Why textareas can&#39;t grow?
+    </h1>
+    <div class="post-meta"><span title='2021-05-01 13:58:49 +0000 UTC'>May 1, 2021</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.</p>
+<p>However, textareas have one small problem that you can’t seem to find an answer, that is textareas won’t automatically grow in height, as you would need them to be in a modern UI website.</p>
+<p>Textareas have a fixed height, and if the text overflows this height, then the usual way is for textareas to have scrollbars.</p>
+<p>This is somewhat of an anti-pattern in today’s websites. No one wants to have scrollbars in their textareas, users and developers want the textareas to grow and make all the user input visible at all times.</p>
+<p>I remember struggling to create a growing textarea five years back when I was trying to develop a website. Back then the solution has been to automatically increase the height property of the textarea style by using jQuery.</p>
+<p>Since I don’t use jQuery anymore, and I don’t want to use jQuery just to grow a textarea, I searched the internet while I was trying to develop a textarea that grows for <a href="https://tuti.study">Tuti</a>. An online flashcard creator that I’m building for fun.</p>
+<p>If you googled this question, you will see that so many questions have been asked and people have come up with different solutions of their own from time to time, depending on the tech and CSS available during their time (like I used jQuery five years ago to solve the same problem)</p>
+<p>The latest and the most popular answer available Google and Stackoverflow points to this <a href="https://css-tricks.com/the-cleanest-trick-for-autogrowing-textareas/">blog post on CSS-Tricks</a>, which uses some CSS magic and one line of Javascript to create an automatically growing textarea.</p>
+<p>Yes, this seems great, and the demo also works fine. However, for some reason when I try to mix the solution with Vue or AlpineJs which I’m currently using for another small web app, there is an annoying delay between the keypress and your text appearing on screen.</p>
+<p>It won’t have much of an effect on someone who types slowly, but for somewhat who is trying relatively fast it tends to be super annoying.</p>
+<p>I tried using different events, (keyup, keydown, onInput) but nothing seems to get rid of me this annoying delay that I’m getting.</p>
+<p>This is not to say that the answer on CSS-Tricks is bad, but it is not the right solution for me when I combine that with a javascript framework. Maybe it has to do with something that has to do with Vue or other DOM manipulating frameworks.</p>
+<h2 id="what-others-are-doing">What others are doing<a hidden class="anchor" aria-hidden="true" href="#what-others-are-doing">#</a></h2>
+<p>So I decided to check what are the solutions that are being used by popular websites, especially Twitter and Facebook. Since an auto-growing textarea plays a central role in their UI. Posting content and comments on Facebook, and writing a new Tweet on Twitter.</p>
+<p>Upon inspecting the website’s code, it seems both services are using a <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Editable_content">content-editable</a> div, and are not depending on a textarea at all.</p>
+<p>So I thought of doing the same, and here’s the solution that I came up for my web app for the time being.</p>
+<h3 id="step-1">Step 1<a hidden class="anchor" aria-hidden="true" href="#step-1">#</a></h3>
+<p>Create a div with content editable being true.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>    &lt;<span style="color:#ff79c6">div</span> <span style="color:#50fa7b">id</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;growingTextarea&#34;</span> <span style="color:#50fa7b">placeholder</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;some placeholder text&#34;</span> <span style="color:#50fa7b">contenteditable</span><span style="color:#ff79c6">=</span><span style="color:#f1fa8c">&#34;true&#34;</span>&gt;&lt;/<span style="color:#ff79c6">div</span>&gt;
+</span></span></code></pre></div><h3 id="step-2">Step 2<a hidden class="anchor" aria-hidden="true" href="#step-2">#</a></h3>
+<p>Textareas have placeholders, but you can’t simply add a placeholder property to a content editable div. But you can add a placeholder property to the div and make it visible to the user with the help of some CSS.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>    [contenteditable=true]:empty:before{
+</span></span><span style="display:flex;"><span>      content: attr(placeholder);
+</span></span><span style="display:flex;"><span>      @apply text-gray-400 text-lg; /* the @apply notations are to import the styles via tailwindCss */
+</span></span><span style="display:flex;"><span>      pointer-events: none;
+</span></span><span style="display:flex;"><span>      display: block; /* For Firefox */
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="step-3">Step 3<a hidden class="anchor" aria-hidden="true" href="#step-3">#</a></h3>
+<p>Retrieve the content of the div with the help of Javascript.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-HTML" data-lang="HTML"><span style="display:flex;"><span>    document.getElementById(&#39;growingTextarea&#39;).innerText
+</span></span></code></pre></div><h2 id="result">Result<a hidden class="anchor" aria-hidden="true" href="#result">#</a></h2>
+<p>See the Pen <a href="https://codepen.io/rukshn/pen/vYgqRdJ">Auto growing TextArea</a> by Rukshan Ranatunge (<a href="https://codepen.io/rukshn">@rukshn</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<h2 id="conclusion">Conclusion<a hidden class="anchor" aria-hidden="true" href="#conclusion">#</a></h2>
+<p>It’s funny how even with so many web apps depending on textareas that are auto-growing, still there is no css only, standard method to create a textarea that is automatically increasing in size, without having to depend on CSS or Javascript hacks.</p>
+<p>Maybe content editable might have their own issues, but it’s something that currently works for me solving my problem.</p>
+<p>If you know any alternative solutions (which I’m sure there are many) feel free to let me know on Twitter via <a href="https://twitter.com/justruky">https://twitter.com/justruky</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

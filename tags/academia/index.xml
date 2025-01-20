@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Academia on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/academia/</link>
+    <description>Recent content in Academia on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Thu, 26 Dec 2024 08:10:20 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/academia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Attended Your Next Conference for Free</title>
+      <link>http://localhost:1313/how-to-attended-your-next-conference-for-free/</link>
+      <pubDate>Thu, 26 Dec 2024 08:10:20 +0000</pubDate>
+      <guid>http://localhost:1313/how-to-attended-your-next-conference-for-free/</guid>
+      <description>&lt;p&gt;Attending a conference can be an expensive thing to do, with lots of expenses, for example, the travel cost, the ticket for the conference, the food, and lodging are some of the main expenses you will have to pay, on top of that there will be hidden small expenses that will add up at the end of your tour.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Publication and My Thoughts on Academia</title>
+      <link>http://localhost:1313/my-first-publication-and-my-thoughts-on-academia/</link>
+      <pubDate>Fri, 25 Oct 2024 05:49:10 +0000</pubDate>
+      <guid>http://localhost:1313/my-first-publication-and-my-thoughts-on-academia/</guid>
+      <description>&lt;p&gt;Few years ago I was someone was not interested in academia, I felt as if people are rehashing the same scientific topic in different ways, or publishing every minute thing just to add up to their pile of publications. I never thought I&amp;rsquo;d be able to write a publication under 200 words, the very idea of expressing something meaningful in such a short number of words was something that I could not agree with.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

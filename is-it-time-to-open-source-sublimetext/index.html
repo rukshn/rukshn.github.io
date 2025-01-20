@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Is It Time to Open Source SublimeText? | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="coding, Internet, Life, Rants, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="
+Recently I had to do some text editing and was in need of a text editor that was better than Notepad, and with muscle memory, I went on and tried to download VSCodium. However, the download was like 100&#43; megabytes in size and since I was using a public internet connection that would make me wait for several good minutes to complete the download.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/is-it-time-to-open-source-sublimetext/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/is-it-time-to-open-source-sublimetext/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/is-it-time-to-open-source-sublimetext/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="Is It Time to Open Source SublimeText?">
+  <meta property="og:description" content="
+Recently I had to do some text editing and was in need of a text editor that was better than Notepad, and with muscle memory, I went on and tried to download VSCodium. However, the download was like 100&#43; megabytes in size and since I was using a public internet connection that would make me wait for several good minutes to complete the download.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-03-30T19:29:26+00:00">
+    <meta property="article:modified_time" content="2023-03-30T19:29:26+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Is It Time to Open Source SublimeText?">
+<meta name="twitter:description" content="
+Recently I had to do some text editing and was in need of a text editor that was better than Notepad, and with muscle memory, I went on and tried to download VSCodium. However, the download was like 100&#43; megabytes in size and since I was using a public internet connection that would make me wait for several good minutes to complete the download.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Is It Time to Open Source SublimeText?",
+      "item": "https://ruky.me/is-it-time-to-open-source-sublimetext/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Is It Time to Open Source SublimeText?",
+  "name": "Is It Time to Open Source SublimeText?",
+  "description": "\nRecently I had to do some text editing and was in need of a text editor that was better than Notepad, and with muscle memory, I went on and tried to download VSCodium. However, the download was like 100+ megabytes in size and since I was using a public internet connection that would make me wait for several good minutes to complete the download.\n",
+  "keywords": [
+    "coding", "Internet", "Life", "Rants", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "\nRecently I had to do some text editing and was in need of a text editor that was better than Notepad, and with muscle memory, I went on and tried to download VSCodium. However, the download was like 100+ megabytes in size and since I was using a public internet connection that would make me wait for several good minutes to complete the download.\nSo I cancelled the download and decided to download SublimeText, something I’ve not done for a long time. I hit the download button, since SublimeText was just 18 megabytes and I was running a good text editor on a Windows machine in no time. Sublime.\nI continued to edit the file, and then it made me realize how much I miss the snappy, instant feedback that I get from SublimeText that is yet to be reproduced by VSCode or other text editors based on electron.\nSublimeText a small but fast editor is overshadowed by VSCode for a very long time. I think much of this has been due to nature of VSCode being a free and open source software. Let me explain,\nVSCode is an editor that you can download for free. However, even thogh free to download, you have to pay a licensing fee of USD 99 when you are using SublimeText. This might not be signficant amount for some users. However, the majority of developers will go to the freely available VSCode rather than paying a licensing fee of USD 99. And in some parts of the world, USD 99 can be difficult for most developers to afford.\nThen the open-source nature of VSCode. The open source model of VSCode is the main reason for VSCode to become popular than SublimeText. VSCode gets contributions from the community for its development, and VSCode gets frequent updates when compared to Sublime. Not only that, the open source nature has also led to an extension marketplace that has outgrown SublimeText. Thanks to the extension marketplace, after installing few extensions, you can convert your VSCode from a simple text editor to a full-blown IDE.\nI feel that open sourcing SublimeText is the only way for SubmlineText to be relevant and compete against VSCode. The developers can get support from the open-source community, and the Sublime team will be able to push regular updates, and new improvements at a faster rate than they are currently doing. I’m sure many more developers like me liked the simplicity of SublimeText before VSCode came along.\nOpen-sourcing SublimeText will also encourage plugin developers to develop more third-party plugins for SublimeText as it has done with VSCode.\nWhen it comes to making money, the SublimeText developers can offer the core version of SublimeText for free, while they can sell a pro version with more advanced features targeted towards more advanced users and developers.\nThis will also take the stress away from the developers in maintaining the SublimeText core, which will be supported by the community while they can focus on pro features for the text editor.\nWith the rapid pace of VSCode development with the backing of Microsoft, I don’t see any other way SublimeText can keep up unless they make the editor open-source. And I truly want SublimeText to be out there because it’s such a good editor and provides a better experience compared to text editors baded on electron.\n",
+  "wordCount" : "557",
+  "inLanguage": "en",
+  "datePublished": "2023-03-30T19:29:26Z",
+  "dateModified": "2023-03-30T19:29:26Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/is-it-time-to-open-source-sublimetext/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Is It Time to Open Source SublimeText?
+    </h1>
+    <div class="post-meta"><span title='2023-03-30 19:29:26 +0000 UTC'>March 30, 2023</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/03/image-5.png?resize=1024%2C495&ssl=1"></p>
+<p>Recently I had to do some text editing and was in need of a text editor that was better than Notepad, and with muscle memory, I went on and tried to download VSCodium. However, the download was like 100+ megabytes in size and since I was using a public internet connection that would make me wait for several good minutes to complete the download.</p>
+<p>So I cancelled the download and decided to download SublimeText, something I’ve not done for a long time. I hit the download button, since SublimeText was just 18 megabytes and I was running a good text editor on a Windows machine in no time. Sublime.</p>
+<p>I continued to edit the file, and then it made me realize how much I miss the snappy, instant feedback that I get from SublimeText that is yet to be reproduced by VSCode or other text editors based on electron.</p>
+<p>SublimeText a small but fast editor is overshadowed by VSCode for a very long time. I think much of this has been due to nature of VSCode being a free and open source software. Let me explain,</p>
+<p>VSCode is an editor that you can download for free. However, even thogh free to download, you have to pay a licensing fee of USD 99 when you are using SublimeText. This might not be signficant amount for some users. However, the majority of developers will go to the freely available VSCode rather than paying a licensing fee of USD 99. And in some parts of the world, USD 99 can be difficult for most developers to afford.</p>
+<p>Then the open-source nature of VSCode. The open source model of VSCode is the main reason for VSCode to become popular than SublimeText. VSCode gets contributions from the community for its development, and VSCode gets frequent updates when compared to Sublime. Not only that, the open source nature has also led to an extension marketplace that has outgrown SublimeText. Thanks to the extension marketplace, after installing few extensions, you can convert your VSCode from a simple text editor to a full-blown IDE.</p>
+<p>I feel that open sourcing SublimeText is the only way for SubmlineText to be relevant and compete against VSCode. The developers can get support from the open-source community, and the Sublime team will be able to push regular updates, and new improvements at a faster rate than they are currently doing. I’m sure many more developers like me liked the simplicity of SublimeText before VSCode came along.</p>
+<p>Open-sourcing SublimeText will also encourage plugin developers to develop more third-party plugins for SublimeText as it has done with VSCode.<br>
+When it comes to making money, the SublimeText developers can offer the core version of SublimeText for free, while they can sell a pro version with more advanced features targeted towards more advanced users and developers.</p>
+<p>This will also take the stress away from the developers in maintaining the SublimeText core, which will be supported by the community while they can focus on pro features for the text editor.</p>
+<p>With the rapid pace of VSCode development with the backing of Microsoft, I don’t see any other way SublimeText can keep up unless they make the editor open-source. And I truly want SublimeText to be out there because it’s such a good editor and provides a better experience compared to text editors baded on electron.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

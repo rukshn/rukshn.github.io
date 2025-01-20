@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blogging, Rants on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/blogging-rants/</link>
+    <description>Recent content in Blogging, Rants on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Sun, 05 Jan 2025 18:15:50 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/blogging-rants/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving My Blog To Hugo</title>
+      <link>http://localhost:1313/moving-my-blog-to-hugo/</link>
+      <pubDate>Sun, 05 Jan 2025 18:15:50 +0100</pubDate>
+      <guid>http://localhost:1313/moving-my-blog-to-hugo/</guid>
+      <description>&lt;p&gt;I have been blogging for nearly 15 years now—gosh,
+I feel so old. Like most, I started on Blogger and then moved to WordPress.com.
+From WordPress, I moved to Tumblr, to Medium, and to Jekyll for a short period and then a self-hosted WordPress.
+Sometimes, I wonder why Google is still keeping Blogger alive. I know people are still using it.
+But Google killed Google Reader when people were still using it and loving it.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

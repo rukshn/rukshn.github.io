@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Why We Need Interoperability and HL7 FHIR | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="DHIS2, DigitalHealth, FHIR, Interoperability, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="I was lucky enough to attend the DHIS2 annual conference at the University of Oslo last week, where I was able to meet experts from all around the world in digital health to discuss not just DHIS2 but also FHIR and interoperability in general.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/why-we-need-interoperability-and-hl7-fhir/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/why-we-need-interoperability-and-hl7-fhir/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/why-we-need-interoperability-and-hl7-fhir/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="Why We Need Interoperability and HL7 FHIR">
+  <meta property="og:description" content="I was lucky enough to attend the DHIS2 annual conference at the University of Oslo last week, where I was able to meet experts from all around the world in digital health to discuss not just DHIS2 but also FHIR and interoperability in general.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-06-25T00:29:17+00:00">
+    <meta property="article:modified_time" content="2023-06-25T00:29:17+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Why We Need Interoperability and HL7 FHIR">
+<meta name="twitter:description" content="I was lucky enough to attend the DHIS2 annual conference at the University of Oslo last week, where I was able to meet experts from all around the world in digital health to discuss not just DHIS2 but also FHIR and interoperability in general.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Why We Need Interoperability and HL7 FHIR",
+      "item": "https://ruky.me/why-we-need-interoperability-and-hl7-fhir/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why We Need Interoperability and HL7 FHIR",
+  "name": "Why We Need Interoperability and HL7 FHIR",
+  "description": "I was lucky enough to attend the DHIS2 annual conference at the University of Oslo last week, where I was able to meet experts from all around the world in digital health to discuss not just DHIS2 but also FHIR and interoperability in general.\n",
+  "keywords": [
+    "DHIS2", "DigitalHealth", "FHIR", "Interoperability", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "I was lucky enough to attend the DHIS2 annual conference at the University of Oslo last week, where I was able to meet experts from all around the world in digital health to discuss not just DHIS2 but also FHIR and interoperability in general.\nWhen I describe my part in developing the national FHIR profiles for Sri Lanka, most people were curious to know about my idea of using FHIR. As some of the fellow developers I talked with were not sure about why everyone is now so interested in FHIR.\nThe answer they received when talking to digital health implementers in countries was the fact that since the USA has adopted FHIR, they would also like to adopt FHIR into their digital health solutions.\nSo this prompted me to write this blog post, describing why we need interoperability in general, and why we need HL7 FHIR.\nWhat is interoperability? It is the ability of different information systems, devices and applications (systems) to access, exchange, integrate and cooperatively use data in a coordinated manner, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize the health of individuals and populations globally.\nIn simpler terms, interoperability is the ability to exchange data between different organizations, regions and nations through systems, devices and applications.\nWhy do we need interoperability? From a physician’s point of view, when encountering a patient I would like to see their past medical history, including the medications they were prescribed, their progress, allergies etc. Which will help me to understand and treat the current underlying condition efficiently.\nIf the patient is moving from one institution to another, and the second institution is running a different health information system and has a different API structure and data structure, then the developers will have to develop to manually connect with the two different APIs to share data between the two systems.\nThis would be easy if you are connecting two systems, but imagine there are 500 systems, with their own API structure and data structure, this will make it nearly impossible to share data as developers will be overwhelmed by connecting different systems.\nAs a physician, I would like to see this continuation of care, and the only way to achieve this is by sharing data between different healthcare systems. And that is why interoperability is important.\nDifferent layers of interoperability There are several layers of interoperability. Even though most sources list three layers of interoperability, I would like to consider having four layers of interoperability,\nFoundational interoperability Syntactic interoperability Semantic Interoperability Organizational interoperability Foundational interoperability As the name implies, foundational interoperability sets the standards to achieve the foundation for data exchange.\nFor example, the TCP/IP standard forms the foundation for data exchange on the internet.\nAnd therefore, the TCP/IP can be considered as a foundational interoperability standard. But still, we can transfer any kind of data, and there is no limitation on the data structure or the meaning of the data that can be shared through the TCP/IP standard.\nSyntactic interoperability Syntactic interoperability on the other hand defines the syntax or the data structure of the data that can be shared on top of the foundational interoperability standard.\nThis is where HL7 FHIR fits in, FHIR defines the data structure utilizing resources (there are nearly 150 different resources at the time of writing in HL7 FHIR V5). HL7 FHIR also defines an API structure that also standardizes the API endpoints in which this data can be exchanged.\nBy adopting the FHIR standard, all the systems will be following a fixed structure of data (standardize the data structure), which allows systems to easily share data between them. And making it easier for developers by not wanting to adhere to different data structures between different systems.\nHowever, FHIR is not the only syntactic interoperability standard, example, other syntactic interoperability standards exist, for example, the DICOM standard (Digital Imaging and Communications in Medicine) is a standard designed to share digital images such as X-Rays and CT images across different health systems.\nSemantic Interoperability Even though we have now defined the data structure of the data shared between the system by adopting a syntactic interoperability standard, there is still ambiguity regarding the data that is shared within the HL7 FHIR resources.\nSemantic interoperability defines a set of defined terminologies which allows systems to add a common meaning to the data shared through a structured manner (syntactic interoperability).\nThese standards include the ICD11, LOINC, SNOMED, RxNORM and many more custom terminologies that countries and organizations have developed. Which has specific and unique names (codes) that provide a defined meaning.\nThis removes the ambiguity that comes with adding different data to the HL7 FHIR resources (syntactic data structure), and all the systems exchanging data, will be sharing the same codes that have the same meaning.\nBy combining the foundational, syntactic and semantic interoperability standards, we have achieved a common method to communicate data (internet), a data structure (HL7 FHIR resources), an API structure (HL7 FHIR endpoints), and meaning to the data by removing ambiguity with a defined set of terms, we have removed the difficulties in catering to different systems with their API, data structure and meaning to the data.\nThis will make it far easier for developers to connect different healthcare systems and for patients to have a continuity of care as they move from one health system to another.\nDifferent layers of interoperability in healthcare\nOrganizational Interoperability Organizational or administrative interoperability includes governance, social, and legal considerations that facilitate seamless and timely data sharing between systems.\nFor example, by adhering to the privacy laws of a given country, the data shared between and the limit of the data shared between systems gets more defined, removing further ambiguity on what data to be shared.\nSo why is everyone moving towards FHIR? It’s not because of TCP/IP, or ICD that there has been a void for a syntactic interoperability standard designed for modern data information exchange through the internet.\nAnd it is FHIR that has come up as the standard that can fill that void, for everyone who wants to migrate to FHIR, the reason should be achieving interoperability between different healthcare systems and the continuation of patient care.\nI hope this post convinced you of the importance of FHIR and interoperability in general. Leave a comment on what you don’t understand, and I would be more than happy to help. And I hope to write more on interoperability and FHIR on the blog in future.\nAttending DHIS2 annual conference has been fun\n",
+  "wordCount" : "1096",
+  "inLanguage": "en",
+  "datePublished": "2023-06-25T00:29:17Z",
+  "dateModified": "2023-06-25T00:29:17Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/why-we-need-interoperability-and-hl7-fhir/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Why We Need Interoperability and HL7 FHIR
+    </h1>
+    <div class="post-meta"><span title='2023-06-25 00:29:17 +0000 UTC'>June 25, 2023</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I was lucky enough to attend the DHIS2 annual conference at the University of Oslo last week, where I was able to meet experts from all around the world in digital health to discuss not just DHIS2 but also FHIR and interoperability in general.</p>
+<p>When I describe my part in developing the national FHIR profiles for Sri Lanka, most people were curious to know about my idea of using FHIR. As some of the fellow developers I talked with were not sure about why everyone is now so interested in FHIR.</p>
+<p>The answer they received when talking to digital health implementers in countries was the fact that since the USA has adopted FHIR, they would also like to adopt FHIR into their digital health solutions.</p>
+<p>So this prompted me to write this blog post, describing why we need interoperability in general, and why we need HL7 FHIR.</p>
+<h2 id="what-is-interoperability">What is interoperability?<a hidden class="anchor" aria-hidden="true" href="#what-is-interoperability">#</a></h2>
+<p>It is the ability of different information systems, devices and applications (systems) to access, exchange, integrate and cooperatively use data in a coordinated manner, within and across organizational, regional and national boundaries, to provide timely and seamless portability of information and optimize the health of individuals and populations globally.</p>
+<p>In simpler terms, interoperability is the ability to exchange data between different organizations, regions and nations through systems, devices and applications.</p>
+<h2 id="why-do-we-need-interoperability">Why do we need interoperability?<a hidden class="anchor" aria-hidden="true" href="#why-do-we-need-interoperability">#</a></h2>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/06/image.png?resize=1024%2C731&ssl=1"></p>
+<p>From a physician’s point of view, when encountering a patient I would like to see their past medical history, including the medications they were prescribed, their progress, allergies etc. Which will help me to understand and treat the current underlying condition efficiently.</p>
+<p>If the patient is moving from one institution to another, and the second institution is running a different health information system and has a different API structure and data structure, then the developers will have to develop to manually connect with the two different APIs to share data between the two systems.</p>
+<p>This would be easy if you are connecting two systems, but imagine there are 500 systems, with their own API structure and data structure, this will make it nearly impossible to share data as developers will be overwhelmed by connecting different systems.</p>
+<p>As a physician, I would like to see this continuation of care, and the only way to achieve this is by sharing data between different healthcare systems. And that is why interoperability is important.</p>
+<h2 id="different-layers-of-interoperability">Different layers of interoperability<a hidden class="anchor" aria-hidden="true" href="#different-layers-of-interoperability">#</a></h2>
+<p>There are several layers of interoperability. Even though most sources list three layers of interoperability, I would like to consider having four layers of interoperability,</p>
+<ul>
+<li>Foundational interoperability</li>
+<li> Syntactic interoperability</li>
+<li> Semantic Interoperability</li>
+<li> Organizational interoperability</li>
+</ul>
+<h3 id="foundational-interoperability">Foundational interoperability<a hidden class="anchor" aria-hidden="true" href="#foundational-interoperability">#</a></h3>
+<p>As the name implies, foundational interoperability sets the standards to achieve the foundation for data exchange.</p>
+<p>For example, the TCP/IP standard forms the foundation for data exchange on the internet.</p>
+<p>And therefore, the TCP/IP can be considered as a foundational interoperability standard. But still, we can transfer any kind of data, and there is no limitation on the data structure or the meaning of the data that can be shared through the TCP/IP standard.</p>
+<h3 id="syntactic-interoperability">Syntactic interoperability<a hidden class="anchor" aria-hidden="true" href="#syntactic-interoperability">#</a></h3>
+<p>Syntactic interoperability on the other hand defines the syntax or the data structure of the data that can be shared on top of the foundational interoperability standard.</p>
+<p>This is where HL7 FHIR fits in, FHIR defines the data structure utilizing resources (there are nearly 150 different resources at the time of writing in HL7 FHIR V5). HL7 FHIR also defines an API structure that also standardizes the API endpoints in which this data can be exchanged.</p>
+<p>By adopting the FHIR standard, all the systems will be following a fixed structure of data (standardize the data structure), which allows systems to easily share data between them. And making it easier for developers by not wanting to adhere to different data structures between different systems.</p>
+<p>However, FHIR is not the only syntactic interoperability standard, example, other syntactic interoperability standards exist, for example, the DICOM standard (Digital Imaging and Communications in Medicine) is a standard designed to share digital images such as X-Rays and CT images across different health systems.</p>
+<h3 id="semantic-interoperability">Semantic Interoperability<a hidden class="anchor" aria-hidden="true" href="#semantic-interoperability">#</a></h3>
+<p>Even though we have now defined the data structure of the data shared between the system by adopting a syntactic interoperability standard, there is still ambiguity regarding the data that is shared within the HL7 FHIR resources.</p>
+<p>Semantic interoperability defines a set of defined terminologies which allows systems to add a common meaning to the data shared through a structured manner (syntactic interoperability).</p>
+<p>These standards include the ICD11, LOINC, SNOMED, RxNORM and many more custom terminologies that countries and organizations have developed. Which has specific and unique names (codes) that provide a defined meaning.</p>
+<p>This removes the ambiguity that comes with adding different data to the HL7 FHIR resources (syntactic data structure), and all the systems exchanging data, will be sharing the same codes that have the same meaning.</p>
+<p>By combining the foundational, syntactic and semantic interoperability standards, we have achieved a common method to communicate data (internet), a data structure (HL7 FHIR resources), an API structure (HL7 FHIR endpoints), and meaning to the data by removing ambiguity with a defined set of terms, we have removed the difficulties in catering to different systems with their API, data structure and meaning to the data.</p>
+<p>This will make it far easier for developers to connect different healthcare systems and for patients to have a continuity of care as they move from one health system to another.</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/06/image-1.png?resize=1024%2C537&ssl=1"></p>
+<p>Different layers of interoperability in healthcare</p>
+<h3 id="organizational-interoperability">Organizational Interoperability<a hidden class="anchor" aria-hidden="true" href="#organizational-interoperability">#</a></h3>
+<p>Organizational or administrative interoperability includes governance, social, and legal considerations that facilitate seamless and timely data sharing between systems.</p>
+<p>For example, by adhering to the privacy laws of a given country, the data shared between and the limit of the data shared between systems gets more defined, removing further ambiguity on what data to be shared.</p>
+<p>So why is everyone moving towards FHIR? It’s not because of TCP/IP, or ICD that there has been a void for a syntactic interoperability standard designed for modern data information exchange through the internet.</p>
+<p>And it is FHIR that has come up as the standard that can fill that void, for everyone who wants to migrate to FHIR, the reason should be achieving interoperability between different healthcare systems and the continuation of patient care.</p>
+<p>I hope this post convinced you of the importance of FHIR and interoperability in general. Leave a comment on what you don’t understand, and I would be more than happy to help. And I hope to write more on interoperability and FHIR on the blog in future.</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/06/IMG_0242.jpeg?resize=768%2C1024&ssl=1"></p>
+<p>Attending DHIS2 annual conference has been fun</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

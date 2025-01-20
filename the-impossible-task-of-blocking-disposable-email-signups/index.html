@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>The impossible task of blocking disposable email signups | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="Rants, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="When a user signs up for a service most of the time they have to share their email address. When a potential user shares an email address with a service during signup, within that sharing there is benefit for both the user and the service.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/the-impossible-task-of-blocking-disposable-email-signups/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/the-impossible-task-of-blocking-disposable-email-signups/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/the-impossible-task-of-blocking-disposable-email-signups/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="The impossible task of blocking disposable email signups">
+  <meta property="og:description" content="When a user signs up for a service most of the time they have to share their email address. When a potential user shares an email address with a service during signup, within that sharing there is benefit for both the user and the service.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-03-14T12:44:21+00:00">
+    <meta property="article:modified_time" content="2021-03-14T12:44:21+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The impossible task of blocking disposable email signups">
+<meta name="twitter:description" content="When a user signs up for a service most of the time they have to share their email address. When a potential user shares an email address with a service during signup, within that sharing there is benefit for both the user and the service.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "The impossible task of blocking disposable email signups",
+      "item": "https://ruky.me/the-impossible-task-of-blocking-disposable-email-signups/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "The impossible task of blocking disposable email signups",
+  "name": "The impossible task of blocking disposable email signups",
+  "description": "When a user signs up for a service most of the time they have to share their email address. When a potential user shares an email address with a service during signup, within that sharing there is benefit for both the user and the service.\n",
+  "keywords": [
+    "Rants", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "When a user signs up for a service most of the time they have to share their email address. When a potential user shares an email address with a service during signup, within that sharing there is benefit for both the user and the service.\nFor the user, they can request a password reset, which usually sent to the given email address, they can get important updates of privacy policy, changes to TOS and even newsletters.\nFor the service provider, they can use the email address to keep the user in the loop and make sure the user returns back to the service. How many emails do you get from Facebook about notifications in a single day?\nMy last two months were spent on working on a small side project called Tuti, a service providing educational tools for teachers and students. When I shared the service on places like Reddit, HackerNews and with some of my colleagues, I received some signups that were made with temporarily email providers.\nTemporary emails are like burner phones, they are not attached to a user and the email address and the inbox. They are good for the users to try out a service, but they provide no value for the service. They will use up space by creating an account for the user on the service, service can reconnect with the user because they are no longer going to use the email addresses again.\nTrying to block temporary email addresses For this reason, I wanted to restrict signups from temporary email addresses, my initial thought was create a list of temporary email address providers and filter them and block signups coming from these email addresses.\nI did a small google search hoping to find an already existing list, and sure enough someone has made a GitHub gist with a list of temporary email providers.\nThe list was several years old and after checking the list I saw that there are sone legit email providers and there were some missing disposable email providers as well. So I decided to make a fork and edit the list.\nI went though some of the comments made to the gist to see what other email providers users have provided. And then I came across this gigantic list of disposable email domains.\nhttps://raw.githubusercontent.com/wesbos/burner-email-providers/master/emails.txt\nThere were more than 100,000+ list of domains. This does not mean that there are 100,000 temporary email providers, but almost all of them use multiple domain names to provide disposable email addresses.\nThere is no way I’m going to put my system go through 100,000+ domain names just squat a system.\nYes sure I can make an array/hashmap with key being the domain name, and finding that would be quicker than looping though the whole list.\n[0:a, 1:b, 2:c] [a:1, b:1, c:1] In the first instance I will have to loop though the array to find out if b exists inside the array. Where on the second instance I can quickly check for the existence of b by checking if (arr[b]).\nSo I quickly gave up the idea of blocking disposable emails , it’s much simpler to squash the account from an administrator panel when I detect that a temporary email address has been used for a signup.\nAre you using a filter to prevent temporary email providers?\nIf you are interested, please checkout my service I created for teachers and students. If you like using flashcards, you can also use it to create Markdown powered flashcards as well. https://tuti.study\n",
+  "wordCount" : "585",
+  "inLanguage": "en",
+  "datePublished": "2021-03-14T12:44:21Z",
+  "dateModified": "2021-03-14T12:44:21Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/the-impossible-task-of-blocking-disposable-email-signups/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      The impossible task of blocking disposable email signups
+    </h1>
+    <div class="post-meta"><span title='2021-03-14 12:44:21 +0000 UTC'>March 14, 2021</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>When a user signs up for a service most of the time they have to share their email address. When a potential user shares an email address with a service during signup, within that sharing there is benefit for both the user and the service.</p>
+<p>For the user, they can request a password reset, which usually sent to the given email address, they can get important updates of privacy policy, changes to TOS and even newsletters.</p>
+<p>For the service provider, they can use the email address to keep the user in the loop and make sure the user returns back to the service. How many emails do you get from Facebook about notifications in a single day?</p>
+<p>My last two months were spent on working on a small side project called <a href="https://tuti.study">Tuti</a>, a service providing educational tools for teachers and students. When I shared the service on places like Reddit, HackerNews and with some of my colleagues, I received some signups that were made with temporarily email providers.</p>
+<p>Temporary emails are like burner phones, they are not attached to a user and the email address and the inbox. They are good for the users to try out a service, but they provide no value for the service. They will use up space by creating an account for the user on the service, service can reconnect with the user because they are no longer going to use the email addresses again.</p>
+<h2 id="trying-to-block-temporary-email-addresses">Trying to block temporary email addresses<a hidden class="anchor" aria-hidden="true" href="#trying-to-block-temporary-email-addresses">#</a></h2>
+<p>For this reason, I wanted to restrict signups from temporary email addresses, my initial thought was create a list of temporary email address providers and filter them and block signups coming from these email addresses.</p>
+<p>I did a small google search hoping to find an already existing list, and sure enough someone has made a <a href="https://gist.github.com/michenriksen/8710649">GitHub gist</a> with a list of temporary email providers.</p>
+<p>The list was several years old and after checking the list I saw that there are sone legit email providers and there were some missing disposable email providers as well. So I decided to make a fork and edit the list.</p>
+<p>I went though some of the comments made to the gist to see what other email providers users have provided. And then I came across this gigantic list of disposable email domains.</p>
+<p><a href="https://raw.githubusercontent.com/wesbos/burner-email-providers/master/emails.txt">https://raw.githubusercontent.com/wesbos/burner-email-providers/master/emails.txt</a></p>
+<p>There were more than 100,000+ list of domains. This does not mean that there are 100,000 temporary email providers, but almost all of them use multiple domain names to provide disposable email addresses.</p>
+<p>There is no way I’m going to put my system go through 100,000+ domain names just squat a system.</p>
+<p>Yes sure I can make an array/hashmap with key being the domain name, and finding that would be quicker than looping though the whole list.</p>
+<pre tabindex="0"><code>    [0:a, 1:b, 2:c]
+    [a:1, b:1, c:1]
+</code></pre><p>In the first instance I will have to loop though the array to find out if <strong>b</strong> exists inside the array. Where on the second instance I can quickly check for the existence of <strong>b</strong> by checking <em>if (arr[b])</em>.</p>
+<p>So I quickly gave up the idea of blocking disposable emails , it’s much simpler to squash the account from an administrator panel when I detect that a temporary email address has been used for a signup.</p>
+<p>Are you using a filter to prevent temporary email providers?</p>
+<p>If you are interested, please checkout my service I created for teachers and students. If you like using flashcards, you can also use it to create Markdown powered flashcards as well. <a href="https://tuti.study">https://tuti.study</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

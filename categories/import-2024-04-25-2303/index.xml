@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Import 2024-04-25 23:03 on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/import-2024-04-25-2303/</link>
+    <description>Recent content in Import 2024-04-25 23:03 on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Thu, 25 Apr 2024 11:46:20 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/import-2024-04-25-2303/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Art of Writing Abstracts</title>
+      <link>https://ruky.me/the-art-of-writing-abstracts/</link>
+      <pubDate>Thu, 25 Apr 2024 11:46:20 +0000</pubDate>
+      <guid>https://ruky.me/the-art-of-writing-abstracts/</guid>
+      <description>&lt;p&gt;I have never been interested in academia and research. I always felt research and academia, or a majority of what people publish is just to fill their profiles with the number of publications. When I think about research, I always think about doing research as something groundbreaking. I remember telling colleagues (and I still do) to read the Page Rank algorithm [&lt;a href=&#34;http://infolab.stanford.edu/pub/papers/google.pdf&#34;&gt;link&lt;/a&gt;, &lt;a href=&#34;https://www.cis.upenn.edu/~mkearns/teaching/NetworkedLife/pagerank.pdf&#34;&gt;link 2&lt;/a&gt;] publication that formed the backbone of Google search in the beginning. I wanted every research or publication to be something like Page Rank.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>GitHub Co-Pilot Generating Different Outputs in Different Editors</title>
+      <link>https://ruky.me/github-co-pilot-generating-different-outputs-in-different-editors/</link>
+      <pubDate>Sat, 03 Feb 2024 15:43:42 +0000</pubDate>
+      <guid>https://ruky.me/github-co-pilot-generating-different-outputs-in-different-editors/</guid>
+      <description>&lt;p&gt;I’ve not been able to write something new lately, in fact, I think this is the first post of the year. So happy new year 2024, insert :tada: emoji. So I’ve been pretty much busy with work, and travelling, networking at conferences, the usual. At the start of 2023, I had never left Sri Lanka in my whole life, but by the end of 2023, I’d visited 5 different countries, including the US.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>XForm and XLSFrom Standards are Preventing The Progress of Digital Health</title>
+      <link>https://ruky.me/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/</link>
+      <pubDate>Tue, 31 Oct 2023 16:25:16 +0000</pubDate>
+      <guid>https://ruky.me/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/</guid>
+      <description>&lt;p&gt;Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I Was Happy, Sad, Lost and Lonely Without a Smartphone at the Same Time</title>
+      <link>https://ruky.me/i-was-happy-sad-lost-and-lonely-without-a-smartphone-at-the-same-time/</link>
+      <pubDate>Tue, 26 Sep 2023 10:53:05 +0000</pubDate>
+      <guid>https://ruky.me/i-was-happy-sad-lost-and-lonely-without-a-smartphone-at-the-same-time/</guid>
+      <description>&lt;p&gt;I haven’t posted on my blog for a long time, partly because I have been super busy with my personal and work life. I moved to Switzerland to work as a health informatics specialist for the Swiss Tropical and Public Health Institute, and moving to Switzerland in a very short period has been a change that took some time for me to get used to. There were cultural, administrative, and legal things I had not been used to while in Sri Lanka. I have yet to move to my apartment and live in a studio apartment at the time of writing this. It’s good that I moved to central Europe during the summer and excited to experience my first winter. Now back to what I wanted to tell you about.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why We Need Interoperability and HL7 FHIR</title>
+      <link>https://ruky.me/why-we-need-interoperability-and-hl7-fhir/</link>
+      <pubDate>Sun, 25 Jun 2023 00:29:17 +0000</pubDate>
+      <guid>https://ruky.me/why-we-need-interoperability-and-hl7-fhir/</guid>
+      <description>&lt;p&gt;I was lucky enough to attend the DHIS2 annual conference at the University of Oslo last week, where I was able to meet experts from all around the world in digital health to discuss not just DHIS2 but also FHIR and interoperability in general.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is It Time to Open Source SublimeText?</title>
+      <link>https://ruky.me/is-it-time-to-open-source-sublimetext/</link>
+      <pubDate>Thu, 30 Mar 2023 19:29:26 +0000</pubDate>
+      <guid>https://ruky.me/is-it-time-to-open-source-sublimetext/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2023/03/image-5.png?resize=1024%2C495&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Recently I had to do some text editing and was in need of a text editor that was better than Notepad, and with muscle memory, I went on and tried to download VSCodium. However, the download was like 100+ megabytes in size and since I was using a public internet connection that would make me wait for several good minutes to complete the download.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to Correctly Load Your Country in to Apache Superset</title>
+      <link>https://ruky.me/how-to-correctly-load-your-country-in-to-apache-superset/</link>
+      <pubDate>Sat, 11 Mar 2023 22:23:24 +0000</pubDate>
+      <guid>https://ruky.me/how-to-correctly-load-your-country-in-to-apache-superset/</guid>
+      <description>&lt;h5 id=&#34;tldr&#34;&gt;TLDR&lt;/h5&gt;
+&lt;ul&gt;
+&lt;li&gt;The geoJSON specification published in 2016 requires the polygons to follow the right-hand rule.&lt;/li&gt;
+&lt;li&gt;All updated geoJSON files now follow the right-hand rule.&lt;/li&gt;
+&lt;li&gt;However, Superset requires your geoJSON file polygons to follow the opposite direction, breaking the specification.&lt;/li&gt;
+&lt;li&gt;Covert your geoJSON files so polygons are drawn in opposite directions using the script included in &lt;a href=&#34;#step5&#34;&gt;Step 5&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Include the geoJSON file inside the &lt;code&gt;legacy-plugin-chart-country-map&lt;/code&gt; plugin.&lt;/li&gt;
+&lt;li&gt;Import the geoJSON file and rebuild your Superset frontend.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Apache Superset is a free and open-core data analysis tool that offers a wide range of really neat features for a business. It’s a good piece of software where you don’t have the budget to spend on an expensive business intelligence tool.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing DHIS2 on a Windows Server</title>
+      <link>https://ruky.me/installing-dhis2-on-a-windows-server/</link>
+      <pubDate>Fri, 10 Feb 2023 01:23:32 +0000</pubDate>
+      <guid>https://ruky.me/installing-dhis2-on-a-windows-server/</guid>
+      <description>&lt;p&gt;Recently a college contacted me asking how they can install DHIS2 on a Windows server which they have just received on their premises. Since most tutorials available on the internet discuss installing DHIS2 on a server running a Linux distribution, he was finding it difficult to follow the steps outlined in those tutorials.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Running a Local HAPI FHIR Server For Testing HL7 FHIR Requests</title>
+      <link>https://ruky.me/running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/</link>
+      <pubDate>Mon, 26 Dec 2022 16:47:59 +0000</pubDate>
+      <guid>https://ruky.me/running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/</guid>
+      <description>&lt;p&gt;When implementing FHIR, a FHIR server is essential for validating and process incoming FHIR requests from clients. Also, it will be the place where you store your customized profiles, valuesets, and codesystems that is necessary for managing terminology.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Installing Apache Superset Version 2 on Ubuntu Without Errors</title>
+      <link>https://ruky.me/installing-apache-superset-version-2-on-ubuntu-without-errors/</link>
+      <pubDate>Fri, 16 Dec 2022 22:37:55 +0000</pubDate>
+      <guid>https://ruky.me/installing-apache-superset-version-2-on-ubuntu-without-errors/</guid>
+      <description>&lt;p&gt;Apache Superset is a great free and open-source software released by the Apache foundation for advanced data visualization and exploration. Unlike proprietary tools for data visualization, Apache Superset adds value for an organization as free and open-source software.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Codeberg a GitHub Alternative From Europe</title>
+      <link>https://ruky.me/codeberg-a-github-alternative-from-europe/</link>
+      <pubDate>Mon, 17 Oct 2022 10:16:36 +0000</pubDate>
+      <guid>https://ruky.me/codeberg-a-github-alternative-from-europe/</guid>
+      <description>&lt;p&gt;Recently I started migrating my note-taking from Notion to Obsidian. Obsidian does not offer free syncing between devices and you will have to manually set up a method to sync your notes, either by using something like Dropbox, Google Drive, or Git.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The rings of share - the unsolved problem of sharing</title>
+      <link>https://ruky.me/the-rings-of-share/</link>
+      <pubDate>Mon, 26 Sep 2022 10:41:58 +0000</pubDate>
+      <guid>https://ruky.me/the-rings-of-share/</guid>
+      <description>&lt;p&gt;Recently (last Saturday), I went to the Colombo Street Food Festival. It was a bit crowded for my liking but had awesome music and good beer. I snapped some photos of the event, recorded some clips of the music, and snapped some more photos with the others who I went to the festival with.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Medium and Google is not a good combination</title>
+      <link>https://ruky.me/medium-and-google-is-not-a-good-combination/</link>
+      <pubDate>Tue, 30 Aug 2022 11:51:37 +0000</pubDate>
+      <guid>https://ruky.me/medium-and-google-is-not-a-good-combination/</guid>
+      <description>&lt;p&gt;I know this is going to sound just like another complaint against Google, but I want my Google results to be better.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The Sri Lankan Data Protection Act, And Its Impact on Digital Health</title>
+      <link>https://ruky.me/the-sri-lankan-data-protection-act-and-its-impact-on-digital-health/</link>
+      <pubDate>Fri, 26 Aug 2022 10:45:13 +0000</pubDate>
+      <guid>https://ruky.me/the-sri-lankan-data-protection-act-and-its-impact-on-digital-health/</guid>
+      <description>&lt;p&gt;The data protection act in Sri Lanka is a highly awaited and timely act to enable data protection in Sri Lanka. It was passed in the parliament on 9th March 2022 [1]. Even though there are similar acts to protect personal data in other countries such as the HIPAA (Health Insurance Portability and Accountability Act) since 1996 and the GDPR (Health Insurance Portability and Accountability Act) since 2016.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>People who don&#39;t use RSS don&#39;t know what they are missing out.</title>
+      <link>https://ruky.me/people-who-dont-use-rss-dont-know-what-they-are-missing-out/</link>
+      <pubDate>Mon, 25 Jul 2022 10:52:04 +0000</pubDate>
+      <guid>https://ruky.me/people-who-dont-use-rss-dont-know-what-they-are-missing-out/</guid>
+      <description>&lt;p&gt;RSS is a great piece of technology that people who use the internet today are unaware of or not using. There has not been any significant development in RSS for the last 10 years, and that’s fine.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Designing is easy, implementation is hard</title>
+      <link>https://ruky.me/designing-is-easy-implementation-is-hard/</link>
+      <pubDate>Sun, 17 Jul 2022 15:53:19 +0000</pubDate>
+      <guid>https://ruky.me/designing-is-easy-implementation-is-hard/</guid>
+      <description>&lt;p&gt;Sri Lanka is facing a never before seen fuel crisis due to the nation’s foreign exchange crisis. While scrolling through my Twitter feed, I came across a tweet from someone suggesting why no one is creating a database to track fuel distribution, accoring by doing that fuel can be distributed equally among everyone, and prevent hoarding and black markets.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cryptocurrencies have broken almost all of their major promises</title>
+      <link>https://ruky.me/cryptocurrencies-have-broken-almost-all-of-their-major-promises/</link>
+      <pubDate>Tue, 14 Jun 2022 13:29:06 +0000</pubDate>
+      <guid>https://ruky.me/cryptocurrencies-have-broken-almost-all-of-their-major-promises/</guid>
+      <description>&lt;p&gt;The crypto market has not been kind to &lt;em&gt;“investors”&lt;/em&gt; lately. The market has been near free-fall, and within the first quarter of the year, we’ve seen so many things going south about cryptocurrencies, and it seems almost all the promises that BitCoin and cryptocurrencies promised were a lie. So what are these promises that cryptocurrencies have failed to deliver? &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I&#39;m Switching from VS Code to VS Codium</title>
+      <link>https://ruky.me/im-switching-form-vs-code-to-vs-codium/</link>
+      <pubDate>Sat, 11 Jun 2022 14:50:34 +0000</pubDate>
+      <guid>https://ruky.me/im-switching-form-vs-code-to-vs-codium/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-1.png?resize=1024%2C576&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why do Javascript frameworks get increasingly difficult over time?</title>
+      <link>https://ruky.me/why-do-javascript-frameworks-get-increasingly-difficult-over-time/</link>
+      <pubDate>Tue, 07 Jun 2022 11:57:10 +0000</pubDate>
+      <guid>https://ruky.me/why-do-javascript-frameworks-get-increasingly-difficult-over-time/</guid>
+      <description>&lt;p&gt;There are so many JavaScript frameworks, and new frameworks come out every few months. I know some people hate to see new frameworks coming up in JavaScript because there are so many, and some insist on using vanilla JavaScript.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Re: Why we stopped making Einsteins? No we did not.</title>
+      <link>https://ruky.me/re-why-we-stopped-making-einsteins-no-we-did-not/</link>
+      <pubDate>Tue, 31 May 2022 23:41:21 +0000</pubDate>
+      <guid>https://ruky.me/re-why-we-stopped-making-einsteins-no-we-did-not/</guid>
+      <description>&lt;p&gt;Recently I came across a post, called “&lt;a href=&#34;https://erikhoel.substack.com/p/why-we-stopped-making-einsteins?s=r&#34;&gt;Why we stopped making Einsteins&lt;/a&gt;“. The main argument is that we are not producing &lt;em&gt;“geniuses”&lt;/em&gt; as we used to and it’s the fault of the current education system. It’s a very interesting post and I suggest everyone go read it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Web 3 Tutorial - How to upload and serve files in IPFS network using NodeJs</title>
+      <link>https://ruky.me/web-3-how-to-upload-a-file-to-the-ipfs-network/</link>
+      <pubDate>Tue, 17 May 2022 23:35:59 +0000</pubDate>
+      <guid>https://ruky.me/web-3-how-to-upload-a-file-to-the-ipfs-network/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2022/05/ipfs-logo.webp?resize=1024%2C406&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Web3 is fascinating and uncharted territory. Recently, I decided to learn a few things about Web3 technologies. Even though I had some basic ideas about the blockchain and NFTs, I’ve never tried writing a program for Web3.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My thoughts on the PayHere data breach</title>
+      <link>https://ruky.me/my-thoughts-on-payhere-data-breach/</link>
+      <pubDate>Tue, 03 May 2022 11:59:40 +0000</pubDate>
+      <guid>https://ruky.me/my-thoughts-on-payhere-data-breach/</guid>
+      <description>&lt;p&gt;Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by &lt;a href=&#34;https://haveibeenpwned.com/&#34;&gt;Have I Been Pwned&lt;/a&gt; about a data breach at &lt;a href=&#34;https://payhere.lk/&#34;&gt;PayHere&lt;/a&gt;, an online payment processor in Sri Lanka.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reddit can&#39;t build a better search engine</title>
+      <link>https://ruky.me/reddit-can-build-a-better-search-engine/</link>
+      <pubDate>Thu, 17 Feb 2022 09:33:08 +0000</pubDate>
+      <guid>https://ruky.me/reddit-can-build-a-better-search-engine/</guid>
+      <description>&lt;p&gt;Every week or twice a week, you will come across a post on HackerNews that Google is dying or Google is awful. There are some valid points to some of their arguments. However, I don’t see Google going anywhere anytime soon.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ideas that have been beaten to death</title>
+      <link>https://ruky.me/ideas-that-have-been-beaten-to-death/</link>
+      <pubDate>Tue, 01 Feb 2022 23:22:34 +0000</pubDate>
+      <guid>https://ruky.me/ideas-that-have-been-beaten-to-death/</guid>
+      <description>&lt;p&gt;Recently I was browsing Product Hunt and I was aimlessly scrolling down to see if there are any interesting ideas.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Every organization needs a CTO</title>
+      <link>https://ruky.me/every-organization-needs-a-cto/</link>
+      <pubDate>Fri, 22 Oct 2021 18:21:18 +0000</pubDate>
+      <guid>https://ruky.me/every-organization-needs-a-cto/</guid>
+      <description>&lt;p&gt;Recently I was shown a product marketing itself as providing geological data layer for apps. A sketchy product at a glance and maybe scammy in the worst case. The developer is unable to provide direct answers and finding it difficult to provide details on how the product really works.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A basic introduction to Git</title>
+      <link>https://ruky.me/a-basic-introduction-to-git/</link>
+      <pubDate>Fri, 24 Sep 2021 12:42:40 +0000</pubDate>
+      <guid>https://ruky.me/a-basic-introduction-to-git/</guid>
+      <description>&lt;p&gt;GIT is a part of the toolkit of every good developer. Just like the terminal, you should be good at GIT. Yes sure you can develop without GIT, but learning GIT is a must if you are working on a large project with multiple developers, or if you are working on an open source project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Aren&#39;t we all professional Googlers?</title>
+      <link>https://ruky.me/are-we-all-professional-googlers/</link>
+      <pubDate>Sat, 18 Sep 2021 14:45:06 +0000</pubDate>
+      <guid>https://ruky.me/are-we-all-professional-googlers/</guid>
+      <description>&lt;p&gt;Recently I was recommended a YouTube video titled “How to Google like a senior software engineer”. It was showing some Google dorks to filter out results so you can find the exact solution that you’re looking to solve your problem.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Work on interesting problems. Not interesting technologies - Part 2</title>
+      <link>https://ruky.me/work-on-interesting-problems-not-interesting-technologies-part-2/</link>
+      <pubDate>Wed, 15 Sep 2021 18:32:49 +0000</pubDate>
+      <guid>https://ruky.me/work-on-interesting-problems-not-interesting-technologies-part-2/</guid>
+      <description>&lt;p&gt;Recently I wrote a short post about why you should work on interesting problems instead of interesting technologies. I never thought that it would reach front page on HN and receive so many responses.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Work on interesting problems. Not interesting technologies.</title>
+      <link>https://ruky.me/work-on-interesting-problems-not-interesting-technologies/</link>
+      <pubDate>Fri, 10 Sep 2021 20:09:08 +0000</pubDate>
+      <guid>https://ruky.me/work-on-interesting-problems-not-interesting-technologies/</guid>
+      <description>&lt;p&gt;When I first began learning programming with basic and pascal, our computer class started teaching us Java. As for a 10 year old it was hard for me to grasp the concept of object oriented programming. It took me another 10 years to partially grasp the concept of OOP, and another 10 years to completely understand OOP.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>When I used to collect computer viruses</title>
+      <link>https://ruky.me/when-i-used-to-collect-computer-viruses/</link>
+      <pubDate>Wed, 01 Sep 2021 01:01:01 +0000</pubDate>
+      <guid>https://ruky.me/when-i-used-to-collect-computer-viruses/</guid>
+      <description>&lt;p&gt;Today I was having a lecture about information security and information security law. I just started the module and this is the third lecture about the topic. And todays lecture was about different IT threats that an health information system would face. The lecture mainly revolved around malware. During the lecture, the teacher told a point that most malware today are written for profit, and ransomware are popular today because it’s a get rich scheme for malware writers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Trying to be a project manager</title>
+      <link>https://ruky.me/trying-to-be-a-project-manager/</link>
+      <pubDate>Sat, 28 Aug 2021 23:14:38 +0000</pubDate>
+      <guid>https://ruky.me/trying-to-be-a-project-manager/</guid>
+      <description>&lt;p&gt;I have always been a solo developer, trying to create something for fun, for myself, trying to get something off the ground, whatever programming I do I did it by myself.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I used to love Bootstrap. God, now I just hate it</title>
+      <link>https://ruky.me/i-used-to-love-bootstrap-god-now-i-just-hate-it/</link>
+      <pubDate>Tue, 24 Aug 2021 11:44:00 +0000</pubDate>
+      <guid>https://ruky.me/i-used-to-love-bootstrap-god-now-i-just-hate-it/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/bootstrap-5-releases-with-major-changes.jpg?resize=710%2C410&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I have been using Bootstrap since it was version 2. At the time Bootstrap was an easy way to set up a responsive website. And also it made your life so much easier and developing a decent website became easier thanks to the styled elements they provided.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to setup SCSS on your computer</title>
+      <link>https://ruky.me/how-to-setup-scss-on-your-computer/</link>
+      <pubDate>Sun, 22 Aug 2021 00:26:39 +0000</pubDate>
+      <guid>https://ruky.me/how-to-setup-scss-on-your-computer/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/sass.png?resize=1024%2C516&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;SCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install a Community Server On VSCode</title>
+      <link>https://ruky.me/install-a-community-server-on-vscode/</link>
+      <pubDate>Wed, 11 Aug 2021 13:30:31 +0000</pubDate>
+      <guid>https://ruky.me/install-a-community-server-on-vscode/</guid>
+      <description>&lt;p&gt;In my previous post, I wrote about how I manually &lt;a href=&#34;__GHOST_URL__/2021/08/07/how-to-setup-glassfish-server-for-java-web-app-deployment/&#34;&gt;deployed a working GlassFish web server&lt;/a&gt; for Java based web apps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to setup Glassfish server for Java web app deployment</title>
+      <link>https://ruky.me/how-to-setup-glassfish-server-for-java-web-app-deployment/</link>
+      <pubDate>Sat, 07 Aug 2021 21:54:11 +0000</pubDate>
+      <guid>https://ruky.me/how-to-setup-glassfish-server-for-java-web-app-deployment/</guid>
+      <description>&lt;p&gt;Recently I had to locally run a JavaEE web app so I can contribute to the project. However, it was my first time trying to run a Java web app locally, or even remotely. I know it was easy to deploy it using NetBeans because it has been developed with NetBeans and Glassfish. However, I wanted to run it without NetBeans because I don’t have NetBeans setup on my computer and I NetBeans currently doesn’t have the native M1 support.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Coming Full Circle</title>
+      <link>https://ruky.me/coming-full-circle/</link>
+      <pubDate>Thu, 05 Aug 2021 10:42:50 +0000</pubDate>
+      <guid>https://ruky.me/coming-full-circle/</guid>
+      <description>&lt;p&gt;&lt;em&gt;This was initially posted as a thread on Twitter, but I decided to add some context and expand it more on the blog.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My Journey In Deleting Facebook and Instagram Accounts</title>
+      <link>https://ruky.me/my-journey-in-deleting-facebook-and-instagram-accounts/</link>
+      <pubDate>Thu, 22 Jul 2021 12:10:52 +0000</pubDate>
+      <guid>https://ruky.me/my-journey-in-deleting-facebook-and-instagram-accounts/</guid>
+      <description>&lt;p&gt;In April I made a decision that I wanted to make for a very long time. Delete my Facebook and Instagram accounts. I wanted to delete my Facebook and IG accounts for a while. I have even applied to delete my account several times in the past, only to reactivate it within few days. However, this time it was different. I was committed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Buddhism and Meditation Is Not The Same.</title>
+      <link>https://ruky.me/buddhism-and-meditation-is-not-the-same/</link>
+      <pubDate>Tue, 20 Jul 2021 15:06:27 +0000</pubDate>
+      <guid>https://ruky.me/buddhism-and-meditation-is-not-the-same/</guid>
+      <description>&lt;p&gt;Today I got to read a post titled &lt;a href=&#34;https://danlawton.substack.com/p/when-buddhism-goes-bad&#34;&gt;“When Buddhism Goes Bad”&lt;/a&gt;, the title incised me to read it. Even though I was born as a Buddhist I never gave Buddhism much of a thought other than trying to pass my exam in region at school. Then since I learned biology, and had interest in technology for almost 30 years the only religion I believed was science.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Are you ashamed to share your email address?</title>
+      <link>https://ruky.me/are-you-ashamed-to-share-your-email-address/</link>
+      <pubDate>Sun, 18 Jul 2021 13:54:11 +0000</pubDate>
+      <guid>https://ruky.me/are-you-ashamed-to-share-your-email-address/</guid>
+      <description>&lt;p&gt;I created my email address when Gmail was still an invitation only platform, and I was 15 at that time. I created a short, somewhat funny, and hard to spell email address by using my initials and how my fiends used to call me at school.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>3 Important Lessons I Learnt Working At A Covid-19 ICU</title>
+      <link>https://ruky.me/working-at-an-icu/</link>
+      <pubDate>Fri, 16 Jul 2021 11:11:56 +0000</pubDate>
+      <guid>https://ruky.me/working-at-an-icu/</guid>
+      <description>&lt;p&gt;I’m writing a blog post after a very long time. This is because I was appointed to work at a COVID-19 intensive care unit for 2 months, and I was busy working there. When I started my work in May the COVID-19 cases were on the rise, and there were not enough doctors to take care of them. So me and some of my colleagues were taken out from our routine course-work from my Health Informatics MSc and was sent to different treatment centers around the country to take care of the rising COVID-19 case load.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why JavaScript dialogs (alert/prompt/confirm) are not widely used?</title>
+      <link>https://ruky.me/why-javascript-dialogs-alert-prompt-confirm-are-not-widely-used/</link>
+      <pubDate>Tue, 15 Jun 2021 23:46:39 +0000</pubDate>
+      <guid>https://ruky.me/why-javascript-dialogs-alert-prompt-confirm-are-not-widely-used/</guid>
+      <description>&lt;p&gt;Recently I started working on a small open-source project side project with Vue, and I wanted to create yes/no dialog (basically a model) which will show a notification with a confirm and cancel button. So users can confirm or cancel an event.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Clones are good</title>
+      <link>https://ruky.me/clones-are-good/</link>
+      <pubDate>Tue, 08 Jun 2021 23:04:00 +0000</pubDate>
+      <guid>https://ruky.me/clones-are-good/</guid>
+      <description>&lt;p&gt;Replit was a service that I was using as a tool where my colleagues were able to run some code snippets online to learn some concepts which I wanted to teach.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Can a company vendor lock patient data?</title>
+      <link>https://ruky.me/can-a-company-vendor-lock-patient-data/</link>
+      <pubDate>Fri, 28 May 2021 12:56:23 +0000</pubDate>
+      <guid>https://ruky.me/can-a-company-vendor-lock-patient-data/</guid>
+      <description>&lt;p&gt;When I first started my new blog, I wanted to post at least one post a week. But just like everything else I have not being able to post at least one blog post per week.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Recycle Bin by Facebook</title>
+      <link>https://ruky.me/recycle-bin-by-facebook/</link>
+      <pubDate>Thu, 13 May 2021 12:19:54 +0000</pubDate>
+      <guid>https://ruky.me/recycle-bin-by-facebook/</guid>
+      <description>&lt;p&gt;Facebook likes to collect as much data as possible, and they will try to retain your data as long as possible. This is why you can’t delete your Facebook or Instagram account for one month. They are slowly opening up WhatsApp so the data you communicate with businesses are available for Facebook. Because at the end of the day the data on what you communicate, how you interact with a business, and what businesses you are interested in communicating is more valuable than what you communicate with your friends,&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why textareas can&#39;t grow?</title>
+      <link>https://ruky.me/why-textareas-cant-grow/</link>
+      <pubDate>Sat, 01 May 2021 13:58:49 +0000</pubDate>
+      <guid>https://ruky.me/why-textareas-cant-grow/</guid>
+      <description>&lt;p&gt;Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>BitClout is a scam, change my mind.</title>
+      <link>https://ruky.me/bitclout-is-a-scam-change-my-mind/</link>
+      <pubDate>Tue, 06 Apr 2021 12:10:29 +0000</pubDate>
+      <guid>https://ruky.me/bitclout-is-a-scam-change-my-mind/</guid>
+      <description>&lt;p&gt;Clubhouse is like a blackhole for your time, it’s no wonder why everyone in the valley are interested about it. And two things that fills at least 25% of my feed are NFT and BitClout.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The good, the bad and the ugly side of Clubhouse</title>
+      <link>https://ruky.me/the-good-the-bad-and-the-ugly-side-of-clubhouse/</link>
+      <pubDate>Tue, 30 Mar 2021 01:22:28 +0000</pubDate>
+      <guid>https://ruky.me/the-good-the-bad-and-the-ugly-side-of-clubhouse/</guid>
+      <description>&lt;p&gt;Today I complete my first week in clubhouse, the audio only social network, which according to some the hottest startup currently available on the internet, while Facebook, Twitter trying to copy the idea and incorporate it on to their own social networks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Your ego can kill your idea before anything else</title>
+      <link>https://ruky.me/your-ego-can-kill-your-idea-before-anything-else/</link>
+      <pubDate>Sun, 21 Mar 2021 20:47:33 +0000</pubDate>
+      <guid>https://ruky.me/your-ego-can-kill-your-idea-before-anything-else/</guid>
+      <description>&lt;p&gt;You’re a creator, you have been working on your idea for few months. The MVP is ready, it’s time to launch your product. You tell about it on ProductHunt, HackerNews, Reddit, Facebook etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>First launch review - YaluKids</title>
+      <link>https://ruky.me/first-launch-review-yalukids/</link>
+      <pubDate>Sat, 20 Mar 2021 21:43:35 +0000</pubDate>
+      <guid>https://ruky.me/first-launch-review-yalukids/</guid>
+      <description>&lt;p&gt;I wanted to write something like this for a while, to look at a launch and dissect it and do a SWOT analysis (strengths, weaknesses, opportunities and threats).&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The impossible task of blocking disposable email signups</title>
+      <link>https://ruky.me/the-impossible-task-of-blocking-disposable-email-signups/</link>
+      <pubDate>Sun, 14 Mar 2021 12:44:21 +0000</pubDate>
+      <guid>https://ruky.me/the-impossible-task-of-blocking-disposable-email-signups/</guid>
+      <description>&lt;p&gt;When a user signs up for a service most of the time they have to share their email address. When a potential user shares an email address with a service during signup, within that sharing there is benefit for both the user and the service.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Weekly update: What I’m built for Tuti this week</title>
+      <link>https://ruky.me/weekly-update-what-im-built-for-tuti-this-week/</link>
+      <pubDate>Sat, 06 Mar 2021 20:48:17 +0000</pubDate>
+      <guid>https://ruky.me/weekly-update-what-im-built-for-tuti-this-week/</guid>
+      <description>&lt;p&gt;I haven’t been very active on my blog recently, but when I initially started the blog I wanted to post at least one post per week. So I guess I’m still following my new year resolution on writing at least one post a week.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using your browser&#39;s developer tools to find vulnerabilities</title>
+      <link>https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/</link>
+      <pubDate>Wed, 03 Mar 2021 14:36:20 +0000</pubDate>
+      <guid>https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/</guid>
+      <description>&lt;p&gt;Last week government launched its online covid tracker called the &amp;ldquo;StaySafe&amp;rdquo; program.&lt;/p&gt;
+&lt;p&gt;The program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How Uber lost to PickMe in Sri Lanka</title>
+      <link>https://ruky.me/how-uber-lost-to-pickme-in-sri-lanka/</link>
+      <pubDate>Tue, 02 Mar 2021 15:53:57 +0000</pubDate>
+      <guid>https://ruky.me/how-uber-lost-to-pickme-in-sri-lanka/</guid>
+      <description>&lt;p&gt;Uber is one of the leaders in ride-sharing in the US and in Europe. However, they are having troubles in expanding to Asian continent. For example Ubers expansion to China failed, and Uber in China was acquired by DiDi.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I do development for one week and marketing and documentation for one week</title>
+      <link>https://ruky.me/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</link>
+      <pubDate>Fri, 26 Feb 2021 20:40:36 +0000</pubDate>
+      <guid>https://ruky.me/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</guid>
+      <description>&lt;p&gt;I know the advice is to find a co-founder. But what if you can’t find a co-founder? Yes, having a co-founder is great. But there are companies that are founded by solo-founders who went on to become billion or million dollar companies.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Facebook is combining Messenger and Instagram messaging</title>
+      <link>https://ruky.me/facebook-is-combining-messenger-and-instagram-messaging/</link>
+      <pubDate>Wed, 24 Feb 2021 10:05:46 +0000</pubDate>
+      <guid>https://ruky.me/facebook-is-combining-messenger-and-instagram-messaging/</guid>
+      <description>&lt;p&gt;Today I received this popup notifying me that soon people using Instagram will be able to find and message me on Facebook.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to host your NuxtJS in 10 steps</title>
+      <link>https://ruky.me/how-to-host-your-nuxtjs-in-10-steps/</link>
+      <pubDate>Tue, 23 Feb 2021 22:40:24 +0000</pubDate>
+      <guid>https://ruky.me/how-to-host-your-nuxtjs-in-10-steps/</guid>
+      <description>&lt;p&gt;I first started using &lt;a href=&#34;https://nuxtjs.org&#34;&gt;NuxtJS&lt;/a&gt; one year ago, when I tried to make a platform for travellers to easily find and book villas online. But unlike other popular booking services, I was targeting villas that did not have an online presence or haven’t signup or don’t know how to use an online booking service.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Don&#39;t allow VSCode to auto fetch from repos</title>
+      <link>https://ruky.me/dont-allow-vscode-to-auto-fetch-from-repos/</link>
+      <pubDate>Sun, 21 Feb 2021 10:52:08 +0000</pubDate>
+      <guid>https://ruky.me/dont-allow-vscode-to-auto-fetch-from-repos/</guid>
+      <description>&lt;p&gt;Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to &lt;a href=&#34;https://github.com/rukshn&#34;&gt;my GitHub&lt;/a&gt; repo.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>They launched a website to register covid vaccinations, but it only lasted one week</title>
+      <link>https://ruky.me/they-launched-a-website-to-register-covid-vaccinations-but-it-only-lasted-one-week/</link>
+      <pubDate>Wed, 17 Feb 2021 22:38:06 +0000</pubDate>
+      <guid>https://ruky.me/they-launched-a-website-to-register-covid-vaccinations-but-it-only-lasted-one-week/</guid>
+      <description>&lt;p&gt;When it comes to IT in this country we are not having a great year, especially when it comes to IT involving health and security.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Always try to be a monopoly</title>
+      <link>https://ruky.me/always-try-to-be-a-monopoly/</link>
+      <pubDate>Sat, 13 Feb 2021 13:04:42 +0000</pubDate>
+      <guid>https://ruky.me/always-try-to-be-a-monopoly/</guid>
+      <description>&lt;p&gt;Roughly three years ago we started &lt;a href=&#34;https://instagram.com/treetalks.lk&#34;&gt;TreeTalks&lt;/a&gt;, it was a very simple idea, we deliver cacti, succulents and indoor plants to people who ordered them online.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hackers briefly took over the Google.lk domain</title>
+      <link>https://ruky.me/hackers-briefly-took-over-the-google-lk-domain/</link>
+      <pubDate>Sat, 06 Feb 2021 23:01:49 +0000</pubDate>
+      <guid>https://ruky.me/hackers-briefly-took-over-the-google-lk-domain/</guid>
+      <description>&lt;p&gt;Today hackers were able to briefly take over the &lt;a href=&#34;https://google.lk&#34;&gt;Google.lk&lt;/a&gt; domain, the Google’s search engine page for Sri Lanka and redirect it to bring awareness to an ongoing crisis in Sri Lanka.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Would you pay me if I built a web browser?</title>
+      <link>https://ruky.me/would-you-pay-me-if-i-built-a-web-browser/</link>
+      <pubDate>Wed, 03 Feb 2021 15:18:02 +0000</pubDate>
+      <guid>https://ruky.me/would-you-pay-me-if-i-built-a-web-browser/</guid>
+      <description>&lt;p&gt;Google recently announced their Q4 results, and it seems almost everyone is having a great Q4 from Facebook, to Amazon to Google.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why Google needs to build an open chat client like Element</title>
+      <link>https://ruky.me/why-google-needs-to-build-an-open-chat-client-like-element/</link>
+      <pubDate>Sun, 31 Jan 2021 10:53:51 +0000</pubDate>
+      <guid>https://ruky.me/why-google-needs-to-build-an-open-chat-client-like-element/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://twitter.com/element_hq/status/1355290296947499013&#34;&gt;Google recently blocked the Matrix based chat app Element from the Play Store sighting sexual content on the platform.&lt;/a&gt; It’s really hard to define the explanation because WhatsApp, Telegram users of other chat clients also share the same content. &lt;a href=&#34;https://www.redpoints.com/blog/telegram-book-piracy/&#34;&gt;Telegram is also known to host groups sharing pirated content as well.&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Suggest me a password</title>
+      <link>https://ruky.me/suggest-me-a-password/</link>
+      <pubDate>Thu, 28 Jan 2021 11:55:50 +0000</pubDate>
+      <guid>https://ruky.me/suggest-me-a-password/</guid>
+      <description>&lt;p&gt;Recently this post making rounds on some of the dev community groups which I’m a part of on Facebook.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Run GraphQL server with Express in NuxtJS</title>
+      <link>https://ruky.me/run-graphql-server-with-express-in-nuxtjs/</link>
+      <pubDate>Wed, 27 Jan 2021 20:54:01 +0000</pubDate>
+      <guid>https://ruky.me/run-graphql-server-with-express-in-nuxtjs/</guid>
+      <description>&lt;p&gt;Since I use Vue for almost all of my projects, if I’m making an application that requires routing and server side rendering (for SEO), I use &lt;a href=&#34;https://nuxtjs.org/&#34;&gt;NuxtJS&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The value of targeted advertising</title>
+      <link>https://ruky.me/the-value-of-targeted-advertising/</link>
+      <pubDate>Wed, 27 Jan 2021 16:48:26 +0000</pubDate>
+      <guid>https://ruky.me/the-value-of-targeted-advertising/</guid>
+      <description>&lt;p&gt;This post will might be the post that will roast me the most. But before triggering your fingers just by reading the title I would like everyone to read my post, and read my argument before jumping in to conclusions.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Do you believe in fail fast and fail quickly?</title>
+      <link>https://ruky.me/do-you-believe-in-fail-fast-and-fail-quickly/</link>
+      <pubDate>Tue, 26 Jan 2021 11:30:07 +0000</pubDate>
+      <guid>https://ruky.me/do-you-believe-in-fail-fast-and-fail-quickly/</guid>
+      <description>&lt;p&gt;The first month of 2021 is a bad month to begin with, I always say to myself that we need to fail fast and fail quickly, but failing is not a pleasant experience.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why I switched to WordPress</title>
+      <link>https://ruky.me/why-i-switched-to-wordpress/</link>
+      <pubDate>Sun, 24 Jan 2021 21:44:57 +0000</pubDate>
+      <guid>https://ruky.me/why-i-switched-to-wordpress/</guid>
+      <description>&lt;p&gt;Recently I read a post which said that the White House official website will be now powered by WordPress.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Have you ever tried blocking WhatsApp from your router?</title>
+      <link>https://ruky.me/have-you-ever-tried-blocking-whatsapp-you-probably-cant/</link>
+      <pubDate>Sat, 23 Jan 2021 22:57:49 +0000</pubDate>
+      <guid>https://ruky.me/have-you-ever-tried-blocking-whatsapp-you-probably-cant/</guid>
+      <description>&lt;p&gt;In a previous post I wrote that I live in a part of the world that &lt;a href=&#34;https://ruky.me/sri-lanka-need-unlimited-internet-connections/&#34;&gt;does not provide unlimited internet&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Who is sending these mysterious 2FA codes?</title>
+      <link>https://ruky.me/who-is-sending-these-mysterious-2fa-codes/</link>
+      <pubDate>Wed, 20 Jan 2021 11:38:19 +0000</pubDate>
+      <guid>https://ruky.me/who-is-sending-these-mysterious-2fa-codes/</guid>
+      <description>&lt;p&gt;I read a recent post titled &lt;a href=&#34;https://shkspr.mobi/blog/2021/01/thats-not-how-2fa-works/&#34;&gt;“That’s not how 2FA works”,&lt;/a&gt; it was an interesting read.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Too much hustling can kill you</title>
+      <link>https://ruky.me/too-much-hustling-can-kill-you/</link>
+      <pubDate>Tue, 19 Jan 2021 12:16:57 +0000</pubDate>
+      <guid>https://ruky.me/too-much-hustling-can-kill-you/</guid>
+      <description>&lt;p&gt;When you are young, you feel like you’re invincible. You feel as if you’re on a road to wold domination.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What‘s the use of LinkedIn?</title>
+      <link>https://ruky.me/whats-the-use-of-linkedin/</link>
+      <pubDate>Mon, 18 Jan 2021 11:03:59 +0000</pubDate>
+      <guid>https://ruky.me/whats-the-use-of-linkedin/</guid>
+      <description>&lt;p&gt;My linked in profile is the first search result that appears if I searched my name. Not my Twitter, Instagram or my blogs. Because those are the places I usually hangout in public, not LinkedIn.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why teaching programming is so difficult?</title>
+      <link>https://ruky.me/why-teaching-programming-is-so-difficult/</link>
+      <pubDate>Sat, 16 Jan 2021 23:42:19 +0000</pubDate>
+      <guid>https://ruky.me/why-teaching-programming-is-so-difficult/</guid>
+      <description>&lt;p&gt;Like I said in one of my previous posts, I just started my first semester in my &lt;a href=&#34;https://ruky.me/what-is-health-informatics-and-what-i-do-for-a-living/&#34;&gt;MSc in health informatics&lt;/a&gt;. And the first semester has a module for object oriented programming.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The framework trap</title>
+      <link>https://ruky.me/the-framework-trap/</link>
+      <pubDate>Thu, 14 Jan 2021 02:24:35 +0000</pubDate>
+      <guid>https://ruky.me/the-framework-trap/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wompampsupport.azureedge.net/fetchimage?siteId=7575&amp;v=2&amp;jpgQuality=100&amp;width=700&amp;url=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F000%2F157%2Fitsatrap.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When it comes to programming, frameworks are there to make your life easy. React, Vue, Larvel, Bootstrap, I can go on and on to list your favourite frameworks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I sent this email asking my friends to switch to Signal</title>
+      <link>https://ruky.me/i-sent-this-email-asking-my-friends-to-switch-to-signal/</link>
+      <pubDate>Wed, 13 Jan 2021 09:26:01 +0000</pubDate>
+      <guid>https://ruky.me/i-sent-this-email-asking-my-friends-to-switch-to-signal/</guid>
+      <description>&lt;p&gt;Hello ?&lt;/p&gt;
+&lt;p&gt;I know you like to use WhatsApp, I use WhatsApp as well. One of the most important things in WhatsApp that differentiates itself from other messaging apps like Viber, Messenger and Telegram is WhatsApp’s privacy.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What if Parler was a decentralised network?</title>
+      <link>https://ruky.me/what-if-parler-was-a-decentralised-network/</link>
+      <pubDate>Tue, 12 Jan 2021 01:38:33 +0000</pubDate>
+      <guid>https://ruky.me/what-if-parler-was-a-decentralised-network/</guid>
+      <description>&lt;p&gt;Recently Parler is getting lot of attention on online and mainstream media, and not for a good reason. This is because Parler is getting banned from almost every service they have been using, from Amazon’s AWS, to Twilio for SMS verification. They also got their app kicked off from both Google PlayStore and Apple AppStore.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Everyone should get a personal email address</title>
+      <link>https://ruky.me/everyone-should-get-a-personal-email-address/</link>
+      <pubDate>Sat, 09 Jan 2021 13:04:38 +0000</pubDate>
+      <guid>https://ruky.me/everyone-should-get-a-personal-email-address/</guid>
+      <description>&lt;p&gt;Recently I sold my old MacBook Pro, and until I buy myself a new laptop, I had to log in to my gmail account from a windows laptop.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Signal, thank you for not collecting my data. But I won’t use you.</title>
+      <link>https://ruky.me/signal-thank-you-for-not-collecting-my-data-but-i-wont-use-you/</link>
+      <pubDate>Fri, 08 Jan 2021 14:24:08 +0000</pubDate>
+      <guid>https://ruky.me/signal-thank-you-for-not-collecting-my-data-but-i-wont-use-you/</guid>
+      <description>&lt;p&gt;Facebook has given an ultimatum for WhatsApp users to either share their data with Facebook or leave the service. And that date is February 8th.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Google launches Question Hub to tackle niche and long tail keyword queries</title>
+      <link>https://ruky.me/google-launches-question-hub-to-tackle-niche-and-long-tail-keyword-queries/</link>
+      <pubDate>Thu, 07 Jan 2021 11:38:35 +0000</pubDate>
+      <guid>https://ruky.me/google-launches-question-hub-to-tackle-niche-and-long-tail-keyword-queries/</guid>
+      <description>&lt;p&gt;You are able to find answers to almost all common questions on Google. But there are some areas where Google fails to provide good answers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>You might want to block Pinterest to save your data</title>
+      <link>https://ruky.me/you-might-want-to-block-pinterest-to-save-your-data/</link>
+      <pubDate>Tue, 05 Jan 2021 10:40:46 +0000</pubDate>
+      <guid>https://ruky.me/you-might-want-to-block-pinterest-to-save-your-data/</guid>
+      <description>&lt;p&gt;&lt;em&gt;I guess this is the first blog post of the new year, even though I’m not someone who is keen on celebrating a new year, I sincerely hope every one would have a very bright 2021.&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Reddit mods please stop automated blocking</title>
+      <link>https://ruky.me/reddit-mods-please-stop-automated-blocking/</link>
+      <pubDate>Thu, 31 Dec 2020 11:54:54 +0000</pubDate>
+      <guid>https://ruky.me/reddit-mods-please-stop-automated-blocking/</guid>
+      <description>&lt;p&gt;In a recent post, I talked about a dark practice that Reddit uses to funnel people to install their app.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Please don’t spam my blog. SEO myths you need to stop believing</title>
+      <link>https://ruky.me/please-dont-spam-my-blog-seo-myths-you-need-to-stop-believing/</link>
+      <pubDate>Tue, 29 Dec 2020 22:09:29 +0000</pubDate>
+      <guid>https://ruky.me/please-dont-spam-my-blog-seo-myths-you-need-to-stop-believing/</guid>
+      <description>&lt;p&gt;I have several WordPress blogs, related to different topics. Including my personal blog.&lt;/p&gt;
+&lt;p&gt;Each day I have to moderate several comments on all of my blogs, which are made my people trying to boost their SEO to their websites, most of them are selling fake medications, or fake online offers, or people trying to build back links to rank higher on Google results.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sri Lanka need unlimited internet connections</title>
+      <link>https://ruky.me/sri-lanka-need-unlimited-internet-connections/</link>
+      <pubDate>Mon, 28 Dec 2020 14:03:37 +0000</pubDate>
+      <guid>https://ruky.me/sri-lanka-need-unlimited-internet-connections/</guid>
+      <description>&lt;p&gt;There is a &lt;a href=&#34;https://i.reddit.com/r/srilanka/comments/kkgb5i/something_is_terribly_wrong_here_also_its/&#34;&gt;post making rounds on social media&lt;/a&gt; about internet charges of Sri Lanka. I don’t know how accurate the post really is, but Sri Lankan telco companies and their ISPs run one of the most shadiest businesses in the country, and it’s doing more harm than good.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Twitter please don’t ruin my timeline</title>
+      <link>https://ruky.me/twitter-please-dont-ruin-my-timeline/</link>
+      <pubDate>Sun, 27 Dec 2020 14:45:09 +0000</pubDate>
+      <guid>https://ruky.me/twitter-please-dont-ruin-my-timeline/</guid>
+      <description>&lt;p&gt;Today I logged in to check my Twitter feed. However, today I saw something different, my Twitter feed was not the same. There were tweets from people I don’t know, or from topics I’m not interested in on their feed.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My lost opportunity to become a millionaire</title>
+      <link>https://ruky.me/my-lost-opportunity-to-become-a-millionaire/</link>
+      <pubDate>Fri, 25 Dec 2020 22:10:22 +0000</pubDate>
+      <guid>https://ruky.me/my-lost-opportunity-to-become-a-millionaire/</guid>
+      <description>&lt;p&gt;Recently one of my friends shared a link in one of our groups, it’s a Telegram bot that is supposed to generate Tron tokens, and he needed 10 referrals to withdraw his tokens.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to sort a list of words? The bucket sorting method</title>
+      <link>https://ruky.me/how-to-sort-a-list-of-words-the-bucket-sorting-method/</link>
+      <pubDate>Thu, 24 Dec 2020 14:25:56 +0000</pubDate>
+      <guid>https://ruky.me/how-to-sort-a-list-of-words-the-bucket-sorting-method/</guid>
+      <description>&lt;p&gt;In the last post I said that I just started my MSc in health informs. The first semester has five modules, one of those modules is about object oriented programming.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>What is health informatics? And what I do for a living</title>
+      <link>https://ruky.me/what-is-health-informatics-and-what-i-do-for-a-living/</link>
+      <pubDate>Wed, 23 Dec 2020 23:27:58 +0000</pubDate>
+      <guid>https://ruky.me/what-is-health-informatics-and-what-i-do-for-a-living/</guid>
+      <description>&lt;p&gt;I recently started this blog to start a new year resolution for 2021, that is to post at least one blog post every week. But I have been writing ever since and blogging has become more of an addiction. Even if I have to painstaking write from by iPad.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Somethings are never meant to be invented. The story of BlockEvent</title>
+      <link>https://ruky.me/somethings-are-never-meant-to-be-invented-the-story-of-blockevent/</link>
+      <pubDate>Wed, 23 Dec 2020 13:47:52 +0000</pubDate>
+      <guid>https://ruky.me/somethings-are-never-meant-to-be-invented-the-story-of-blockevent/</guid>
+      <description>&lt;p&gt;Every few years there comes a technology that people get hyped about, everyone wants to be a specialist in that field because it appears to be the next big thing.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>This community is available in the app</title>
+      <link>https://ruky.me/this-community-is-available-in-the-app/</link>
+      <pubDate>Tue, 22 Dec 2020 09:53:26 +0000</pubDate>
+      <guid>https://ruky.me/this-community-is-available-in-the-app/</guid>
+      <description>&lt;p&gt;Yesterday’s &lt;a href=&#34;https://ruky.me/a-to-do-app-that-fits-in-a-single-tweet/&#34;&gt;post&lt;/a&gt; was an awesome one, I learned a lot in JavaScript and and I was happy to see people doing what I thought impossible. Writing a simple todo app within 280 chars, in plain js.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A TO-DO app that fits in a single tweet</title>
+      <link>https://ruky.me/a-to-do-app-that-fits-in-a-single-tweet/</link>
+      <pubDate>Mon, 21 Dec 2020 09:50:03 +0000</pubDate>
+      <guid>https://ruky.me/a-to-do-app-that-fits-in-a-single-tweet/</guid>
+      <description>&lt;p&gt;Sunday morning while I was scrolling through my Twitter feed one tweet caught my eye,&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I just checked Yamu stats, they don’t look good. Is Google killing Yamu?</title>
+      <link>https://ruky.me/i-just-checked-yamu-stats-they-dont-look-good-is-google-killing-yamu/</link>
+      <pubDate>Sun, 20 Dec 2020 10:05:38 +0000</pubDate>
+      <guid>https://ruky.me/i-just-checked-yamu-stats-they-dont-look-good-is-google-killing-yamu/</guid>
+      <description>&lt;p&gt;Yamu was started out as an idea in a hackathon back in 2011 or 2012 (I can’t remember the exact time), but it’s close to a decade. The original idea was to start something that was close to Uber or PickMe.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Starting a blog has never been this difficult</title>
+      <link>https://ruky.me/starting-a-blog-has-never-been-this-difficult/</link>
+      <pubDate>Fri, 18 Dec 2020 12:09:21 +0000</pubDate>
+      <guid>https://ruky.me/starting-a-blog-has-never-been-this-difficult/</guid>
+      <description>&lt;p&gt;I feel blogging is making a comeback, why? Because people are starting to realize that they can carve their own brand and be content creators, rather than just sharing your thoughts among few Facebook friends.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I just installed a content blocker on my iPhone</title>
+      <link>https://ruky.me/i-just-installed-a-content-blocker-on-my-iphone/</link>
+      <pubDate>Thu, 17 Dec 2020 21:24:27 +0000</pubDate>
+      <guid>https://ruky.me/i-just-installed-a-content-blocker-on-my-iphone/</guid>
+      <description>&lt;p&gt;Recently I saw a Facebook post post where someone has monitored his data usage and found out that he is spending nearly 300mb of data everyday just for the ad content he’s getting on different websites and YouTube.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Don&#39;t buy a .icu domain</title>
+      <link>https://ruky.me/dont-buy-a-icu-domain/</link>
+      <pubDate>Tue, 15 Dec 2020 14:45:26 +0000</pubDate>
+      <guid>https://ruky.me/dont-buy-a-icu-domain/</guid>
+      <description>&lt;p&gt;The new .icu and .cyou domains targeting the new generation, which is a hip way to say ‘I see you’, or ‘see you’.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The unusual pricing of electronics in Sri Lanka</title>
+      <link>https://ruky.me/the-unusual-pricing-of-electronics-in-sri-lanka/</link>
+      <pubDate>Mon, 14 Dec 2020 11:31:09 +0000</pubDate>
+      <guid>https://ruky.me/the-unusual-pricing-of-electronics-in-sri-lanka/</guid>
+      <description>&lt;p&gt;I was looking to buy a new laptop and I was doing some shopping online. I was tracking the pricing of the new M1 MacBook air, since two weeks after its release, I found the first M1 MacBooks in Sri Lanka priced at Rs 245,000.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Convocation ceremonies are fake</title>
+      <link>https://ruky.me/convocation-ceremonies-are-fake/</link>
+      <pubDate>Sat, 12 Dec 2020 12:59:55 +0000</pubDate>
+      <guid>https://ruky.me/convocation-ceremonies-are-fake/</guid>
+      <description>&lt;p&gt;Recently I got to know about the virtual convocation ceremony done by the University of Kelaniya for the graduated students and the backlash that it generated among the students and social media against holding a virtual event instead of a real ceremony at the BMICH.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

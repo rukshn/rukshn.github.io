@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Nostalgia on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/nostalgia/</link>
+    <description>Recent content in Nostalgia on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Wed, 01 Sep 2021 01:01:01 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/nostalgia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>When I used to collect computer viruses</title>
+      <link>https://ruky.me/when-i-used-to-collect-computer-viruses/</link>
+      <pubDate>Wed, 01 Sep 2021 01:01:01 +0000</pubDate>
+      <guid>https://ruky.me/when-i-used-to-collect-computer-viruses/</guid>
+      <description>&lt;p&gt;Today I was having a lecture about information security and information security law. I just started the module and this is the third lecture about the topic. And todays lecture was about different IT threats that an health information system would face. The lecture mainly revolved around malware. During the lecture, the teacher told a point that most malware today are written for profit, and ransomware are popular today because it’s a get rich scheme for malware writers.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

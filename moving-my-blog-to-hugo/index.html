@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Moving My Blog To Hugo | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="Blogging, Rants">
+<meta name="description" content="I have been blogging for nearly 15 years now—gosh,
+I feel so old. Like most, I started on Blogger and then moved to WordPress.com.
+From WordPress, I moved to Tumblr, to Medium, and to Jekyll for a short period and then a self-hosted WordPress.
+Sometimes, I wonder why Google is still keeping Blogger alive. I know people are still using it.
+But Google killed Google Reader when people were still using it and loving it.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/moving-my-blog-to-hugo/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/moving-my-blog-to-hugo/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/moving-my-blog-to-hugo/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="Moving My Blog To Hugo">
+  <meta property="og:description" content="I have been blogging for nearly 15 years now—gosh, I feel so old. Like most, I started on Blogger and then moved to WordPress.com. From WordPress, I moved to Tumblr, to Medium, and to Jekyll for a short period and then a self-hosted WordPress. Sometimes, I wonder why Google is still keeping Blogger alive. I know people are still using it. But Google killed Google Reader when people were still using it and loving it.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-01-05T18:15:50+01:00">
+    <meta property="article:modified_time" content="2025-01-05T18:15:50+01:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Moving My Blog To Hugo">
+<meta name="twitter:description" content="I have been blogging for nearly 15 years now—gosh,
+I feel so old. Like most, I started on Blogger and then moved to WordPress.com.
+From WordPress, I moved to Tumblr, to Medium, and to Jekyll for a short period and then a self-hosted WordPress.
+Sometimes, I wonder why Google is still keeping Blogger alive. I know people are still using it.
+But Google killed Google Reader when people were still using it and loving it.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Moving My Blog To Hugo",
+      "item": "https://ruky.me/moving-my-blog-to-hugo/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Moving My Blog To Hugo",
+  "name": "Moving My Blog To Hugo",
+  "description": "I have been blogging for nearly 15 years now—gosh, I feel so old. Like most, I started on Blogger and then moved to WordPress.com. From WordPress, I moved to Tumblr, to Medium, and to Jekyll for a short period and then a self-hosted WordPress. Sometimes, I wonder why Google is still keeping Blogger alive. I know people are still using it. But Google killed Google Reader when people were still using it and loving it.\n",
+  "keywords": [
+    "Blogging, Rants"
+  ],
+  "articleBody": "I have been blogging for nearly 15 years now—gosh, I feel so old. Like most, I started on Blogger and then moved to WordPress.com. From WordPress, I moved to Tumblr, to Medium, and to Jekyll for a short period and then a self-hosted WordPress. Sometimes, I wonder why Google is still keeping Blogger alive. I know people are still using it. But Google killed Google Reader when people were still using it and loving it.\nBack to the topic, I switched from a self-hosted WordPress to Ghost for a short period to give it a try. But looking back at what happened in the world of WordPress the last couple of months, I honestly feel pretty good about moving away from WordPress.\nHowever, managing Ghost as a self-hosted thing was a pain, I had difficulty logging back into my account from a different device after updating to the latest version, plus hosting the blog on a VPS while paying for it felt like a bummer.\nSo I decided to try out Hugo. I have been learning Go for the last 3-4 months, and I’m loving it. It’s one of those languages that I instantly fell in love with and learned the basics within a couple of days. So I decided to try Hugo, which is written in Go, and this is my first post in Hugo.\nI am using NeoVim to write the post. I have written a couple of posts about ‘how difficult it is to start a blog’ and I still believe that starting a blog is now difficult because most platforms try to be a CMS or a website builder, whereas things like Hugo and Jekyll are for people who can use a text editor and build and deploy it on a hosting provider.\nI don’t know how long I will use Hugo but let’s give it a try.\nAlso check out my post on blog spam on Google by Medium.\n",
+  "wordCount" : "324",
+  "inLanguage": "en",
+  "datePublished": "2025-01-05T18:15:50+01:00",
+  "dateModified": "2025-01-05T18:15:50+01:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/moving-my-blog-to-hugo/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Moving My Blog To Hugo
+    </h1>
+    <div class="post-meta"><span title='2025-01-05 18:15:50 +0100 CET'>January 5, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>I have been blogging for nearly 15 years now—gosh,
+I feel so old. Like most, I started on Blogger and then moved to WordPress.com.
+From WordPress, I moved to Tumblr, to Medium, and to Jekyll for a short period and then a self-hosted WordPress.
+Sometimes, I wonder why Google is still keeping Blogger alive. I know people are still using it.
+But Google killed Google Reader when people were still using it and loving it.</p>
+<p>Back to the topic, I switched from a self-hosted WordPress to Ghost for a short period to give it a try.
+But looking back at what happened in the world of WordPress the last couple of months,
+I honestly feel pretty good about moving away from WordPress.</p>
+<p>However, managing Ghost as a self-hosted thing was a pain,
+I had difficulty logging back into my account from a different device after updating to the latest version,
+plus hosting the blog on a VPS while paying for it felt like a bummer.</p>
+<p>So I decided to try out Hugo. I have been learning Go for the last 3-4 months, and I’m loving it.
+It’s one of those languages that I instantly fell in love with and learned the basics within a couple of days.
+So I decided to try Hugo, which is written in Go, and this is my first post in Hugo.</p>
+<p>I am using NeoVim to write the post. I have written a couple of posts about <a href="https://ruky.me/starting-a-blog-has-never-been-this-difficult/">&lsquo;how difficult it is to start a blog&rsquo;</a> and I still believe that starting a blog is now difficult because most platforms try to be a CMS or a website builder, whereas things like Hugo and Jekyll are for people who can use a text editor and build and deploy it on a hosting provider.</p>
+<p>I don’t know how long I will use Hugo but let’s give it a try.</p>
+<p>Also check out <a href="https://ruky.me/medium-and-google-is-not-a-good-combination/">my post on blog spam on Google by Medium</a>.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

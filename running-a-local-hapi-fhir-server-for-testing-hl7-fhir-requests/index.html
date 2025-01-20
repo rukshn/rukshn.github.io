@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Running a Local HAPI FHIR Server For Testing HL7 FHIR Requests | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="DevOps, FHIR, Internet, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="When implementing FHIR, a FHIR server is essential for validating and process incoming FHIR requests from clients. Also, it will be the place where you store your customized profiles, valuesets, and codesystems that is necessary for managing terminology.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="Running a Local HAPI FHIR Server For Testing HL7 FHIR Requests">
+  <meta property="og:description" content="When implementing FHIR, a FHIR server is essential for validating and process incoming FHIR requests from clients. Also, it will be the place where you store your customized profiles, valuesets, and codesystems that is necessary for managing terminology.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-12-26T16:47:59+00:00">
+    <meta property="article:modified_time" content="2022-12-26T16:47:59+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Running a Local HAPI FHIR Server For Testing HL7 FHIR Requests">
+<meta name="twitter:description" content="When implementing FHIR, a FHIR server is essential for validating and process incoming FHIR requests from clients. Also, it will be the place where you store your customized profiles, valuesets, and codesystems that is necessary for managing terminology.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Running a Local HAPI FHIR Server For Testing HL7 FHIR Requests",
+      "item": "https://ruky.me/running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Running a Local HAPI FHIR Server For Testing HL7 FHIR Requests",
+  "name": "Running a Local HAPI FHIR Server For Testing HL7 FHIR Requests",
+  "description": "When implementing FHIR, a FHIR server is essential for validating and process incoming FHIR requests from clients. Also, it will be the place where you store your customized profiles, valuesets, and codesystems that is necessary for managing terminology.\n",
+  "keywords": [
+    "DevOps", "FHIR", "Internet", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "When implementing FHIR, a FHIR server is essential for validating and process incoming FHIR requests from clients. Also, it will be the place where you store your customized profiles, valuesets, and codesystems that is necessary for managing terminology.\nHAPI FHIR is the most popular FHIR server available at the moment and has been available for several years. It’s fully open-source software which means anyone can download and host it to experiment with it to get their hands dirty with FHIR.\nIn this post, I’m going to show how you can install the hapi fhir server on your computer for development and testing fhir requests.\nDownload HAPI with Docker The easiest way to download HAPI is with Docker. The repository is available on Docker Hub at the following address : https://hub.docker.com/r/hapiproject/hapi\nPull the latest hapi fhir server to your computer. After the pull is complete, you can run the hapi fhir server with the following command.\ndocker pull hapiproject/hapi:latest Run the following command to start the HAPI FHIR server on port 8080\ndocker run -p 8080:8080 hapiproject/hapi:latest Navigating to http://127.0.0.1:8080 you will be able to see the the standard HAPI FHIR screen.\nMaking a request to HAPI FHIR server Now you can make requests to your local setup HAPI FHIR server to perform different actions that you would do on a real FHIR server. Such as creating, updating, deleting, searching for different resources, uploading profiles, valuesets etc.\nIn order to make a simple request, open the Postman client or Hoppscotch.io and make the following post request to the Patient endpoint to create a new patient resource.\n{ \"resourceType\": \"Patient\", \"extension\": [ { \"url\": \"http://hl7.org/fhir/StructureDefinition/us-core-race\", \"valueCodeableConcept\": { \"coding\": [ { \"system\": \"http://hl7.org/fhir/v3/Race\" } ] } }, { \"url\": \"http://hl7.org/fhir/StructureDefinition/us-core-ethnicity\", \"valueCodeableConcept\": { \"coding\": [ { \"system\": \"http://hl7.org/fhir/v3/Ethnicity\" } ] } } ], \"identifier\": [ { \"id\": \"5fdfe7f0-5fd1-4675-a800-417042d3ebdd\", \"use\": \"usual\", \"type\": { \"coding\": [ { \"system\": \"http://terminology.hl7.org/CodeSystem/v2-0203\", \"code\": \"MR\" } ] }, \"system\": \"urn:oid:1.2.36.146.595.217.0.1\", \"value\": \"129862\", \"assigner\": { \"display\": \"MCH\" } }, { \"system\": \"http://new-republic.gov/galactic-citizen-identifier\", \"value\": \"213445556\" }, { \"system\": \"http://caringly.tech/hospital-patient-identifier\", \"value\": \"MCH@HNAM@129862\" } ], \"active\": true, \"name\": [ { \"use\": \"official\", \"family\": \"MEDSURGTELE\", \"given\": [ \"EIGHT\" ] } ], \"telecom\": [ { \"system\": \"phone\", \"value\": \"(123)344-2556\", \"use\": \"home\", \"rank\": 1 }, { \"system\": \"phone\", \"use\": \"work\", \"rank\": 2 } ], \"gender\": \"female\", \"birthDate\": \"1990-01-08\", \"deceasedBoolean\": false, \"address\": [ { \"use\": \"home\" } ], \"generalPractitioner\": [ { \"identifier\": { \"use\": \"official\", \"system\": \"http://caringly.tech/hospital-provider-identifier\" } } ], \"managingOrganization\": { \"reference\": \"Organization/582205\" } } If successful, you will receive a response with status code of 200 and a resource with id of 1 (this is the first patient resource that we just created on the server) and of resource type of Patient.\nYou can make more requests and get to know your way around HAPI FHIR.\nHAPI FHIR server for production The method described above is only good for a development environment and not for a production environment. You will have to serve HAPI FHIR through something like Apache Tomcat to incorporate HAPI FHIR in a production environment.\nHAPI FHIR server does not act as a FHIR authorization server, so there is no way to authorize incoming requests based on the requesting clients. For that, you will have to incorporate an authorization server such as FHIR Auth.\nI’ll write a post on how to deploy HAPI FHIR on Apache Tomcat in a production environment in a later post. Feel free to shoot any questions via Twitter or in the comments.\nTalk To Us! Need support for your FHIR implementation, profiling?\nor\nImplement a FHIR authorization server with FHIR Auth.\nTalk To Zemantic.co\n",
+  "wordCount" : "596",
+  "inLanguage": "en",
+  "datePublished": "2022-12-26T16:47:59Z",
+  "dateModified": "2022-12-26T16:47:59Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/running-a-local-hapi-fhir-server-for-testing-hl7-fhir-requests/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Running a Local HAPI FHIR Server For Testing HL7 FHIR Requests
+    </h1>
+    <div class="post-meta"><span title='2022-12-26 16:47:59 +0000 UTC'>December 26, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>When implementing FHIR, a FHIR server is essential for validating and process incoming FHIR requests from clients. Also, it will be the place where you store your customized profiles, valuesets, and codesystems that is necessary for managing terminology.</p>
+<p>HAPI FHIR is the most popular FHIR server available at the moment and has been available for several years. It’s fully open-source software which means anyone can download and host it to experiment with it to get their hands dirty with FHIR.</p>
+<p>In this post, I’m going to show how you can install the hapi fhir server on your computer for development and testing fhir requests.</p>
+<h2 id="download-hapi-with-docker">Download HAPI with Docker<a hidden class="anchor" aria-hidden="true" href="#download-hapi-with-docker">#</a></h2>
+<p>The easiest way to download HAPI is with Docker. The repository is available on Docker Hub at the following address : <a href="https://hub.docker.com/r/hapiproject/hapi">https://hub.docker.com/r/hapiproject/hapi</a></p>
+<p>Pull the latest hapi fhir server to your computer. After the pull is complete, you can run the hapi fhir server with the following command.</p>
+<pre><code>docker pull hapiproject/hapi:latest
+</code></pre>
+<p>Run the following command to start the HAPI FHIR server on port 8080</p>
+<pre><code>docker run -p 8080:8080 hapiproject/hapi:latest
+</code></pre>
+<p>Navigating to <code>http://127.0.0.1:8080</code> you will be able to see the the standard HAPI FHIR screen.</p>
+<h2 id="making-a-request-to-hapi-fhir-server">Making a request to HAPI FHIR server<a hidden class="anchor" aria-hidden="true" href="#making-a-request-to-hapi-fhir-server">#</a></h2>
+<p>Now you can make requests to your local setup HAPI FHIR server to perform different actions that you would do on a real FHIR server. Such as creating, updating, deleting, searching for different resources, uploading profiles, valuesets etc.</p>
+<p>In order to make a simple request, open the Postman client or <a href="https://hoppscotch.io/">Hoppscotch.io</a> and make the following post request to the Patient endpoint to create a new patient resource.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JSON" data-lang="JSON"><span style="display:flex;"><span>    {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;resourceType&#34;</span>: <span style="color:#f1fa8c">&#34;Patient&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;extension&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;url&#34;</span>: <span style="color:#f1fa8c">&#34;http://hl7.org/fhir/StructureDefinition/us-core-race&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;valueCodeableConcept&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;coding&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;system&#34;</span>: <span style="color:#f1fa8c">&#34;http://hl7.org/fhir/v3/Race&#34;</span>
+</span></span><span style="display:flex;"><span>          } ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }, {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;url&#34;</span>: <span style="color:#f1fa8c">&#34;http://hl7.org/fhir/StructureDefinition/us-core-ethnicity&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;valueCodeableConcept&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;coding&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;system&#34;</span>: <span style="color:#f1fa8c">&#34;http://hl7.org/fhir/v3/Ethnicity&#34;</span>
+</span></span><span style="display:flex;"><span>          } ]
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      } ],
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;identifier&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;id&#34;</span>: <span style="color:#f1fa8c">&#34;5fdfe7f0-5fd1-4675-a800-417042d3ebdd&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;use&#34;</span>: <span style="color:#f1fa8c">&#34;usual&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;type&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;coding&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;system&#34;</span>: <span style="color:#f1fa8c">&#34;http://terminology.hl7.org/CodeSystem/v2-0203&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#ff79c6">&#34;code&#34;</span>: <span style="color:#f1fa8c">&#34;MR&#34;</span>
+</span></span><span style="display:flex;"><span>          } ]
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;system&#34;</span>: <span style="color:#f1fa8c">&#34;urn:oid:1.2.36.146.595.217.0.1&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;129862&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;assigner&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;display&#34;</span>: <span style="color:#f1fa8c">&#34;MCH&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      }, {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;system&#34;</span>: <span style="color:#f1fa8c">&#34;http://new-republic.gov/galactic-citizen-identifier&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;213445556&#34;</span>
+</span></span><span style="display:flex;"><span>      }, {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;system&#34;</span>: <span style="color:#f1fa8c">&#34;http://caringly.tech/hospital-patient-identifier&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;MCH@HNAM@129862&#34;</span>
+</span></span><span style="display:flex;"><span>      } ],
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;active&#34;</span>: <span style="color:#ff79c6">true</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;name&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;use&#34;</span>: <span style="color:#f1fa8c">&#34;official&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;family&#34;</span>: <span style="color:#f1fa8c">&#34;MEDSURGTELE&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;given&#34;</span>: [ <span style="color:#f1fa8c">&#34;EIGHT&#34;</span> ]
+</span></span><span style="display:flex;"><span>      } ],
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;telecom&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;system&#34;</span>: <span style="color:#f1fa8c">&#34;phone&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;value&#34;</span>: <span style="color:#f1fa8c">&#34;(123)344-2556&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;use&#34;</span>: <span style="color:#f1fa8c">&#34;home&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;rank&#34;</span>: <span style="color:#bd93f9">1</span>
+</span></span><span style="display:flex;"><span>      }, {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;system&#34;</span>: <span style="color:#f1fa8c">&#34;phone&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;use&#34;</span>: <span style="color:#f1fa8c">&#34;work&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;rank&#34;</span>: <span style="color:#bd93f9">2</span>
+</span></span><span style="display:flex;"><span>      } ],
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;gender&#34;</span>: <span style="color:#f1fa8c">&#34;female&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;birthDate&#34;</span>: <span style="color:#f1fa8c">&#34;1990-01-08&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;deceasedBoolean&#34;</span>: <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;address&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;use&#34;</span>: <span style="color:#f1fa8c">&#34;home&#34;</span>
+</span></span><span style="display:flex;"><span>      } ],
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;generalPractitioner&#34;</span>: [ {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;identifier&#34;</span>: {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;use&#34;</span>: <span style="color:#f1fa8c">&#34;official&#34;</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">&#34;system&#34;</span>: <span style="color:#f1fa8c">&#34;http://caringly.tech/hospital-provider-identifier&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>      } ],
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">&#34;managingOrganization&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff79c6">&#34;reference&#34;</span>: <span style="color:#f1fa8c">&#34;Organization/582205&#34;</span>
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><p>If successful, you will receive a response with status code of <code>200</code> and a resource with <code>id</code> of 1 (this is the first patient resource that we just created on the server) and of resource type of <code>Patient</code>.</p>
+<p>You can make more requests and get to know your way around HAPI FHIR.</p>
+<h2 id="hapi-fhir-server-for-production">HAPI FHIR server for production<a hidden class="anchor" aria-hidden="true" href="#hapi-fhir-server-for-production">#</a></h2>
+<p>The method described above is only good for a development environment and not for a production environment. You will have to serve HAPI FHIR through something like <a href="https://tomcat.apache.org/">Apache Tomcat</a> to incorporate HAPI FHIR in a production environment.</p>
+<p>HAPI FHIR server <strong>does not</strong> act as a FHIR authorization server, so there is no way to authorize incoming requests based on the requesting clients. For that, you will have to incorporate an authorization server such as <a href="https://zemantic.co/fhir-auth">FHIR Auth</a>.</p>
+<p>I’ll write a post on how to deploy HAPI FHIR on Apache Tomcat in a production environment in a later post. Feel free to shoot any questions via <a href="https://twitter.com/justruky">Twitter</a> or in the comments.</p>
+<h3 id="talk-to-us">Talk To Us!<a hidden class="anchor" aria-hidden="true" href="#talk-to-us">#</a></h3>
+<p>Need support for your FHIR implementation, profiling?<br>
+or<br>
+Implement a FHIR authorization server with FHIR Auth.</p>
+<p><a href="https://zemantic.co/fhir-auth">Talk To Zemantic.co</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

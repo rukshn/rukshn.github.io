@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Don&#39;t allow VSCode to auto fetch from repos | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="coding, Rants, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to my GitHub repo.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/dont-allow-vscode-to-auto-fetch-from-repos/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/dont-allow-vscode-to-auto-fetch-from-repos/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/dont-allow-vscode-to-auto-fetch-from-repos/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="Don&#39;t allow VSCode to auto fetch from repos">
+  <meta property="og:description" content="Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to my GitHub repo.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-02-21T10:52:08+00:00">
+    <meta property="article:modified_time" content="2021-02-21T10:52:08+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Don&#39;t allow VSCode to auto fetch from repos">
+<meta name="twitter:description" content="Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to my GitHub repo.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Don't allow VSCode to auto fetch from repos",
+      "item": "https://ruky.me/dont-allow-vscode-to-auto-fetch-from-repos/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Don't allow VSCode to auto fetch from repos",
+  "name": "Don\u0027t allow VSCode to auto fetch from repos",
+  "description": "Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to my GitHub repo.\n",
+  "keywords": [
+    "coding", "Rants", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to my GitHub repo.\nDuring the past 1 month I was hacking a small side project during my free time. Since I’m the only one working on the project I’m the only one who is pushing to the repo.\nWhenever I was pushing commits to my GitHub repo, VS code is showing this popup, with this message. “would you like code to periodically run git fetch?”\nImage stolen from Twitter https://twitter.com/levelsio/status/1329077610542886915/photo/2\nAt the beginning I ignored this message and clicked ask me later. But since it is nagging me during every push to GitHub, since I’m the only one pushing commits to the repo, and thinking that it will warn me when there is conflict between versions, or code. I decided to click yes, allowing VsCode to run git fetch “periodically”.\nI’m using GraphQL for the project, and GraphQL is something that I learned this year (2021). And GraphQL doesn’t have a type to upload a file, I had to dig though the internet for a way and some npm packages to find a suitable package to handle file uploads.\nI finally found out a package, and it took me a whole day to cook a way to work it together with Amazon AWS package to upload a file successfully to an s3 bucket. It was frustrating and took me a whole day, and staying up till around 2am to figure everything and make it work.\nI’m not going in to detail, but first the file was not uploading, and second the uploaded file was corrupted, and had to fix some other bugs before it finally worked.\nSo I was happy. On this project I had this habit of committing and pushing everything to GitHub before I went to bed. And since it was 2am in the morning, I didn’t push the commits to GitHub and instead went to bed.\nThe next day I started again on the project, did some changes, and when I was testing for the changes, the file uploading function did not work, and was giving an error, which I’m sure I fixed and it worked the other night.\nI thought maybe it was the changes that I just made during the morning that was causing the error, even though it had nothing to do with file uploading, I was adding some features to my GraphQL API.\nI quickly undid some of my changes, ran the program again, still getting the same error, undid some more, still the same error, undid all the work that I did in the morning, still the same error.\nI was dead frustrated, it took me a whole day to figure everything yesterday, and now again I had to work on a file uploading function? Does this has to do with the package I just selected to handle file uploading in GraphQL?\nAfter checking my GraphQL API, and nothing seemed to work, I decided to take a look at the file uploading module I just created yesterday. And I was surprised to see what I just found.\nSome of the important changes I just did to the file uploading module has be reverted to a previously pushed commit, because I was yet to commit them and push it to GitHub.\nThen I fixed everything again and changed everything to as they were when everything was working fine and finally committed and pushed it to my repo.\nThe next thing I did was quickly find a way to turn off the auto fetch, because I was afraid that my project will be taken back a whole day, and all other important changes I just made during the day will be lost (like I said earlier for this project, I had the habit of committing and pushing at the end of the day)\nTurn off auto fetch on vs code Turn off auto fetch on VSCode\nSo I went to preferences, searched fetch, and it will show the auto fetch option. I opened the settings.json and set auto fetch to false. Now that it won’t fetch commits from the repo and changing my code without my notice.\nI’m not an advanced user of Git, I use to track changes, and push them to GitHub, and maybe my idea of fetch was wrong, which I thought it would warn me when there is a difference or conflict in the code.\nFetch just updates your remote tracking branches and doesn’t affect your local branches or working copy, so it’s safe to do regularly without messing up your work. It’s helpful for staying updated when collaborating on a repo with others.\n— Justin Roberts (@roarked) December 12, 2018\nWhile according to Justin even though it did not affect my local branch, here it did affected my local branch, and if anyone is using auto fetch feature on GitHub please let me know in the comments so I can learn and improve my VSCode skills.\nI guess until I figure the importance of this feature, it is better to keep the auto fetch as false and fetch manually when it is only required.\n",
+  "wordCount" : "869",
+  "inLanguage": "en",
+  "datePublished": "2021-02-21T10:52:08Z",
+  "dateModified": "2021-02-21T10:52:08Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/dont-allow-vscode-to-auto-fetch-from-repos/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Don&#39;t allow VSCode to auto fetch from repos
+    </h1>
+    <div class="post-meta"><span title='2021-02-21 10:52:08 +0000 UTC'>February 21, 2021</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to <a href="https://github.com/rukshn">my GitHub</a> repo.</p>
+<p>During the past 1 month I was hacking a small side project during my free time. Since I’m the only one working on the project I’m the only one who is pushing to the repo.</p>
+<p>Whenever I was pushing commits to my GitHub repo, VS code is showing this popup, with this message. <strong>“would you like code to periodically run <em>git fetch?</em></strong>”</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/02/EnHU-mFVQAIzSDd.jpg?resize=1024%2C336&ssl=1"></p>
+<p>Image stolen from Twitter <a href="https://twitter.com/levelsio/status/1329077610542886915/photo/2">https://twitter.com/levelsio/status/1329077610542886915/photo/2</a></p>
+<p>At the beginning I ignored this message and clicked ask me later. But since it is nagging me during every push to GitHub, since I’m the only one pushing commits to the repo, and thinking that it will warn me when there is conflict between versions, or code. I decided to click yes, allowing VsCode to run git fetch “periodically”.</p>
+<p>I’m using GraphQL for the project, and GraphQL is something that I learned this year (2021). And GraphQL doesn’t have a <em>type</em> to upload a file, I had to dig though the internet for a way and some npm packages to find a suitable package to handle file uploads.</p>
+<p>I finally found out a package, and it took me a whole day to cook a way to work it together with Amazon AWS package to upload a file successfully to an s3 bucket. It was frustrating and took me a whole day, and staying up till around 2am to figure everything and make it work.</p>
+<p>I’m not going in to detail, but first the file was not uploading, and second the uploaded file was corrupted, and had to fix some other bugs before it finally worked.</p>
+<p>So I was happy. On this project I had this habit of committing and pushing everything to GitHub before I went to bed. And since it was 2am in the morning, I didn’t push the commits to GitHub and instead went to bed.</p>
+<p>The next day I started again on the project, did some changes, and when I was testing for the changes, the file uploading function did not work, and was giving an error, which I’m sure I fixed and it worked the other night.</p>
+<p>I thought maybe it was the changes that I just made during the morning that was causing the error, even though it had nothing to do with file uploading, I was adding some features to my GraphQL API.</p>
+<p>I quickly undid some of my changes, ran the program again, still getting the same error, undid some more, still the same error, undid all the work that I did in the morning, still the same error.</p>
+<p>I was dead frustrated, it took me a whole day to figure everything yesterday, and now again I had to work on a file uploading function? Does this has to do with the package I just selected to handle file uploading in GraphQL?</p>
+<p>After checking my GraphQL API, and nothing seemed to work, I decided to take a look at the file uploading module I just created yesterday. And I was surprised to see what I just found.</p>
+<p>Some of the important changes I just did to the file uploading module has be reverted to a previously pushed commit, because I was yet to commit them and push it to GitHub.</p>
+<p>Then I fixed everything again and changed everything to as they were when everything was working fine and finally committed and pushed it to my repo.</p>
+<p>The next thing I did was quickly find a way to turn off the auto fetch, because I was afraid that my project will be taken back a whole day, and all other important changes I just made during the day will be lost (like I said earlier for this project, I had the habit of committing and pushing at the end of the day)</p>
+<h2 id="turn-off-auto-fetch-on-vs-code">Turn off auto fetch on vs code<a hidden class="anchor" aria-hidden="true" href="#turn-off-auto-fetch-on-vs-code">#</a></h2>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2021/02/Screenshot-2021-02-21-at-10.41.38.png?resize=1024%2C172&ssl=1"></p>
+<p>Turn off auto fetch on VSCode</p>
+<p>So I went to preferences, searched fetch, and it will show the auto fetch option. I opened the settings.json and set auto fetch to false. Now that it won’t fetch commits from the repo and changing my code without my notice.</p>
+<p>I’m not an advanced user of Git, I use to track changes, and push them to GitHub, and maybe my idea of fetch was wrong, which I thought it would warn me when there is a difference or conflict in the code.</p>
+<blockquote>
+<p>Fetch just updates your remote tracking branches and doesn&rsquo;t affect your local branches or working copy, so it&rsquo;s safe to do regularly without messing up your work. It&rsquo;s helpful for staying updated when collaborating on a repo with others.</p>
+<p>— Justin Roberts (@roarked) <a href="https://twitter.com/roarked/status/1072979375098744832?ref_src=twsrc%5Etfw">December 12, 2018</a></p>
+</blockquote>
+<p>While according to Justin even though it did not affect my local branch, here it did affected my local branch, and if anyone is using auto fetch feature on GitHub please let me know in the comments so I can learn and improve my VSCode skills.</p>
+<p>I guess until I figure the importance of this feature, it is better to keep the auto fetch as false and fetch manually when it is only required.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

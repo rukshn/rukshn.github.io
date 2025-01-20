@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>My thoughts on the PayHere data breach | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="Hacking, Internet, Rants, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by Have I Been Pwned about a data breach at PayHere, an online payment processor in Sri Lanka.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/my-thoughts-on-payhere-data-breach/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/my-thoughts-on-payhere-data-breach/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/my-thoughts-on-payhere-data-breach/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="My thoughts on the PayHere data breach">
+  <meta property="og:description" content="Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by Have I Been Pwned about a data breach at PayHere, an online payment processor in Sri Lanka.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-05-03T11:59:40+00:00">
+    <meta property="article:modified_time" content="2022-05-03T11:59:40+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="My thoughts on the PayHere data breach">
+<meta name="twitter:description" content="Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by Have I Been Pwned about a data breach at PayHere, an online payment processor in Sri Lanka.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "My thoughts on the PayHere data breach",
+      "item": "https://ruky.me/my-thoughts-on-payhere-data-breach/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "My thoughts on the PayHere data breach",
+  "name": "My thoughts on the PayHere data breach",
+  "description": "Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by Have I Been Pwned about a data breach at PayHere, an online payment processor in Sri Lanka.\n",
+  "keywords": [
+    "Hacking", "Internet", "Rants", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by Have I Been Pwned about a data breach at PayHere, an online payment processor in Sri Lanka.\n#SriLanka payment gateway @PayHereLK ’s hacked data dump is listed on https://t.co/DFEEZx7yZz\nYou can check whether you’re included in it.\nIt’s massive, 65GB data of 1.5 million accounts including partial credit card data, addresses, purchase history, etc. #lka #Cybersecurity\n— Dumi Jay (@dumindaxsb) May 2, 2022\nPayHere may well be one the largest and most significant data breach to occur in Sri Lanka, and it’s the only data breach from Sri Lanka to be included in Have I Been Pwned.\nSince I may have submitted my personal and payment details though a merchant that uses PayHere as their payment processor, also since I too have tried to apply as a merchant on PayHere several years ago, I decided to search my email on Have I Been Pwned and there it was, my email is in the PayHere data breach.\nBut the thing is, I never received an email about a data breach from PayHere. They never asked me to change my password or never informed me abut the what the hackers managed to steal from about me from their database. Are my banking details at risk? Did they manage to get my credit card information?\nUpon further searching, I came across this Tweet that showed\nPayHere was indeed hacked and their website was defaced by the hackers who broke in to the website late March.\nHere’s your screenshot.\n⚡ Want to automatically post your tweets on Instagram? Visit https://t.co/6fIpjtsiEr. pic.twitter.com/YMBixiPX5x\n— Pikaso (@pikaso_me) April 2, 2022\nThe account that initially posted this tweet, “MyWayReach” is now suspended. Even though the breach happened in March/April, apart from few social media posts, PayHere never informed their customers about the incident.\nUsers can easily miss social media posts about a breach. It is not a responsible way to handle a serious data breach, and informing your customers about an incident.\nAccording to Have I Been Pwned, the breach contains 1.5+ million email addresses, personal information, partially obfuscated credit card data, etc.\nIt took nearly a month, for them to acknowledge the breach in a blog post. They are yet to inform their customers individually about the breach.\nData protection act loophole? PayHere exploited a loophole in the Sri Lankan data protection act to get away from informing their customers about the data breach. The act binds companies to inform any potential data breach to the data protection authority. However, the act does not explicitly bind companies to inform a data breach to their customers.\nHowever, there is a moral obligation for companies to inform about a data breach to their customers, and something that most global companies follow when handling a serious data breach as of this nature.\nAs AccessNow which has done a through research on the Data Protection Act suggests, companies should be given a deadline no less than 5 days to inform the public about a potential data breach to the data protection authority and to the public.\nYou can read about the Access Now analysis of the current data protection act in Sri Lanka – https://www.accessnow.org/cms/assets/uploads/2022/02/Policy_Brief_Sri_Lanka_Data_Protection_Bill_February_2022.pdf\nPayHere’s data breach is a good lesson for tech companies on how to handle a potential data breach in a responsible manner. And we hopefuture amendments to the data protection act closing down these loopholes for better disclosure of data breaches.\n",
+  "wordCount" : "589",
+  "inLanguage": "en",
+  "datePublished": "2022-05-03T11:59:40Z",
+  "dateModified": "2022-05-03T11:59:40Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/my-thoughts-on-payhere-data-breach/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      My thoughts on the PayHere data breach
+    </h1>
+    <div class="post-meta"><span title='2022-05-03 11:59:40 +0000 UTC'>May 3, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Yesterday a tweet by Duminda, a fellow developer on Twitter, caught my eye. In that tweet he said that he has been warned by <a href="https://haveibeenpwned.com/">Have I Been Pwned</a> about a data breach at <a href="https://payhere.lk/">PayHere</a>, an online payment processor in Sri Lanka.</p>
+<blockquote>
+<p><a href="https://twitter.com/hashtag/SriLanka?src=hash&amp;ref_src=twsrc%5Etfw">#SriLanka</a> payment gateway <a href="https://twitter.com/PayHereLK?ref_src=twsrc%5Etfw">@PayHereLK</a> &rsquo;s hacked data dump is listed on <a href="https://t.co/DFEEZx7yZz">https://t.co/DFEEZx7yZz</a></p>
+<p>You can check whether you&rsquo;re included in it.</p>
+<p>It&rsquo;s massive, 65GB data of 1.5 million accounts including partial credit card data, addresses, purchase history, etc. <a href="https://twitter.com/hashtag/lka?src=hash&amp;ref_src=twsrc%5Etfw">#lka</a> <a href="https://twitter.com/hashtag/Cybersecurity?src=hash&amp;ref_src=twsrc%5Etfw">#Cybersecurity</a></p>
+<p>— Dumi Jay (@dumindaxsb) <a href="https://twitter.com/dumindaxsb/status/1521018057832816641?ref_src=twsrc%5Etfw">May 2, 2022</a></p>
+</blockquote>
+<p>PayHere may well be one the largest and most significant data breach to occur in Sri Lanka, and it’s the only data breach from Sri Lanka to be included in Have I Been Pwned.</p>
+<p>Since I may have submitted my personal and payment details though a merchant that uses PayHere as their payment processor, also since I too have tried to apply as a merchant on PayHere several years ago, I decided to search my email on Have I Been Pwned and there it was, my email is in the PayHere data breach.</p>
+<p>But the thing is, I never received an email about a data breach from PayHere. They never asked me to change my password or never informed me abut the what the hackers managed to steal from about me from their database. Are my banking details at risk? Did they manage to get my credit card information?</p>
+<p>Upon further searching, I came across this Tweet that showed</p>
+<p>PayHere was indeed hacked and their website was defaced by the hackers who broke in to the website late March.</p>
+<blockquote>
+<p>Here&rsquo;s your screenshot.</p>
+<p>⚡ Want to automatically post your tweets on Instagram? Visit <a href="https://t.co/6fIpjtsiEr">https://t.co/6fIpjtsiEr</a>. <a href="https://t.co/YMBixiPX5x">pic.twitter.com/YMBixiPX5x</a></p>
+<p>— Pikaso (@pikaso_me) <a href="https://twitter.com/pikaso_me/status/1510095350991794178?ref_src=twsrc%5Etfw">April 2, 2022</a></p>
+</blockquote>
+<p>The account that initially posted this tweet, “MyWayReach” is now suspended. Even though the breach happened in March/April, apart from few social media posts, PayHere never informed their customers about the incident.</p>
+<p>Users can easily miss social media posts about a breach. It is not a responsible way to handle a serious data breach, and informing your customers about an incident.</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/05/image.png?resize=650%2C135&ssl=1"></p>
+<p>According to Have I Been Pwned, the breach contains 1.5+ million email addresses, personal information, partially obfuscated credit card data, etc.</p>
+<p>It took nearly a month, for them to acknowledge the breach in a <a href="https://blog.payhere.lk/ensuring-integrity-on-payhere-cybersecurity-incident/">blog post.</a> They are yet to inform their customers individually about the breach.</p>
+<h2 id="data-protection-act-loophole">Data protection act loophole?<a hidden class="anchor" aria-hidden="true" href="#data-protection-act-loophole">#</a></h2>
+<p>PayHere exploited a loophole in the Sri Lankan data protection act to get away from informing their customers about the data breach. The act binds companies to inform any potential data breach to the data protection authority. However, the act does not explicitly bind companies to inform a data breach to their customers.</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/05/image-1.png?resize=858%2C315&ssl=1"></p>
+<p>However, there is a moral obligation for companies to inform about a data breach to their customers, and something that most global companies follow when handling a serious data breach as of this nature.</p>
+<p>As AccessNow which has done a through research on the Data Protection Act suggests, companies should be given a deadline no less than 5 days to inform the public about a potential data breach to the data protection authority and to the public.</p>
+<p>You can read about the Access Now analysis of the current data protection act in Sri Lanka – <a href="https://www.accessnow.org/cms/assets/uploads/2022/02/Policy_Brief_Sri_Lanka_Data_Protection_Bill_February_2022.pdf">https://www.accessnow.org/cms/assets/uploads/2022/02/Policy_Brief_Sri_Lanka_Data_Protection_Bill_February_2022.pdf</a></p>
+<p>PayHere’s data breach is a good lesson for tech companies on how to handle a potential data breach in a responsible manner. And we hopefuture amendments to the data protection act closing down these loopholes for better disclosure of data breaches.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

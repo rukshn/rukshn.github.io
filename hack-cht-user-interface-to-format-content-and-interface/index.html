@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>Hack CHT User Interface to Format Content and Interface | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="hacking">
+<meta name="description" content="CHT javascript extensions can be used to customize the look and feel of the CHT form">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/hack-cht-user-interface-to-format-content-and-interface/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/hack-cht-user-interface-to-format-content-and-interface/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="http://localhost:1313/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="http://localhost:1313/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="http://localhost:1313/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Hack CHT User Interface to Format Content and Interface
+    </h1>
+    <div class="post-description">
+      CHT javascript extensions can be used to customize the look and feel of the CHT form
+    </div>
+    <div class="post-meta"><span title='2025-01-20 11:40:43 +0100 CET'>January 20, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Spoiler before anyone gets too excited, &ldquo;hacking&rdquo; in this context refers to the creative and collaborative process of rapidly developing innovative solutions to specific problems or challenges.</p>
+<p>When working with community health toolkit (CHT) one of the most important things is to customize the questions. For example, you have very two similar select options, and you want to highlight the different between the two, so the users don&rsquo;t get confused when selecting them.</p>
+<p>Let&rsquo;s take the following two select options,</p>
+<ul>
+<li><input disabled="" type="checkbox"> Amoxicillin Clavulanic Acid 7:1 (400 mg Amoxicillin and 57 mg Clavulanic Acid per 5 ml syrup)</li>
+<li><input disabled="" type="checkbox"> Amoxicillin Clavulanic Acid 4:1 (125 mg Amoxicillin and 31.25 mg Clavulanic Acid per 5 ml syrup)</li>
+</ul>
+<p>As you see, the difference between the two select options is very minute, and one can easily get confused when answering, it would be nice if we could customize to select options to highlight the differences like this.</p>
+<ul>
+<li><input disabled="" type="checkbox"> Amoxicillin Clavulanic Acid <strong>7:1</strong> (<strong>400</strong>mg Amoxicillin and <strong>57</strong> mg Clavulanic Acid per 5 ml syrup)</li>
+<li><input disabled="" type="checkbox"> Amoxicillin Clavulanic Acid <strong>4:1</strong> (<strong>125</strong>mg Amoxicillin and <strong>31.25</strong> mg Clavulanic Acid per 5 ml syrup)</li>
+</ul>
+<p>However the current XLS forms, or the CHT documentation do not provide a way to customize the select option in using CSS. This is something that has been <a href="https://forum.communityhealthtoolkit.org/t/form-styling-is-not-applied-in-choices/2943">asked before</a> but there seems to be no way to overcome this issue.</p>
+<p>However, in an earlier CHT update, CHT gave the ability to add custom javascript functions to perform complex calculations and basically anything that javascript can do, but you can&rsquo;t do in an XLS form because of the XLS limitations. This is done by adding a calculation with a <code>cht:extension-lib</code>function.</p>
+<p>We have been using this to perform drug calculations and other complex calculations. We pass input data from the CHT form, perform the calculations within Javascript, and return the value as a calculate, which will be displayed later in the form.</p>
+<p>But since the CHT form is a web application, and the CHT android application is actually a web-view, what if we can use javascript to manipulate the HTML DOM and its elements, mmmm interesting, it&rsquo;s just HTM and DOM after all, what can go wrong. This got me thinking because I had to solve the exact same problem mentioned above, making sure users don&rsquo;t get confused with the two select options.</p>
+<p>So I quickly wrote a simple javascript file <code>hack.js</code> that would take two parameters, first the data attribute that uniquely identifies an element. A second parameter that accepts the HTML changes that one needs to render within the CHT.</p>
+<p>Each element in the form has its own data attribute that uniquely identifies an element. For me, since I did it for an already running form, I grabbed the attribute by looking at the web-inspector from my browser.</p>
+<p><img alt="unique data attribute" loading="lazy" src="https://i.imgur.com/DoOzlvW.png"></p>
+<p>See the <code>data-itext-id</code> , this data attribute uniquely identifies elements in a CHT form, there are other unique data attributes like <code>data-contains-ref-target</code>as well, you get the point, you will have to get it from the inspector. You can also use the classical <code>class</code> or <code>id</code> attributes as well if you see them in the inspector.</p>
+<p>Then I added it as a calculation in the Excel file, which would look like this,</p>
+<p><code>cht:extension-lib('hack.js’, ‘/almanach_somaliav3/oral_antibiotics/co_amoxiclav_confirm/co_amoxiclav_sto:label’, ‘Amoxicillin Clavulanic Acid &lt;b&gt;7:1&lt;/b&gt; (&lt;b&gt;400mg&lt;/b&gt; Amoxicillin and &lt;b&gt;57mg&lt;/b&gt; Clavulanic Acid per 5ml syrup) ’)</code></p>
+<p>The first parameter as mentioned above is the data attribute and the second parameter is the HTML that I want to inject.</p>
+<p>The javascript file will then read the parameter, find the DOM element, and then inject the HTML instead of the HTML given in the Excel file.</p>
+<p>When I uploaded the form and the extension to CHT and ran it on my computer, things rendered exactly as I intended.</p>
+<p><img alt="rendered html in cht" loading="lazy" src="https://i.imgur.com/foTRf7W.png"></p>
+<p>You can find the javascript code in the <code>hack.js</code> repository here in my GitHub account. <a href="https://github.com/rukshn/cht-hack-js">https://github.com/rukshn/cht-hack-js</a></p>
+<p>The <code>hack.js</code> file currently only looks for the data-attribute, but this can be changed, and customized to look for classes, IDs or different data attributes. You can also use the same approach to inject, and change CHT interface as you would like to, hence the name hack.js.</p>
+<p>Happy hacking.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

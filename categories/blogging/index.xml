@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Blogging on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/blogging/</link>
+    <description>Recent content in Blogging on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Sun, 05 Jan 2025 18:15:50 +0100</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/blogging/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Moving My Blog To Hugo</title>
+      <link>https://ruky.me/moving-my-blog-to-hugo/</link>
+      <pubDate>Sun, 05 Jan 2025 18:15:50 +0100</pubDate>
+      <guid>https://ruky.me/moving-my-blog-to-hugo/</guid>
+      <description>&lt;p&gt;I have been blogging for nearly 15 years now—gosh,
+I feel so old. Like most, I started on Blogger and then moved to WordPress.com.
+From WordPress, I moved to Tumblr, to Medium, and to Jekyll for a short period and then a self-hosted WordPress.
+Sometimes, I wonder why Google is still keeping Blogger alive. I know people are still using it.
+But Google killed Google Reader when people were still using it and loving it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Medium and Google is not a good combination</title>
+      <link>https://ruky.me/medium-and-google-is-not-a-good-combination/</link>
+      <pubDate>Tue, 30 Aug 2022 11:51:37 +0000</pubDate>
+      <guid>https://ruky.me/medium-and-google-is-not-a-good-combination/</guid>
+      <description>&lt;p&gt;I know this is going to sound just like another complaint against Google, but I want my Google results to be better.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Please don’t spam my blog. SEO myths you need to stop believing</title>
+      <link>https://ruky.me/please-dont-spam-my-blog-seo-myths-you-need-to-stop-believing/</link>
+      <pubDate>Tue, 29 Dec 2020 22:09:29 +0000</pubDate>
+      <guid>https://ruky.me/please-dont-spam-my-blog-seo-myths-you-need-to-stop-believing/</guid>
+      <description>&lt;p&gt;I have several WordPress blogs, related to different topics. Including my personal blog.&lt;/p&gt;
+&lt;p&gt;Each day I have to moderate several comments on all of my blogs, which are made my people trying to boost their SEO to their websites, most of them are selling fake medications, or fake online offers, or people trying to build back links to rank higher on Google results.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Starting a blog has never been this difficult</title>
+      <link>https://ruky.me/starting-a-blog-has-never-been-this-difficult/</link>
+      <pubDate>Fri, 18 Dec 2020 12:09:21 +0000</pubDate>
+      <guid>https://ruky.me/starting-a-blog-has-never-been-this-difficult/</guid>
+      <description>&lt;p&gt;I feel blogging is making a comeback, why? Because people are starting to realize that they can carve their own brand and be content creators, rather than just sharing your thoughts among few Facebook friends.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

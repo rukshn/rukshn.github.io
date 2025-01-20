@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Web Development on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/web-development/</link>
+    <description>Recent content in Web Development on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Sun, 22 Aug 2021 00:26:39 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/web-development/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to setup SCSS on your computer</title>
+      <link>https://ruky.me/how-to-setup-scss-on-your-computer/</link>
+      <pubDate>Sun, 22 Aug 2021 00:26:39 +0000</pubDate>
+      <guid>https://ruky.me/how-to-setup-scss-on-your-computer/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/sass.png?resize=1024%2C516&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;SCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

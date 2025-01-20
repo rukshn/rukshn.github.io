@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Programming on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/programming/</link>
+    <description>Recent content in Programming on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Fri, 26 Feb 2021 20:40:36 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>I do development for one week and marketing and documentation for one week</title>
+      <link>http://localhost:1313/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</link>
+      <pubDate>Fri, 26 Feb 2021 20:40:36 +0000</pubDate>
+      <guid>http://localhost:1313/i-do-development-for-one-week-and-marketing-and-documentation-for-one-week/</guid>
+      <description>&lt;p&gt;I know the advice is to find a co-founder. But what if you can’t find a co-founder? Yes, having a co-founder is great. But there are companies that are founded by solo-founders who went on to become billion or million dollar companies.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

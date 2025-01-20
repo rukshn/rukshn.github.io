@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Coding on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/coding/</link>
+    <description>Recent content in Coding on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Sat, 03 Feb 2024 15:43:42 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/coding/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>GitHub Co-Pilot Generating Different Outputs in Different Editors</title>
+      <link>http://localhost:1313/github-co-pilot-generating-different-outputs-in-different-editors/</link>
+      <pubDate>Sat, 03 Feb 2024 15:43:42 +0000</pubDate>
+      <guid>http://localhost:1313/github-co-pilot-generating-different-outputs-in-different-editors/</guid>
+      <description>&lt;p&gt;I’ve not been able to write something new lately, in fact, I think this is the first post of the year. So happy new year 2024, insert :tada: emoji. So I’ve been pretty much busy with work, and travelling, networking at conferences, the usual. At the start of 2023, I had never left Sri Lanka in my whole life, but by the end of 2023, I’d visited 5 different countries, including the US.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>XForm and XLSFrom Standards are Preventing The Progress of Digital Health</title>
+      <link>http://localhost:1313/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/</link>
+      <pubDate>Tue, 31 Oct 2023 16:25:16 +0000</pubDate>
+      <guid>http://localhost:1313/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/</guid>
+      <description>&lt;p&gt;Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Is It Time to Open Source SublimeText?</title>
+      <link>http://localhost:1313/is-it-time-to-open-source-sublimetext/</link>
+      <pubDate>Thu, 30 Mar 2023 19:29:26 +0000</pubDate>
+      <guid>http://localhost:1313/is-it-time-to-open-source-sublimetext/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2023/03/image-5.png?resize=1024%2C495&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Recently I had to do some text editing and was in need of a text editor that was better than Notepad, and with muscle memory, I went on and tried to download VSCodium. However, the download was like 100+ megabytes in size and since I was using a public internet connection that would make me wait for several good minutes to complete the download.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Codeberg a GitHub Alternative From Europe</title>
+      <link>http://localhost:1313/codeberg-a-github-alternative-from-europe/</link>
+      <pubDate>Mon, 17 Oct 2022 10:16:36 +0000</pubDate>
+      <guid>http://localhost:1313/codeberg-a-github-alternative-from-europe/</guid>
+      <description>&lt;p&gt;Recently I started migrating my note-taking from Notion to Obsidian. Obsidian does not offer free syncing between devices and you will have to manually set up a method to sync your notes, either by using something like Dropbox, Google Drive, or Git.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I&#39;m Switching from VS Code to VS Codium</title>
+      <link>http://localhost:1313/im-switching-form-vs-code-to-vs-codium/</link>
+      <pubDate>Sat, 11 Jun 2022 14:50:34 +0000</pubDate>
+      <guid>http://localhost:1313/im-switching-form-vs-code-to-vs-codium/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-1.png?resize=1024%2C576&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why do Javascript frameworks get increasingly difficult over time?</title>
+      <link>http://localhost:1313/why-do-javascript-frameworks-get-increasingly-difficult-over-time/</link>
+      <pubDate>Tue, 07 Jun 2022 11:57:10 +0000</pubDate>
+      <guid>http://localhost:1313/why-do-javascript-frameworks-get-increasingly-difficult-over-time/</guid>
+      <description>&lt;p&gt;There are so many JavaScript frameworks, and new frameworks come out every few months. I know some people hate to see new frameworks coming up in JavaScript because there are so many, and some insist on using vanilla JavaScript.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Web 3 Tutorial - How to upload and serve files in IPFS network using NodeJs</title>
+      <link>http://localhost:1313/web-3-how-to-upload-a-file-to-the-ipfs-network/</link>
+      <pubDate>Tue, 17 May 2022 23:35:59 +0000</pubDate>
+      <guid>http://localhost:1313/web-3-how-to-upload-a-file-to-the-ipfs-network/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2022/05/ipfs-logo.webp?resize=1024%2C406&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;Web3 is fascinating and uncharted territory. Recently, I decided to learn a few things about Web3 technologies. Even though I had some basic ideas about the blockchain and NFTs, I’ve never tried writing a program for Web3.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A basic introduction to Git</title>
+      <link>http://localhost:1313/a-basic-introduction-to-git/</link>
+      <pubDate>Fri, 24 Sep 2021 12:42:40 +0000</pubDate>
+      <guid>http://localhost:1313/a-basic-introduction-to-git/</guid>
+      <description>&lt;p&gt;GIT is a part of the toolkit of every good developer. Just like the terminal, you should be good at GIT. Yes sure you can develop without GIT, but learning GIT is a must if you are working on a large project with multiple developers, or if you are working on an open source project.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>When I used to collect computer viruses</title>
+      <link>http://localhost:1313/when-i-used-to-collect-computer-viruses/</link>
+      <pubDate>Wed, 01 Sep 2021 01:01:01 +0000</pubDate>
+      <guid>http://localhost:1313/when-i-used-to-collect-computer-viruses/</guid>
+      <description>&lt;p&gt;Today I was having a lecture about information security and information security law. I just started the module and this is the third lecture about the topic. And todays lecture was about different IT threats that an health information system would face. The lecture mainly revolved around malware. During the lecture, the teacher told a point that most malware today are written for profit, and ransomware are popular today because it’s a get rich scheme for malware writers.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I used to love Bootstrap. God, now I just hate it</title>
+      <link>http://localhost:1313/i-used-to-love-bootstrap-god-now-i-just-hate-it/</link>
+      <pubDate>Tue, 24 Aug 2021 11:44:00 +0000</pubDate>
+      <guid>http://localhost:1313/i-used-to-love-bootstrap-god-now-i-just-hate-it/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/bootstrap-5-releases-with-major-changes.jpg?resize=710%2C410&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;I have been using Bootstrap since it was version 2. At the time Bootstrap was an easy way to set up a responsive website. And also it made your life so much easier and developing a decent website became easier thanks to the styled elements they provided.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Install a Community Server On VSCode</title>
+      <link>http://localhost:1313/install-a-community-server-on-vscode/</link>
+      <pubDate>Wed, 11 Aug 2021 13:30:31 +0000</pubDate>
+      <guid>http://localhost:1313/install-a-community-server-on-vscode/</guid>
+      <description>&lt;p&gt;In my previous post, I wrote about how I manually &lt;a href=&#34;__GHOST_URL__/2021/08/07/how-to-setup-glassfish-server-for-java-web-app-deployment/&#34;&gt;deployed a working GlassFish web server&lt;/a&gt; for Java based web apps.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to setup Glassfish server for Java web app deployment</title>
+      <link>http://localhost:1313/how-to-setup-glassfish-server-for-java-web-app-deployment/</link>
+      <pubDate>Sat, 07 Aug 2021 21:54:11 +0000</pubDate>
+      <guid>http://localhost:1313/how-to-setup-glassfish-server-for-java-web-app-deployment/</guid>
+      <description>&lt;p&gt;Recently I had to locally run a JavaEE web app so I can contribute to the project. However, it was my first time trying to run a Java web app locally, or even remotely. I know it was easy to deploy it using NetBeans because it has been developed with NetBeans and Glassfish. However, I wanted to run it without NetBeans because I don’t have NetBeans setup on my computer and I NetBeans currently doesn’t have the native M1 support.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why JavaScript dialogs (alert/prompt/confirm) are not widely used?</title>
+      <link>http://localhost:1313/why-javascript-dialogs-alert-prompt-confirm-are-not-widely-used/</link>
+      <pubDate>Tue, 15 Jun 2021 23:46:39 +0000</pubDate>
+      <guid>http://localhost:1313/why-javascript-dialogs-alert-prompt-confirm-are-not-widely-used/</guid>
+      <description>&lt;p&gt;Recently I started working on a small open-source project side project with Vue, and I wanted to create yes/no dialog (basically a model) which will show a notification with a confirm and cancel button. So users can confirm or cancel an event.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to host your NuxtJS in 10 steps</title>
+      <link>http://localhost:1313/how-to-host-your-nuxtjs-in-10-steps/</link>
+      <pubDate>Tue, 23 Feb 2021 22:40:24 +0000</pubDate>
+      <guid>http://localhost:1313/how-to-host-your-nuxtjs-in-10-steps/</guid>
+      <description>&lt;p&gt;I first started using &lt;a href=&#34;https://nuxtjs.org&#34;&gt;NuxtJS&lt;/a&gt; one year ago, when I tried to make a platform for travellers to easily find and book villas online. But unlike other popular booking services, I was targeting villas that did not have an online presence or haven’t signup or don’t know how to use an online booking service.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Don&#39;t allow VSCode to auto fetch from repos</title>
+      <link>http://localhost:1313/dont-allow-vscode-to-auto-fetch-from-repos/</link>
+      <pubDate>Sun, 21 Feb 2021 10:52:08 +0000</pubDate>
+      <guid>http://localhost:1313/dont-allow-vscode-to-auto-fetch-from-repos/</guid>
+      <description>&lt;p&gt;Recently I had a very annoying experience using VSCode. I use git to track changes of my work, and I push important changes to &lt;a href=&#34;https://github.com/rukshn&#34;&gt;my GitHub&lt;/a&gt; repo.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

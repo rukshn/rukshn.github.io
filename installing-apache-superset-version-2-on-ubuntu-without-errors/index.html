@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Installing Apache Superset Version 2 on Ubuntu Without Errors | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="bigdata, data, data visualization, open-souce, superset, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="Apache Superset is a great free and open-source software released by the Apache foundation for advanced data visualization and exploration. Unlike proprietary tools for data visualization, Apache Superset adds value for an organization as free and open-source software.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/installing-apache-superset-version-2-on-ubuntu-without-errors/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/installing-apache-superset-version-2-on-ubuntu-without-errors/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/installing-apache-superset-version-2-on-ubuntu-without-errors/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="Installing Apache Superset Version 2 on Ubuntu Without Errors">
+  <meta property="og:description" content="Apache Superset is a great free and open-source software released by the Apache foundation for advanced data visualization and exploration. Unlike proprietary tools for data visualization, Apache Superset adds value for an organization as free and open-source software.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-12-16T22:37:55+00:00">
+    <meta property="article:modified_time" content="2022-12-16T22:37:55+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Installing Apache Superset Version 2 on Ubuntu Without Errors">
+<meta name="twitter:description" content="Apache Superset is a great free and open-source software released by the Apache foundation for advanced data visualization and exploration. Unlike proprietary tools for data visualization, Apache Superset adds value for an organization as free and open-source software.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Installing Apache Superset Version 2 on Ubuntu Without Errors",
+      "item": "https://ruky.me/installing-apache-superset-version-2-on-ubuntu-without-errors/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Installing Apache Superset Version 2 on Ubuntu Without Errors",
+  "name": "Installing Apache Superset Version 2 on Ubuntu Without Errors",
+  "description": "Apache Superset is a great free and open-source software released by the Apache foundation for advanced data visualization and exploration. Unlike proprietary tools for data visualization, Apache Superset adds value for an organization as free and open-source software.\n",
+  "keywords": [
+    "bigdata", "data", "data visualization", "open-souce", "superset", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "Apache Superset is a great free and open-source software released by the Apache foundation for advanced data visualization and exploration. Unlike proprietary tools for data visualization, Apache Superset adds value for an organization as free and open-source software.\nOnce installed, you can create multiple dashboards with multiple varieties of charts, maps, etc, and connect multiple data sources including different databases, excel and CSV files, and even APIs (with some workarounds) to create a very advanced data exploration tool than just using a simple Excel spreadsheet. So whenever the data sources get updated, your Superset dashboards will also be updated simultaneously.\nApache superset dashboard. Source GitHub\nThis June Apache Superset announced Version 2, which adds different charts and features that were not available in version 1. And In this post, I’m covering how one can install Apache Superset version 2 on a computer running Linux/Ubuntu. And in a later post, I will show how you can connect an external database to Apache superset.\nIf you came here because because you were unable to install Superset by following the official documentation, because it threw errors, that is because the documentation has not updated for a while, and some steps mentioned in the official documentation are now outdated.\nBefore getting started Before getting started, you will need to have a server/computer that is running latest Ubuntu LTS or Windows Subsystem for Linux with Docker installed.\nSee the Docker documentation on how you can install Docker on your computer, and some basic knowledge on how to use Docker.\nInstalling Superset with Docker Currently, the easiest way to install Superset is with Docker. The officially documented way of installing Superset with pip does not seem to work and will give you dependency incompatibility issues. I’m sure these issues will be solved by the developers in future updates. But at the time of writing, the easiest way to install Superset is with Docker.\nAgain if you are trying to install Superset via the official Docker image published by Apache, you won’t be able to install the latest Superset version (V2), as the official Docker image at the time of writing installs an older version of Superset. So follow these steps instead to install Superset version 2.\nInstead of the official Docker image, there is a community-maintained Docker Image published by the user, amancevice, and it has more than 5 million pulls at the time of writing. It is also on track with the latest updates of Supersets development.\nLink to the Docker image – https://hub.docker.com/r/amancevice/superset Link to the GitHub repository – https://github.com/amancevice/docker-superset Step 1 – Create a Dockerfile Rather than directly pulling and installing the Docker image, follow the steps to create a Dockerfile and install with the Dockerfile that we just created.\nWe are doing this because we need to install the openpyxl module for Superset to read Excel files that you will be uploading to Superset.\nWe also need to make sure the Docker containers USER is set to root. Otherwise, you won’t be able to upload Excel files to Superset, and Superset seems to throw an internal server error (500).\nFROM amancevice/superset # install openpyxl to read write excel files, you won't be able to upload excel files without openpyxl RUN pip install openpyxl USER ROOT Save the Dockerfile, and navigate to the location of the Dockerfile from the terminal, and build the docker image using the build command, and we will be tagging the image as superset.\ndocker build -t superset . Now you can can the image and create your container, to do that run the following command and make sure to name your container as superset as in this command, or else the below steps won’t work.\ndocker run -p 8088:8088 -d --name superset superset Now you need to create and administrator account to login and to create other users and dashboards etc, run the following command to create an admin user account within the superset instance with a username of admin and password of admin.\ndocker exec -it superset superset fab create-admin \\ --username admin \\ --firstname Superset \\ --lastname Admin \\ --email admin@superset.com \\ --password admin The final step is to initialize the Superset database by running the following command. You might be prompted to create a new administrator account, and you can enter the details to create a second administrator account during the initialization process.\ndocker exec -it superset superset-init Now you will be able to access the Superset installation from the address http://127.0.0.1:8088 and you will be able login with the username admin and password admin.\nInitial dashboard after a successful installation\nHost your Superset with us Want to host Superset with dedicated cloud hosting? Let us maintain your Superset hosting with our dedicate cloud hosting solutions. With regular backups, extra security and lots more.\nGet in touch with Zemantic\n",
+  "wordCount" : "804",
+  "inLanguage": "en",
+  "datePublished": "2022-12-16T22:37:55Z",
+  "dateModified": "2022-12-16T22:37:55Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/installing-apache-superset-version-2-on-ubuntu-without-errors/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Installing Apache Superset Version 2 on Ubuntu Without Errors
+    </h1>
+    <div class="post-meta"><span title='2022-12-16 22:37:55 +0000 UTC'>December 16, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Apache Superset is a great free and open-source software released by the Apache foundation for advanced data visualization and exploration. Unlike proprietary tools for data visualization, Apache Superset adds value for an organization as free and open-source software.</p>
+<p>Once installed, you can create multiple dashboards with multiple varieties of charts, maps, etc, and connect multiple data sources including different databases, excel and CSV files, and even APIs (with some workarounds) to create a very advanced data exploration tool than just using a simple Excel spreadsheet. So whenever the data sources get updated, your Superset dashboards will also be updated simultaneously.</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/12/image.png?resize=1024%2C587&ssl=1"></p>
+<p>Apache superset dashboard. Source GitHub</p>
+<p>This June Apache Superset announced Version 2, which adds different charts and features that were not available in version 1. And In this post, I’m covering how one can install Apache Superset version 2 on a computer running Linux/Ubuntu. And in a later post, I will show how you can connect an external database to Apache superset.</p>
+<p>If you came here because because you were unable to install Superset by following the official documentation, because it threw errors, that is because the documentation has not updated for a while, and some steps mentioned in the official documentation are now outdated.</p>
+<h2 id="before-getting-started">Before getting started<a hidden class="anchor" aria-hidden="true" href="#before-getting-started">#</a></h2>
+<p>Before getting started, you will need to have a server/computer that is running latest Ubuntu LTS or Windows Subsystem for Linux with Docker installed.</p>
+<p>See the Docker documentation on how you can install Docker on your computer, and some basic knowledge on how to use Docker.</p>
+<h2 id="installing-superset-with-docker">Installing Superset with Docker<a hidden class="anchor" aria-hidden="true" href="#installing-superset-with-docker">#</a></h2>
+<p>Currently, the easiest way to install Superset is with Docker. The officially documented way of installing Superset with <code>pip</code> does not seem to work and will give you dependency incompatibility issues. I’m sure these issues will be solved by the developers in future updates. But at the time of writing, the easiest way to install Superset is with Docker.</p>
+<p>Again if you are trying to install Superset via the official Docker image published by Apache, you won’t be able to install the latest Superset version (V2), as the official Docker image at the time of writing installs an older version of Superset. So follow these steps instead to install Superset version 2.</p>
+<p>Instead of the official Docker image, there is a community-maintained Docker Image published by the user, <em>amancevice,</em> and it has more than 5 million pulls at the time of writing. It is also on track with the latest updates of Supersets development.</p>
+<ul>
+<li>Link to the Docker image – <a href="https://hub.docker.com/r/amancevice/superset">https://hub.docker.com/r/amancevice/superset</a></li>
+<li>Link to the GitHub repository – <a href="https://github.com/amancevice/docker-superset">https://github.com/amancevice/docker-superset</a></li>
+</ul>
+<h2 id="step-1--create-a-dockerfile">Step 1 – Create a <code>Dockerfile</code><a hidden class="anchor" aria-hidden="true" href="#step-1--create-a-dockerfile">#</a></h2>
+<p>Rather than directly pulling and installing the Docker image, follow the steps to create a <code>Dockerfile</code> and install with the <code>Dockerfile</code> that we just created.</p>
+<p>We are doing this because we need to install the <code>openpyxl</code> module for Superset to read Excel files that you will be uploading to Superset.</p>
+<p>We also need to make sure the Docker containers <code>USER</code> is set to <code>root</code>. Otherwise, you won’t be able to upload Excel files to Superset, and Superset seems to throw an internal server error (500).</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-docker" data-lang="docker"><span style="display:flex;"><span>    FROM amancevice/superset
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4"># install openpyxl to read write excel files, you won&#39;t be able to upload excel files without openpyxl</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    RUN pip install openpyxl
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    USER ROOT
+</span></span></code></pre></div><p>Save the <code>Dockerfile</code>, and navigate to the location of the <code>Dockerfile</code> from the terminal, and build the docker image using the build command, and we will be tagging the image as <code>superset</code>.</p>
+<pre><code>docker build -t superset .
+</code></pre>
+<p>Now you can can the image and create your container, to do that run the following command and make sure to name your container as <code>superset</code> as in this command, or else the below steps won’t work.</p>
+<pre><code>docker run -p 8088:8088 -d --name superset superset
+</code></pre>
+<p>Now you need to create and administrator account to login and to create other users and dashboards etc, run the following command to create an admin user account within the superset instance with a username of <code>admin</code> and password of <code>admin</code>.</p>
+<pre tabindex="0"><code>    docker exec -it superset superset fab create-admin \
+                  --username admin \
+                  --firstname Superset \
+                  --lastname Admin \
+                  --email admin@superset.com \
+                  --password admin
+</code></pre><p>The final step is to initialize the Superset database by running the following command. You might be prompted to create a new administrator account, and you can enter the details to create a second administrator account during the initialization process.</p>
+<pre><code>docker exec -it superset superset-init
+</code></pre>
+<p>Now you will be able to access the Superset installation from the address <code>http://127.0.0.1:8088</code> and you will be able login with the username <code>admin</code> and password <code>admin</code>.</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/12/image-1.png?resize=1024%2C570&ssl=1"></p>
+<p>Initial dashboard after a successful installation</p>
+<hr>
+<h3 id="host-your-superset-with-us">Host your Superset with us<a hidden class="anchor" aria-hidden="true" href="#host-your-superset-with-us">#</a></h3>
+<p>Want to host Superset with dedicated cloud hosting? Let us maintain your Superset hosting with our dedicate cloud hosting solutions. With regular backups, extra security and lots more.</p>
+<p><a href="https://zemantic.co/superset-hosting/">Get in touch with Zemantic</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

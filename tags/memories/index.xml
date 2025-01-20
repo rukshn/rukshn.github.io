@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Memories on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/memories/</link>
+    <description>Recent content in Memories on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Fri, 16 Jul 2021 11:11:56 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/memories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>3 Important Lessons I Learnt Working At A Covid-19 ICU</title>
+      <link>http://localhost:1313/working-at-an-icu/</link>
+      <pubDate>Fri, 16 Jul 2021 11:11:56 +0000</pubDate>
+      <guid>http://localhost:1313/working-at-an-icu/</guid>
+      <description>&lt;p&gt;I’m writing a blog post after a very long time. This is because I was appointed to work at a COVID-19 intensive care unit for 2 months, and I was busy working there. When I started my work in May the COVID-19 cases were on the rise, and there were not enough doctors to take care of them. So me and some of my colleagues were taken out from our routine course-work from my Health Informatics MSc and was sent to different treatment centers around the country to take care of the rising COVID-19 case load.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

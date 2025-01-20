@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Bitcoin on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/bitcoin/</link>
+    <description>Recent content in Bitcoin on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Tue, 14 Jun 2022 13:29:06 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/bitcoin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cryptocurrencies have broken almost all of their major promises</title>
+      <link>http://localhost:1313/cryptocurrencies-have-broken-almost-all-of-their-major-promises/</link>
+      <pubDate>Tue, 14 Jun 2022 13:29:06 +0000</pubDate>
+      <guid>http://localhost:1313/cryptocurrencies-have-broken-almost-all-of-their-major-promises/</guid>
+      <description>&lt;p&gt;The crypto market has not been kind to &lt;em&gt;“investors”&lt;/em&gt; lately. The market has been near free-fall, and within the first quarter of the year, we’ve seen so many things going south about cryptocurrencies, and it seems almost all the promises that BitCoin and cryptocurrencies promised were a lie. So what are these promises that cryptocurrencies have failed to deliver? &lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

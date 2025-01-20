@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CSS on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/css/</link>
+    <description>Recent content in CSS on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Sat, 01 May 2021 13:58:49 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/css/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Why textareas can&#39;t grow?</title>
+      <link>https://ruky.me/why-textareas-cant-grow/</link>
+      <pubDate>Sat, 01 May 2021 13:58:49 +0000</pubDate>
+      <guid>https://ruky.me/why-textareas-cant-grow/</guid>
+      <description>&lt;p&gt;Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The framework trap</title>
+      <link>https://ruky.me/the-framework-trap/</link>
+      <pubDate>Thu, 14 Jan 2021 02:24:35 +0000</pubDate>
+      <guid>https://ruky.me/the-framework-trap/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wompampsupport.azureedge.net/fetchimage?siteId=7575&amp;v=2&amp;jpgQuality=100&amp;width=700&amp;url=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F000%2F157%2Fitsatrap.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When it comes to programming, frameworks are there to make your life easy. React, Vue, Larvel, Bootstrap, I can go on and on to list your favourite frameworks.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

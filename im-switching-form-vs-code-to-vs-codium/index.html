@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>I&#39;m Switching from VS Code to VS Codium | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="coding, Internet, JavaScript, Life, Rants, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="
+VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/im-switching-form-vs-code-to-vs-codium/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/im-switching-form-vs-code-to-vs-codium/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/im-switching-form-vs-code-to-vs-codium/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="I&#39;m Switching from VS Code to VS Codium">
+  <meta property="og:description" content="
+VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2022-06-11T14:50:34+00:00">
+    <meta property="article:modified_time" content="2022-06-11T14:50:34+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="I&#39;m Switching from VS Code to VS Codium">
+<meta name="twitter:description" content="
+VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "I'm Switching from VS Code to VS Codium",
+      "item": "https://ruky.me/im-switching-form-vs-code-to-vs-codium/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "I'm Switching from VS Code to VS Codium",
+  "name": "I\u0027m Switching from VS Code to VS Codium",
+  "description": "\nVS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.\n",
+  "keywords": [
+    "coding", "Internet", "JavaScript", "Life", "Rants", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "\nVS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.\nDon’t get me wrong, VS Code is a good editor. It has improved since its initial release. But starting this month, I’m switching from VS Code to VS Codium. Allow me to explain,\nVS Codium official website – https://vscodium.com\nIs VS Code open source? VS Code, released by Microsoft, is not open-source software. Microsoft is following the open-core model for the VS Code editor, just like how Google is following an open-core model for its Chrome browser. In the open core model, the core of the editor gets developed as an open-source project, with the source code for VS Code under the MIT license. However, Microsoft uses this core and modifies it, incorporates its propriety changes, includes telemetry tracking, and releases it as a proprietary version with its own licensing that is not a FOSS license, therefore different from the MIT license.\nIt is similar to the Chrome browser, where the core of the browser is “Chromium”, an open-source browser developed and released under a FOSS license. Google then modifies it, incorporates proprietary Google services, and releases Chrome as a separate browser.\nWhat is proprietary about VS Code? Microsoft modifies VS Code in a way that a non-Microsoft VS Code fork can’t use extensions from the official Microsoft VS Code store. Not only that, some of the VS Code extensions developed and released by Microsoft will only work in the VS Code released by Microsoft and won’t work on non-Microsoft VS Code forks.\nThere is nothing wrong with an organization following an open-core principal. Microsoft still has to pay for the developers who contribute to VS Code and other bills associated with VS Code and running the extension store.\nWhy I switched to VS Codium? If you want to get the full open-source MIT-licensed VS Code with no telemetry tracking, you will have to download the source code from the repository and build the VS Code on your own.\nIt is difficult for most users to build VS Code from the source.\nThis is where VS Codium comes in,\nVS Codium is a fully open-source version of the VS Code, without the constraints and tracking that come with Microsoft’s VS Code. The VS Codium team builds VS Code from the source and releases the builds for different platforms under the VS Codium name.\nI wanted to skip all the tracking that comes with VS Code. I was increasingly getting upset about their extension marketplace, where there is an increased number of extensions starting to sell pro versions of the extensions we used for free.\nMy experience with VS Codium Even though I’ve seen VS Codium before, the only thing that kept me from switching was the lack of availability of all the extensions. Extensions that I’ve used to customize my VS Code experience. But the extension ecosystem for VS COdium has matured, and almost all the open-source extensions for VS Code are now available for VS Codium under the open-vsx extension marketplace. These extensions are uploaded by the official developers or by the community. Now that the extensions I use are available in VS Codium, I made a smooth transition to VS Codium, and there is nothing to complain about.\nThe only thing I miss is the “Monokai pro” theme, which I used on VS Code, but I have found a new favourite called “Blackboard Pro” (it’s free) on Open VSX registry.\nOpen VS Code extension registry. https://open-vsx.org. You can now download all the popular VS Code extensions from the Open VSX registry\nHow to install VS Codium? The easiest way to install VS Codium is through the package manages, available for your respective operating systems.\nIf you’re a Windows user winget install vscodium macOs user brew install --cask vscodium Linux Ubuntu user sudo apt update \u0026\u0026 sudo apt install codium VS Codium after installation. I’ve installed the Blackboard pro theme.\nPerformance Performance wise I don’t see a noticeable change, maybe it’s because my MBP and my Windows machine both has enough specs to run VS Codium and VS Code Smoothly, but I’m sure there is a small performance gain because you don’t have telemetry running in the background sending data to Microsoft.\nIf you’re a VS Code user, I suggest you to try out VS Codium and see if it works for you as well.\nFollow the discussion on HackerNews – https://news.ycombinator.com/item?id=31713625\n",
+  "wordCount" : "754",
+  "inLanguage": "en",
+  "datePublished": "2022-06-11T14:50:34Z",
+  "dateModified": "2022-06-11T14:50:34Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/im-switching-form-vs-code-to-vs-codium/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      I&#39;m Switching from VS Code to VS Codium
+    </h1>
+    <div class="post-meta"><span title='2022-06-11 14:50:34 +0000 UTC'>June 11, 2022</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-1.png?resize=1024%2C576&ssl=1"></p>
+<p>VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.</p>
+<p>Don’t get me wrong, VS Code is a good editor. It has improved since its initial release. But starting this month, I’m switching from VS Code to VS Codium. Allow me to explain,</p>
+<p>VS Codium official website – <a href="https://vscodium.com">https://vscodium.com</a></p>
+<h2 id="is-vs-code-open-source">Is VS Code open source?<a hidden class="anchor" aria-hidden="true" href="#is-vs-code-open-source">#</a></h2>
+<p>VS Code, released by Microsoft, is not open-source software. Microsoft is following the open-core model for the VS Code editor, just like how Google is following an open-core model for its Chrome browser. </p>
+<p>In the open core model, the core of the editor gets developed as an open-source project, with the source code for VS Code under the MIT license. However, Microsoft uses this core and modifies it, incorporates its propriety changes, includes <strong>telemetry tracking,</strong> and releases it as a proprietary version with its own licensing that is not a FOSS license, therefore different from the MIT license.</p>
+<p>It is similar to the Chrome browser, where the core of the browser is “Chromium”, an open-source browser developed and released under a FOSS license. Google then modifies it, incorporates proprietary Google services, and releases Chrome as a separate browser.</p>
+<h2 id="what-is-proprietary-about-vs-code">What is proprietary about VS Code?<a hidden class="anchor" aria-hidden="true" href="#what-is-proprietary-about-vs-code">#</a></h2>
+<p>Microsoft modifies VS Code in a way that a non-Microsoft VS Code fork can’t use extensions from the official Microsoft VS Code store. Not only that, some of the VS Code extensions developed and released by Microsoft will only work in the VS Code released by Microsoft and won’t work on non-Microsoft VS Code forks.</p>
+<p>There is nothing wrong with an organization following an open-core principal. Microsoft still has to pay for the developers who contribute to VS Code and other bills associated with VS Code and running the extension store.</p>
+<h2 id="why-i-switched-to-vs-codium">Why I switched to VS Codium?<a hidden class="anchor" aria-hidden="true" href="#why-i-switched-to-vs-codium">#</a></h2>
+<p>If you want to get the full open-source MIT-licensed VS Code with no telemetry tracking, you will have to download the source code from the repository and build the VS Code on your own.</p>
+<p>It is difficult for most users to build VS Code from the source.</p>
+<p>This is where VS Codium comes in,</p>
+<p>VS Codium is a fully open-source version of the VS Code, without the constraints and tracking that come with Microsoft’s VS Code. The VS Codium team builds VS Code from the source and releases the builds for different platforms under the VS Codium name.</p>
+<p>I wanted to skip all the tracking that comes with VS Code. I was increasingly getting upset about their extension marketplace, where there is an increased number of extensions starting to sell pro versions of the extensions we used for free.</p>
+<h2 id="my-experience-with-vs-codium">My experience with VS Codium<a hidden class="anchor" aria-hidden="true" href="#my-experience-with-vs-codium">#</a></h2>
+<p>Even though I’ve seen VS Codium before, the only thing that kept me from switching was the lack of availability of all the extensions. Extensions that I’ve used to customize my VS Code experience. </p>
+<p>But the extension ecosystem for VS COdium has matured, and almost all the open-source extensions for VS Code are now available for VS Codium under the <a href="https://open-vsx.org/">open-vsx</a> extension marketplace. </p>
+<p>These extensions are uploaded by the official developers or by the community. Now that the extensions I use are available in VS Codium, I made a smooth transition to VS Codium, and there is nothing to complain about.</p>
+<p>The only thing I miss is the “Monokai pro” theme, which I used on VS Code, but I have found a new favourite called <a href="https://open-vsx.org/extension/croccifixio/blackboard-pro">“Blackboard Pro”</a> (it’s free) on Open VSX registry.</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-2.png?resize=1024%2C511&ssl=1"></p>
+<p>Open VS Code extension registry. <a href="https://open-vsx.org">https://open-vsx.org</a>. You can now download all the popular VS Code extensions from the Open VSX registry</p>
+<h2 id="how-to-install-vs-codium">How to install VS Codium?<a hidden class="anchor" aria-hidden="true" href="#how-to-install-vs-codium">#</a></h2>
+<p>The easiest way to install VS Codium is through the package manages, available for your respective operating systems.</p>
+<h3 id="if-youre-a-windows-user">If you’re a Windows user<a hidden class="anchor" aria-hidden="true" href="#if-youre-a-windows-user">#</a></h3>
+<pre><code>winget install vscodium
+</code></pre>
+<h3 id="macos-user">macOs user<a hidden class="anchor" aria-hidden="true" href="#macos-user">#</a></h3>
+<pre><code>brew install --cask vscodium
+</code></pre>
+<h3 id="linux-ubuntu-user">Linux Ubuntu user<a hidden class="anchor" aria-hidden="true" href="#linux-ubuntu-user">#</a></h3>
+<pre><code>sudo apt update &amp;&amp; sudo apt install codium
+</code></pre>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-3.png?resize=1024%2C549&ssl=1"></p>
+<p>VS Codium after installation. I’ve installed the Blackboard pro theme.</p>
+<h2 id="performance">Performance<a hidden class="anchor" aria-hidden="true" href="#performance">#</a></h2>
+<p>Performance wise I don’t see a noticeable change, maybe it’s because my MBP and my Windows machine both has enough specs to run VS Codium and VS Code Smoothly, but I’m sure there is a small performance gain because you don’t have telemetry running in the background sending data to Microsoft.</p>
+<p>If you’re a VS Code user, I suggest you to try out VS Codium and see if it works for you as well.</p>
+<hr>
+<p>Follow the discussion on HackerNews – <a href="https://news.ycombinator.com/item?id=31713625">https://news.ycombinator.com/item?id=31713625</a></p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

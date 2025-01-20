@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Switzerland on Rukshan&#39;s Blog</title>
+    <link>http://localhost:1313/tags/switzerland/</link>
+    <description>Recent content in Switzerland on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Sun, 09 Jun 2024 11:20:30 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/switzerland/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Geneva Digital Health Day 2024</title>
+      <link>http://localhost:1313/geneva-digital-health-day-2024/</link>
+      <pubDate>Sun, 09 Jun 2024 11:20:30 +0000</pubDate>
+      <guid>http://localhost:1313/geneva-digital-health-day-2024/</guid>
+      <description>&lt;p&gt;The month of May ended me attending the Geneva digital health day, and event following the Geneva health forum. The event was at Campus Biotech, where people get together to talk about the future on digital health.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

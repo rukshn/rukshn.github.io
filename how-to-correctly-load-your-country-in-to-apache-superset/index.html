@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>How to Correctly Load Your Country in to Apache Superset | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="apache-superset, geojson, superset, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="TLDR
+
+The geoJSON specification published in 2016 requires the polygons to follow the right-hand rule.
+All updated geoJSON files now follow the right-hand rule.
+However, Superset requires your geoJSON file polygons to follow the opposite direction, breaking the specification.
+Covert your geoJSON files so polygons are drawn in opposite directions using the script included in Step 5.
+Include the geoJSON file inside the legacy-plugin-chart-country-map plugin.
+Import the geoJSON file and rebuild your Superset frontend.
+
+Apache Superset is a free and open-core data analysis tool that offers a wide range of really neat features for a business. It’s a good piece of software where you don’t have the budget to spend on an expensive business intelligence tool.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/how-to-correctly-load-your-country-in-to-apache-superset/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/how-to-correctly-load-your-country-in-to-apache-superset/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/how-to-correctly-load-your-country-in-to-apache-superset/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="How to Correctly Load Your Country in to Apache Superset">
+  <meta property="og:description" content="TLDR The geoJSON specification published in 2016 requires the polygons to follow the right-hand rule. All updated geoJSON files now follow the right-hand rule. However, Superset requires your geoJSON file polygons to follow the opposite direction, breaking the specification. Covert your geoJSON files so polygons are drawn in opposite directions using the script included in Step 5. Include the geoJSON file inside the legacy-plugin-chart-country-map plugin. Import the geoJSON file and rebuild your Superset frontend. Apache Superset is a free and open-core data analysis tool that offers a wide range of really neat features for a business. It’s a good piece of software where you don’t have the budget to spend on an expensive business intelligence tool.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2023-03-11T22:23:24+00:00">
+    <meta property="article:modified_time" content="2023-03-11T22:23:24+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="How to Correctly Load Your Country in to Apache Superset">
+<meta name="twitter:description" content="TLDR
+
+The geoJSON specification published in 2016 requires the polygons to follow the right-hand rule.
+All updated geoJSON files now follow the right-hand rule.
+However, Superset requires your geoJSON file polygons to follow the opposite direction, breaking the specification.
+Covert your geoJSON files so polygons are drawn in opposite directions using the script included in Step 5.
+Include the geoJSON file inside the legacy-plugin-chart-country-map plugin.
+Import the geoJSON file and rebuild your Superset frontend.
+
+Apache Superset is a free and open-core data analysis tool that offers a wide range of really neat features for a business. It’s a good piece of software where you don’t have the budget to spend on an expensive business intelligence tool.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "How to Correctly Load Your Country in to Apache Superset",
+      "item": "https://ruky.me/how-to-correctly-load-your-country-in-to-apache-superset/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "How to Correctly Load Your Country in to Apache Superset",
+  "name": "How to Correctly Load Your Country in to Apache Superset",
+  "description": "TLDR The geoJSON specification published in 2016 requires the polygons to follow the right-hand rule. All updated geoJSON files now follow the right-hand rule. However, Superset requires your geoJSON file polygons to follow the opposite direction, breaking the specification. Covert your geoJSON files so polygons are drawn in opposite directions using the script included in Step 5. Include the geoJSON file inside the legacy-plugin-chart-country-map plugin. Import the geoJSON file and rebuild your Superset frontend. Apache Superset is a free and open-core data analysis tool that offers a wide range of really neat features for a business. It’s a good piece of software where you don’t have the budget to spend on an expensive business intelligence tool.\n",
+  "keywords": [
+    "apache-superset", "geojson", "superset", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "TLDR The geoJSON specification published in 2016 requires the polygons to follow the right-hand rule. All updated geoJSON files now follow the right-hand rule. However, Superset requires your geoJSON file polygons to follow the opposite direction, breaking the specification. Covert your geoJSON files so polygons are drawn in opposite directions using the script included in Step 5. Include the geoJSON file inside the legacy-plugin-chart-country-map plugin. Import the geoJSON file and rebuild your Superset frontend. Apache Superset is a free and open-core data analysis tool that offers a wide range of really neat features for a business. It’s a good piece of software where you don’t have the budget to spend on an expensive business intelligence tool.\nSadly their documentation is not up to date, the questions and solutions on StackOverflow are limited and customizing Superset can be a pain. GitHub support is very limited by the community. And most of the time you will have to figure things out by yourself.\nRecently I had to load a country map to Apache Superset to generate country map charts. Apache Superset does not include all the country maps by default and provides only a handful of countries.\nThe Apache Superset documentation provides you with the steps needed to load a country into Superset. This sounds straight forward, however the reality it’s far from that.\nIn this tutorial, I’m going to write about my experience and how you can include your country on Apache Superset. And take you through the treasure hunt like I did which literally drove me near insanity.\nStep 1 – Finding the right geoJSON file of the country First I had to find the right geoJSON file. Luckily I found the geoJSON file for Sri Lanka at – https://data.humdata.org. The website includes a lot of geoJSON files from different countries that you can freely download.\nIf your country is not listed on the humdata website, you can create a geoJSON file using QGIS software. You can download the QGIS software from their website https://qgis.org/en/site/.\nI downloaded and included the geoJSON file in the legacy-plugins-chart-map-country plugin as mentioned in the Superset documentation and rebuilt the Superset frontend.\nI was hoping everything will go according to plan and I will nicely get the Sri Lankan map loaded into the Superset website. However, the map rendered was completely different from what I expected,\nThe initial rendering of the map, you can faintly see a small indentation on the right border.\nThe map is rendered as a rectangle, and if you look closely you can see a small indentation on the right border of the rectangle with some sort of rendering caused by the geoJSON file.\nApparently, this has been asked as an issue on GitHub multiple times, but no one seems to share a working solution that fixed the issue.\nTrouble adding Argentina geojson to country map legacy plugin #12987 superset new country map #14079 Can this be an issue with Superset? Or is something wrong with the geoJSON file as mentioned in both GitHub issues?\nI initially thought this has to be an issue with Superset, therefore I used an existing geoJSON file in the Superset plugin for Sri Lanka and reloaded the frontend and that geoJSON file rendered correctly.\nTo get to the bottom of this, I downloaded a different country geoJSON file from humdata and loaded it to Superset.\nThis also rendered a rectangle as you see above, and by then I knew this has to be something wrong with the geoJSON file or how Superset use the geoJSON file that was downloaded from humdata or created by QGIS.\nStep 2 – Trying parse the geoJSON file I then went to https://geojson.io website and pasted the geoJSON file of Sri Lanka and see if there is something wrong with the GeoJSON file, and the file rendered correctly on geojson.io website.\nThe geoJSON file for Sri Lanka also gets rendered correctly on GitHub and this meant there is nothing wrong with the geoJSON file I downloaded from humdata. So what can be the issue here?\nI even drew a simple polygon over the Sri Lankan map (a large triangle) and tried to render it on Superset. And this also rendered a large rectangle as you see above.\nStep 3 – Trying see if the coordinates are correct Being frustrated I googled the latitude and longitude of one of the points in an existing map inside Superset [113.13181294000367, -25.951992185759366], this is a point in Western Australia, and to my surprise, google did not show a place matching these coordinates.\nThen I reversed the coordinates and googled [-25.951992185759366, 113.13181294000367], and this correctly showed a point in Western Australia.\nSo does this mean I have to invert the coordinates correctly and display it on Superset? This is not abnormal, as mentioned on Stackoverflow, the popular javascript map rendering plugin Leaflet also uses coordinates inverted. Apache Superset might be doing the same, so there is nothing wrong with that.\nHow hard inverting the coordinates can be, all I have to do is write a simple javascript to invert the coordinates within the geoJSON.\nI wrote a simple javascript and inverted the coordinates of the geoJSON file that I downloaded from humdata. And loaded it to Superset, and this was the result,\nRendering the map with inverted coordinates.\nSo this gave me a wired map of Sri Lanka, located in a completely geographically off place. But this was an improvement from the initial rectangle that I received. So I’m definitely making progress here.\nStep 4 – Parsing a geoJSON file included in Superset Since GitHub correctly renders all the geoJSON files included in Superset, I initially thought these geoJSON files are correct. But why my geoJSON file is not working? There has to be something wrong somewhere.\nI copied one of the geoJSON files from the superset repository and parsed it on geojson.io, and to my surprise, it did not render on geojson.io.\nI got the following error, “Polygons and MultiPolygons should follow the right hand-rule”. So there is something not right with the geoJSON file inside Superset and not with the one I downloaded from humdata.\nSearching for this error I landed on a post on StackOverflow about the geoJSON specification published in 2016 which requires all polygons to should be ordered in a clockwise manner. The old 2008 geoJSON informal specification did not have this rule.\nA linear ring MUST follow the right-hand rule with respect to the area it bounds, i.e., exterior rings are counterclockwise, and holes are clockwise.\nThis meant that the Superset geoJSON files breaks this rule, and were ordered in a counter-clockwise manner. Even though current geoJSON files are published following the right-hand rule, while apache Superset requires geoJSON files going against the right-hand rule, and GitHub doesn’t care whether a geoJSON file follows the right-hand rule or not and renders them irrespectively.\nAnd I had to reverse the order of the coordinate and not to reverse latitudes and longitudes as I did earlier. There are plenty of online tools that allow you to correct the issue, to make a geoJSON that does not follow the right-hand rule to follow the right-hand rule. But I didn’t find a tool that breaks this rule.\nSo as the rule breaker that I always am, again I had to write a simple javascript to reverse the order of the coordinates. I’m sharing below for anyone to use and to convert a geoJSON file following the right-hand rule to go against the rule and go counterclockwise.\nStep 5 – Converting geoJSON file to go against right-hand rule I’m sharing the javascript that I used to convert a geoJSON file to go against right-hand rule. If anyone wants to include a country map in Superset, they can use this script to convert the geoJSON files to go against the right-hand rule and import them into Superset.\n// import the geoJSON file const data = require(\"./lk.json\"); const { writeFileSync, readFileSync } = require(\"fs\"); // reverse the order of the coordinates for (let index = 0; index \u003c data.features.length; index++) { const element = data.features[index]; const coordinates = element.geometry.coordinates; data.features[index].geometry.coordinates[0].reverse(); } // save the file onto disk writeFileSync(\"./srilanka.geojson\", JSON.stringify(data), \"utf-8\"); console.log(\"written\"); Now I included this geoJSON file which is in counter-clockwise order onto Superset and it finally rendered the map correctly.\nStep 6 – Importing the geoJSON file that Save the geoJSON file you just created inside the countries folder of the legacy-plugin-chart-country-map plugin. This is located in the superset/superset-frontend/plugins/legacy-plugin-chart-country-map/src/ folder.\nThen import the geoJSON file you just saved by modifying the country.ts file inside the legacy-plugin-chart-map-country plugin which is located inside the superset/superset-frontend/plugins/legacy-plugin-chart-country-map/src/ folder.\nStep 7 – Build the Superset frontend and run Superset Now build the superset frontend\ncd superset/superset-frontend/ npm run build Then restart the superset server\ncd superset source venv/bin/activate superset run -p 8088 --with-threads --reload --debugger Now the country you included will be available for country map charts.\n",
+  "wordCount" : "1487",
+  "inLanguage": "en",
+  "datePublished": "2023-03-11T22:23:24Z",
+  "dateModified": "2023-03-11T22:23:24Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/how-to-correctly-load-your-country-in-to-apache-superset/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      How to Correctly Load Your Country in to Apache Superset
+    </h1>
+    <div class="post-meta"><span title='2023-03-11 22:23:24 +0000 UTC'>March 11, 2023</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h5 id="tldr">TLDR<a hidden class="anchor" aria-hidden="true" href="#tldr">#</a></h5>
+<ul>
+<li>The geoJSON specification published in 2016 requires the polygons to follow the right-hand rule.</li>
+<li>All updated geoJSON files now follow the right-hand rule.</li>
+<li>However, Superset requires your geoJSON file polygons to follow the opposite direction, breaking the specification.</li>
+<li>Covert your geoJSON files so polygons are drawn in opposite directions using the script included in <a href="#step5">Step 5</a>.</li>
+<li>Include the geoJSON file inside the <code>legacy-plugin-chart-country-map</code> plugin.</li>
+<li>Import the geoJSON file and rebuild your Superset frontend.</li>
+</ul>
+<p>Apache Superset is a free and open-core data analysis tool that offers a wide range of really neat features for a business. It’s a good piece of software where you don’t have the budget to spend on an expensive business intelligence tool.</p>
+<p>Sadly their documentation is not up to date, the questions and solutions on StackOverflow are limited and customizing Superset can be a pain. GitHub support is very limited by the community. And most of the time you will have to figure things out by yourself.</p>
+<p>Recently I had to load a country map to Apache Superset to generate country map charts. Apache Superset does not include all the country maps by default and provides only a handful of countries.</p>
+<p>The Apache Superset <a href="https://superset.apache.org/docs/miscellaneous/country-map-tools">documentation</a> provides you with the steps needed to load a country into Superset. This sounds straight forward, however the reality it’s far from that.</p>
+<p>In this tutorial, I’m going to write about my experience and how you can include your country on Apache Superset. And take you through the treasure hunt like I did which literally drove me near insanity.</p>
+<h2 id="step-1--finding-the-right-geojson-file-of-the-country">Step 1 – Finding the right geoJSON file of the country<a hidden class="anchor" aria-hidden="true" href="#step-1--finding-the-right-geojson-file-of-the-country">#</a></h2>
+<p>First I had to find the right geoJSON file. Luckily I found the geoJSON file for Sri Lanka at – <a href="https://data.humdata.org/">https://data.humdata.org.</a> The website includes a lot of geoJSON files from different countries that you can freely download.</p>
+<p>If your country is not listed on the humdata website, you can create a geoJSON file using QGIS software. You can download the QGIS software from their website <a href="https://qgis.org/en/site/">https://qgis.org/en/site/</a>.</p>
+<p>I downloaded and included the geoJSON file in the legacy-plugins-chart-map-country plugin as mentioned in the Superset documentation and rebuilt the Superset frontend.</p>
+<p>I was hoping everything will go according to plan and I will nicely get the Sri Lankan map loaded into the Superset website. However, the map rendered was completely different from what I expected,</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/03/image.png?resize=1024%2C779&ssl=1"></p>
+<p>The initial rendering of the map, you can faintly see a small indentation on the right border.</p>
+<p>The map is rendered as a rectangle, and if you look closely you can see a small indentation on the right border of the rectangle with some sort of rendering caused by the geoJSON file.</p>
+<p>Apparently, this has been asked as an issue on GitHub multiple times, but no one seems to share a working solution that fixed the issue.</p>
+<ul>
+<li><a href="https://github.com/apache/superset/issues/12987">Trouble adding Argentina geojson to country map legacy plugin #12987</a></li>
+<li><a href="https://github.com/apache/superset/issues/14079">superset new country map #14079</a></li>
+</ul>
+<p>Can this be an issue with Superset? Or is something wrong with the geoJSON file as mentioned in both GitHub issues?</p>
+<p>I initially thought this has to be an issue with Superset, therefore I used an existing geoJSON file in the Superset plugin for Sri Lanka and reloaded the frontend and that geoJSON file rendered correctly.</p>
+<p>To get to the bottom of this, I downloaded a different country geoJSON file from humdata and loaded it to Superset.</p>
+<p>This also rendered a rectangle as you see above, and by then I knew this has to be something wrong with the geoJSON file or how Superset use the geoJSON file that was downloaded from humdata or created by QGIS.</p>
+<h2 id="step-2--trying-parse-the-geojson-file">Step 2 – Trying parse the geoJSON file<a hidden class="anchor" aria-hidden="true" href="#step-2--trying-parse-the-geojson-file">#</a></h2>
+<p>I then went to <a href="https://geojson.io">https://geojson.io</a> website and pasted the geoJSON file of Sri Lanka and see if there is something wrong with the GeoJSON file, and the file rendered correctly on geojson.io website.</p>
+<p>The geoJSON file for Sri Lanka also gets rendered correctly on GitHub and this meant there is nothing wrong with the geoJSON file I downloaded from humdata. So what can be the issue here?</p>
+<p>I even drew a simple polygon over the Sri Lankan map (a large triangle) and tried to render it on Superset. And this also rendered a large rectangle as you see above.</p>
+<h2 id="step-3--trying-see-if-the-coordinates-are-correct">Step 3 – Trying see if the coordinates are correct<a hidden class="anchor" aria-hidden="true" href="#step-3--trying-see-if-the-coordinates-are-correct">#</a></h2>
+<p>Being frustrated I googled the latitude and longitude of one of the points in an existing map inside Superset [113.13181294000367, -25.951992185759366], this is a point in Western Australia, and to my surprise, google did not show a place matching these coordinates.</p>
+<p>Then I reversed the coordinates and googled [-25.951992185759366, 113.13181294000367], and this correctly showed a point in Western Australia.</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/03/image-1.png?resize=1024%2C779&ssl=1"></p>
+<p>So does this mean I have to invert the coordinates correctly and display it on Superset? This is not abnormal, as mentioned on Stackoverflow, the popular javascript map rendering plugin Leaflet also uses coordinates inverted. Apache Superset might be doing the same, so there is nothing wrong with that.</p>
+<p>How hard inverting the coordinates can be, all I have to do is write a simple javascript to invert the coordinates within the geoJSON.</p>
+<p>I wrote a simple javascript and inverted the coordinates of the geoJSON file that I downloaded from humdata. And loaded it to Superset, and this was the result,</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/03/image-2.png?resize=1024%2C569&ssl=1"></p>
+<p>Rendering the map with inverted coordinates.</p>
+<p>So this gave me a wired map of Sri Lanka, located in a completely geographically off place. But this was an improvement from the initial rectangle that I received. So I’m definitely making progress here.</p>
+<h2 id="step-4--parsing-a-geojson-file-included-in-superset">Step 4 – Parsing a geoJSON file included in Superset<a hidden class="anchor" aria-hidden="true" href="#step-4--parsing-a-geojson-file-included-in-superset">#</a></h2>
+<p>Since GitHub correctly renders all the geoJSON files included in Superset, I initially thought these geoJSON files are correct. But why my geoJSON file is not working? There has to be something wrong somewhere.</p>
+<p>I copied one of the geoJSON files from the superset repository and parsed it on geojson.io, and to my surprise, it did not render on geojson.io.</p>
+<p>I got the following error, <strong>“Polygons and MultiPolygons should follow the right hand-rule”</strong>. So there is something not right with the geoJSON file inside Superset and not with the one I downloaded from humdata.</p>
+<p>Searching for this error I landed on a post on StackOverflow about the geoJSON specification published in 2016 which requires all polygons to should be ordered in a clockwise manner. The old 2008 geoJSON informal specification did not have this rule.</p>
+<blockquote>
+<p>A linear ring MUST follow the right-hand rule with respect to the area it bounds, i.e., exterior rings are counterclockwise, and holes are clockwise.</p>
+</blockquote>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/03/image-3.png?resize=1024%2C928&ssl=1"></p>
+<p>This meant that the Superset geoJSON files breaks this rule, and were ordered in a counter-clockwise manner. Even though current geoJSON files are published following the right-hand rule, while apache Superset requires geoJSON files going against the right-hand rule, and GitHub doesn’t care whether a geoJSON file follows the right-hand rule or not and renders them irrespectively.</p>
+<p>And I had to reverse the order of the coordinate and not to reverse latitudes and longitudes as I did earlier. There are plenty of online tools that allow you to correct the issue, <em>to make a geoJSON that does not follow the right-hand rule to follow the right-hand rule.</em> But I didn’t find a tool that breaks this rule.</p>
+<p>So as the rule breaker that I always am, again I had to write a simple javascript to reverse the order of the coordinates. I’m sharing below for anyone to use and to convert a geoJSON file following the right-hand rule to go against the rule and go counterclockwise.</p>
+<h2 id="step-5--converting-geojson-file-to-go-against-right-hand-rule">Step 5 – Converting geoJSON file to go against right-hand rule<a hidden class="anchor" aria-hidden="true" href="#step-5--converting-geojson-file-to-go-against-right-hand-rule">#</a></h2>
+<p>I’m sharing the javascript that I used to convert a geoJSON file to go against right-hand rule. If anyone wants to include a country map in Superset, they can use this script to convert the geoJSON files to go against the right-hand rule and import them into Superset.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>    <span style="color:#6272a4">// import the geoJSON file
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">const</span> data <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;./lk.json&#34;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#ff79c6">const</span> { writeFileSync, readFileSync } <span style="color:#ff79c6">=</span> require(<span style="color:#f1fa8c">&#34;fs&#34;</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// reverse the order of the coordinates 
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    <span style="color:#ff79c6">for</span> (<span style="color:#8be9fd;font-style:italic">let</span> index <span style="color:#ff79c6">=</span> <span style="color:#bd93f9">0</span>; index <span style="color:#ff79c6">&lt;</span> data.features.length; index<span style="color:#ff79c6">++</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">const</span> element <span style="color:#ff79c6">=</span> data.features[index];
+</span></span><span style="display:flex;"><span>      <span style="color:#ff79c6">const</span> coordinates <span style="color:#ff79c6">=</span> element.geometry.coordinates;
+</span></span><span style="display:flex;"><span>      data.features[index].geometry.coordinates[<span style="color:#bd93f9">0</span>].reverse();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#6272a4">// save the file onto disk
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>    writeFileSync(<span style="color:#f1fa8c">&#34;./srilanka.geojson&#34;</span>, JSON.stringify(data), <span style="color:#f1fa8c">&#34;utf-8&#34;</span>);
+</span></span><span style="display:flex;"><span>    console.log(<span style="color:#f1fa8c">&#34;written&#34;</span>);
+</span></span></code></pre></div><p>Now I included this geoJSON file which is in counter-clockwise order onto Superset and it finally rendered the map correctly.</p>
+<p><img loading="lazy" src="https://i0.wp.com/ruky.me/wp-content/uploads/2023/03/image-4.png?resize=1024%2C569&ssl=1"></p>
+<h2 id="step-6--importing-the-geojson-file-that">Step 6 – Importing the geoJSON file that<a hidden class="anchor" aria-hidden="true" href="#step-6--importing-the-geojson-file-that">#</a></h2>
+<p>Save the geoJSON file you just created inside the countries folder of the <code>legacy-plugin-chart-country-map</code> plugin. This is located in the <code>superset/superset-frontend/plugins/legacy-plugin-chart-country-map/src/</code> folder.</p>
+<p>Then import the geoJSON file you just saved by modifying the country.ts file inside the <code>legacy-plugin-chart-map-country</code> plugin which is located inside the <code>superset/superset-frontend/plugins/legacy-plugin-chart-country-map/src/</code> folder.</p>
+<h2 id="step-7--build-the-superset-frontend-and-run-superset">Step 7 – Build the Superset frontend and run Superset<a hidden class="anchor" aria-hidden="true" href="#step-7--build-the-superset-frontend-and-run-superset">#</a></h2>
+<p>Now build the superset frontend</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">cd</span> superset/superset-frontend/
+</span></span><span style="display:flex;"><span>    npm run build
+</span></span></code></pre></div><p>Then restart the superset server</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">cd</span> superset
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">source</span> venv/bin/activate
+</span></span><span style="display:flex;"><span>    superset run -p <span style="color:#bd93f9">8088</span> --with-threads --reload --debugger
+</span></span></code></pre></div><p>Now the country you included will be available for country map charts.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

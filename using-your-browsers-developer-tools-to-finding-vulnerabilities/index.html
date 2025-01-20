@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Using your browser&#39;s developer tools to find vulnerabilities | Rukshan&#39;s Blog</title>
+<meta name="keywords" content="Hacking, JavaScript, Rants, Sri Lanka, wordpress, Import 2024-04-25 23:03">
+<meta name="description" content="Last week government launched its online covid tracker called the &ldquo;StaySafe&rdquo; program.
+The program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.">
+<meta name="author" content="">
+<link rel="canonical" href="https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.45e028aa8ce0961349adf411b013ee39406be2c0bc80d4ea3fc04555f7f4611a.css" integrity="sha256-ReAoqozglhNJrfQRsBPuOUBr4sC8gNTqP8BFVff0YRo=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://ruky.me/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://ruky.me/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://ruky.me/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://ruky.me/apple-touch-icon.png">
+<link rel="mask-icon" href="https://ruky.me/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/">
+  <meta property="og:site_name" content="Rukshan&#39;s Blog">
+  <meta property="og:title" content="Using your browser&#39;s developer tools to find vulnerabilities">
+  <meta property="og:description" content="Last week government launched its online covid tracker called the “StaySafe” program.
+The program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.">
+  <meta property="og:locale" content="en-US">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2021-03-03T14:36:20+00:00">
+    <meta property="article:modified_time" content="2021-03-03T14:36:20+00:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Using your browser&#39;s developer tools to find vulnerabilities">
+<meta name="twitter:description" content="Last week government launched its online covid tracker called the &ldquo;StaySafe&rdquo; program.
+The program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Post",
+      "item": "https://ruky.me/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Using your browser's developer tools to find vulnerabilities",
+      "item": "https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Using your browser's developer tools to find vulnerabilities",
+  "name": "Using your browser\u0027s developer tools to find vulnerabilities",
+  "description": "Last week government launched its online covid tracker called the \u0026ldquo;StaySafe\u0026rdquo; program.\nThe program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.\n",
+  "keywords": [
+    "Hacking", "JavaScript", "Rants", "Sri Lanka", "wordpress", "Import 2024-04-25 23:03"
+  ],
+  "articleBody": "Last week government launched its online covid tracker called the “StaySafe” program.\nThe program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.\nLeaving the privacy aspect aside, since we are experiencing a second wave of COVID 19 a tracking solution can help to identify people exposed to a potential COVID 19 patient.\nI have not investigated an exploit for a very long time. I was busy with my daily job, and my master’s in Health Informatics.\nHowever, a Facebook post about someone finding unofficial API access to check the infective status of any person just passing their NIC number (it’s like a social security number) caught my eye.\nThe facebook post that started it all\nThe post showed an unofficial API, where anyone can just type a NIC number and get their covid status, without requiring any authentication.\nSince this is all about to do with a Health Informatics system, it sparked my curiosity to learn more about this StaySafe platform, potentially finding an exploit and ultimately breaching it.\nStep 1 I visited the stay safe website, and at a glance, it has a simple landing page.\nThe first thing I did was to sign up as a new user.\nAccording to the landing page, I had to do is text my NIC number to 1919, or scan a QR code using my mobile.\nIf I send a text message, they will create a new account, associate my NIC number with my mobile number.\nIf I scan the QR code, it will take me to a signup form, where I have to give my NIC number, mobile phone number, and they will signup me as a new user using the same details.\nSo I picked up my phone and sent 123456789V as my NIC number to 1919. I was hoping the system will reject my NIC number since this is obviously an incorrect NIC number (just like a credit card number, an NIC number follows a standard pattern).\nHowever, I was able to sign-up for the system using a fake NIC number, which means I can game the system, or impersonate someone else, using someone else’s NIC number.\nI registered with a fake nic\nStep 2 Still, I was not able to find information about the unofficial API as I saw on the screenshots.\nI scanned the QR code using my phone, and it took me to a registration form.\nhttps://staysafe.gov.lk/customerSignUp/00047\nThe system generates different forms for different locations, and each location will have its own unique URL.\nThe forms also had the same vulnerability, where I can signup using a fake NIC number.\nI signed up through the form using fake data, and at the same time checked the network-requests.\nThe requests are all made using javascript, Iooked the developer tools, and looking at the requests I saw that anyone could make a get request to an unofficial API endpoint to get the infected status of the covid status just sending their NIC number with the get request.\nThe unofficial API to check infected status\nStep 3 I made a simple Google search.\nSearch site:staysafe.gov.lk\nLooking at the Google results, I was able to access a backend dashboard for merchants (location owners) that was not supposed to be accessible to users.\nAnd this page was not protected by any authentication. However, I was unable to go to click links because they are redirecting me to the landing page.\nSo again looking at network requests, I was able to find that they are checking whether the user is logged in from the front end.\nBy using javascript and a merchant ID is sent to the API, it supposedly checks whether that merchant ID exists in the database (which was a 4 digit ID), if the merchant ID exists, a valid response is sent, if it does not exist an invalid response is sent, and the user is redirected.\nLooking at their javascript code, I was able to find that they save the merchant ID in the browser local storage. So by using the developer tools, I created a 4 digit merchant ID on the browser local storage. (I was able to obtain a valid merchant ID from the signup form.)\nAfter refreshing the page, I was able to access the other broken features on the dashboard. I was able to submit some forms, but I was not able to get any valuable data through that dashboard. And I didn’t know whether the data I passed made any difference.\nStep 4 Then I saw another photo on the same Facebook thread that showed a password field.\nAnd I followed that URL – staysafe.gov.lk/admin\nThen I came to a page with the password field, saying I need some secret key to log in to the next page.\nI entered some generic passwords to check whether it will open, but for no luck.\nAgain I checked the page source code. All the user checks are done in front-end using javascript.\nSo I went through the javascript code and came across this unusual function, function saveAdmin() {}\nfunction saveAdmin() { var fname = document.getElementById(\"sfname\").value; var lname = document.getElementById(\"slname\").value; var contact = document.getElementById(\"sphone\").value; var email = document.getElementById(\"semail\").value; var password = document.getElementById(\"spassword\").value; var isOk = true; if (isEmpty(email)) { setErrorMessage('semail', 'Email is required.') isOk = false; } else { removeErrorMessage('semail'); } if (isEmpty(contact)) { setErrorMessage('sphone', 'Contact Number is required.') isOk = false; } else { removeErrorMessage('sphone'); } if (isEmpty(password)) { setErrorMessage('spassword', 'Password is required.') isOk = false; } else { removeErrorMessage('spassword'); } if (isOk === false) { return; } var form = new FormData(); form.append(\"mainTypeId\", \"1\"); form.append(\"mainType\", \"Admin\"); form.append(\"subTypeId\", \"9\"); form.append(\"subType\", \"stay safe\"); form.append(\"contactNumberTypeId\", \"2\"); form.append(\"contactNumberType\", \"Personal\"); form.append(\"contactNumber\", contact); form.append(\"email\", email); form.append(\"fname\", fname); form.append(\"lname\", lname); form.append(\"password\", password); var settings = { \"url\": main_api_url + \"/admin/save_admin\", \"type\": \"POST\", \"timeout\": 0, \"headers\": { 'X-CSRF-TOKEN': $('meta[name=\"csrf-token\"]').attr('content') }, \"processData\": false, \"mimeType\": \"multipart/form-data\", \"contentType\": false, \"data\": form, success: function(data) { Swal.fire({ // position: 'top-end', icon: 'success', title: 'Account Has Been Created' }).then(function() { window.location.replace(main_url + '/admin/dashboard'); }); }, error: function(data) { console.log(data); } }; $.ajax(settings); } Further inspecting this function’s code, I was able to figure out that all I need to do is pass a name, email, a phone number, a password, and a CSRF token (which I can collect from the website) as a POST request to an API URL which was available in the saveAdmin function.\nAnd looking at the function, it looked as if it was successful, I will be able to create an administrator account on the system, which can be the vulnerability I was looking for.\nI made a simple javascript fetch request with all the required fields.\nAnd as a response, I got a successful response, which meant I just created a new Admin account. I was surprised and excited at the same time.\nCreating an admin account is one thing, but what about login? I went back to the login page and tried entering the password I just passed in the previous POST request. It didn’t work.\nThe breakthrough Again looking at the javascript code, just as what they did with the merchant dashboard, I saw that they are checking the authentication from the frontend using javascript.\nThey store a local storage object with name, id, and email, and upon saving the objects in the local storage, they will redirect you to the dashboard URL, which was also available in the javascript code.\nThey will make an API call with administrator details, ID, name, and email. And my theory was that if the data exists in the backend, then the API will return a valid response, and if not it will return a response.\nSince I made an admin account, and I had the email, name with me, and received my admin ID from the response of the saveAdmin function, I just saved these objects in the local storage, crossed my fingers, and typed the dashboard URL on my browser address bar.\nAnd just like that, I was inside the dashboard of the corona tracker designed to track patient exposure in the country.\nExploring the national COVID tracker After a brief moment of joy, I thought of exploring the system to see the functionality of the system.\nI could search for anyone who signed up for the system, using their NIC or mobile number.\nI can see the places they have visited, and even mark them as infected, I didn’t tamper or saved any data. My intention was only to find the vulnerability and report it.\nFor some wired reason, when someone logged in to the dashboard, all the registered user data was fetched in a single JSON response to the dashboard. I was able to see that the request returned around 8000+ user data, which included, their mobile phone number, NIC number, and their COVID status.\nI’m not sure whether this response included all the user data in the system.\nI didn’t tamper with any data. I contacted some developers who commented on the original Facebook post that started all this to find out whether this was the only vulnerability.\nBut some fellow developers showed me that the website’s SSL is not properly configured and you can find out the IP address of the server, which is also found to be correct.\nLearning points Even though javascript can give a nice user experience, there is a risk of passing authentication details through javascript. A session value can easily read by the server-side than passing the session details in a javascript request. Use a cookie-based or token-based authentication system. Never trust user input, always validate the data. Status update I contacted the CTO of ICTA Mr. Hiranya Samarasekera, I informed about the vulnerability and offered my support to fix the vulnerabilities. Mr. Hiranya Samarasekera said that the project was developed by a group of volunteers and offered to ICTA for free. The API, admin page, and dashboard are now removed and returns a 404 error. ICTA has thanked me for informing the vulnerability and said they are working on a fix. More updates\nAfter writing this Mr. Hiranya Samarasekera contacted me and me and the developers of StaySafe had a discussion where I explained to them about the vulnerabilities we found, I offered my ideas on how to fix it. The developers have patched the vulnerabilities and working on a fix. Disclaimer\nI did not tamper or save any data, I hope I’m the first to find the vulnerability, and no one was able to breach the system and harvest the user data.\nThe idea of this post is for learning purposes only on finding vulnerabilities and designing a secure system. I take no responsibility for any damage caused by someone wrongfully using this information.\nThis post was initially posted on my GitHub blog https://rukshn.github.io in November 2020. Just days after the launch of the COVID tracker. But it was later removed because the developers of the tracker wanted to post to be removed in order for people to trust the solution.\nNow things have progressed and no one really use the COVID tracker, I decided it’s time to put the post back online.\n",
+  "wordCount" : "1886",
+  "inLanguage": "en",
+  "datePublished": "2021-03-03T14:36:20Z",
+  "dateModified": "2021-03-03T14:36:20Z",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Rukshan's Blog",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ruky.me/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://ruky.me/" accesskey="h" title="Rukshan&#39;s Blog (Alt + H)">Rukshan&#39;s Blog</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://ruky.me/" title="Home">
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/about" title="About me">
+                    <span>About me</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/categories" title="Categories">
+                    <span>Categories</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://ruky.me/tags" title="Tags">
+                    <span>Tags</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Using your browser&#39;s developer tools to find vulnerabilities
+    </h1>
+    <div class="post-meta"><span title='2021-03-03 14:36:20 +0000 UTC'>March 3, 2021</span>
+
+</div>
+  </header> 
+  <div class="post-content"><p>Last week government launched its online covid tracker called the &ldquo;StaySafe&rdquo; program.</p>
+<p>The program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.</p>
+<p>Leaving the privacy aspect aside, since we are experiencing a second wave of COVID 19 a tracking solution can help to identify people exposed to a potential COVID 19 patient.</p>
+<p>I have not investigated an exploit for a very long time. I was busy with my daily job, and my master’s in Health Informatics.</p>
+<p>However, a Facebook post about someone finding unofficial API access to check the infective status of any person just passing their NIC number (it’s like a social security number) caught my eye.</p>
+<p><img alt="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/123760394_3724198324297298_1148737849357766572_n.jpg?ssl=1" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/123760394_3724198324297298_1148737849357766572_n.jpg?ssl=1"></p>
+<p>The facebook post that started it all</p>
+<p>The post showed an unofficial API, where anyone can just type a NIC number and get their covid status, without requiring any authentication.</p>
+<p>Since this is all about to do with a Health Informatics system, it sparked my curiosity to learn more about this StaySafe platform, potentially finding an exploit and ultimately breaching it.</p>
+<h2 id="step-1">Step 1<a hidden class="anchor" aria-hidden="true" href="#step-1">#</a></h2>
+<p>I visited the stay safe website, and at a glance, it has a simple landing page.</p>
+<p>The first thing I did was to sign up as a new user.</p>
+<p>According to the landing page, I had to do is text my NIC number to 1919, or scan a QR code using my mobile.</p>
+<ul>
+<li>
+<p>If I send a text message, they will create a new account, associate my NIC number with my mobile number.</p>
+</li>
+<li>
+<p>If I scan the QR code, it will take me to a signup form, where I have to give my NIC number, mobile phone number, and they will signup me as a new user using the same details.</p>
+</li>
+</ul>
+<p>So I picked up my phone and sent 123456789V as my NIC number to 1919. I was hoping the system will reject my NIC number since this is obviously an incorrect NIC number (just like a credit card number, an NIC number follows a standard pattern).</p>
+<p>However, I was able to sign-up for the system using a fake NIC number, which means I can game the system, or impersonate someone else, using someone else’s NIC number.</p>
+<p><img alt="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/IMG_8B243A37279C-1.jpg?ssl=1" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/IMG_8B243A37279C-1.jpg?ssl=1"></p>
+<p>I registered with a fake nic</p>
+<h2 id="step-2">Step 2<a hidden class="anchor" aria-hidden="true" href="#step-2">#</a></h2>
+<p>Still, I was not able to find information about the unofficial API as I saw on the screenshots.</p>
+<p>I scanned the QR code using my phone, and it took me to a registration form.</p>
+<p><a href="https://staysafe.gov.lk/customerSignUp/00047">https://staysafe.gov.lk/customerSignUp/00047</a></p>
+<p>The system generates different forms for different locations, and each location will have its own unique URL.</p>
+<p>The forms also had the same vulnerability, where I can signup using a fake NIC number.</p>
+<p>I signed up through the form using fake data, and at the same time checked the network-requests.</p>
+<p>The requests are all made using javascript, Iooked the developer tools, and looking at the requests I saw that anyone could make a get request to an unofficial API endpoint to get the infected status of the covid status just sending their NIC number with the get request.</p>
+<p><img alt="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/Screenshot-2020-11-10-at-14.34.27.png?ssl=1" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/Screenshot-2020-11-10-at-14.34.27.png?ssl=1"></p>
+<p>The unofficial API to check infected status</p>
+<h2 id="step-3">Step 3<a hidden class="anchor" aria-hidden="true" href="#step-3">#</a></h2>
+<p>I made a simple Google search.</p>
+<p>Search site:staysafe.gov.lk</p>
+<p>Looking at the Google results, I was able to access a backend dashboard for merchants (location owners) that was not supposed to be accessible to users.</p>
+<p><img alt="Merchant dashboard" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/Screenshot-2020-11-10-at-14.37.20.png?ssl=1"></p>
+<p>And this page was not protected by any authentication. However, I was unable to go to click links because they are redirecting me to the landing page.</p>
+<p>So again looking at network requests, I was able to find that they are checking whether the user is logged in from the front end.</p>
+<p>By using javascript and a merchant ID is sent to the API, it supposedly checks whether that merchant ID exists in the database (which was a 4 digit ID), if the merchant ID exists, a valid response is sent, if it does not exist an invalid response is sent, and the user is redirected.</p>
+<p>Looking at their javascript code, I was able to find that they save the merchant ID in the browser local storage. So by using the developer tools, I created a 4 digit merchant ID on the browser local storage. (I was able to obtain a valid merchant ID from the signup form.)</p>
+<p>After refreshing the page, I was able to access the other broken features on the dashboard. I was able to submit some forms, but I was not able to get any valuable data through that dashboard. And I didn’t know whether the data I passed made any difference.</p>
+<p><img alt="Gained more privilages in the merchant dashboard" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/Screenshot-2020-11-10-at-14.38.20.png?ssl=1_"></p>
+<h2 id="step-4">Step 4<a hidden class="anchor" aria-hidden="true" href="#step-4">#</a></h2>
+<p>Then I saw another photo on the same Facebook thread that showed a password field.</p>
+<p>And I followed that URL – staysafe.gov.lk/admin</p>
+<p>Then I came to a page with the password field, saying I need some secret key to log in to the next page.</p>
+<p><img alt="Login page I found in the same Facebook post" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/123849698_3724191044298026_8139327141724236291_n.jpg?ssl=1"></p>
+<p>I entered some generic passwords to check whether it will open, but for no luck.</p>
+<p>Again I checked the page source code. All the user checks are done in front-end using javascript.</p>
+<p>So I went through the javascript code and came across this unusual function, function saveAdmin() {}</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#282a36;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#8be9fd;font-style:italic">function</span> saveAdmin() {
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">var</span> fname <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;sfname&#34;</span>).value;
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">var</span> lname <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;slname&#34;</span>).value;
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">var</span> contact <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;sphone&#34;</span>).value;
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">var</span> email <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;semail&#34;</span>).value;
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">var</span> password <span style="color:#ff79c6">=</span> <span style="color:#8be9fd;font-style:italic">document</span>.getElementById(<span style="color:#f1fa8c">&#34;spassword&#34;</span>).value;
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">var</span> isOk <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">true</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> (isEmpty(email)) {
+</span></span><span style="display:flex;"><span>         setErrorMessage(<span style="color:#f1fa8c">&#39;semail&#39;</span>, <span style="color:#f1fa8c">&#39;Email is required.&#39;</span>)
+</span></span><span style="display:flex;"><span>         isOk <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>; 
+</span></span><span style="display:flex;"><span>     } <span style="color:#ff79c6">else</span> {
+</span></span><span style="display:flex;"><span>         removeErrorMessage(<span style="color:#f1fa8c">&#39;semail&#39;</span>); 
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> (isEmpty(contact)) {
+</span></span><span style="display:flex;"><span>         setErrorMessage(<span style="color:#f1fa8c">&#39;sphone&#39;</span>, <span style="color:#f1fa8c">&#39;Contact Number is required.&#39;</span>)
+</span></span><span style="display:flex;"><span>         isOk <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>; 
+</span></span><span style="display:flex;"><span>     } <span style="color:#ff79c6">else</span> {
+</span></span><span style="display:flex;"><span>         removeErrorMessage(<span style="color:#f1fa8c">&#39;sphone&#39;</span>);
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> (isEmpty(password)) {
+</span></span><span style="display:flex;"><span>         setErrorMessage(<span style="color:#f1fa8c">&#39;spassword&#39;</span>, <span style="color:#f1fa8c">&#39;Password is required.&#39;</span>)
+</span></span><span style="display:flex;"><span>         isOk <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">false</span>; 
+</span></span><span style="display:flex;"><span>     } <span style="color:#ff79c6">else</span> {
+</span></span><span style="display:flex;"><span>         removeErrorMessage(<span style="color:#f1fa8c">&#39;spassword&#39;</span>); 
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>     <span style="color:#ff79c6">if</span> (isOk <span style="color:#ff79c6">===</span> <span style="color:#ff79c6">false</span>) {
+</span></span><span style="display:flex;"><span>          <span style="color:#ff79c6">return</span>; 
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>     <span style="color:#8be9fd;font-style:italic">var</span> form <span style="color:#ff79c6">=</span> <span style="color:#ff79c6">new</span> FormData(); 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    form.append(<span style="color:#f1fa8c">&#34;mainTypeId&#34;</span>, <span style="color:#f1fa8c">&#34;1&#34;</span>); form.append(<span style="color:#f1fa8c">&#34;mainType&#34;</span>, <span style="color:#f1fa8c">&#34;Admin&#34;</span>);    
+</span></span><span style="display:flex;"><span>    form.append(<span style="color:#f1fa8c">&#34;subTypeId&#34;</span>, <span style="color:#f1fa8c">&#34;9&#34;</span>); form.append(<span style="color:#f1fa8c">&#34;subType&#34;</span>, <span style="color:#f1fa8c">&#34;stay safe&#34;</span>); 
+</span></span><span style="display:flex;"><span>    form.append(<span style="color:#f1fa8c">&#34;contactNumberTypeId&#34;</span>, <span style="color:#f1fa8c">&#34;2&#34;</span>); 
+</span></span><span style="display:flex;"><span>    form.append(<span style="color:#f1fa8c">&#34;contactNumberType&#34;</span>, <span style="color:#f1fa8c">&#34;Personal&#34;</span>); 
+</span></span><span style="display:flex;"><span>    form.append(<span style="color:#f1fa8c">&#34;contactNumber&#34;</span>, contact); form.append(<span style="color:#f1fa8c">&#34;email&#34;</span>, email);  
+</span></span><span style="display:flex;"><span>    form.append(<span style="color:#f1fa8c">&#34;fname&#34;</span>, fname); form.append(<span style="color:#f1fa8c">&#34;lname&#34;</span>, lname); 
+</span></span><span style="display:flex;"><span>    form.append(<span style="color:#f1fa8c">&#34;password&#34;</span>, password);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#8be9fd;font-style:italic">var</span> settings <span style="color:#ff79c6">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;url&#34;</span><span style="color:#ff79c6">:</span> main_api_url <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#34;/admin/save_admin&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;type&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;POST&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;timeout&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#bd93f9">0</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;headers&#34;</span><span style="color:#ff79c6">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#f1fa8c">&#39;X-CSRF-TOKEN&#39;</span><span style="color:#ff79c6">:</span> $(<span style="color:#f1fa8c">&#39;meta[name=&#34;csrf-token&#34;]&#39;</span>).attr(<span style="color:#f1fa8c">&#39;content&#39;</span>)
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;processData&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;mimeType&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#34;multipart/form-data&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;contentType&#34;</span><span style="color:#ff79c6">:</span> <span style="color:#ff79c6">false</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#f1fa8c">&#34;data&#34;</span><span style="color:#ff79c6">:</span> form,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        success<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span>(data) {
+</span></span><span style="display:flex;"><span>            Swal.fire({
+</span></span><span style="display:flex;"><span>             <span style="color:#6272a4">// position: &#39;top-end&#39;,
+</span></span></span><span style="display:flex;"><span><span style="color:#6272a4"></span>             icon<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;success&#39;</span>,
+</span></span><span style="display:flex;"><span>             title<span style="color:#ff79c6">:</span> <span style="color:#f1fa8c">&#39;Account Has Been Created&#39;</span>
+</span></span><span style="display:flex;"><span>         }).then(<span style="color:#8be9fd;font-style:italic">function</span>() {
+</span></span><span style="display:flex;"><span>             <span style="color:#8be9fd;font-style:italic">window</span>.location.replace(main_url <span style="color:#ff79c6">+</span> <span style="color:#f1fa8c">&#39;/admin/dashboard&#39;</span>);
+</span></span><span style="display:flex;"><span>         });
+</span></span><span style="display:flex;"><span>     },
+</span></span><span style="display:flex;"><span>     error<span style="color:#ff79c6">:</span> <span style="color:#8be9fd;font-style:italic">function</span>(data) {
+</span></span><span style="display:flex;"><span>         console.log(data);
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>    $.ajax(settings);
+</span></span><span style="display:flex;"><span> }
+</span></span></code></pre></div><p>Further inspecting this function’s code, I was able to figure out that all I need to do is pass a name, email, a phone number, a password, and a CSRF token (which I can collect from the website) as a POST request to an API URL which was available in the saveAdmin function.</p>
+<p>And looking at the function, it looked as if it was successful, I will be able to create an administrator account on the system, which can be the vulnerability I was looking for.</p>
+<p>I made a simple javascript fetch request with all the required fields.</p>
+<p>And as a response, I got a successful response, which meant I just created a new Admin account. I was surprised and excited at the same time.</p>
+<p>Creating an admin account is one thing, but what about login? I went back to the login page and tried entering the password I just passed in the previous POST request. It didn’t work.</p>
+<h2 id="the-breakthrough">The breakthrough<a hidden class="anchor" aria-hidden="true" href="#the-breakthrough">#</a></h2>
+<p>Again looking at the javascript code, just as what they did with the merchant dashboard, I saw that they are checking the authentication from the frontend using javascript.</p>
+<p>They store a local storage object with name, id, and email, and upon saving the objects in the local storage, they will redirect you to the dashboard URL, which was also available in the javascript code.</p>
+<p>They will make an API call with administrator details, ID, name, and email. And my theory was that if the data exists in the backend, then the API will return a valid response, and if not it will return a response.</p>
+<p>Since I made an admin account, and I had the email, name with me, and received my admin ID from the response of the saveAdmin function, I just saved these objects in the local storage, crossed my fingers, and typed the dashboard URL on my browser address bar.</p>
+<p>And just like that, I was inside the dashboard of the corona tracker designed to track patient exposure in the country.</p>
+<h2 id="exploring-the-national-covid-tracker">Exploring the national COVID tracker<a hidden class="anchor" aria-hidden="true" href="#exploring-the-national-covid-tracker">#</a></h2>
+<p>After a brief moment of joy, I thought of exploring the system to see the functionality of the system.</p>
+<p>I could search for anyone who signed up for the system, using their NIC or mobile number.</p>
+<p><img alt="The national covid tracker staysafe dashboard" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/Screenshot-2020-11-10-at-00.31.00.png?ssl=1"></p>
+<p>I can see the places they have visited, and even mark them as infected, I didn’t tamper or saved any data. My intention was only to find the vulnerability and report it.</p>
+<p>For some wired reason, when someone logged in to the dashboard, all the registered user data was fetched in a single JSON response to the dashboard. I was able to see that the request returned around 8000+ user data, which included, their mobile phone number, NIC number, and their COVID status.</p>
+<p>I’m not sure whether this response included all the user data in the system.</p>
+<p><img alt="The request resposne with 8000+ userdata" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/blur-data.jpg?ssl=1"></p>
+<p>I didn’t tamper with any data. I contacted some developers who commented on the original Facebook post that started all this to find out whether this was the only vulnerability.</p>
+<p><img alt="More info on dashboard" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/Screenshot-2020-11-10-at-00.34.46.png?ssl=1"></p>
+<p>But some fellow developers showed me that the website’s SSL is not properly configured and you can find out the IP address of the server, which is also found to be correct.</p>
+<p><img alt="SSL vulnerability with the exposed IP address" loading="lazy" src="https://i0.wp.com/rukshn.github.io/images/posts/2020/staysafe/PHOTO-2020-11-10-09-47-46.jpg?ssl=1"></p>
+<h2 id="learning-points">Learning points<a hidden class="anchor" aria-hidden="true" href="#learning-points">#</a></h2>
+<ul>
+<li>Even though javascript can give a nice user experience, there is a risk of passing authentication details through javascript. A session value can easily read by the server-side than passing the session details in a javascript request.</li>
+<li>Use a cookie-based or token-based authentication system.</li>
+<li>Never trust user input, always validate the data.</li>
+</ul>
+<h2 id="status-update">Status update<a hidden class="anchor" aria-hidden="true" href="#status-update">#</a></h2>
+<ul>
+<li>I contacted the CTO of ICTA Mr. Hiranya Samarasekera, I informed about the vulnerability and offered my support to fix the vulnerabilities.</li>
+<li>Mr. Hiranya Samarasekera said that the project was developed by a group of volunteers and offered to ICTA for free.</li>
+<li>The API, admin page, and dashboard are now removed and returns a 404 error.</li>
+<li>ICTA has thanked me for informing the vulnerability and said they are working on a fix.</li>
+</ul>
+<p><strong>More updates</strong></p>
+<ul>
+<li>After writing this Mr. Hiranya Samarasekera contacted me and me and the developers of StaySafe had a discussion where I explained to them about the vulnerabilities we found, I offered my ideas on how to fix it.</li>
+<li>The developers have patched the vulnerabilities and working on a fix.</li>
+</ul>
+<p><strong>Disclaimer</strong></p>
+<p>I did not tamper or save any data, I hope I’m the first to find the vulnerability, and no one was able to breach the system and harvest the user data.</p>
+<p>The idea of this post is for learning purposes only on finding vulnerabilities and designing a secure system. I take no responsibility for any damage caused by someone wrongfully using this information.</p>
+<p>This post was initially posted on my GitHub blog <a href="https://rukshn.github.io">https://rukshn.github.io</a> in November 2020. Just days after the launch of the COVID tracker. But it was later removed because the developers of the tracker wanted to post to be removed in order for people to trust the solution.</p>
+<p>Now things have progressed and no one really use the COVID tracker, I decided it’s time to put the post back online.</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>2025</span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>

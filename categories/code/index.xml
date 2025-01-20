@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Code on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/code/</link>
+    <description>Recent content in Code on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Thu, 24 Dec 2020 14:25:56 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/code/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to sort a list of words? The bucket sorting method</title>
+      <link>https://ruky.me/how-to-sort-a-list-of-words-the-bucket-sorting-method/</link>
+      <pubDate>Thu, 24 Dec 2020 14:25:56 +0000</pubDate>
+      <guid>https://ruky.me/how-to-sort-a-list-of-words-the-bucket-sorting-method/</guid>
+      <description>&lt;p&gt;In the last post I said that I just started my MSc in health informs. The first semester has five modules, one of those modules is about object oriented programming.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

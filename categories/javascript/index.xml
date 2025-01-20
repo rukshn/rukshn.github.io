@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>JavaScript on Rukshan&#39;s Blog</title>
+    <link>https://ruky.me/categories/javascript/</link>
+    <description>Recent content in JavaScript on Rukshan&#39;s Blog</description>
+    <generator>Hugo -- 0.140.2</generator>
+    <language>en-US</language>
+    <copyright>2025</copyright>
+    <lastBuildDate>Tue, 31 Oct 2023 16:25:16 +0000</lastBuildDate>
+    <atom:link href="https://ruky.me/categories/javascript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>XForm and XLSFrom Standards are Preventing The Progress of Digital Health</title>
+      <link>https://ruky.me/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/</link>
+      <pubDate>Tue, 31 Oct 2023 16:25:16 +0000</pubDate>
+      <guid>https://ruky.me/how-xform-and-xlsfrom-standards-are-preventing-the-progress-of-digital-health/</guid>
+      <description>&lt;p&gt;Recently, apart from my work on FHIR and interoperability, I got a chance to work on clinical decision support, healthcare surveys and verbal autopsy. All these clinical decision support, healthcare surveys and verbal autopsies have one thing in common. All three struggle because of a long-forgotten web standard, a pseudo standard and applications that use these standards and do not break away from these standards.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>I&#39;m Switching from VS Code to VS Codium</title>
+      <link>https://ruky.me/im-switching-form-vs-code-to-vs-codium/</link>
+      <pubDate>Sat, 11 Jun 2022 14:50:34 +0000</pubDate>
+      <guid>https://ruky.me/im-switching-form-vs-code-to-vs-codium/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2022/06/image-1.png?resize=1024%2C576&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;VS Code has been my primary text editor/ IDE for several years. “Brackets” was my initial IDE for web development, then I moved to “Atom” and ended up with VS Code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why do Javascript frameworks get increasingly difficult over time?</title>
+      <link>https://ruky.me/why-do-javascript-frameworks-get-increasingly-difficult-over-time/</link>
+      <pubDate>Tue, 07 Jun 2022 11:57:10 +0000</pubDate>
+      <guid>https://ruky.me/why-do-javascript-frameworks-get-increasingly-difficult-over-time/</guid>
+      <description>&lt;p&gt;There are so many JavaScript frameworks, and new frameworks come out every few months. I know some people hate to see new frameworks coming up in JavaScript because there are so many, and some insist on using vanilla JavaScript.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to setup SCSS on your computer</title>
+      <link>https://ruky.me/how-to-setup-scss-on-your-computer/</link>
+      <pubDate>Sun, 22 Aug 2021 00:26:39 +0000</pubDate>
+      <guid>https://ruky.me/how-to-setup-scss-on-your-computer/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://i0.wp.com/ruky.me/wp-content/uploads/2021/08/sass.png?resize=1024%2C516&amp;ssl=1&#34;&gt;&lt;/p&gt;
+&lt;p&gt;SCSS is a CSS pre-processor. By using a pre-processor like SCSS you can easily write simple and elegant CSS. You also have added advantage of variables, arithmetic operations and more. And overall writing sass can be more productive than writing simple CSS.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why JavaScript dialogs (alert/prompt/confirm) are not widely used?</title>
+      <link>https://ruky.me/why-javascript-dialogs-alert-prompt-confirm-are-not-widely-used/</link>
+      <pubDate>Tue, 15 Jun 2021 23:46:39 +0000</pubDate>
+      <guid>https://ruky.me/why-javascript-dialogs-alert-prompt-confirm-are-not-widely-used/</guid>
+      <description>&lt;p&gt;Recently I started working on a small open-source project side project with Vue, and I wanted to create yes/no dialog (basically a model) which will show a notification with a confirm and cancel button. So users can confirm or cancel an event.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Why textareas can&#39;t grow?</title>
+      <link>https://ruky.me/why-textareas-cant-grow/</link>
+      <pubDate>Sat, 01 May 2021 13:58:49 +0000</pubDate>
+      <guid>https://ruky.me/why-textareas-cant-grow/</guid>
+      <description>&lt;p&gt;Textareas are a basic and and an important element in any website UI. You might need textareas for a comment section, chat box, etc.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Using your browser&#39;s developer tools to find vulnerabilities</title>
+      <link>https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/</link>
+      <pubDate>Wed, 03 Mar 2021 14:36:20 +0000</pubDate>
+      <guid>https://ruky.me/using-your-browsers-developer-tools-to-finding-vulnerabilities/</guid>
+      <description>&lt;p&gt;Last week government launched its online covid tracker called the &amp;ldquo;StaySafe&amp;rdquo; program.&lt;/p&gt;
+&lt;p&gt;The program which is similar to Stay Safe was launched in China, a QR code-based system. Where people should scan a QR code when they enter a location, a government server will save and track their check-in and check-out depending on the QR code scanning.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to host your NuxtJS in 10 steps</title>
+      <link>https://ruky.me/how-to-host-your-nuxtjs-in-10-steps/</link>
+      <pubDate>Tue, 23 Feb 2021 22:40:24 +0000</pubDate>
+      <guid>https://ruky.me/how-to-host-your-nuxtjs-in-10-steps/</guid>
+      <description>&lt;p&gt;I first started using &lt;a href=&#34;https://nuxtjs.org&#34;&gt;NuxtJS&lt;/a&gt; one year ago, when I tried to make a platform for travellers to easily find and book villas online. But unlike other popular booking services, I was targeting villas that did not have an online presence or haven’t signup or don’t know how to use an online booking service.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Run GraphQL server with Express in NuxtJS</title>
+      <link>https://ruky.me/run-graphql-server-with-express-in-nuxtjs/</link>
+      <pubDate>Wed, 27 Jan 2021 20:54:01 +0000</pubDate>
+      <guid>https://ruky.me/run-graphql-server-with-express-in-nuxtjs/</guid>
+      <description>&lt;p&gt;Since I use Vue for almost all of my projects, if I’m making an application that requires routing and server side rendering (for SEO), I use &lt;a href=&#34;https://nuxtjs.org/&#34;&gt;NuxtJS&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>The framework trap</title>
+      <link>https://ruky.me/the-framework-trap/</link>
+      <pubDate>Thu, 14 Jan 2021 02:24:35 +0000</pubDate>
+      <guid>https://ruky.me/the-framework-trap/</guid>
+      <description>&lt;p&gt;&lt;img loading=&#34;lazy&#34; src=&#34;https://wompampsupport.azureedge.net/fetchimage?siteId=7575&amp;v=2&amp;jpgQuality=100&amp;width=700&amp;url=https%3A%2F%2Fi.kym-cdn.com%2Fentries%2Ficons%2Ffacebook%2F000%2F000%2F157%2Fitsatrap.jpg&#34;&gt;&lt;/p&gt;
+&lt;p&gt;When it comes to programming, frameworks are there to make your life easy. React, Vue, Larvel, Bootstrap, I can go on and on to list your favourite frameworks.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>How to sort a list of words? The bucket sorting method</title>
+      <link>https://ruky.me/how-to-sort-a-list-of-words-the-bucket-sorting-method/</link>
+      <pubDate>Thu, 24 Dec 2020 14:25:56 +0000</pubDate>
+      <guid>https://ruky.me/how-to-sort-a-list-of-words-the-bucket-sorting-method/</guid>
+      <description>&lt;p&gt;In the last post I said that I just started my MSc in health informs. The first semester has five modules, one of those modules is about object oriented programming.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>A TO-DO app that fits in a single tweet</title>
+      <link>https://ruky.me/a-to-do-app-that-fits-in-a-single-tweet/</link>
+      <pubDate>Mon, 21 Dec 2020 09:50:03 +0000</pubDate>
+      <guid>https://ruky.me/a-to-do-app-that-fits-in-a-single-tweet/</guid>
+      <description>&lt;p&gt;Sunday morning while I was scrolling through my Twitter feed one tweet caught my eye,&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
